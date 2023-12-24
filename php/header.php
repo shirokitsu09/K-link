@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../css/HEADER.css" />
 
 <div class="HEADER"></div>
-<img class="app-icon" alt="" src="../public/LOGO.svg" />
+<img class="app-icon" alt="" src="./resources/images/LOGO.svg" />
 
 <div class="name-header">HOME</div>
 <div class="LINE"></div>
