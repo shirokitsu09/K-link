@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./resources/css/FOOTER.css" />
+<link rel="stylesheet" href="../css/FOOTER.css" />
 
 <div class="navigation">
     <ul>

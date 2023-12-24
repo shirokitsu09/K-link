@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="./resources/css/creategroup.css" />
+    <link rel="stylesheet" href="../css/creategroup.css" />
   </head>
   <body>
 <!-- ----------------------------------------creategroup-buttom------------------------------------------- -->
       <div class="creategroup" id="create" onclick="openpopup()">
-        <img class="creategroup-button" alt="" src="./resources/images/creategroup.svg">
+        <img class="creategroup-button" alt="" src="../images/creategroup.svg">
       </div>
 <!-- ----------------------------------------creategroup-buttom------------------------------------------- -->
 <!-- -----------------------------------------popup-select-type------------------------------------------- -->
@@ -19,7 +19,7 @@
         <div class="dropdown">
           <div class="dropdown-toggle" type="button" aria-haspopup = "true" id="dropdown" onclick="opendropdown()">
             <div class ="select">เลือกหมวด</div>
-            <img class="dropdown-button" alt="" src="./resources/images/dropdownbutton.svg">
+            <img class="dropdown-button" alt="" src="../images/dropdownbutton.svg">
           </div>
           <ul class="dropdown-menu hidden" role="list" aria-expanded = "false">
             <li role="option" tabindex="0" class="option1">Option 1</li>

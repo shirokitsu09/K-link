@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="./resources/css/globalTEST.css" />
-    <link rel="stylesheet" href="./resources/css/home1.css" />
+    <link rel="stylesheet" href="../css/globalTEST.css" />
+    <link rel="stylesheet" href="../css/home1.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" />
 </head>
 
@@ -17,18 +17,18 @@
         <div class="contentselect">
             <div class="Arrow">
                 <div id="Hobby" onclick="changeImg()" class="LeftArrow">
-                    <img src="./resources/images/LeftArrow.svg" alt="">
+                    <img src="../images/LeftArrow.svg" alt="">
                 </div>
 
                 <div id="Library" onclick="changeImg()" class="RightArrow">
-                    <img src="./resources/images/RightArrow.svg" alt="">
+                    <img src="../images/RightArrow.svg" alt="">
                 </div>
 
                 <div class="group-parent">
                     <div class="ellipse-parent">
                         <div class="group-child"></div>
                         <a id="link" href="hobby-home.php">
-                            <img class="MainIcon" alt="" src="./resources/images/HobbyIcon.svg" />
+                            <img class="MainIcon" alt="" src="../images/HobbyIcon.svg" />
                         </a>
                     </div>
 
@@ -42,13 +42,13 @@
                 let mainIcon = document.querySelector('.MainIcon');
                 let content = document.getElementById('content');
 
-                if (mainIcon.src.match('./resources/images/HobbyIcon.svg')) {
-                    mainIcon.src = './resources/images/LibraryIcon.svg';
+                if (mainIcon.src.match('../images/HobbyIcon.svg')) {
+                    mainIcon.src = '../images/LibraryIcon.svg';
                     content.textContent = 'Library';
                     content.className = 'Librarycontent';
                     link.href = 'library-home.php';
-                } else if (mainIcon.src.match('./resources/images/LibraryIcon.svg')) {
-                    mainIcon.src = './resources/images/HobbyIcon.svg';
+                } else if (mainIcon.src.match('../images/LibraryIcon.svg')) {
+                    mainIcon.src = '../images/HobbyIcon.svg';
                     content.textContent = 'Hobby';
                     content.className = 'Hobbycontent';
                     link.href = 'hobby-home.php';
@@ -67,13 +67,13 @@
                     <input type="radio" name="radio-btn" id="ads3">
 
                     <div class="slide first">
-                        <img src="./resources/images/advertise1.svg" alt="">
+                        <img src="../images/advertise1.svg" alt="">
                     </div>
                     <div class="slide">
-                        <img src="./resources/images/advertise2.svg" alt="">
+                        <img src="../images/advertise2.svg" alt="">
                     </div>
                     <div class="slide">
-                        <img src="./resources/images/advertise3.svg" alt="">
+                        <img src="../images/advertise3.svg" alt="">
                     </div>
 
                     <div class="navigation-auto">
@@ -95,13 +95,13 @@
 
         <div id="leftArrowAds" class="LeftArrowAds">
             <div class="rectangle-left">
-                <img class="vector-icon" alt="" src="./resources/images/LeftArrowAds.svg" />
+                <img class="vector-icon" alt="" src="../images/LeftArrowAds.svg" />
             </div>
         </div>
 
         <div id="rightArrowAds" class="RightArrowAds">
             <div class="rectangle-right">
-                <img class="vector-icon" alt="" src="./resources/images/RightArrowAds.svg" />
+                <img class="vector-icon" alt="" src="../images/RightArrowAds.svg" />
             </div>
         </div>
 

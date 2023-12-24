@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./resources/css/globalTEST.css" />
-    <link rel="stylesheet" href="./resources/css/notify.css" />
-    <link rel="stylesheet" href="./resources/css/HEADER.css" />
-    <link rel="stylesheet" href="./resources/css/FOOTER.css" />
+    <link rel="stylesheet" href="../css/globalTEST.css" />
+    <link rel="stylesheet" href="../css/notify.css" />
+    <link rel="stylesheet" href="../css/HEADER.css" />
+    <link rel="stylesheet" href="../css/FOOTER.css" />
     <title>Notify</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
       
       <div class="day-frame">
           <div class="day-background"></div>
-          <img class="day-dropicon" alt="" src="./resources/images/notify-drop.svg" />
+          <img class="day-dropicon" alt="" src="../images/notify-drop.svg" />
           <div class="textday">Day</div>
       </div>
 
@@ -31,7 +31,7 @@
 
       <div class="feature-frame">
         <div class="feature-background"></div>
-        <img class="feature-dropicon" alt="" src="./resources/images/notify-drop.svg" />
+        <img class="feature-dropicon" alt="" src="../images/notify-drop.svg" />
         <div class="textfeature">Feature</div>
       </div>
         </div> -->

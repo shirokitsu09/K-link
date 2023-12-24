@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library-Home</title>
 
-    <link rel="stylesheet" href="./resources/css/hobby-home.css" />
-    <link rel="stylesheet" href="./resources/css/globalTEST.css" />
-    <link rel="stylesheet" href="./resources/css/HEADER.css" />
-    <link rel="stylesheet" href="./resources/css/FOOTER.css" />
-    <link rel="stylesheet" href="./resources/css/hamburger.css" />
+    <link rel="stylesheet" href="../css/hobby-home.css" />
+    <link rel="stylesheet" href="../css/globalTEST.css" />
+    <link rel="stylesheet" href="../css/HEADER.css" />
+    <link rel="stylesheet" href="../css/FOOTER.css" />
+    <link rel="stylesheet" href="../css/hamburger.css" />
 
 </head>
 <body>
