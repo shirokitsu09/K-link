@@ -1,0 +1,303 @@
+.list-frame {
+    position: relative;
+    background-color: transparent;
+    right: 60%;
+    left: 40%;
+    width: 360px;
+    height: 800px;
+    overflow: scroll;
+    text-align: left;
+    font-family: var(--subtitle-1);
+    font-size: var(--subtitle-1-size);
+    color: var(--color-black);
+}
+
+.list-inner {
+    position: relative;
+    border-radius: 20px;
+    background-color: var(--basecolor-white);
+    padding-inline: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 300px;
+    height: 280px;
+    top: 10px;
+    left: 15px;
+    cursor: pointer;
+}
+
+.list-inner :hover{
+    background-color: var(--color-lightcyan);
+}
+
+.tag1 {
+    position: relative;
+    text-align: center;
+    border-radius: 40px;
+    background-color: var(--neutrals1);
+    width: max-content;
+    padding-inline: 5px;
+    height: 15px;
+    top: 5px;
+    left: 27%;
+    font-size: var(--overline-size);
+}
+
+.tag2 {
+    position: absolute;
+    text-align: center;
+    border-radius: 40px;
+    background-color: var(--neutrals1);
+    padding-inline: 5px;
+    width: max-content;
+    height: 15px;
+    top: 5px;
+    left: 53%;
+    border-radius: 40px;
+    font-size: var(--overline-size);
+}
+
+.tag3 {
+    position: absolute;
+    text-align: center;
+    border-radius: 40px;
+    background-color: var(--neutrals1);
+    padding-inline: 5px;
+    width: max-content;
+    height: 15px;
+    top: 25px;
+    left: 20%;
+    border-radius: 40px;
+    font-size: var(--overline-size);
+}
+
+.tag1:empty,
+.tag2:empty,
+.tag3:empty {
+    display: none;
+}
+
+.faculty {
+    position: absolute;
+    height: max-content;
+    width: max-content;
+    bottom: 20px;
+    right: 15px;
+    display: inline-block;
+    color: var(--primary);
+}
+
+.group-amount {
+    position: absolute;
+    display: inline-block;
+    top: 25px;
+    right: 14px;
+    color: var(--accent);
+    font-size: var(--h6-size);
+    width: max-content;
+    height: max-content;
+}
+
+.subject {
+    position: absolute;
+    display: inline-block;
+    height: max-content;
+    width: max-content;
+    top: 45px;
+    left: 25px;
+    color: var(--color-black);
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--h5-size);
+}
+
+.group-date {
+    position: absolute;
+    display: inline-block;
+    height: max-content;
+    width: max-content;
+    top: 125px;
+    left: 25px;
+    font-size: var(--subtitle-1-size);
+}
+
+.mentor {
+    position: absolute;
+    font-size: var(--h6-size);
+    color: var(--neutrals1);
+    display: inline-block;
+    height: max-content;
+    width: max-content;
+    top: 95px;
+    left: 25px;
+}
+
+.group-location {
+    position: absolute;
+    display: inline-block;
+    height: max-content;
+    width: max-content;
+    top: 150px;
+    left: 25px;
+    font-size: var(--subtitle-1-size);
+}
+
+.group-description {
+    position: absolute;
+    display: inline-block;
+    height: max-content;
+    width: max-content;
+    top: 190px;
+    left: 25px;
+    font-size: var(--subtitle-1-size);
+}
+
+.Tdot-button{
+    position: absolute;
+    width: 32px;
+    height: 16px;
+    object-fit: cover;
+    right: 0px;
+    top: 20px;
+}
+
+.flag-banner {
+    position: absolute;
+    width: 109px;
+    height: 105px;
+    object-fit: cover;
+    left: -9px;
+    top: -32px;
+}
+
+.tutoringjoin {
+    display: block;
+    position: relative;
+    background-color: var(--color-gray);
+    width: 360px;
+    height: 100px;
+    top: -20px;
+    z-index: 5;
+    animation-name: slidein;
+    animation-duration: 500ms;
+  }
+
+  @keyframes slidein {
+    from{transform: translateX(300%);}
+}
+
+.join-button {
+    position: absolute;
+    border-radius: 10px;
+    background-color: var(--basecolor-white);
+    padding-inline: 1px;
+    top: 35px;
+    left: 10px;
+    width: 125px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .member-button {
+    position: absolute;
+    top: 35px;
+    left: 140px;
+    border-radius: 10px;
+    background-color: var(--basecolor-white);
+    padding-inline: 1px;
+    width: 125px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .close-button {
+    position: absolute;
+    border-radius: 10px;
+    background-color: var(--basecolor-white);
+    padding-inline: 1px;
+    top: 35px;
+    left: 270px;
+    width: 75px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+    .button-icon1,
+    .button-icon {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      object-fit: cover;
+    }
+    .button-icon1{
+      width: 43px;
+      height: 46px;
+    }
+  
+    .button-text {
+      position: absolute;
+      height: max-content;
+      width: max-content;
+      top: 10px;
+      left: 45px;
+      display: inline-block;
+    }
+    
+    .group {
+      position: absolute;
+      height: 81.63%;
+      width: 96.72%;
+      top: 8.16%;
+      right: 0;
+      bottom: 10.2%;
+      left: 3.28%;
+    }
+    
+.list-1 {
+    position: relative;
+    top: 30px;
+    left: 0px;
+    width: 320px;
+    height: 320px;
+}
+
+.list-2 {
+    position: relative;
+    top: 5px;
+    left: 0px;
+    width: 320px;
+    height: 320px;
+}
+
+.list-3 {
+    position: relative;
+    top: -20px;
+    left: 0px;
+    width: 320px;
+    height: 320px;
+}
+
+.list-4 {
+    position: relative;
+    top: -45px;
+    left: 0px;
+    width: 320px;
+    height: 320px;
+}
+
+.list-5 {
+    position: relative;
+    top: -70px;
+    left: 0px;
+    width: 320px;
+    height: 320px;
+}
+
+.list-1.padding
+,.list-2.padding
+,.list-3.padding
+,.list-4.padding
+,.list-5.padding {
+    margin-bottom: 50px;
+}
