@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/tutoringlist.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/tutoringlist.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -12,8 +12,11 @@
   </head>
   <body>
     <div class="list-frame">
-      <div class="list-1" id="list-1">
+      <div class="status-bar"></div>
+      <div class="list" id="list-1">
         <div class="list-inner" id="innerlist-1">
+        <img class="flag-banner" alt="" src="../images/tutoringlist/tutoringbanner.svg" />
+        <img class="Tdot-button" alt="" src="../images/tutoringlist/threedot.svg" />
         <div class="tag1">วิศวกรรมศาสตร์</div>
         <div class="tag2">Calculus</div>
         <div class="tag3">วิศวกรรมคอมพิวเตอร์</div>
@@ -25,34 +28,35 @@
         <div class="group-location">สถานที่ : โต๊ะรูม A (โดมเห็ดข้างโรง A)</div>
         <b class="faculty">วิศวกรรมศาสตร์</b>
         </div>
-        <img class="flag-banner" alt="" src="./public/tutoringlist/tutoringbanner.svg" />
-        <img class="Tdot-button" alt="" src="./public/tutoringlist/threedot.svg" />
+        
         <div class="tutoringjoin" id="tutoringjoin-1" style="display: none;">
         <div class="join-button" id="join-1" value="join-1">
             <div class="group">
               <div class="button-text">เข้าร่วมกลุ่ม</div>
-              <img class="button-icon" alt="" src="./public/tutoringlist/tutoring-join.svg" />
+              <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-join.svg" />
             </div>
           </div>
 
           <div class="member-button" id="member-1">
             <div class="group">
               <div class="button-text">สมาชิกกลุ่ม</div>
-              <img class="button-icon" alt="" src="./public/tutoringlist/tutoring-member.svg" />
+              <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-member.svg" />
             </div>
           </div>
 
           <div class="close-button" id="close-1">
                 <div class="group">
                   <div class="button-text">ปิด</div>
-                  <img class="button-icon1" alt="" src="./public/tutoringlist/tutoring-close.svg" />
+                  <img class="button-icon1" alt="" src="../images/tutoringlist/tutoring-close.svg" />
                 </div>
           </div>
       </div>
       </div>
 
-      <div class="list-2" id="list-2">
+      <div class="list" id="list-2">
         <div class="list-inner" id="innerlist-2">
+        <img class="flag-banner" alt="" src="../images/tutoringlist/tutoringbanner.svg" />
+        <img class="Tdot-button" alt="" src="../images/tutoringlist/threedot.svg" />
         <div class="tag1">วิทยาศาสตร์</div>
         <div class="tag2">Biology</div>
         <div class="tag3">ชีวะนาโน</div>
@@ -64,34 +68,35 @@
             <div class="group-location">สถานที่ : พระจอมเกล้า 908</div>
             <b class="faculty">วิทยาศาสตร์</b>
         </div>
-        <img class="flag-banner" alt="" src="./public/tutoringlist/tutoringbanner.svg" />
-        <img class="Tdot-button" alt="" src="./public/tutoringlist/threedot.svg" />
+        
         <div class="tutoringjoin" id="tutoringjoin-2" style="display: none;">
           <div class="join-button" id="join-2">
             <div class="group">
               <div class="button-text">เข้าร่วมกลุ่ม</div>
-              <img class="button-icon" alt="" src="./public/tutoringlist/tutoring-join.svg" />
+              <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-join.svg" />
             </div>
           </div>
 
           <div class="member-button" id="member-2">
             <div class="group">
               <div class="button-text">สมาชิกกลุ่ม</div>
-              <img class="button-icon" alt="" src="./public/tutoringlist/tutoring-member.svg" />
+              <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-member.svg" />
             </div>
           </div>
 
           <div class="close-button" id="close-2">
                 <div class="group">
                   <div class="button-text">ปิด</div>
-                  <img class="button-icon1" alt="" src="./public/tutoringlist/tutoring-close.svg" />
+                  <img class="button-icon1" alt="" src="../images/tutoringlist/tutoring-close.svg" />
                 </div>
           </div>
       </div>
       </div>
 
-      <div class="list-3" id="list-3">
+      <div class="list" id="list-3">
         <div class="list-inner" id="innerlist-3">
+        <img class="flag-banner" alt="" src="../images/tutoringlist/tutoringbanner.svg" />
+        <img class="Tdot-button" alt="" src="../images/tutoringlist/threedot.svg" />
         <div class="tag1">วิศวกรรมศาสตร์</div>
         <div class="tag2">Calculus</div>
         <div class="tag3"></div>
@@ -103,35 +108,36 @@
             <div class="group-location">สถานที่ : Google meet</div>
             <b class="faculty">วิศวกรรมศาสตร์</b>
         </div> 
-        <img class="flag-banner" alt="" src="./public/tutoringlist/tutoringbanner.svg" />
-        <img class="Tdot-button" alt="" src="./public/tutoringlist/threedot.svg" />
+        
         <div class="tutoringjoin" id="tutoringjoin-3" style="display: none;">
         <div class="join-button" id="join-3">
           <div class="group">
             <div class="button-text">เข้าร่วมกลุ่ม</div>
-            <img class="button-icon" alt="" src="./public/tutoringlist/tutoring-join.svg" />
+            <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-join.svg" />
           </div>
         </div>
 
         <div class="member-button" id="member-3">
           <div class="group">
             <div class="button-text">สมาชิกกลุ่ม</div>
-            <img class="button-icon" alt="" src="./public/tutoringlist/tutoring-member.svg" />
+            <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-member.svg" />
           </div>
         </div>
 
         <div class="close-button" id="close-3">
               <div class="group">
                 <div class="button-text">ปิด</div>
-                <img class="button-icon1" alt="" src="./public/tutoringlist/tutoring-close.svg" />
+                <img class="button-icon1" alt="" src="../images/tutoringlist/tutoring-close.svg" />
               </div>
         </div>
       </div>
       
       </div>
 
-      <div class="list-4" id="list-4">
+      <div class="list" id="list-4">
         <div class="list-inner" id="innerlist-4">
+        <img class="flag-banner" alt="" src="../images/tutoringlist/tutoringbanner.svg" />
+        <img class="Tdot-button" alt="" src="../images/tutoringlist/threedot.svg" />
         <div class="tag1">วิศวกรรมศาสตร์</div>
         <div class="tag2">Circuits</div>
         <div class="tag3">วิศวกรรมคอมพิวเตอร์</div>
@@ -143,34 +149,35 @@
             <div class="group-location">สถานที่ : E-12 1007</div>
             <b class="faculty">วิศวกรรมศาสตร์</b>
         </div>
-        <img class="flag-banner" alt="" src="./public/tutoringlist/tutoringbanner.svg" />
-        <img class="Tdot-button" alt="" src="./public/tutoringlist/threedot.svg" />
+        
         <div class="tutoringjoin" id="tutoringjoin-4" style="display: none;">
         <div class="join-button" id="join-4">
           <div class="group">
             <div class="button-text">เข้าร่วมกลุ่ม</div>
-            <img class="button-icon" alt="" src="./public/tutoringlist/tutoring-join.svg" />
+            <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-join.svg" />
           </div>
         </div>
 
         <div class="member-button" id="member-4">
           <div class="group">
             <div class="button-text">สมาชิกกลุ่ม</div>
-            <img class="button-icon" alt="" src="./public/tutoringlist/tutoring-member.svg" />
+            <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-member.svg" />
           </div>
         </div>
 
         <div class="close-button" id="close-4">
               <div class="group">
                 <div class="button-text">ปิด</div>
-                <img class="button-icon1" alt="" src="./public/tutoringlist/tutoring-close.svg" />
+                <img class="button-icon1" alt="" src="../images/tutoringlist/tutoring-close.svg" />
               </div>
         </div>
       </div>
       </div>
 
-      <div class="list-5" id="list-5">
+      <div class="list" id="list-5">
         <div class="list-inner" id="innerlist-5">
+        <img class="flag-banner" alt="" src="../images/tutoringlist/tutoringbanner.svg" />
+        <img class="Tdot-button" alt="" src="../images/tutoringlist/threedot.svg" />
         <div class="tag1">วิทยาศาสตร์</div>
         <div class="tag2">Electronic Circuits</div>
         <div class="tag3">ฟิสิกส์อุตสาหกรรม</div>
@@ -182,27 +189,26 @@
             <div class="group-location">สถานที่ : โรงครุ</div>
             <b class="faculty">วิทยาศาสตร์</b>
         </div>
-          <img class="flag-banner" alt="" src="./public/tutoringlist/tutoringbanner.svg" />
-          <img class="Tdot-button" alt="" src="./public/tutoringlist/threedot.svg" />
+          
           <div class="tutoringjoin" id="tutoringjoin-5" style="display: none;">
           <div class="join-button" id="join-5">
           <div class="group">
             <div class="button-text">เข้าร่วมกลุ่ม</div>
-            <img class="button-icon" alt="" src="./public/tutoringlist/tutoring-join.svg" />
+            <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-join.svg" />
           </div>
         </div>
 
         <div class="member-button" id="member-5">
           <div class="group">
             <div class="button-text">สมาชิกกลุ่ม</div>
-            <img class="button-icon" alt="" src="./public/tutoringlist/tutoring-member.svg" />
+            <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-member.svg" />
           </div>
         </div>
 
         <div class="close-button" id="close-5">
               <div class="group">
                 <div class="button-text">ปิด</div>
-                <img class="button-icon1" alt="" src="./public/tutoringlist/tutoring-close.svg" />
+                <img class="button-icon1" alt="" src="../images/tutoringlist/tutoring-close.svg" />
               </div>
         </div>
       </div>
