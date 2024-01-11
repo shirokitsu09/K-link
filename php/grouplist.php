@@ -13,10 +13,22 @@
   <body>
     <div class="list-frame">
       <div class="status-bar"></div>
+      <div class="tpopup" id="tpopup">
+        <div class="tpopup-drag" id="tpopupdrag"></div>
+        <div class="tpopup-option" id="tpopup-option-1">
+          <img class="tpopup-option-icon" src="../images/librarylist/tdotblock.svg">
+          <div class="tpopup-option-text">บล็อก</div> 
+        </div>
+        <div class="tpopup-option" id="tpopup-option-2">
+        <img class="tpopup-option-icon" src="../images/librarylist/report.svg">
+          <div class="tpopup-option-text">รายงาน</div> 
+        </div>
+      </div>
       <div class="list" id="list-1">
-        <div class="list-inner" id="innerlist-1">
-        <img class="flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
-        <img class="Tdot-button" alt="" src="../images/tutoringlist/threedot.svg" />
+        <div class="list-inner">
+        <div class="list-inner-head">
+        <img class="group-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
+        <img class="tdot-button" id="tdot-1" alt="" src="../images/tutoringlist/threedot.svg" />
             <div class="tag-group">
             <div class="tag">กีฬาและการออกกำลังกาย</div>
             <div class="tag">ชิลๆ</div>
@@ -25,7 +37,9 @@
             <div class="tag"></div>
             <div class="tag"></div>
             </div>
-        <b class="group-amount">1/10</b>
+        <b class="group-amount available">1/10</b>
+        </div>
+        <div class="list-inner-body" id="innerlist-1">
         <b class="group-name">หาเพื่อนไปวิ่งกันเถอะ232...</b>
         <div class="leader">AIJHONG</div>
         <img class="group-profile-picture" alt="" src="../images/grouplist/group-profilepic1.svg" />
@@ -34,6 +48,7 @@
         <div class="group-location">สถานที่ : สนามกีฬา</div>
         <div class="group-description">รายละเอียด : ผู้เล่นจะได้รับบทบาทเป็น โกะโจ เพื่อช่วยเหล่าผู้เล่นให้ได้มากที่สุด ขณะเดียวกันผู้เล่นคนอื่น ๆ </div>
         </div>
+      </div>
         
         <div class="tutoringjoin" id="tutoringjoin-1" style="display: none;">
         <div class="join-button" id="join-1" value="join-1">
@@ -60,9 +75,10 @@
       </div>
 
       <div class="list" id="list-2">
-        <div class="list-inner" id="innerlist-2">
-        <img class="flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
-        <img class="Tdot-button" alt="" src="../images/tutoringlist/threedot.svg" />
+        <div class="list-inner">
+        <div class="list-inner-head">
+        <img class="group-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
+        <img class="tdot-button" id="tdot-2" alt="" src="../images/tutoringlist/threedot.svg" />
                 <div class="tag-group">
                 <div class="tag">อาหารการกิน</div>
                 <div class="tag">ชาบูปิ้งย่าง</div>
@@ -71,7 +87,9 @@
                 <div class="tag-group1">
                 <div class="tag"></div>
                 </div>
-            <b class="group-amount">4/4</b>
+            <b class="group-amount full">4/4</b>
+        </div>
+        <div class="list-inner-body" id="innerlist-2">
             <b class="group-name">หมูกะทะหารสี่</b>
             <div class="leader">ราชาหมูกะทะผู้ยิ่งใหญ่</div>
             <img class="group-profile-picture" alt="" src="../images/grouplist/group-profilepic2.svg" />
@@ -79,6 +97,7 @@
             <div class="group-date">วัน : 25 ก.ค. 2589</div>
             <div class="group-time">เวลา : 16:00 - 19:00 น.</div>
             <div class="group-location">สถานที่ : หมูกะทะเกกี4</div>
+        </div>
         </div>
         
         <div class="tutoringjoin" id="tutoringjoin-2" style="display: none;">
@@ -106,15 +125,18 @@
       </div>
 
       <div class="list" id="list-3">
-        <div class="list-inner" id="innerlist-3">
-        <img class="flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
-        <img class="Tdot-button" alt="" src="../images/tutoringlist/threedot.svg" />
+        <div class="list-inner">
+        <div class="list-inner-head">
+        <img class="group-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
+        <img class="tdot-button" id="tdot-3" alt="" src="../images/tutoringlist/threedot.svg" />
             <div class="tag-group">
             <div class="tag">วิศวกรรมศาสตร์</div>
             <div class="tag">Calculus</div>
             <div class="tag"></div>
             </div>
-            <b class="group-amount">10/ไม่จำกัด</b>
+            <b class="group-amount available">10/ไม่จำกัด</b>
+            </div>
+            <div class="list-inner-body" id="innerlist-3">
             <b class="group-name">เชียร์บาสภาคคอมรวมตัว</b>
             <div class="leader">เหน่ง iot</div>
             <img class="group-profile-picture" alt="" src="../images/grouplist/group-profilepic3.svg" />
@@ -122,6 +144,7 @@
             <div class="group-date">วัน : 9 ธ.ค. 2565</div>
             <div class="group-time">เวลา : 17:00 - 21:00 น.</div>
             <div class="group-location">สถานที่ : สนามบาสข้างโรงเอ</div>
+            </div>
         </div> 
         
         <div class="tutoringjoin" id="tutoringjoin-3" style="display: none;">
@@ -154,6 +177,7 @@
       var list1 = document.getElementById("list-1");
       var tutoringjoin1 =document.getElementById("tutoringjoin-1");
       var innerlist1 = document.getElementById("innerlist-1");
+      var tpopup = document.getElementById("tpopup"); // three dot pop up id
 
       var list2 = document.getElementById("list-2");
       var tutoringjoin2 =document.getElementById("tutoringjoin-2");
@@ -213,6 +237,50 @@
         close_tutoringjoin();
       });
 
+      function tpopup_open(e){
+        tpopup.classList.add("on");
+      }
+
+      function tpopup_close(e){
+        tpopup.classList.remove("on");
+      }
+
+      tdot1 = document.getElementById("tdot-1")
+      tdot1.addEventListener("click",function (e) {
+        close_tutoringjoin();
+        tpopup_open();
+      });
+
+      tdot2 = document.getElementById("tdot-2")
+      tdot2.addEventListener("click",function (e) {
+        close_tutoringjoin();
+        tpopup_open();
+      });
+
+      tdot3 = document.getElementById("tdot-3")
+      tdot3.addEventListener("click",function (e) {
+        close_tutoringjoin();
+        tpopup_open();
+      });
+
+      var tpopupdrag = document.getElementById("tpopupdrag");
+      tpopupdrag.addEventListener("click",function(e){
+        tpopup_close();
+      });
+
+      var tpopupoption1 = document.getElementById("tpopup-option-1");
+      tpopupoption1.addEventListener("click", function(e){
+        console.log("blocked request");
+        tpopup_close();
+      });
+
+      var tpopupoption2 =document.getElementById("tpopup-option-2");
+      tpopupoption2.addEventListener("click", function(e){
+        console.log("reported request")
+        tpopup_close();
+      });
+
+// 
       if (innerlist1) {
         innerlist1.addEventListener("click", function (e) {
           if (list1 != 'list-1.padding'){
