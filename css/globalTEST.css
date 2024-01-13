@@ -3,7 +3,7 @@
 body {
   margin: 0 auto;
   line-height: normal;
-  background: #000;
+  background: #000000;
 }
 
 .background {
@@ -67,4 +67,11 @@ body {
   /* Border radiuses */
   --br-xl: 20px;
   --br-mini: 15px;
+  --br-8xs: 5px;
+  --br-5xs: 8px;
+  --br-11xl: 30px;
+
+  --padding-2xs: 11px;
+  --padding-lg: 18px;
+
 }
