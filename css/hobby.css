@@ -13,7 +13,7 @@ ellipse-parent.frame-child {
     height: 1161px;
   }
   
-  .div {
+  .create-button {
     position: absolute;
     top: 14px;
     left: 36px;
@@ -33,7 +33,7 @@ ellipse-parent.frame-child {
     border-radius: var(--br-8xs);
     background-color: var(--neutrals1);
   }
-  .div1 {
+  .button-cancle {
     position: absolute;
     top: 14px;
     left: 34.45px;
@@ -301,13 +301,6 @@ ellipse-parent.frame-child {
   }
   .place {
     top: 317px;
-  }
-  .div11 {
-    position: absolute;
-    top: 34px;
-    left: 8.18px;
-    display: inline-block;
-    width: 260.71px;
   }
   
   .textarea-child {
