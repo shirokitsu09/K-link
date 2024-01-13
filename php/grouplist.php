@@ -30,8 +30,8 @@
         <img class="group-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
         <img class="tdot-button" id="tdot-1" alt="" src="../images/tutoringlist/threedot.svg" />
             <div class="tag-group">
-            <div class="tag">กีฬาและการออกกำลังกาย</div>
-            <div class="tag">ชิลๆ</div>
+            <div class="tag" id="tag1-1">กีฬาและการออกกำลังกาย</div>
+            <div class="tag" id="tag1-2">ชิลๆ</div>
             </div>
             <div class="tag-group1">
             <div class="tag"></div>
@@ -80,9 +80,9 @@
         <img class="group-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
         <img class="tdot-button" id="tdot-2" alt="" src="../images/tutoringlist/threedot.svg" />
                 <div class="tag-group">
-                <div class="tag">อาหารการกิน</div>
-                <div class="tag">ชาบูปิ้งย่าง</div>
-                <div class="tag">ซอยเกกี</div>
+                <div class="tag" id="tag2-1">อาหารการกิน</div>
+                <div class="tag" id="tag2-2">ชาบูปิ้งย่าง</div>
+                <div class="tag" id="tag2-3">ซอยเกกี</div>
                 </div>
                 <div class="tag-group1">
                 <div class="tag"></div>
@@ -193,6 +193,15 @@
         tutoringjoin3.style.display = 'none';
         document.querySelector('.padding')?.classList.remove('padding')
       }
+      var tag_1= document.getElementById("tag1-1");
+      tag_1.addEventListener("click", function(){
+        location.href = "";
+      });
+
+      var tag_2 = document.getElementById("tag1-2");
+      tag_2.addEventListener("click", function(){
+        location.href = "";
+      });
 
       var close1 = document.getElementById("close-1");
       close1.addEventListener("click", close_tutoringjoin);
