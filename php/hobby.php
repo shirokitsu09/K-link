@@ -23,7 +23,7 @@
         include '../php/header.php';
       ?>
 
-<form action="#" method="#">
+<form action="" method="post">
 
       <div class="main-frame">
         <div class="frame-child"></div>
@@ -31,11 +31,11 @@
         <div class="create-cancle">
           <div class="rectangle-group">
             <div class="group-child"></div>
-            <div class="div">สร้าง</div>
+            <div class="create-button">สร้าง</div>
           </div>
           <div class="rectangle-container">
             <div class="group-item"></div>
-            <div class="div1">ยกเลิก</div>
+            <div class="button-cancle">ยกเลิก</div>
           </div>
         </div>
 
