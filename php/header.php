@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="../css/HEADER.css" />
+<link rel="stylesheet" href="../CSS/HEADER.css" />
 
 <div class="HEADER"></div>
 <img class="app-icon" alt="" src="../images/LOGO.svg" />
 
-<div class="name-header">HOME</div>
+<div class="name-header" id="name-header">HOME</div>
 <div class="LINE"></div>
 <div class="noti-button-icon">
-    <a href="notify.php">
+    <a href="#noti">
         <ion-icon name="notifications"></ion-icon>
     </a>
 </div>

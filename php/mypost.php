@@ -1,37 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hobby-Home</title>
+<link rel="stylesheet" href="../CSS/MYGROUP.css">
+<link rel="stylesheet" href="../CSS/globalTEST.css">
 
-    <link rel="stylesheet" href="../css/hobby-home.css" />
-    <link rel="stylesheet" href="../css/globalTEST.css" />
-    <link rel="stylesheet" href="../css/HEADER.css" />
-    <link rel="stylesheet" href="../css/FOOTER.css" />
-    <link rel="stylesheet" href="../css/creategroup.css" />
 
-</head>
-<body>
-    <div class="background">
-        <?php include 'HEADER.php';?>
-        <?php include 'FOOTER.php';?>
-        <?php include 'creategroup.php';?>
+<div class="Filter-btn-background"> <!--background-->
+    <div class="filter-btn">  
+        <input type="checkbox" name="filter" id="1">
+        <label for="1" class="point">กลุ่มที่อยู่</label>
+
+        <input type="checkbox" name="filter" id="2">
+        <label for="2" class="point">กลุ่มที่สร้าง</label>
+
+        <input type="checkbox" name="filter" id="3">
+        <label for="3" class="point">Hobby</label>
+            
+        <input type="checkbox" name="filter" id="4">
+        <label for="4" class="point">Library</label>
+
+        <input type="checkbox" name="filter" id="5">
+        <label for="5" class="point">Tutoring</label>
+
+            
     </div>
-
-</body>
-<!------------------------------ script ------------------------------>
-    <script>
-        function changeText() {
-          let text = document.querySelector('.name-header');
-          let list = document.querySelector('.list');
-          let indicator = document.getElementById('indicator');
-            text.textContent = 'MyGroup';
-            list.classList.remove('active');
-            indicator.classList.add('hidden');
-          }
-        changeText();
-    </script>
-<!------------------------------ script ------------------------------>
-
-</html>
+</div>
