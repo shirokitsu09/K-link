@@ -18,7 +18,7 @@
             <div class="container">
                 <section id="home" class="s">
                     <div class="c">
-                        <?php include '../PHP/home.php'; ?>
+                        <?php include '../php/home.php'; ?>
                     </div>
                 </section>
 
