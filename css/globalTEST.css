@@ -8,8 +8,9 @@ body {
 
 .background {
   position: relative;
+  /* top:50px;
   left: 40%;
-  right: 60%;
+  right: 60%; */
   background-color: var(--basecolor-white);
   width: 360px;
   height: 800px;
@@ -70,6 +71,7 @@ body {
   --br-8xs: 5px;
   --br-5xs: 8px;
   --br-11xl: 30px;
+  --br-6xl: 25px;
 
   --padding-2xs: 11px;
   --padding-lg: 18px;
