@@ -23,7 +23,7 @@
         include '../php/header.php';
       ?>
 
-<form action="createPostHobby_db.php" method="post" enctype="multipart/form-data">
+<form action="createPostHobby_db_2.php" method="post" enctype="multipart/form-data">
 
       <div class="main-frame">      
         <div class="frame-child"></div>
