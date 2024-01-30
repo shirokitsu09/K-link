@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../CSS/HEADER.css" />
+<link rel="stylesheet" href="../css/HEADER.css" />
 
 <div class="HEADER"></div>
 <img class="app-icon" alt="" src="../images/LOGO.svg" />

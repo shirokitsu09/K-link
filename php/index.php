@@ -24,14 +24,14 @@
 
                 <section id="mygroup" class="s">
                     <div class="c-1">
-                        <?php include '../php/MyGroup.php';?>
+                        <?php include '../php/mypost.php';?>
                         <?php include '../php/tutoringlist.php';?>
                     </div>
                 </section>
 
                 <section id="setting" class="s">
                     <div class="c-2">
-                        <?php include '../php/setting.php';?>
+                        <?php include '../php/settingJANE.php';?>
                     </div>
                 </section>
 

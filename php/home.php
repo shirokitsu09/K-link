@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="../CSS/globalTEST.css"/>
-<link rel="stylesheet" href="../CSS/home1.css"/>
+<link rel="stylesheet" href="../css/globalTEST.css"/>
+<link rel="stylesheet" href="../css/home1.css"/>
 
 
 <div class="contentselect">
@@ -34,7 +34,7 @@
             mainIcon.src = '../images/LibraryIcon.svg';
             content.textContent = 'Library';
             content.className = 'Librarycontent';
-            link.href = '../PHP/library-home.php';
+            link.href = '../php/library-home.php';
         } else if (mainIcon.src.match('../images/LibraryIcon.svg')) {
             mainIcon.src = '../images/HobbyIcon.svg';
             content.textContent = 'Hobby';
