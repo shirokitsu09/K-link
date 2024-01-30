@@ -14,13 +14,13 @@
     background: #06021b;
  } */
  .navigation {
-    position: absolute;
+    position: relative;
     margin-top: 300px;
     right: 0;
-    bottom: 0;
+    bottom: -420px;
     width: 360px;
     /* height: 70px; */
-    height: 95px;
+    height: 80px;
     background: var(--primary);
     display: flex;
     justify-content: center;
@@ -28,6 +28,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     /* box-shadow: 3px -5px 0 rgba(0, 0, 0, 0.25);  */
+    z-index: 5;
  }
  .navigation ul {
     display: flex;
@@ -38,7 +39,7 @@
  .navigation ul li {
     position: relative;
     width: 100px;
-    height: 70px;
+    height: 60px;
     list-style: none;
     z-index: 1;
     top: 15px;
@@ -65,7 +66,7 @@
     transition: .5s;
  }
  .navigation ul li.active a .icon {
-   transform: translateY(-33px);
+   transform: translateY(-26px);
  }
  .navigation ul li a .text {
    position: absolute;
@@ -97,7 +98,7 @@
  .navigation ul li.active a .circle {
    transition: .5s;
    transition-delay: .2s;
-   transform: translateY(-34px) scale(1);
+   transform: translateY(-28px) scale(1);
  }
  .indicator {
    position: absolute;
@@ -122,8 +123,8 @@
    height: 13px;
    /* background: #000; */
    background: transparent;
-   top: 13.5px;
-   left: -18.6px;
+   top: 8.3px;
+   left: -18px;
    border-radius: 50%;
    /* box-shadow: 1px -8px 0 #F85B03; */
    /* box-shadow: 1px -8px 0 var(--neutrals1); */
@@ -135,8 +136,8 @@
    width: 13px;
    height: 13px;
    background: transparent;
-   top: 13.5px;
-   right: -18.6px;
+   top: 8.25px;
+   right: -18px;
    border-radius: 50%;
    /* border-top-left-radius: 20px; */
    /* box-shadow: -1px -8px 0 #F85B03; */

@@ -1,5 +1,4 @@
 .container-icon,
-
 .container-icon {
   height: 100%;
   top: 0;
@@ -48,17 +47,16 @@
   height: 584px;
 }
 
-.option-parent {
-  position: relative;
+.option1-parent {
+  position: absolute;
   top: 34px;
   left: 10px;
   width: 300px;
   height: 40px;
   cursor: pointer;
-  margin-bottom: 10px;
 }
 
-.option-text {
+.option1-text {
   position: relative;
   top: -5px;
   left: 75px;
@@ -69,7 +67,7 @@
   color: var(--color-black);
 }
 
-.option-icon {
+.option1-icon {
   position: absolute;
   height: 30px;
   width: 30px;
