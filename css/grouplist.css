@@ -1,6 +1,6 @@
 .list-frame {
     position: relative;
-    background-color: var(--basecolor-white);
+    background-color: transparent;
     width: 360px;
     height: 800px;
     overflow: scroll;

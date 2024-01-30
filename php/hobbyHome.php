@@ -16,6 +16,7 @@
     <div class="background">
         <?php include 'header.php';?>
         <?php include 'footer.php';?>
+        <?php include 'hobbyList.php';?>
     </div>
 
 </body>
