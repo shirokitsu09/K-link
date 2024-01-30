@@ -16,7 +16,7 @@
     </div>
 
     <div class="option2-parent" id="option2">
-      <img class="option2-icon" alt="" src="../images/bookmark.svg" />
+      <img class="option2-icon" alt="" src="../images/setting/bookmark.svg" />
       <div class="option2-text">saved</div>
     </div>
 
