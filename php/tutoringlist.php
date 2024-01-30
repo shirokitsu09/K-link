@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/globalTEST.css" />
     <link rel="stylesheet" href="../css/tutoringlist.css" />
     <link
       rel="stylesheet"
@@ -28,7 +28,7 @@
         <div class="list-inner">
         <div class="list-inner-head">
         <img class="tutoring-flag-banner" alt="" src="../images/tutoringlist/tutoringbanner.svg" />
-        <img class="tdot-button" id="tdot-1" alt="" src="../images/threedot.svg" />
+        <img class="tdot-button" id="tdot-1" alt="" src="../images/tutoringlist/threedot.svg" />
           <div class="tag-group">
           <div class="tag" id="tag-faculty-1">วิศวกรรมศาสตร์</div>
           <div class="tag" id="tag-subject-1">Calculus</div>
