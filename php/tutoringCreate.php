@@ -19,7 +19,7 @@
     
       <link rel="stylesheet" href="../css/HEADER.css" />
       <?php
-        include '../php/header.php';
+        include 'header.php';
       ?>
 
       <div class="main-frame">
@@ -48,7 +48,7 @@
                             <!-- coding -->
                             <link rel="stylesheet" href="../css/date.css" />
                             <?php
-                              include '../php/date.php';
+                              include 'assets/date.php';
                             ?>
                             <!-- coding -->
                     </div>
@@ -73,7 +73,7 @@
                         <!-- coding -->
                         <link rel="stylesheet" href="../css/time.css" />
                         <?php
-                          include '../php/time.php';
+                          include 'assets/time.php';
                         ?>
                         <!-- coding -->
                 </div>
