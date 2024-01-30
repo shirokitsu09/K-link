@@ -39,7 +39,7 @@
             mainIcon.src = '../images/HobbyIcon.svg';
             content.textContent = 'Hobby';
             content.className = 'Hobbycontent';
-            link.href = '../PHP/hobby-home.php';
+            link.href = '../php/hobby-home.php';
         }
     }
 </script>

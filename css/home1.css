@@ -50,12 +50,14 @@
 }
 .Hobbycontent{
   position: absolute;
+  color: var(--basecolor-white);
   top: 270px;
   left: 66px;
 }
 
 .Librarycontent{
   position: absolute;
+  color: var(--basecolor-white);
   top: 270px;
   left: 63.5px;
 }
