@@ -31,7 +31,7 @@
             <option value="22">22</option>
             <option value="23">23</option>
         </select>
-        <input type="text" id="HourInput" name="Hour" style="display: none;" value="--">
+        <input type="text" id="HourInput" name="Hour" style="display: none;" value="">
     </div>
 
     <div id="dropdown-minute" class="dropdown-minute hidden">
@@ -49,7 +49,7 @@
             <option value="50">50</option>
             <option value="55">55</option>
         </select>
-        <input type="text" id="MinuteInput" name="Minute" style="display: none;" value="--">
+        <input type="text" id="MinuteInput" name="Minute" style="display: none;" value="">
     </div>
         <input type="time" id="CombinedTimeInput" name="CombinedTime" hidden>
 <!-- -------------------------------------------------------------- -->
