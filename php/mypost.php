@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="../CSS/MYGROUP.css">
-<link rel="stylesheet" href="../CSS/globalTEST.css">
+<link rel="stylesheet" href="../css/MYGROUP.css">
+<link rel="stylesheet" href="../css/globalTEST.css">
 
 
 <div class="Filter-btn-background"> <!--background-->
