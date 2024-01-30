@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="list-frame">
-      <div class="status-bar"></div>
+      <!-- <div class="status-bar"></div> -->
       <div class="tpopup" id="tpopup">
         <div class="tpopup-drag" id="tpopupdrag"></div>
         <div class="tpopup-option" id="tpopup-option-1">
@@ -264,6 +264,8 @@
         </div>
       </div>
       </div>
+
+      <div class="list-111"></div> <!-- <=== NEW -->
     </div>
 
 

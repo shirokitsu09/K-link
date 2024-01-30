@@ -1,6 +1,8 @@
 .list-frame {
     position: relative;
-    background-color: var(--basecolor-white);
+    /* background-color: var(--basecolor-white); */
+    background-color: transparent; /*<-------new*/
+    top: 38%; /*<-----new*/
     width: 360px;
     height: 800px;
     overflow: scroll;
@@ -385,4 +387,12 @@
 {
     margin-bottom: 50px;
 }
+
+/*================NEW==============*/
+.list-111 {
+    width: 300px;
+    height: 400px;
+    background-color:transparent;
+}
+/*=================================*/
 

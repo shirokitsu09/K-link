@@ -25,7 +25,7 @@
                 <section id="mygroup" class="s">
                     <div class="c-1">
                         <?php include '../php/mypost.php';?>
-                        
+                        <?php include '../php/tutoringlist.php';?>
                     </div>
                 </section>
 
