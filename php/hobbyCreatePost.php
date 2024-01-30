@@ -23,9 +23,9 @@
         include '../php/header.php';
       ?>
 
-<form action="" method="post">
+<form action="hobbyCreatePost_db2.php" method="post" enctype="multipart/form-data">
 
-      <div class="main-frame">
+      <div class="main-frame">      
         <div class="frame-child"></div>
 
         <div class="date-select">
@@ -33,47 +33,50 @@
               <div class="div2">วันที่</div>
             </div>
           <div class="frame-div">
+
             <div class="ellipse-parent">
               <div class="group-inner"></div>
-              <div class="div3" onclick="toggleBackground(this); selectMon();">จ
-                <input type="text" style="display: none;" name="date[]" value=""/>
-              </div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="0">จ
+                <input type="checkbox" hidden name="date[]" id="monday" value="monday">
+              </label>
+            </div>
+
+            <div class="ellipse-parent">
+              <div class="group-inner"></div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="1">อ
+                <input type="checkbox" hidden name="date[]" id="tuesday" value="tuesday">
+              </label>
+            </div>
+
+            <div class="ellipse-parent">
+              <div class="group-inner"></div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="2">พ
+                <input type="checkbox" hidden name="date[]" id="wednesday" value="wednesday">
+              </label>
             </div>
             <div class="ellipse-parent">
               <div class="group-inner"></div>
-              <div class="div3" onclick="toggleBackground(this); selectTue();">อ
-                <input type="text" style="display: none;" name="date[]" value=""/>
-              </div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="3">พฤ
+                <input type="checkbox" hidden name="date[]" id="thursday" value="thursday">
+              </label>
             </div>
             <div class="ellipse-parent">
               <div class="group-inner"></div>
-              <div class="div3" onclick="toggleBackground(this); selectWed();">พ
-                <input type="text" style="display: none;" name="date[]" value=""/>
-              </div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="4">ศ
+                <input type="checkbox" hidden name="date[]" id="friday" value="friday">
+              </label>
             </div>
             <div class="ellipse-parent">
               <div class="group-inner"></div>
-              <div class="div3" onclick="toggleBackground(this); selectThu();">พฤ
-                <input type="text" style="display: none;" name="date[]" value=""/>
-              </div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="5">ส
+                <input type="checkbox" hidden name="date[]" id="saturday" value="saturday">
+              </label>
             </div>
             <div class="ellipse-parent">
               <div class="group-inner"></div>
-              <div class="div3" onclick="toggleBackground(this); selectFri();">ศ
-                <input type="text" style="display: none;" name="date[]" value=""/>
-              </div>
-            </div>
-            <div class="ellipse-parent">
-              <div class="group-inner"></div>
-              <div class="div3" onclick="toggleBackground(this); selectSat();">ส
-                <input type="text" style="display: none;" name="date[]" value=""/>
-              </div>
-            </div>
-            <div class="ellipse-parent">
-              <div class="group-inner"></div>
-              <div class="div3" onclick="toggleBackground(this); selectSun();">อา
-                <input type="text" style="display: none;" name="date[]" value=""/>
-              </div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="6">อา
+                <input type="checkbox" hidden name="date[]" id="sunday" value="sunday">
+              </label>
             </div>
           </div>
         </div>
@@ -87,7 +90,7 @@
                       <!-- coding -->
                       <link rel="stylesheet" href="../css/time.css" />
                       <?php
-                        include '../php/time.php';
+                        include '../php/assets/time.php';
                       ?>
                       <!-- coding -->
               </div>
@@ -96,7 +99,7 @@
 
             <div class="member">
               <div class="name">สมาชิก</div>
-              <input type="text" class="first2 textfields-child" name="member" placeholder="จำนวนที่รับได้" maxlength="2"></input>
+              <input type="text" class="first2 textfields-child" name="memberMax" placeholder="จำนวนที่รับได้" maxlength="2"></input>
           </div>
 
         </div>
@@ -106,9 +109,9 @@
           <input type="text" class="first2 textfields-child" name="activityName" placeholder="ชื่อกลุ่มหรือกิจกรรม..." maxlength="27"></input>
         </div>
 
-        <div class="place">
-          <label for="place" class="name">สถานที่</label>
-          <input type="text" class="first2 textfields-child" name="place" placeholder="สถานที่ทำกิจกรรม"></input>
+        <div class="location">
+          <label for="location" class="name">สถานที่</label>
+          <input type="text" class="first2 textfields-child" name="location" placeholder="สถานที่ทำกิจกรรม"></input>
         </div>
         
         <div class="detail">
@@ -120,7 +123,7 @@
 
           <label for="PicProfileGroup" class="div12">รูปโปรไฟล์กลุ่ม</label>
           <label class="group-child8">
-            <input type="file" name="image" id="image" accept="image/*">     
+            <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png, .pdf">     
             <div class="PicUpload">    
               <img class="vector-icon" alt="" src="../images/plus.svg" />
             </div> 
@@ -139,12 +142,11 @@
 
         <div class="create-cancle">
           <div class="rectangle-group">
-            <input type="button" value="สร้าง" class="create-button">
+            <button type="submit" name="Create" class="create-button">สร้าง</button>
           </div>
           <div class="rectangle-container">
-            <input type="button" value="ยกเลิก" class="button-cancle">
-          </input>
-        </div>
+            <button type="button" name="Cancle" class="button-cancle">ยกเลิก</button>
+          </div>
 
       </div>
 
@@ -152,15 +154,16 @@
 
     </div>
   </body>
-  
-  <!-- ... Your HTML code ... -->
-
-<!-- ... Your HTML code ... -->
 
 <script>
     function toggleBackground(element) {
-        element.classList.toggle('select');
+      let checkbox = element.querySelector('input[type="checkbox"]');
+        if (checkbox.checked) {
+        element.classList.add('select');
+    } else {
+        element.classList.remove('select');
     }
+  }
 
     function changeText() {
         let text = document.querySelector('.name-header');
@@ -184,47 +187,6 @@
 
     changeText();
 
-    function selectDay(day) {
-        let inputElement = document.querySelector('input[name="date"]');
-    
-        if (inputElement.value === '') {
-            inputElement.value = day; 
-        } else if (inputElement.value === day) {
-            inputElement.value = ''; 
-        }
-    }
-
-    function selectMon() {
-        selectDay("จันทร์");
-    }
-
-    function selectTue() {
-        selectDay("อังคาร");
-    }
-
-    function selectWed() {
-        selectDay("พุธ");
-    }
-
-    function selectThu() {
-        selectDay("พฤหัสบดี");
-    }
-
-    function selectFri() {
-        selectDay("ศุกร์");
-    }
-
-    function selectSat() {
-        selectDay("เสาร์");
-    }
-
-    function selectSun() {
-        selectDay("อาทิตย์");
-    }
 </script>
-
-<!-- ... Your HTML code ... -->
-
-</html>
 
 </html>

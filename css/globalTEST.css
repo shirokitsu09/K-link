@@ -3,13 +3,14 @@
 body {
   margin: 0 auto;
   line-height: normal;
-  background: #000;
+  background: #000000;
 }
 
 .background {
   position: relative;
-  /* left: 40%;
-  right: 60%; */
+  top:50px;
+  left: 40%;
+  right: 60%;
   background-color: var(--basecolor-white);
   width: 360px;
   height: 800px;
@@ -19,8 +20,7 @@ body {
   /* color: var(--neutrals1); */
   font-family: var(--h4);
   /* background: var(--neutrals1); */
-  /* background: var(--basecolor-white); */
-  background: var(--Backguard-1, linear-gradient(180deg, #F89603 0%, #F86A03 56.25%, #F89603 100%));
+  background: #fff;
   /* background: var(--Backguard-1, linear-gradient(180deg, #F89603 0%, #F86A03 56.25%, #F85B03 100%)); */
   /* background: linear-gradient(191deg, #F96E20 2.37%, #FBBF66 42.3%, #F89603 98.21%); */
 
@@ -68,5 +68,12 @@ body {
   /* Border radiuses */
   --br-xl: 20px;
   --br-mini: 15px;
-}
+  --br-8xs: 5px;
+  --br-5xs: 8px;
+  --br-11xl: 30px;
+  --br-6xl: 25px;
 
+  --padding-2xs: 11px;
+  --padding-lg: 18px;
+
+}
