@@ -450,8 +450,8 @@ ellipse-parent.frame-child {
   overflow-y: auto;
   text-align: left;
   color: var(--neutrals2);
-  left: 40%;
-  top: 50px;
+  /* left: 40%;
+  top: 50px; */
   overflow-x: hidden;
   &::-webkit-scrollbar {
     width: 0;
