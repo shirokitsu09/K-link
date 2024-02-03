@@ -87,7 +87,7 @@ ellipse-parent.frame-child {
 
 .div2 {
   position: absolute;
-  top: 18.6%;
+  top: 20%;
   left: 0;
   text-transform: capitalize;
 }
@@ -95,8 +95,8 @@ ellipse-parent.frame-child {
 .group-inner,
 .textfields {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 90px;
+  left: 23px;
   width: 290px;
   height: 86px;
 }
@@ -157,12 +157,12 @@ ellipse-parent.frame-child {
 }
 
 .frame-div {
-  height: 46.51%;
-  width: 290px;
-  top: 50%;
+  height: 0;
+  width: fit-content;
+  top: 45px;
   right: 0;
-  bottom: 3.49%;
-  left: 0;
+  bottom: 0;
+  left: 11.25px;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
@@ -181,6 +181,19 @@ ellipse-parent.frame-child {
   position: absolute;
 }
 
+.name a{
+  position: relative;
+  left: 1px;
+  color: red;
+  font-size: var(--font-size-xs);
+}
+
+.name a1{
+  position: relative;
+  left: 5px;
+  color: red;
+  font-size: var(--font-size-xs);
+}
 
 .textfields-child {
   position: absolute;
@@ -410,10 +423,12 @@ ellipse-parent.frame-child {
 .group-child10,
 .rectangle-parent2 {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
   width: 118px;
   height: 30px;
+  padding: 3px;
+  padding-left: 1px;
 }
 .group-child10 {
   top: 47px;
@@ -430,6 +445,11 @@ ellipse-parent.frame-child {
   left: 18px;
   width: 275px;
   height: 221px;
+}
+.tag {
+  position: absolute;
+  top: 69.2%;
+  left: 11px;
 }
 .main-frame {
   position: absolute;
