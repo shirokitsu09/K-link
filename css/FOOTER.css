@@ -15,12 +15,12 @@
  } */
  .navigation {
     position: relative;
-    margin-top: 300px;
+    margin-top: 30px;/*ถ้าเจ๊งแก้เป็น 300 px*/
     right: 0;
-    bottom: -420px;
+    bottom: -420;
     width: 360px;
     /* height: 70px; */
-    height: 80px;
+    min-height: 80px;
     background: var(--primary);
     display: flex;
     justify-content: center;

@@ -1,13 +1,14 @@
 .list-frame {
-    position: absolute;
+    position: relative;
     background-color: transparent;
-    width: auto;
-    height: auto;
-    overflow-x: hidden;
+    width: fit-content;
+    height: fit-content;
     text-align: left;
     font-family: var(--subtitle-1);
     font-size: var(--subtitle-1-size);
     color: var(--color-black);
+    top:90px;
+    margin-bottom: 95px;
 }
 
 .status-bar {
@@ -88,7 +89,7 @@
 .tag:empty {
     display: none;
 }
-
+/*  */
 .group-amount {
     position: absolute;
     display: inline-block;
@@ -130,7 +131,7 @@
     top: 25px;
     left: 25px;
 }
-
+/* ----------- */
 .group-profile-picture {
     position: absolute;
     width: 100px;
