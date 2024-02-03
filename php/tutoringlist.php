@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="list-frame">
-      <div class="status-bar"></div>
+      <!-- <div class="status-bar"></div> -->
       <div class="tpopup" id="tpopup">
         <div class="tpopup-drag" id="tpopupdrag"></div>
         <div class="tpopup-option" id="tpopup-option-1">
@@ -28,7 +28,7 @@
         <div class="list-inner">
         <div class="list-inner-head">
         <img class="tutoring-flag-banner" alt="" src="../images/tutoringlist/tutoringbanner.svg" />
-        <img class="tdot-button" id="tdot-1" alt="" src="../images/tutoringlist/threedot.svg" />
+        <img class="tdot-button" id="tdot-1" alt="" src="../images/threedot.svg" />
           <div class="tag-group">
           <div class="tag" id="tag-faculty-1">วิศวกรรมศาสตร์</div>
           <div class="tag" id="tag-subject-1">Calculus</div>
@@ -264,6 +264,8 @@
         </div>
       </div>
       </div>
+
+      <div class="list-111"></div> <!-- <=== NEW -->
     </div>
 
 

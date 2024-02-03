@@ -14,9 +14,7 @@
 </head>
 <body>
     <div class="background">
-        <?php include 'HEADER.php';?>
-        <?php include 'FOOTER.php';?>
-        <?php include 'creategroup.php';?>
+        <?php include 'hobbyList.php';?>
     </div>
 
 </body>
@@ -26,7 +24,7 @@
           let text = document.querySelector('.name-header');
           let list = document.querySelector('.list');
           let indicator = document.getElementById('indicator');
-            text.textContent = 'MyGroup';
+            text.textContent = 'Hobby';
             list.classList.remove('active');
             indicator.classList.add('hidden');
           }

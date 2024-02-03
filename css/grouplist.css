@@ -1,9 +1,9 @@
 .list-frame {
-    position: relative;
-    background-color: var(--basecolor-white);
-    width: 360px;
-    height: 800px;
-    overflow: scroll;
+    position: absolute;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    overflow-x: hidden;
     text-align: left;
     font-family: var(--subtitle-1);
     font-size: var(--subtitle-1-size);

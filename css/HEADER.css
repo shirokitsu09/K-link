@@ -33,15 +33,15 @@
 }
 .LINE {
   position: absolute;
-  top: 40px;
+  top: 39px;
   left: 106px;
   border-radius: 5px;
   background-color: var(--neutrals1);
   box-shadow: 1.5px 5px 0 rgba(0, 0, 0, 0.25);
-  border: 1px solid var(--neutrals1);
+  border: 2px solid var(--neutrals1);
   box-sizing: border-box;
-  width: 2px;
-  height: 28px;
+  width: 3px;
+  height: 30px;
 }
 .noti-button-icon {
   position: absolute;
