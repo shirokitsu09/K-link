@@ -15,6 +15,7 @@
             <a href="#mygroup" onclick="changeText('MYPOST')">
                 <span class="icon">
                     <ion-icon name="people"></ion-icon>
+                    <!-- <img alt="" src="../images/Group-Icon.svg" /> -->
                 </span>
                 <span class="text">MyPost</span>
                 <span class="circle"></span>
