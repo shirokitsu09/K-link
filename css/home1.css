@@ -50,14 +50,20 @@
 }
 .Hobbycontent{
   position: absolute;
-  color: var(--basecolor-white);
+  /* color: var(--basecolor-white); */
+  color: var(--neutrals2);
+  font-weight: bold;
+  font-size: 34px;
   top: 270px;
   left: 66px;
 }
 
 .Librarycontent{
   position: absolute;
-  color: var(--basecolor-white);
+  /* color: var(--basecolor-white); */
+  color: var(--neutrals2);
+  font-weight: bold;
+  font-size: 34px;
   top: 270px;
   left: 63.5px;
 }
