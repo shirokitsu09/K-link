@@ -48,7 +48,7 @@
                             <!-- coding -->
                             <link rel="stylesheet" href="../css/date.css" />
                             <?php
-                              include 'assets/date.php';
+                              include 'assets/day.php';
                             ?>
                             <!-- coding -->
                     </div>

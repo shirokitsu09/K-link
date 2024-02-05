@@ -7,7 +7,7 @@
     font-family: var(--subtitle-1);
     font-size: var(--subtitle-1-size);
     color: var(--color-black);
-    top:90px;
+    top:15px;
     margin-bottom: 95px;
 }
 
@@ -171,11 +171,14 @@
 }
 
 .group-description {
+    word-wrap: break-word;
+    overflow-x: auto;
     position: absolute;
     display: inline-block;
-    height: max-content;
+    padding: 10px;
+    height: 70px;
     width: 260px;
-    top: 155px;
+    top: 150px;
     left: 25px;
     font-size: var(--subtitle-1-size);
 }
@@ -388,5 +391,5 @@
 
 .list.padding
 {
-    margin-bottom: 50px;
+    margin-bottom: 95px;
 }

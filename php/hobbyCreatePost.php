@@ -29,13 +29,13 @@
         <div class="frame-child"></div>
 
         <div class="hobby-name">
-          <label for="ActivityName" class="name">ชื่อกิจกรรม</label>
+          <label for="ActivityName" class="name">ชื่อกิจกรรม <a class="star">*<a></label>
           <input type="text" class="first2 textfields-child" name="activityName" placeholder="ชื่อกลุ่มหรือกิจกรรม..." maxlength="27"></input>
         </div>
 
         <div class="day-select">
             <div class="textfields">
-              <div class="div2">วันที่</div>
+              <div class="div2">วันที่ <a class="star">*<a></div>
             
             </div>
           <div class="frame-div">
@@ -91,7 +91,7 @@
 
           <div class="textfields-parent">
             <div class="textfields1">
-              <div class="name">เวลา <a>*จำเป็น<a></div>
+              <div class="name">เวลา <a class="star">*</a></div>
               <div class="textfields-child">
                       <!-- coding -->
                       <link rel="stylesheet" href="../css/time.css" />
@@ -104,14 +104,17 @@
           </div>
 
             <div class="member">
-              <div class="name">สมาชิก<a1>*ไม่จำกัดใส่"00"<a1></div>
+              <div class="name">สมาชิก <a class="star">*</a></div>
               <input type="text" class="first2 textfields-child" name="memberMax" placeholder="จำนวนที่รับได้" maxlength="2"></input>
             </div>
 
+            <div class="requairment">
+              <div class="name"><a class="star">*</a> ไม่จำกัดสมาชิก<br>โปรดพิมพ์ "00"</div>
+            </div>
         </div>
 
         <div class="location">
-          <label for="location" class="name">สถานที่</label>
+          <label for="location" class="name">สถานที่ <a class="star">*</a></label>
           <input type="text" class="first2 textfields-child" name="location" placeholder="สถานที่ทำกิจกรรม"></input>
         </div>
         

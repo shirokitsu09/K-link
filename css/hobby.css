@@ -10,7 +10,7 @@ ellipse-parent.frame-child {
   border: 3px solid var(--accent);
   box-sizing: border-box;
   width: 313px;
-  height: 1161px;
+  height: 1230px;
 }
 
 .create-button {
@@ -59,7 +59,7 @@ ellipse-parent.frame-child {
   height: 48px;
 }
 .create-cancle {
-  top: 1085px;
+  top: 89%;
   left: 13px;
   width: 292px;
   height: 49px;
@@ -111,6 +111,7 @@ ellipse-parent.frame-child {
   left: 0;
 }
 .group-inner {
+  top: 0;
   right: 0;
   bottom: 0;
   border-radius: 50%;
@@ -126,6 +127,7 @@ ellipse-parent.frame-child {
   width: 38px;
   height: 38px;
   cursor: pointer;
+  top: 0;
 }
 .div3:hover {
   background-color: var(--accent);
@@ -159,7 +161,7 @@ ellipse-parent.frame-child {
 .frame-div {
   height: 0;
   width: fit-content;
-  top: 45px;
+  top: 135px;
   right: 0;
   bottom: 0;
   left: 11.25px;
@@ -181,16 +183,9 @@ ellipse-parent.frame-child {
   position: absolute;
 }
 
-.name a{
+.star{
   position: relative;
   left: 1px;
-  color: red;
-  font-size: var(--font-size-xs);
-}
-
-.name a1{
-  position: relative;
-  left: 5px;
   color: red;
   font-size: var(--font-size-xs);
 }
@@ -211,7 +206,7 @@ ellipse-parent.frame-child {
   position: absolute;
   top: 0;
   left: 0;
-  width: 136.65px;
+  width: 162px;
   height: 86.13px;
 }
 
@@ -219,7 +214,7 @@ ellipse-parent.frame-child {
   position: absolute;
   top: 5px;
   left: 0;
-  width: 128px;
+  width: 162px;
   height: 86px;
 }
 .textfields-parent {
@@ -234,7 +229,7 @@ ellipse-parent.frame-child {
   position: absolute;
   top: 0;
   right: 0;
-  width: 128px;
+  width: 100px;
   height: 86px;
 }
 
@@ -243,12 +238,26 @@ ellipse-parent.frame-child {
   top: 201px;
   right: 21.5px;
   width: 270px;
-  height: 100px;
+  height: 130px;
 }
+
+.requairment {
+  height: 30px;
+  width: 100px;
+  bottom: 10px;
+  position: absolute;
+  left: 170px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+}
+
 .first2 {
   top: 25px;
   font-size: var(--subtitle-1-size);
   color: var(--neutrals2);
+
 }
 
 .detail-text {
@@ -316,13 +325,10 @@ ellipse-parent.frame-child {
 
 .location {
   position: absolute;
-  top: 16px;
+  top: 27%;
   left: 21.5px;
   width: 270px;
   height: 68px;
-}
-.location {
-  top: 317px;
 }
 
 .textarea-child {
@@ -353,7 +359,7 @@ ellipse-parent.frame-child {
 
 .detail {
   position: absolute;
-  top: 405px;
+  top: 35%;
   left: 21.5px;
   width: 270px;
   height: 160px;
@@ -385,7 +391,7 @@ ellipse-parent.frame-child {
 .group-child9,
 .PicUpload-frame {
   position: absolute;
-  top: 564px;
+  top: 47%;
   left: 21.5px;
   width: 270px;
   height: 255px;
@@ -431,7 +437,7 @@ ellipse-parent.frame-child {
   padding-left: 1px;
 }
 .group-child10 {
-  top: 47px;
+  top: 45%;
   left: 5px;
   border-radius: var(--br-8xs);
   border: 1px solid var(--neutrals2);
@@ -453,7 +459,7 @@ ellipse-parent.frame-child {
 }
 .main-frame {
   position: absolute;
-  height: 153.88%;
+  height: 1300px;
   width: 86.94%;
   top: 14%;
   right: 6.67%;
@@ -470,8 +476,6 @@ ellipse-parent.frame-child {
   overflow-y: auto;
   text-align: left;
   color: var(--neutrals2);
-  left: 40%;
-  top: 50px;
   overflow-x: hidden;
   &::-webkit-scrollbar {
     width: 0;

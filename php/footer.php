@@ -50,6 +50,8 @@
 <script>
   function changeText(text) {
     const textContainer = document.getElementById('name-header');
+    let indicator = document.querySelector('.indicator'); 
+
     textContainer.innerText = text;
 
     if (text === 'MYPOST') {
@@ -61,6 +63,9 @@
     else{
         textContainer.style.left = '135px';
     }
+
+    indicator.classList.remove('hidden');
+
   }
 </script>
 
