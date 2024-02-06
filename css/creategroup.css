@@ -1,9 +1,8 @@
-/*------global-----------
 body {
-  margin: 0;
-  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 } 
---------global---------*/
 
 .creategroup-button {
   width: 100%;
@@ -188,4 +187,21 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.Lock {
+  bottom: 0%;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  flex: 0 0 auto;
+  
+}
+
+.background {
+  display:flex;
+  flex-direction: column;
+  &::-webkit-scrollbar {
+    width: 0;
+}
 }
