@@ -1,57 +1,97 @@
-const tabsBox = document.querySelector(".tabs-box");
-allTabs = document.querySelectorAll(".tab");
-arrowIcons = document.querySelectorAll(".icon i");
+const btnLeft = document.querySelector(".left");
+const btnRight = document.querySelector(".right");
+const tabMenu = document.querySelector(".tab-menu");
 
-let isDragging = false;
+const IconVisibility = () => {
+    let scrollLeftValue = Math.ceil(tabMenu.scrollLeft);
 
+    let scrollableWidth = tabMenu.scrollWidth - tabMenu.clientWidth;
 
-const handleIcons = () => {
-    let scrollVal = Math.round(tabsBox.scrollLeft);
-    let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth;
-    console.log(maxScrollableWidth , scrollVal);
-    arrowIcons[0].parentElement.style.display = scrollVal > 0 ? "flex" : "none";
-    arrowIcons[1].parentElement.style.display = maxScrollableWidth > scrollVal ? "flex" : "none";
+    btnLeft.style.display = scrollLeftValue > 0 ? "block" : "none";
+    btnRight.style.display = scrollableWidth > scrollLeftValue ? "block" : "none";
+    console.log(scrollableWidth ,scrollLeftValue);
 }
 
 
-arrowIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        // console.log(icon.id);
-        tabsBox.scrollLeft += icon.id === "left" ? -350 : 350;
-        setTimeout(() => handleIcons(), 50);
-    });
-
+btnRight.addEventListener("click", () => {
+    tabMenu.scrollLeft += 150;
+    setTimeout(() => IconVisibility(),50);
+    
 });
 
-allTabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-        tabsBox.querySelector(".active").classList.remove("active");
-        tab.classList.add("active");
-    });
-
+btnLeft.addEventListener("click", () => {
+    tabMenu.scrollLeft -= 150;
+    setTimeout(() => IconVisibility(),50);
 });
 
-const dragging = (e) => {
-    // console.log("dragging...")
-    if(!isDragging) return;
-    tabsBox.classList.add("dragging");
-    tabsBox.scrollLeft -= e.movementX;
-    handleIcons();
+window.onload = function(){
+    btnRight.style.display = tabMenu.scrollWidth > tabMenu.clientWidth || tabMenu.scrollWidth >= window.innerWidth ? "block" : "none";
+    btnLeft.style.display = tabMenu.scrollWidth >= window.innerWidth ? "" : "none";
 }
 
-const dragStop = () => {
-    isDragging = false;
-    tabsBox.classList.remove("dragging");
+window.onresize = function(){
+    btnRight.style.display = tabMenu.scrollWidth > tabMenu.clientWidth || tabMenu.scrollWidth >= window.innerWidth ? "block" : "none";
+    btnLeft.style.display = tabMenu.scrollWidth >= window.innerWidth ? "" : "none";
+
+    let scrollLeftValue = Math.round(tabMenu.scrollLeft);
+
+    btnLeft.style.display = scrollLeftValue > 0 ? "block" : "none";
 }
 
+// ================================destop==========================
+let activeDragDestop = false;
 
-tabsBox.addEventListener("mousedown", () => isDragging = true);
-tabsBox.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
+tabMenu.addEventListener("mousemove", (drag) => {
+    if(!activeDragDestop) return;
+    tabMenu.scrollLeft -= drag.movementX;
+    IconVisibility();
+    tabMenu.classList.add("dragging");
+});
 
+document.addEventListener("mouseup", () => {
+    activeDragDestop = false;
+    tabMenu.classList.remove("dragging");
+});
 
+tabMenu.addEventListener("mousedown", () => {
+    activeDragDestop = true;
+});
 
+// ================================phone==========================
+let activeDragPhone = false;
+let startX = 0;
 
+tabMenu.addEventListener("touchmove", (event) => {
+    if (!activeDragPhone) return;
+    const touch = event.touches[0];
+    tabMenu.scrollLeft -= touch.clientX - startX;
+    IconVisibility();
+    tabMenu.classList.add("dragging");
+    startX = touch.clientX;
+});
 
+document.addEventListener("touchend", () => {
+    activeDragPhone = false;
+    tabMenu.classList.remove("dragging");
+});
 
+tabMenu.addEventListener("touchstart", (event) => {
+    activeDragPhone = true;
+    const touch = event.touches[0];
+    startX = touch.clientX;
+});
+// ==================================================================
 
+const tabBtns = document.querySelectorAll(".tab-btn");
+
+tabBtns.forEach(tabBtn => {
+    tabBtn.addEventListener("click", () => {
+        const isActive = tabBtn.classList.contains("active");
+
+        if (!isActive) {
+            tabBtn.classList.add("active");
+        } else {
+            tabBtn.classList.remove("active");
+        }
+    });
+});
