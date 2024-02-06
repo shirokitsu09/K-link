@@ -216,4 +216,5 @@ body {
 .navigation {
   position: absolute !important;
   top: 0 !important;
+  z-index: 10000 !important;
 }
