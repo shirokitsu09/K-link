@@ -172,7 +172,7 @@
 
 .group-description {
     word-wrap: break-word;
-    overflow-x: auto;
+    overflow: hidden;
     position: absolute;
     display: inline-block;
     padding: 10px;
@@ -281,7 +281,7 @@
     width: 360px;
     height: 100px;
     top: -20px;
-    z-index: 1;
+    z-index: 0;
     animation-name: slidein;
     animation-duration: 500ms;
   }
