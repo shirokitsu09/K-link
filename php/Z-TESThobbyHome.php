@@ -20,7 +20,7 @@
             </a>
 
         <?php include 'header.php';?>
-        <?php include 'hobbylist.php';?>
+        <?php include 'Z-TESThobbylist.php';?>
         <?php include 'footer.php';?>
 
     </div>

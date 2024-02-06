@@ -12,7 +12,6 @@
   </head>
   <body>
     <div class="list-frame">
-      <div class="status-bar"></div>
       <div class="tpopup" id="tpopup">
         <div class="tpopup-drag" id="tpopupdrag"></div>
         <div class="tpopup-option" id="tpopup-option-1">
@@ -46,7 +45,7 @@
         <div class="group-date">วัน : 15 มิ.ย. 2567</div>
         <div class="group-time">เวลา : 17:00 - 19:00 น.</div>
         <div class="group-location">สถานที่ : สนามกีฬา</div>
-        <div class="group-description">รายละเอียด : ผู้เล่นจะได้รับบทบาทเป็น โกะโจ เพื่อช่วยเหล่าผู้เล่นให้ได้มากที่สุด ขณะเดียวกันผู้เล่นคนอื่น ๆ </div>
+        <div class="group-description">รายละเอียด : ผู้เล่นจะได้รับบทบาทเป็น โกะโจ เพื่อช่วยเหล่าผู้เล่นให้ได้มากที่สุด ขณะเดียวกันผู้เล่นคนอื่น ๆ</textarea></div>
         </div>
       </div>
         
@@ -169,9 +168,9 @@
               </div>
         </div>
       </div>
+      </div>
       
       </div>
-
     <script>
       var display = 0;
       var list1 = document.getElementById("list-1");
