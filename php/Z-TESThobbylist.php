@@ -29,8 +29,10 @@
   ?>
   
   <div class="list-frame">
+  
   <div class="tpopup" id="tpopup">
-        <div class="tpopup-drag" id="tpopupdrag"></div>
+  
+        <div class="tpopup-drag" id="tpopupdrag"><div class="OutFrame"></div></div>
         <div class="tpopup-option" id="tpopup-option-1">
           <img class="tpopup-option-icon" src="../images/librarylist/tdotblock.svg">
           <div class="tpopup-option-text">บล็อก</div> 

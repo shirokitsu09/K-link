@@ -391,5 +391,13 @@
 
 .list.padding
 {
-    margin-bottom: 95px;
+    margin-bottom: 125px;
+}
+
+.OutFrame {
+    width: 360px;
+    height: 500px;
+    top: -480px;
+    position: absolute;
+    left: -126px;
 }
