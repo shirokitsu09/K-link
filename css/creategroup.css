@@ -205,3 +205,15 @@ body {
     width: 0;
 }
 }
+
+.footerIndividual {
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  top: 720px;
+}
+
+.navigation {
+  position: absolute !important;
+  top: 0 !important;
+}

@@ -8,7 +8,7 @@
     font-size: var(--subtitle-1-size);
     color: var(--color-black);
     top:15px;
-    margin-bottom: 95px;
+    margin-bottom: 170px;
 }
 
 .status-bar {
@@ -391,7 +391,7 @@
 
 .list.padding
 {
-    margin-bottom: 125px;
+    margin-bottom: 55px;
 }
 
 .OutFrame {
