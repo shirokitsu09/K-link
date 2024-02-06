@@ -1,5 +1,5 @@
 .createGroupButton {
-    position: fixed; /* Set fixed positioning for the button */
+    position: absolute; /* Set fixed positioning for the button */
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    bottom: 210px; /* Adjust the top value as needed */
+    bottom: 20px; /* Adjust the top value as needed */
     left: 280px; /* Adjust the left value as needed */
     z-index: 100;
     box-shadow: 8px 2px 12px rgba(0, 0, 0, 0.3);

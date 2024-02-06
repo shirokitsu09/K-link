@@ -15,14 +15,18 @@
 <body>
     <div class="background">
 
-            <a href="hobbyCreatePost.php" class="createGroupButton">
-                <img src="../images/WhitePlus.svg">
-            </a>
+            
 
         <?php include 'header.php';?>
         <?php include 'Z-TESThobbylist.php';?>
-        <?php include 'footer.php';?>
 
+        <div class="footerIndividual">
+            <a href="hobbyCreatePost.php" class="createGroupButton">
+                <img src="../images/WhitePlus.svg">
+            </a>
+        <?php include 'footer.php';?>
+        </div>   
+        
     </div>
 
 </body>
