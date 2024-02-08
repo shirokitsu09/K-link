@@ -53,13 +53,20 @@
         <img class="group-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
         <img class="tdot-button" id="tdot-<?php echo $id?>" alt="" src="../images/tutoringlist/threedot.svg" />
             <div class="tag-group">
-            <div class="tag" id="tag<?php echo $id?>-1">กีฬาและการออกกำลังกาย</div>
-            <div class="tag" id="tag<?php echo $id?>-2">ชิลๆ</div>
-            <div class="tag" id="tag<?php echo $id?>-3">ชิลๆ</div>
-            <div class="tag" id="tag<?php echo $id?>-4">ชิลๆ</div>
-            <div class="tag" id="tag<?php echo $id?>-5">ชิลๆ</div>
-            <div class="tag" id="tag<?php echo $id?>-6">กีฬาและการออกกำลังก</div>
-
+              <?php
+                 $dataArray = explode(",", $row["Tag"]);
+                 $count = count($dataArray);
+                 if (count($dataArray) > 0) {
+                  $AmountOfTag = 0;
+                  while (($AmountOfTag < $count) && ($dataArray != '')) {
+                    ?>
+                      <div class="tag" id="tag<?php echo $id?>-1"><?php echo $dataArray[$AmountOfTag]?></div>
+            <?php $AmountOfTag++; }
+                } else {
+                    echo "Error: Insufficient data.<br>";
+                }
+                
+              ?>
             </div>
             <div class="tag-group1">
             <div class="tag"></div>
