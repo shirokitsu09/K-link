@@ -60,7 +60,7 @@
   var aboutAccountParent = document.getElementById("aboutAccountParent");
   if (aboutAccountParent) {
     aboutAccountParent.addEventListener("click", function (e) {
-      window.location.href = "";
+      window.location.href = "../php/editAccount.php";
     });
   }
 

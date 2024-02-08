@@ -33,16 +33,18 @@
         <div class="indicator" id="indicator"></div>
     </ul>
 </div>
+
 <script>
-    const list = document.querySelectorAll('.list-footer');
+
+    const listF = document.querySelectorAll('.list-footer');
 
 
     function activeLink() {
-        list.forEach((item) =>
+        listF.forEach((item) =>
             item.classList.remove('active'));
         this.classList.add('active');
     }
-// ---------------------
+    // ---------------------
     // const Indi = document.querySelectorAll(".list-footer");
     // function hiddenIndicator() {
     //     Indi.forEach(at => {
@@ -55,17 +57,23 @@
     //         });
     //     });
     // }
-        
-// --------------------------
-    list.forEach((item) =>
-        item.addEventListener('click', activeLink));
-</script>
+    function removeActiveFromClass() {
+        listF.forEach((item) => {
+            item.classList.remove('active');
+        });
+    }
 
-<script>
+    // --------------------------
+    listF.forEach((item) => {
+        item.addEventListener('click', activeLink);
+    });
+
+
+
     function changeText(text) {
         const textContainer = document.getElementById('name-header');
         textContainer.innerText = text;
-
+        // console.log("change:" + text);
         if (text === 'MYPOST') {
             textContainer.style.left = '130px';
         }
@@ -76,6 +84,8 @@
             textContainer.style.left = '135px';
         }
     }
+
+
 </script>
 
 

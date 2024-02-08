@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/hobby-home.css" />
     <link rel="stylesheet" href="../css/globalTEST.css" />
     <!-- <link rel="stylesheet" href="../css/creategroup.css" /> -->
-
+    
 </head>
 
 <body>
@@ -41,5 +41,12 @@
     </script> -->
 
 <!------------------------------ script ------------------------------>
+<!-- <script>
+    const activeListItem = document.querySelector('.list-footer.active');
+    if (activeListItem) {
+        activeListItem.classList.remove('active');
+    }
+</script> -->
+
 
 </html>
