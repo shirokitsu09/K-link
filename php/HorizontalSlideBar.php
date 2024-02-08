@@ -10,7 +10,7 @@
     <title>HORI</title>
 </head>
 <body>
-    <section class="main-container">
+    <section class="main-container-scrollBar">
         <div class="tab-nav-bar">
             <div class="tab-navigation">
                 <ion-icon class="left" name="chevron-back-outline"></ion-icon>

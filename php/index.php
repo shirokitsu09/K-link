@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="../css/globalTEST.css" />
+    <!-- <link rel="stylesheet" href="../css/globalTEST.css" /> -->
     <link rel="stylesheet" href="../css/section.css" />
     <link rel="stylesheet" href="../css/setting.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" />
@@ -25,7 +25,6 @@
                 <section id="mygroup" class="s">
                     <div class="c-1">
                         <?php include '../php/mypost.php';?>
-                        <?php include '../php/tutoringlist.php';?>
                     </div>
                 </section>
 

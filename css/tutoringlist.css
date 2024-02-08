@@ -1,8 +1,8 @@
-.list-frame {
+.list-frame-tutoring {
     position: relative;
     /* background-color: var(--basecolor-white); */
     background-color: transparent; /*<-------new*/
-    top: 38%; /*<-----new*/
+    top: 2%; /*<-----new*/
     width: 360px;
     height: 800px;
     overflow: scroll;
@@ -17,7 +17,7 @@
     width: 360px;
     height: 24px;
 }
-.list-inner {
+.list-inner-tutoring {
     position: relative;
     border-radius: 20px;
     background-color: var(--basecolor-white);
@@ -377,7 +377,7 @@
     
 .list {
     position: relative;
-    top: 10px;
+    top: 0px; /*10px*/
     left: 0px;
     width: 360px;
     height: 300px;
