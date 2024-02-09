@@ -1,38 +1,20 @@
-<?php
-  $serverName = "localhost";
-  $userName = "root";
-  $password = "";
-  $dbName = "test";
-
-  $con = mysqli_connect($serverName,$userName,$password,$dbName);
-
-  if(mysqli_connect_errno()){
-    echo "Failed";
-    exit();
-  } else {
-  echo "Success";
-  }
-  $sql = "SELECT * FROM test_hobbylist";
-  $sqlCount = "SELECT COUNT(*) as count FROM test_hobbylist";
-  $result = $con->query($sql);
-  $resultCount = $con->query($sqlCount);
-
-  if ($result !== false && $resultCount->num_rows > 0) {
-    // Fetch the result
-    $row = $resultCount->fetch_assoc();
-    $rowCount = $row['count'];
-
-    echo "Number of rows in the table: " . $rowCount;
-} else {
-    echo "No rows found";
-}
-  ?>
-  
-  <div class="list-frame">
-  
-  <div class="tpopup" id="tpopup">
-  
-        <div class="tpopup-drag" id="tpopupdrag"><div class="OutFrame"></div></div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="../css/globalTEST.css" />
+    <link rel="stylesheet" href="../css/hobbylist.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="list-frame">
+      <div class="status-bar"></div>
+      <div class="tpopup" id="tpopup">
+        <div class="tpopup-drag" id="tpopupdrag"></div>
         <div class="tpopup-option" id="tpopup-option-1">
           <img class="tpopup-option-icon" src="../images/librarylist/tdotblock.svg">
           <div class="tpopup-option-text">บล็อก</div> 
@@ -42,31 +24,14 @@
           <div class="tpopup-option-text">รายงาน</div> 
         </div>
       </div>
-<?php
-  if ($result->num_rows > 0) {
-    $id = 1;
-    while ($id <= $rowCount && ($row = $result->fetch_assoc())) {
-          ?>
-      <div class="list" id="list-<?php echo $id?>">
+      <div class="list" id="list-1">
         <div class="list-inner">
         <div class="list-inner-head">
         <img class="group-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
-        <img class="tdot-button" id="tdot-<?php echo $id?>" alt="" src="../images/tutoringlist/threedot.svg" />
+        <img class="tdot-button" id="tdot-1" alt="" src="../images/threedot.svg" />
             <div class="tag-group">
-              <?php
-                 $dataArray = explode(",", $row["Tag"]);
-                 $count = count($dataArray);
-                 if (count($dataArray) > 0) {
-                  $AmountOfTag = 0;
-                  while (($AmountOfTag < $count) && ($dataArray != '')) {
-                    ?>
-                      <div class="tag" id="tag<?php echo $id?>-1"><?php echo $dataArray[$AmountOfTag]?></div>
-            <?php $AmountOfTag++; }
-                } else {
-                    echo "Error: Insufficient data.<br>";
-                }
-                
-              ?>
+            <div class="tag" id="tag1-1">กีฬาและการออกกำลังกาย</div>
+            <div class="tag" id="tag1-2">ชิลๆ</div>
             </div>
             <div class="tag-group1">
             <div class="tag"></div>
@@ -74,33 +39,36 @@
             </div>
         <b class="group-amount available">1/10</b>
         </div>
-        <div class="list-inner-body" id="innerlist-<?php echo $id?>">
-        <b class="group-name"><?php echo $row['Name']; ?></b>
+        <div class="list-inner-body" id="innerlist-1">
+        <b class="group-name">หาเพื่อนไปวิ่งกันเถอะ232...</b>
         <div class="leader">AIJHONG</div>
         <img class="group-profile-picture" alt="" src="../images/grouplist/group-profilepic1.svg" />
-        <div class="group-date"><?php echo $row['Date']; ?></div>
-        <div class="group-time"><?php echo $row['Time']; ?></div>
-        <div class="group-location">สถานที่ : สนามกีฬา</div>
-        <div class="group-description"><?php echo $row['Detail']; ?></div>
+        <div class="group-date">ทุกๆ วันจันทร์ อังคาร พฤหัส ศุกร์ เสาร์ อาทิตย์</div>
+        <div class="group-tim">เวลา : </div>
+        <div class="group-time">17:00 - 19:00 น.</div>
+        <div class="group-loc">สถานที่ : </div>
+        <div class="group-location">สนามกีฬา</div>
+        <div class="group-desc">รายละเอียด : </div>
+        <div class="group-description">ผู้เล่นจะได้รับบทบาทเป็น โกะโจ เพื่อช่วยเหล่าผู้เล่นให้ได้มากที่สุด ขณะเดียวกันผู้เล่นคนอื่น ๆ </div>
         </div>
       </div>
         
-        <div class="tutoringjoin" id="tutoringjoin-<?php echo $id?>" style="display: none;">
-        <div class="join-button" id="join-<?php echo $id?>" value="join-1">
+        <div class="tutoringjoin" id="tutoringjoin-1" style="display: none;">
+        <div class="join-button" id="join-1" value="join-1">
             <div class="group">
               <div class="button-text">เข้าร่วมกลุ่ม</div>
               <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-join.svg" />
             </div>
           </div>
 
-          <div class="member-button" id="member-<?php echo $id?>">
+          <div class="member-button" id="member-1">
             <div class="group">
               <div class="button-text">สมาชิกกลุ่ม</div>
               <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-member.svg" />
             </div>
           </div>
 
-          <div class="close-button" id="close-<?php echo $id?>">
+          <div class="close-button" id="close-1">
                 <div class="group">
                   <div class="button-text">ปิด</div>
                   <img class="button-icon1" alt="" src="../images/tutoringlist/tutoring-close.svg" />
@@ -108,135 +76,260 @@
           </div>
       </div>
       </div>
+
+      <div class="list" id="list-2">
+        <div class="list-inner">
+        <div class="list-inner-head">
+        <img class="group-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
+        <img class="tdot-button" id="tdot-2" alt="" src="../images/threedot.svg" />
+                <div class="tag-group">
+                <div class="tag" id="tag2-1">อาหารการกิน</div>
+                <div class="tag" id="tag2-2">ชาบูปิ้งย่าง</div>
+                <div class="tag" id="tag2-3">ซอยเกกี</div>
+                </div>
+                <div class="tag-group1">
+                <div class="tag"></div>
+                </div>
+            <b class="group-amount full">4/4</b>
+        </div>
+        <div class="list-inner-body" id="innerlist-2">
+            <b class="group-name">หมูกะทะหารสี่</b>
+            <div class="leader">ราชาหมูกะทะผู้ยิ่งใหญ่</div>
+            <img class="group-profile-picture" alt="" src="../images/grouplist/group-profilepic2.svg" />
+            <div class="group-date">ทุกวัน</div>
+            <div class="group-tim">เวลา : </div>
+            <div class="group-time">3:00 น.</div>
+            <div class="group-loc">สถานที่ : </div>
+            <div class="group-location">หมูกะทะเกกี4</div>
+            <div class="group-desc">รายละเอียด : </div>
+            <div class="group-description">มากินหมูกะทะกันหาร 4 คน</div>
+        </div>
+        </div>
+        
+        <div class="tutoringjoin" id="tutoringjoin-2" style="display: none;">
+          <div class="join-button" id="join-2">
+            <div class="group">
+              <div class="button-text">เข้าร่วมกลุ่ม</div>
+              <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-join.svg" />
+            </div>
+          </div>
+
+          <div class="member-button" id="member-2">
+            <div class="group">
+              <div class="button-text">สมาชิกกลุ่ม</div>
+              <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-member.svg" />
+            </div>
+          </div>
+
+          <div class="close-button" id="close-2">
+                <div class="group">
+                  <div class="button-text">ปิด</div>
+                  <img class="button-icon1" alt="" src="../images/tutoringlist/tutoring-close.svg" />
+                </div>
+          </div>
+      </div>
+      </div>
+
+      <div class="list" id="list-3">
+        <div class="list-inner">
+        <div class="list-inner-head">
+        <img class="group-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
+        <img class="tdot-button" id="tdot-3" alt="" src="../images/threedot.svg" />
+            <div class="tag-group">
+            <div class="tag">วิศวกรรมศาสตร์</div>
+            <div class="tag">Calculus</div>
+            <div class="tag"></div>
+            </div>
+            <b class="group-amount available">10/ไม่จำกัด</b>
+            </div>
+            <div class="list-inner-body" id="innerlist-3">
+            <b class="group-name">เชียร์บาสภาคคอมรวมตัว</b>
+            <div class="leader">เหน่ง iot</div>
+            <img class="group-profile-picture" alt="" src="../images/grouplist/group-profilepic3.svg" />
+            <div class="group-date">ทุกวันจันทร์ อังคาร</div>
+            <div class="group-tim">เวลา : </div>
+            <div class="group-time">17:00 น.</div>
+            <div class="group-loc">สถานที่ : </div>
+            <div class="group-location">สนามบาสข้างโรงเอ</div>
+            <div class="group-desc">รายละเอียด : </div>
+            <div class="group-description">เพื่อช่วยเหล่าผู้เล่นให้ได้มากที่สุด ขณะเดียวกันผู้เล่นคนอื่น ๆ </div>
+            </div>
+        </div> 
+        
+        <div class="tutoringjoin" id="tutoringjoin-3" style="display: none;">
+        <div class="join-button" id="join-3">
+          <div class="group">
+            <div class="button-text">เข้าร่วมกลุ่ม</div>
+            <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-join.svg" />
+          </div>
+        </div>
+
+        <div class="member-button" id="member-3">
+          <div class="group">
+            <div class="button-text">สมาชิกกลุ่ม</div>
+            <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-member.svg" />
+          </div>
+        </div>
+
+        <div class="close-button" id="close-3">
+              <div class="group">
+                <div class="button-text">ปิด</div>
+                <img class="button-icon1" alt="" src="../images/tutoringlist/tutoring-close.svg" />
+              </div>
+        </div>
+      </div>
       
-          <?php
-          $id++;
-      }
-  } else {
-      echo "0 results";
-  }
-  
-  // Close the database connection
-  $con->close();
-?>  
-</div>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="../css/globalTEST.css" />
-    <link rel="stylesheet" href="../css/grouplist.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    />
-  </head>
-  <body>
-    
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-  var numberOfLists = <?php echo $rowCount?>; // Set the actual number of elements dynamically
-  var tpopup = document.getElementById("tpopup");
+      </div>
 
-  function close_tutoringjoin() {
-    for (var i = 1; i <= numberOfLists; i++) {
-      var tutoringjoin = document.getElementById("tutoringjoin-" + i);
-      if (tutoringjoin) {
-        tutoringjoin.style.display = 'none';
-      }
-    }
-    document.querySelector('.padding')?.classList.remove('padding');
-  }
+    <script>
+      var display = 0;
+      var list1 = document.getElementById("list-1");
+      var tutoringjoin1 =document.getElementById("tutoringjoin-1");
+      var innerlist1 = document.getElementById("innerlist-1");
+      var tpopup = document.getElementById("tpopup"); // three dot pop up id
 
-  function handleInnerListClick(list, tutoringjoin) {
-    return function (e) {
-      if (list && !list.classList.contains('padding')) {
-        close_tutoringjoin();
-        tutoringjoin.style.display = 'block';
+      var list2 = document.getElementById("list-2");
+      var tutoringjoin2 =document.getElementById("tutoringjoin-2");
+      var innerlist2 = document.getElementById("innerlist-2");
+
+      var list3 = document.getElementById("list-3");
+      var tutoringjoin3 =document.getElementById("tutoringjoin-3");
+      var innerlist3 = document.getElementById("innerlist-3");
+      
+      function close_tutoringjoin(e){
+        tutoringjoin1.style.display = 'none';
+        tutoringjoin2.style.display = 'none';
+        tutoringjoin3.style.display = 'none';
         document.querySelector('.padding')?.classList.remove('padding')
-        list.classList.add('padding');
       }
-    };
-  }
+      var tag_1= document.getElementById("tag1-1");
+      tag_1.addEventListener("click", function(){
+        location.href = "";
+      });
 
-  function createJoinClickHandler(index) {
-    return function (e) {
-      console.log("join group" + index + " requested");
-      close_tutoringjoin();
-    };
-  }
+      var tag_2 = document.getElementById("tag1-2");
+      tag_2.addEventListener("click", function(){
+        location.href = "";
+      });
 
-  function createMemberClickHandler(index) {
-    return function (e) {
-      console.log("member group" + index + " view requested");
-      close_tutoringjoin();
-    };
-  }
+      var close1 = document.getElementById("close-1");
+      close1.addEventListener("click", close_tutoringjoin);
+      var close2 = document.getElementById("close-2");
+      close2.addEventListener("click", close_tutoringjoin);
+      var close3 = document.getElementById("close-3");
+      close3.addEventListener("click", close_tutoringjoin);
 
-  function createTdotClickHandler() {
-    return function (e) {
-      close_tutoringjoin();
-      tpopup_open();
-    };
-  }
+      var join1 = document.getElementById("join-1");
+      join1.addEventListener("click", function(e){
+        console.log("join group1 requested");
+        close_tutoringjoin();
+      });
 
-  for (var i = 1; i <= numberOfLists; i++) {
-    var list = document.getElementById("list-" + i);
-    var tutoringjoin = document.getElementById("tutoringjoin-" + i);
-    var innerlist = document.getElementById("innerlist-" + i);
+      var join2 = document.getElementById("join-2");
+      join2.addEventListener("click", function(e){
+        console.log("join group2 requested");
+        close_tutoringjoin();
+      });
 
-    var close = document.getElementById("close-" + i);
-    var join = document.getElementById("join-" + i);
-    var member = document.getElementById("member-" + i);
-    var tdot = document.getElementById("tdot-" + i);
+      var join3 = document.getElementById("join-3");
+      join3.addEventListener("click", function(e){
+        console.log("join group3 requested");
+        close_tutoringjoin();
+      });
+      
+      var member1 = document.getElementById("member-1")
+      member1.addEventListener("click", function (e) {
+        console.log("member group1 view requested")
+        close_tutoringjoin();
+      });
 
-    if (innerlist) {
-      innerlist.addEventListener("click", handleInnerListClick(list, tutoringjoin));
-    }
+      var member2 = document.getElementById("member-2")
+      member2.addEventListener("click", function (e) {
+        console.log("member group2 view requested")
+        close_tutoringjoin();
+      });
 
-    if (close) {
-      close.addEventListener("click", close_tutoringjoin);
-    }
+      var member3 = document.getElementById("member-3")
+      member3.addEventListener("click", function (e) {
+        console.log("member group3 view requested")
+        close_tutoringjoin();
+      });
 
-    if (join) {
-      join.addEventListener("click", createJoinClickHandler(i));
-    }
+      function tpopup_open(e){
+        tpopup.classList.add("on");
+      }
 
-    if (member) {
-      member.addEventListener("click", createMemberClickHandler(i));
-    }
+      function tpopup_close(e){
+        tpopup.classList.remove("on");
+      }
 
-    if (tdot) {
-      tdot.addEventListener("click", createTdotClickHandler());
-    }
-  }
+      tdot1 = document.getElementById("tdot-1")
+      tdot1.addEventListener("click",function (e) {
+        close_tutoringjoin();
+        tpopup_open();
+      });
 
-  var tpopupdrag = document.getElementById("tpopupdrag");
-  tpopupdrag.addEventListener("click", function (e) {
-    tpopup_close();
-  });
+      tdot2 = document.getElementById("tdot-2")
+      tdot2.addEventListener("click",function (e) {
+        close_tutoringjoin();
+        tpopup_open();
+      });
 
-  var tpopupoption1 = document.getElementById("tpopup-option-1");
-  tpopupoption1.addEventListener("click", function (e) {
-    console.log("blocked request");
-    tpopup_close();
-  });
+      tdot3 = document.getElementById("tdot-3")
+      tdot3.addEventListener("click",function (e) {
+        close_tutoringjoin();
+        tpopup_open();
+      });
 
-  var tpopupoption2 = document.getElementById("tpopup-option-2");
-  tpopupoption2.addEventListener("click", function (e) {
-    console.log("reported request");
-    tpopup_close();
-  });
+      var tpopupdrag = document.getElementById("tpopupdrag");
+      tpopupdrag.addEventListener("click",function(e){
+        tpopup_close();
+      });
 
-  function tpopup_open(e) {
-    tpopup.classList.add("on");
-  }
+      var tpopupoption1 = document.getElementById("tpopup-option-1");
+      tpopupoption1.addEventListener("click", function(e){
+        console.log("blocked request");
+        tpopup_close();
+      });
 
-  function tpopup_close(e) {
-    tpopup.classList.remove("on");
-  }
-});
+      var tpopupoption2 =document.getElementById("tpopup-option-2");
+      tpopupoption2.addEventListener("click", function(e){
+        console.log("reported request")
+        tpopup_close();
+      });
+
+// 
+      if (innerlist1) {
+        innerlist1.addEventListener("click", function (e) {
+          if (list1 != 'list-1.padding'){
+            close_tutoringjoin();
+            tutoringjoin1.style.display = 'block';
+            list1.classList.add('padding');
+          }
+        });
+      }
+
+      if (innerlist2) {
+        innerlist2.addEventListener("click", function (e) {
+          if (list2 != 'list-2.padding'){
+            close_tutoringjoin();
+            tutoringjoin2.style.display = 'block';
+            document.querySelector('.padding')?.classList.remove('padding')
+            list2.classList.add('padding');
+          }
+        });
+      }
+
+      if (innerlist3) {
+        innerlist3.addEventListener("click", function (e) {
+          if (list3 != 'list-3.padding'){
+            close_tutoringjoin();
+            tutoringjoin3.style.display = 'block';
+            document.querySelector('.padding')?.classList.remove('padding')
+            list3.classList.add('padding');
+          }
+        });
+      }
 
     </script>
 
