@@ -1,13 +1,14 @@
 .list-frame {
-    position: absolute;
+    position: relative;
     background-color: transparent;
-    width: auto;
-    height: auto;
-    overflow-x: hidden;
+    width: fit-content;
+    height: fit-content;
     text-align: left;
     font-family: var(--subtitle-1);
     font-size: var(--subtitle-1-size);
     color: var(--color-black);
+    top:15px;
+    margin-bottom: 170px;
 }
 
 .status-bar {
@@ -88,7 +89,7 @@
 .tag:empty {
     display: none;
 }
-
+/*  */
 .group-amount {
     position: absolute;
     display: inline-block;
@@ -130,7 +131,7 @@
     top: 25px;
     left: 25px;
 }
-
+/* ----------- */
 .group-profile-picture {
     position: absolute;
     width: 100px;
@@ -170,11 +171,14 @@
 }
 
 .group-description {
+    word-wrap: break-word;
+    overflow: hidden;
     position: absolute;
     display: inline-block;
-    height: max-content;
+    padding: 10px;
+    height: 70px;
     width: 260px;
-    top: 155px;
+    top: 150px;
     left: 25px;
     font-size: var(--subtitle-1-size);
 }
@@ -277,7 +281,7 @@
     width: 360px;
     height: 100px;
     top: -20px;
-    z-index: 1;
+    z-index: 0;
     animation-name: slidein;
     animation-duration: 500ms;
   }
@@ -387,5 +391,13 @@
 
 .list.padding
 {
-    margin-bottom: 50px;
+    margin-bottom: 55px;
+}
+
+.OutFrame {
+    width: 360px;
+    height: 500px;
+    top: -480px;
+    position: absolute;
+    left: -126px;
 }

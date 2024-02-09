@@ -15,14 +15,14 @@
   position: absolute;
 }
 .app-icon {
-  top: 24px;
-  left: 16px;
-  width: 72.5px;
-  height: 62px;
+  top: 12px;
+  left: 30px;
+  width: 46.55px;
+  height: 65.95px;
   object-fit: cover;
 }
 .name-header {
-  top: 34px;
+  top: 25px;
   left: 135px;
   display: inline-block;
   width: 117px;
@@ -33,7 +33,7 @@
 }
 .LINE {
   position: absolute;
-  top: 39px;
+  top: 30px;
   left: 106px;
   border-radius: 5px;
   background-color: var(--neutrals1);
@@ -45,7 +45,7 @@
 }
 .noti-button-icon {
   position: absolute;
-  top: 30px;
+  top: 25px;
   left: 292px;  
 }
 .noti-button-icon a {
