@@ -16,19 +16,13 @@
                 <ion-icon class="left" name="chevron-back-outline"></ion-icon>
                 <ion-icon class="right" name="chevron-forward-outline"></ion-icon>
                 <ul class="tab-menu">
-                    <li class="tab-btn">Tokyo</li>
-                    <li class="tab-btn">Tokyo</li>
-                    <li class="tab-btn">Tokyo</li>
-                    <li class="tab-btn">Tokyo</li>
-                    <li class="tab-btn">Tokyo</li>
-                    <li class="tab-btn">Tokyo</li>
-                    <li class="tab-btn">Tokyo</li>
-                    <li class="tab-btn">Tokyo</li>
-                    <li class="tab-btn">Tokyo</li>
-                    <li class="tab-btn">Tokyo</li>
-                    <li class="tab-btn">Tokyo</li>
-                    <li class="tab-btn">Tokyo</li>
-                    <li class="tab-btn">Tokyo</li>
+                    <li class="tab-btn">กลุ่มที่สร้าง</li>
+                    <li class="tab-btn">กลุ่มที่เข้าร่วมแล้ว</li>
+                    <li class="tab-btn">กลุ่มที่รอการตอบรับ</li>
+                    <li class="tab-btn">Hobby</li>
+                    <li class="tab-btn">Library</li>
+                    <li class="tab-btn">Tutoring</li>
+                    <li class="tab-btn">โพสต์ของฉัน</li>
                 </ul>
             </div>
         </div>
