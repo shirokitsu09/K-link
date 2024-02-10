@@ -11,29 +11,29 @@
 
   <div class="setting-inner">
     <div class="option1-parent" id="aboutAccountParent">
-      <div class="option1-text">about account</div>
+      <div class="option1-text">เกี่ยวกับบัญชี</div>
       <img class="option1-icon" alt="" src="../images/profile-icon.svg" />
     </div>
 
     <div class="option2-parent" id="option2">
       <img class="option2-icon" alt="" src="../images/setting/bookmark.svg" />
-      <div class="option2-text">saved</div>
+      <div class="option2-text">ที่บันทึกไว้</div>
     </div>
 
-    <div class="option3-parent" id="languageParent">
+    <!-- <div class="option3-parent" id="languageParent">
       <div class="option3-text">language</div>
       <img class="option3-icon" alt="" src="../images/global-icon.svg" />
-    </div>
+    </div> -->
 
     <div class="option4-parent" id="notificationParent">
       <img class="option4-icon" alt="" src="../images/notification-icon.svg" />
-      <div class="option4-text">notification</div>
+      <div class="option4-text">ปิดการแจ้งเตือน</div>
       <div1 class="option4-mode" id="notificationMode"></div1>
     </div>
 
     <div class="option5-parent" id="aboutAppParent">
       <img class="option5-icon" alt="" src="../images/about-app-icon.svg" />
-      <div class="option5-text">about app</div>
+      <div class="option5-text">เกี่ยวกับแอพ</div>
     </div>
   </div>
 
