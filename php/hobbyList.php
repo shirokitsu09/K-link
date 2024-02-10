@@ -2,7 +2,7 @@
   $serverName = "localhost";
   $userName = "root";
   $password = "";
-  $dbName = "test";
+  $dbName = "k-link";
 
   $con = mysqli_connect($serverName,$userName,$password,$dbName);
 
@@ -12,8 +12,8 @@
   } else {
   echo "Success";
   }
-  $sql = "SELECT * FROM test_hobbylist";
-  $sqlCount = "SELECT COUNT(*) as count FROM test_hobbylist";
+  $sql = "SELECT * FROM hobby_db";
+  $sqlCount = "SELECT COUNT(*) as count FROM hobby_db";
   $result = $con->query($sql);
   $resultCount = $con->query($sqlCount);
 
@@ -46,6 +46,10 @@
   if ($result->num_rows > 0) {
     $id = 1;
     while ($id <= $rowCount && ($row = $result->fetch_assoc())) {
+      $pic = $row['image'];
+      if ($pic === NULL) {
+        $pic = 'emptyPicture.svg';
+      }
           ?>
       <div class="list" id="list-<?php echo $id?>">
         <div class="list-inner">
@@ -54,7 +58,7 @@
         <img class="tdot-button" id="tdot-<?php echo $id?>" alt="" src="../images/tutoringlist/threedot.svg" />
             <div class="tag-group">
               <?php
-                 $dataArray = explode(",", $row["Tag"]);
+                 $dataArray = explode(",", $row["tag"]);
                  $count = count($dataArray);
                  if (count($dataArray) > 0) {
                   $AmountOfTag = 0;
@@ -72,16 +76,18 @@
             <div class="tag"></div>
             <div class="tag"></div>
             </div>
-        <b class="group-amount available">1/10</b>
+        <b class="group-amount available"><?php echo $row['memberCount'] ."/". $row['memberMax']; ?></b>
         </div>
         <div class="list-inner-body" id="innerlist-<?php echo $id?>">
-        <b class="group-name"><?php echo $row['Name']; ?></b>
-        <div class="leader">AIJHONG</div>
-        <img class="group-profile-picture" alt="" src="../images/grouplist/group-profilepic1.svg" />
-        <div class="group-date"><?php echo $row['Date']; ?></div>
-        <div class="group-time"><?php echo $row['Time']; ?></div>
-        <div class="group-location">สถานที่ : สนามกีฬา</div>
-        <div class="group-description"><?php echo $row['Detail']; ?></div>
+        <b class="group-name"><?php echo $row['activityName']; ?></b>
+        <div class="leader"><?php echo $row['createBy']; ?></div>
+        <div class="imgFrame">
+          <img class="group-profile-picture" alt="" src="uploadedImg/<?php echo $pic?>" />
+        </div>
+        <div class="group-date"><?php echo $row['date[]']; ?></div>
+        <div class="group-time"><?php echo $row['time']; ?></div>
+        <div class="group-location"><?php echo $row['location']; ?></div>
+        <div class="group-description"><?php echo $row['detail']; ?></div>
         </div>
       </div>
         
@@ -95,8 +101,10 @@
 
           <div class="member-button" id="member-<?php echo $id?>">
             <div class="group">
+              <a href='#memberPage'>
               <div class="button-text">สมาชิกกลุ่ม</div>
               <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-member.svg" />
+              </a>
             </div>
           </div>
 

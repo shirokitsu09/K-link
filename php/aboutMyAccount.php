@@ -32,7 +32,7 @@
         </div>
       <div class="profile-fn">ชื่อ-นามสกุล</div>
       <div class="display-box-fullname" id="profilefullname">
-          <div class="display-text">Aijong Jomkan</div>
+          <div class="display-text">Aichorn Fudfid</div>
           <img class="display-edit" src="../images/editacc/editpencil.svg" />
           <div class="display-line"></div>
         </div>
@@ -44,7 +44,7 @@
         </div>
       <div class="label-aboutme">About me</div>
       <div class="display-box-aboutme" id="profileaboutme">
-          <div class="display-text"> I Love JustiNa_Xie </div>
+          <div class="display-text"> I Love JustiNa_Xie Fudfid Fudfid </div>
           <img class="display-edit" src="../images/editacc/editpencil.svg" />
           <div class="display-line"></div>
         </div>
