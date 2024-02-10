@@ -1,6 +1,6 @@
 <?php
 
-    $conn = mysqli_connect("127.0.0.1", "root", "", "k-link");
+    $conn = mysqli_connect("127.0.0.1", "root", "", "k-link_db");
     mysqli_set_charset($conn, "utf8");
 
     if(!$conn){
