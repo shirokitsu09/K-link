@@ -26,7 +26,7 @@
       <div class="body-background">
       <img class="tdot-button" id="tdot" alt="" src="../images/Threedots.svg" />
       <img class="profile-picture" alt="" src="../images/aboutacc/p1profile.svg" />
-      <div class="profile-name">AIJHONG</div>
+      <div class="profile-name">JustiNa_Xie</div>
       <div class="profile-fn">ชื่อ : </div>
       <div class="profile-fullname">Aijong Jomkan</div>
       <div class="profile-em">Email : </div>
