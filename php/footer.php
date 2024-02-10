@@ -72,14 +72,24 @@
 
     function changeText(text) {
         const textContainer = document.getElementById('name-header');
+
+        const headerElement = document.querySelector('.HEADER');
+
         textContainer.innerText = text;
-        // console.log("change:" + text);
-        if (text === 'MYPOST') {
+
+        if (text === 'SETTING') {
+            headerElement.style.display = 'none';
+        } else {
+            headerElement.style.display = '';
+        }
+
+
+        if (text === 'MYPOST' || text === 'SETTING') {
             textContainer.style.left = '130px';
         }
-        else if (text === 'SETTING') {
-            textContainer.style.left = '130px';
-        }
+        // else if (text === 'SETTING') {
+        //     textContainer.style.left = '130px';
+        // }
         else {
             textContainer.style.left = '135px';
         }

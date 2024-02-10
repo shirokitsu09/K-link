@@ -13,7 +13,7 @@
 
 <body>
     <div class="background">
-        
+
         <div class="main-container">
             <div class="container">
                 <section id="home" class="s">
@@ -24,19 +24,20 @@
 
                 <section id="mygroup" class="s">
                     <div class="c-1">
-                        <?php include '../php/mypost.php';?>
+                        <?php include '../php/mypost.php'; ?>
                     </div>
                 </section>
 
                 <section id="setting" class="s">
                     <div class="c-2">
-                        <?php include '../php/settingJANE.php';?>
+
+                        <?php include '../php/settingJANE.php'; ?>
                     </div>
                 </section>
 
                 <section id="hobby-home" class="s">
                     <div class="c-3">
-                        <?php include '../php/hobbyHome.php';?>
+                        <?php include '../php/hobbyHome.php'; ?>
                     </div>
                 </section>
             </div>

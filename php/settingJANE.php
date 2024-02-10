@@ -3,11 +3,15 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
 <div class="background">
 
-  <!-- <div class="setting-head">
-        <img class="setting-item" alt="" src="../images/backbutton.svg" id="backbutton"/>
-        <div class="header-text">SETTING</div>
-        <img class="noti-button-icon" alt="" src="../images/noti.svg" id="notiButtonIcon"/>
-      </div> -->
+  <div class="setting-head">
+    <img class="setting-item" alt="" src="../images/backbutton.svg" id="backbutton" />
+    <div class="header-text">SETTING</div>
+    <div class="noti-button-icon">
+        <a href="#noti">
+            <ion-icon name="notifications"></ion-icon>
+        </a>
+    </div>
+  </div>
 
   <div class="setting-inner">
     <div class="option1-parent" id="aboutAccountParent">
@@ -25,13 +29,13 @@
       <img class="option3-icon" alt="" src="../images/global-icon.svg" />
     </div> -->
 
-    <div class="option4-parent" id="notificationParent">
+    <div class="option3-parent" id="notificationParent">
       <img class="option4-icon" alt="" src="../images/notification-icon.svg" />
       <div class="option4-text">ปิดการแจ้งเตือน</div>
       <div1 class="option4-mode" id="notificationMode"></div1>
     </div>
 
-    <div class="option5-parent" id="aboutAppParent">
+    <div class="option4-parent" id="aboutAppParent">
       <img class="option5-icon" alt="" src="../images/about-app-icon.svg" />
       <div class="option5-text">เกี่ยวกับแอพ</div>
     </div>

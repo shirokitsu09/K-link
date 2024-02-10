@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
+    --black: #000;
     --first-color: #2e2e41;
     --secound-color: #5b85ff;
     --third-color: #434354;
     --text-color: #fff;
+    --neutrals1: #d9d9d9;
+    --accent: #ffb600;
 
     --box-shadow: 0 5px 25px rgb(2, 2, 2, 0.1);
     --text-shadow: 0 5px 25px rgb(2, 2, 2, 0.1);
@@ -50,13 +53,14 @@ section {
 .tab-menu {
     color: var(--text-color);
     list-style: none;
-    background: var(--third-color);
+    /* background: var(--third-color); */
+    background: transparent;
     max-width: 800px;
     padding: 10px;
     white-space: nowrap;
-    border-bottom: 1px solid var(--third-color);
-    border-radius: 50px;
-    box-shadow: var(--box-shadow);
+    /* border-bottom: 1px solid var(--third-color); */
+    /* border-radius: 50px; */
+    /* box-shadow: var(--box-shadow); */
     overflow-x: auto;
     user-select: none;
     scroll-behavior: smooth;
@@ -73,14 +77,21 @@ section {
 }
 
 .tab-btn {
-    color: var(--text-color);
+    color: var(--black);
+    /*old*/
     display: inline-block;
+    /*new*/
+    /* display: inline-flex;
+    justify-content: center;
+    align-items: center; */
+    /**/
     font-size: 16px;
-    font-weight: 400;
+    font-weight: bold;
     margin: 0 2px;
-    padding: 3.1px 20px;
+    /* padding: 3.1px 20px; */
+    padding: 3.1px 20px 3.1px 10px;
     border-radius: 30px;
-    background: var(--first-color);
+    background: var(--neutrals1);
     cursor: pointer;
     user-select: none;
 }
@@ -89,9 +100,9 @@ section {
     pointer-events: none;
 }
 
-.tab-btn.active {
+/* .tab-btn.active {
     background: var(--secound-color);
-}
+} */
 
 .left, .right {
     position: absolute;
@@ -117,10 +128,22 @@ section {
     border-bottom-right-radius: 30px;
 }
 
+.tab-btn-circle {
+    position: relative;
+    top: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+}
 
-
-
-
+.tab-btn.active .tab-btn-circle {
+    background: var(--accent);
+}
 
 
 
