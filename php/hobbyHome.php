@@ -18,7 +18,7 @@
             
 
         <?php include 'header.php';?>
-        <?php include 'hobbylist.php';?>
+        <?php include 'hobbyList.php';?>
 
         <div class="footerIndividual">
             <a href="hobbyCreatePost.php" class="createGroupButton">
