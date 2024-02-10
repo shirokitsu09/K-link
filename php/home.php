@@ -16,7 +16,7 @@
             <div class="ellipse-parent">
                 <div class="group-child"></div>
                 <a id="link" href="#hobby-home" onclick="changeText('HOBBY')"> <!-- href #hobby-home -->
-                    <img class="MainIcon" alt="" src="../images/HobbyIcon.svg" />
+                    <img class="MainIcon" alt="" src="../images/Hobby-LOGO.svg" />
                 </a>
             </div>
 
@@ -30,13 +30,13 @@
         let mainIcon = document.querySelector('.MainIcon');
         let content = document.getElementById('content');
 
-        if (mainIcon.src.match('../images/HobbyIcon.svg')) {
-            mainIcon.src = '../images/LibraryIcon.svg';
+        if (mainIcon.src.match('../images/Hobby-LOGO.svg')) {
+            mainIcon.src = '../images/Library-LOGO.svg';
             content.textContent = 'Library';
             content.className = 'Librarycontent';
             link.href = '../php/library-home.php';
-        } else if (mainIcon.src.match('../images/LibraryIcon.svg')) {
-            mainIcon.src = '../images/HobbyIcon.svg';
+        } else if (mainIcon.src.match('../images/Library-LOGO.svg')) {
+            mainIcon.src = '../images/Hobby-LOGO.svg';
             content.textContent = 'Hobby';
             content.className = 'Hobbycontent';
             link.href = '../php/index.php#hobby-home';
