@@ -6,6 +6,9 @@
 
     <link rel="stylesheet" href="../css/globalTEST.css" />
     <link rel="stylesheet" href="../css/hobbyaboutgroup.css" />
+    <link rel="stylesheet" href="../css/HEADER.css" />
+    <link rel="stylesheet" href="../css/editGroupButton.css" />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -13,18 +16,14 @@
   </head>
   <body>
     <div class="hobby">
-      <div class="about-group-header">
-      <div class="group-child"></div>
-        <b class="header-text">ABOUT GROUP</b>
-        <img class="back-button" alt="" src="../images/backbutton.svg" />
-
-        <img class="noti-button-icon" alt="" src="../images/noti.svg" />
-      </div>
+     <?php
+        include '../php/header.php';
+      ?>
       
 
       <div class="about-group-body">
         <div class="body-background">
-        <img class="tdot-button" alt="" src="../images/threedot.svg" />
+        <img class="tdot-button" alt="" src="../images/ThreeDots.svg" />
           <b class="group-name">ชื่อกลุ่ม</b>
             <img class="group-picture" alt="" src="../images/" />
 
@@ -99,6 +98,11 @@
       </div>
     </div>
 
+        <div class="footerIndividual">
+            <a href="hobbyEditAboutGroup.php" class="createGroupButton">
+                <img src="../images/wrench.svg">
+            </a>
+        </div>
     <script>
       var groupContainer11 = document.getElementById("groupContainer11");
       if (groupContainer11) {
@@ -120,6 +124,38 @@
           // Please sync "ThreeDotsOption" to the project
         });
       }
+
+      function changeText() {
+        let text = document.querySelector('.name-header');
+        let box = document.querySelector('.HEADER');
+        let icon = document.querySelector('.app-icon');
+        let line = document.querySelector('.LINE');
+        let noti = document.querySelector('.noti-button-icon a');
+
+        text.textContent = 'About Group';
+        text.style.fontSize = 'var(--h4-size)';
+        text.style.width = '200px';
+        text.style.left = '90px';
+        text.style.top = '30px';
+
+        noti.style.fontSize = '27.2px';
+        
+        box.style.height = '140px';
+        box.style.borderRadius = '0';
+
+        icon.src = '../images/backbutton.svg';
+        icon.style.width = '30px';
+        icon.style.height = '30px';
+        icon.style.top = '37px';
+        icon.style.left = '25px';
+
+        line.style.left = '80px';
+        line.style.top = '38px';
+    }
+
+
+    changeText();
+
       </script>
   </body>
 </html>

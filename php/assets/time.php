@@ -51,7 +51,7 @@
         </select>
         <input type="text" id="MinuteInput" name="Minute" style="display: none;" value="">
     </div>
-        <input type="time" id="CombinedTimeInput" name="CombinedTime" hidden>
+        <input type="time" id="CombinedTimeInput" name="time" hidden>
 <!-- -------------------------------------------------------------- -->
 
 <script>
