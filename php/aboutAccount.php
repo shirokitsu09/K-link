@@ -1,3 +1,17 @@
+<?php
+
+  include("../config/con_db.php");
+  $uID = $_GET["uID"];
+
+  $sql = "SELECT 
+          *
+          FROM users
+          WHERE uID = '$uID' 
+          ";
+  $result = mysqli_query($conn, $sql);
+  $rows = mysqli_fetch_array($result)
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,18 +40,18 @@
       <div class="body-background">
       <img class="tdot-button" id="tdot" alt="" src="../images/Threedots.svg" />
       <img class="profile-picture" alt="" src="../images/aboutacc/p1profile.svg" />
-      <div class="profile-name">JustiNa_Xie</div>
+      <div class="profile-name"><?php echo $rows["username"]; ?></div>
       <div class="profile-fn">ชื่อ : </div>
-      <div class="profile-fullname">Aijong Jomkan</div>
+      <div class="profile-fullname"><?php echo $rows["fullname"]; ?></div>
       <div class="profile-em">Email : </div>
-      <div class="profile-email">65010xxx@kmitl.ac.th</div>
+      <div class="profile-email"><?php echo $rows["email"]; ?></div>
       <div class="profile-tel">เบอร์โทร : </div>
-      <div class="profile-telephone">087-999-9999</div>
+      <div class="profile-telephone"><?php echo $rows["phoneNumber"]; ?></div>
       <div class="profile-fac">Faculty : </div>
-      <div class="profile-faculty">Computer Engineering</div>
+      <div class="profile-faculty"><?php echo $rows["fID"]; ?></div>
       <div class="label-aboutme">About me</div>
       <div class="box-aboutme">
-      <div class="profile-aboutme"> I Love JustiNa_Xie </div>
+      <div class="profile-aboutme"><?php echo $rows["aboutme"]; ?></div>
       </div>
       </div>
     </div>
