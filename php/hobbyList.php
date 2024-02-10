@@ -2,7 +2,7 @@
   $serverName = "localhost";
   $userName = "root";
   $password = "";
-  $dbName = "k-link";
+  $dbName = "k-link_db";
 
   $con = mysqli_connect($serverName,$userName,$password,$dbName);
 
