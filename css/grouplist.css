@@ -142,8 +142,8 @@
     display: inline-block;
     height: max-content;
     width: max-content;
-    top: 50px;
-    left: 140px;
+    /* top: 50px;
+    left: 140px; */
     font-size: var(--subtitle-1-size);
 }
 
