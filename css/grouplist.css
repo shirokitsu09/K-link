@@ -133,11 +133,23 @@
 }
 /* ----------- */
 .group-profile-picture {
-    position: absolute;
+    background-color: transparent;
+    position: relative;
+    width: 100px;
+    height: auto;
+}
+
+.imgFrame {
     width: 100px;
     height: 100px;
+    position: absolute;
+    background-color: var(--neutrals1);
     top: 50px;
-    left: 25px
+    left: 25px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--br-5xs);
+    overflow: hidden;
 }
 
 .group-date {
