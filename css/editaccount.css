@@ -3,7 +3,7 @@
     background: linear-gradient(180deg, #f89603, #f86a03 56.25%, #f85b03);
     width: 360px;
     height: 800px;
-    overflow: scroll;
+    overflow: hidden;
     text-align: center;
     color: var(--neutrals1);
     font-size: var(--subtitle-1-size);
@@ -11,7 +11,7 @@
   }
 
 .part-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 360px;
@@ -165,17 +165,19 @@
 }
 
 .display-box-aboutme {
-    position: absolute;
+    position: relative;
     top: 304px;
     width: 316px;
-    height: 30px;
+    height: fit-content;
+    padding-bottom: 5px;
 }
 
 .display-text {
     position: relative;
     display: inline-block;
+    word-break: break-all;
     width: 240px;
-    height: 30px;
+    height: fit-content;
     top: 4px;
     left: 25px;
     vertical-align: middle;
@@ -195,24 +197,24 @@
 .display-line {
     position: absolute;
     width: 280px;
-    top: 28px;
+    bottom: 2px;
     left: 20px;
-    border-bottom: 1px solid;
-    margin-bottom: -1px;
-    color: var(--neutrals3);
+    border-bottom: 1.5px solid;
+    margin-bottom: -1.5px;
+    color: var(--neutrals2);
 }
 
 .logout-button {
-    position: absolute;
-    top: 354px;
+    position: relative;
+    top: 320px;
     width: 316px;
     height: 30px;
     cursor: pointer;
 }
 
 .delete-button {
-    position: absolute;
-    top: 394px;
+    position: relative;
+    top: 330px;
     width: 316px;
     height: 30px;
     cursor: pointer;
