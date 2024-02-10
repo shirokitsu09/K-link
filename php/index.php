@@ -30,7 +30,6 @@
 
                 <section id="setting" class="s">
                     <div class="c-2">
-
                         <?php include '../php/settingJANE.php'; ?>
                     </div>
                 </section>
