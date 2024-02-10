@@ -18,7 +18,7 @@ if (isset($_POST['Create'])) {
 
     $selectedHour = $_POST["Hour"];
     $selectedMinute = $_POST["Minute"];
-    $combinedTime = $_POST["CombinedTime"];
+    $combinedTime = $_POST["time"];
 
     echo "Selected Hour: " . $selectedHour . "<br>";
     echo "Selected Minute: " . $selectedMinute . "<br>";
@@ -48,6 +48,8 @@ if (isset($_POST['Create'])) {
 
                 move_uploaded_file($fileTmpName, $fileDestination);
 
+                echo '<img src="' . $fileDestination . '" alt="Uploaded Image">';
+
             } else {
                 echo "Your file is too large!";
             }
@@ -60,7 +62,6 @@ if (isset($_POST['Create'])) {
     }
 }
 // -------------------------------------------------------------------
-echo '<img src="' . $fileDestination . '" alt="Uploaded Image">';
 
 
 ?>

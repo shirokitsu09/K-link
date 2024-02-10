@@ -2,7 +2,7 @@
   $serverName = "localhost";
   $userName = "root";
   $password = "";
-  $dbName = "k-linkhobby";
+  $dbName = "k-link";
 
   $con = mysqli_connect($serverName,$userName,$password,$dbName);
 
@@ -48,7 +48,7 @@
     while ($id <= $rowCount && ($row = $result->fetch_assoc())) {
       $pic = $row['image'];
       if ($pic === NULL) {
-        $pic = '../images/emptyPicture.svg';
+        $pic = 'emptyPicture.svg';
       }
           ?>
       <div class="list" id="list-<?php echo $id?>">
@@ -81,7 +81,9 @@
         <div class="list-inner-body" id="innerlist-<?php echo $id?>">
         <b class="group-name"><?php echo $row['activityName']; ?></b>
         <div class="leader"><?php echo $row['createBy']; ?></div>
-        <img class="group-profile-picture" alt="" src="<?php echo $pic?>" />
+        <div class="imgFrame">
+          <img class="group-profile-picture" alt="" src="uploadedImg/<?php echo $pic?>" />
+        </div>
         <div class="group-date"><?php echo $row['date[]']; ?></div>
         <div class="group-time"><?php echo $row['time']; ?></div>
         <div class="group-location"><?php echo $row['location']; ?></div>
