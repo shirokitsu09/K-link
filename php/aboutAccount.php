@@ -13,18 +13,18 @@
 </head>
 <body>
 <div class="hobby">
-      <?php include'../php/report.php'
+      <?php include_once'../php/reportAccount.php'
       ?>
       <div class="part-header">
       <div class="group-child"></div>
         <b class="header-text">เกี่ยวกับบัญชี</b>
         <img class="back-button" alt="" src="../images/backbutton.svg" />
 
-        <img class="noti-button-icon" alt="" src="../images/setting/noti.svg" />
+        <img class="noti-button-icon" alt="" src="../images/noti.svg" />
       </div>
       <div class="part-body">
       <div class="body-background">
-      <img class="tdot-button" id="tdot" alt="" src="../images/Threedots.svg" />
+      <img class="tdot-button" id="tdot" alt="" src="../images/threedot.svg" />
       <img class="profile-picture" alt="" src="../images/aboutacc/p1profile.svg" />
       <div class="profile-name">JustiNa_Xie</div>
       <div class="profile-fn">ชื่อ : </div>
@@ -44,18 +44,18 @@
 </div>
 <script>
 
-      function tpopup_open(e){
-        tpopup.classList.add("on");
-      }
-
-      function tpopup_close(e){
-        tpopup.classList.remove("on");
-      }
-
-  tdot = document.getElementById("tdot")
+  var tdot = document.getElementById("tdot")
       tdot.addEventListener("click",function (e) {
       tpopup_open();
       });
+
+  document.addEventListener('click', e => {
+    if(!tpopup.contains(e.target) && !tpopupReport.contains(e.target) && !reportpopup.contains(e.target) && e.target !== tdot){
+        tpopup_close();
+        tpopupReport_close();
+        reportpopup_close();
+      }
+    });
 
 </script>
 </body>
