@@ -1,28 +1,11 @@
 <?php
+  SESSION_START();
+
 include("../config/con_db.php");
+if (isset($_POST['Update']) && isset($_SESSION['hID'])) {
+    $hID = $_SESSION['hID'];
+    echo $_SESSION['hID'];
 
-function generateID($con) {
-    $dateComponents = date('myd');
-
-    $sql_hID = "SELECT MAX(SUBSTRING_INDEX(hID, '-', -1)) AS lastNumber FROM hobby_db WHERE hID LIKE 'h$dateComponents%'";
-    $result_hID = $con->query($sql_hID);
-
-    if ($result_hID && $result_hID->num_rows > 0) {
-        $row = $result_hID->fetch_assoc();
-        $nextNumber = intval($row['lastNumber']) + 1;
-    } else {
-        $nextNumber = 1;
-    }
-
-    $suffix = sprintf("%03d", $nextNumber);
-    return 'h' . $dateComponents . '-' . $suffix;
-}
-
-$hID = generateID($con); 
-echo $hID; 
-
-
-if (isset($_POST['Create'])) {
     $activityname = $_POST["activityName"];
     $days = isset($_POST['day']) ? implode(',', array_map(function($day) use ($con) {
         return $con->real_escape_string($day);
@@ -54,31 +37,18 @@ if (isset($_POST['Create'])) {
 
                 move_uploaded_file($imageTmpName, $imageDestination);
 
-                $sql = "INSERT INTO hobby_db
-                            (hID,
-                            type,
-                            activityname, 
-                            time,
-                            `date[]`,  
-                            memberMax, 
-                            location, 
-                            detail,
-                            image,
-                            dateCreate,
-                            timeCreate,
-                            createBy 
-                            ) VALUES ('$hID',
-                                    'hobby',
-                                    '$activityname',
-                                    '$time',
-                                    '$days',
-                                    '$memberMax',
-                                    '$location',
-                                    '$detail',
-                                    '$imageNewName',
-                                    NOW(),
-                                    NOW(),
-                                    '')";
+                $sql = "UPDATE hobby_db SET
+                            activityname = '$activityname',
+                            time = '$time',
+                            `date[]` = '$days', 
+                            memberMax = '$memberMax',
+                            location = '$location',
+                            detail = '$detail',
+                            image = '$imageNewName',
+                            dateUpdate = NOW(),
+                            timeUpdate = NOW()
+                            
+                        WHERE `hID` = '$hID'";
 
                 $result = mysqli_query($con, $sql);
 

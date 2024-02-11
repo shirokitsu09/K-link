@@ -133,10 +133,11 @@
 }
 /* ----------- */
 .group-profile-picture {
-    background-color: transparent;
     position: relative;
-    width: 100px;
     height: auto;
+    max-width: 100%;
+    width: auto;
+    max-height: 100%;
 }
 
 .imgFrame {
@@ -150,6 +151,7 @@
     align-items: center;
     border-radius: var(--br-5xs);
     overflow: hidden;
+    justify-content: center;
 }
 
 .group-date {
@@ -234,6 +236,8 @@
     left: 125px;
     margin-bottom: 40px;
     z-index: 2;
+    display: flex;
+    justify-content: center;
 }
 
 .tpopup-option {
@@ -381,6 +385,7 @@
   top: 10px;
   left: 45px;
   display: inline-block;
+  color: black;
 }
     
 .group {
@@ -407,9 +412,9 @@
 }
 
 .OutFrame {
+    height: 10000px;
     width: 360px;
-    height: 500px;
-    top: -480px;
+    bottom: -10px;
     position: absolute;
-    left: -126px;
+    background-color: rgba(0,0,0,0.2);
 }
