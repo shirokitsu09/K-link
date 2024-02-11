@@ -1,25 +1,16 @@
 <?php
-  $serverName = "localhost";
-  $userName = "root";
-  $password = "";
-  $dbName = "k-link";
+  session_start();
 
-  $con = mysqli_connect($serverName,$userName,$password,$dbName);
+  include("../config/con_db.php");
 
-  if(mysqli_connect_errno()){
-    echo "Failed";
-    exit();
-  } else {
-  echo "Success";
-  }
-  $sql = "SELECT * FROM hobby_db";
-  $sqlCount = "SELECT COUNT(*) as count FROM hobby_db";
-  $result = $con->query($sql);
-  $resultCount = $con->query($sqlCount);
+  $sql_hobby_db = "SELECT * FROM hobby_db";
+  $sql_hobby_dbCount = "SELECT COUNT(*) as count FROM hobby_db";
+  $result_hobby_db = $con->query($sql_hobby_db);
+  $result_hobby_dbCount = $con->query($sql_hobby_dbCount);
 
-  if ($result !== false && $resultCount->num_rows > 0) {
+  if ($result_hobby_db !== false && $result_hobby_dbCount->num_rows > 0) {
     // Fetch the result
-    $row = $resultCount->fetch_assoc();
+    $row = $result_hobby_dbCount->fetch_assoc();
     $rowCount = $row['count'];
 
     echo "Number of rows in the table: " . $rowCount;
@@ -43,9 +34,20 @@
         </div>
       </div>
 <?php
-  if ($result->num_rows > 0) {
+  if ($result_hobby_db->num_rows > 0) {
+
     $id = 1;
-    while ($id <= $rowCount && ($row = $result->fetch_assoc())) {
+    while ($id <= $rowCount && ($row = $result_hobby_db->fetch_assoc())) {
+      
+    // Session
+    $_SESSION['activityName'] = $row['activityName'];
+    $_SESSION['location'] = $row['location'];
+    $_SESSION['time'] = $row['time'];
+    $_SESSION['memberCount'] = $row['memberCount'];
+    $_SESSION['memberMax'] = $row['memberMax'];
+    $_SESSION['detail'] = $row['detail'];
+    // 
+
       $pic = $row['image'];
       if ($pic === NULL) {
         $pic = 'emptyPicture.svg';
@@ -69,7 +71,6 @@
                 } else {
                     echo "Error: Insufficient data.<br>";
                 }
-                
               ?>
             </div>
             <div class="tag-group1">
@@ -80,24 +81,27 @@
         </div>
         <div class="list-inner-body" id="innerlist-<?php echo $id?>">
         <b class="group-name"><?php echo $row['activityName']; ?></b>
-        <div class="leader"><?php echo $row['createBy']; ?></div>
+        <div class="leader">หัวหน้า : <?php echo $row['header']; ?></div>
         <div class="imgFrame">
           <img class="group-profile-picture" alt="" src="uploadedImg/<?php echo $pic?>" />
         </div>
-        <div class="group-date"><?php echo $row['date[]']; ?></div>
-        <div class="group-time"><?php echo $row['time']; ?></div>
-        <div class="group-location"><?php echo $row['location']; ?></div>
-        <div class="group-description"><?php echo $row['detail']; ?></div>
+        <div class="group-date">วัน : <?php echo $row['date[]']; ?></div>
+        <div class="group-time">เวลา : <?php echo $row['time']; ?></div>
+        <div class="group-location">สถานที่ : <?php echo $row['location']; ?></div>
+        <div class="group-description">รายละเอียด : <?php echo $row['detail']; ?></div>
         </div>
       </div>
         
         <div class="tutoringjoin" id="tutoringjoin-<?php echo $id?>" style="display: none;">
         <div class="join-button" id="join-<?php echo $id?>" value="join-1">
-            <div class="group">
+          
+        <a href="hobbyAboutGroup.php?hID=<?php echo $row['hID'];?>">  
+          <div class="group">
               <div class="button-text">เข้าร่วมกลุ่ม</div>
               <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-join.svg" />
             </div>
           </div>
+        </a>
 
           <div class="member-button" id="member-<?php echo $id?>">
             <div class="group">
@@ -135,6 +139,8 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="../css/globalTEST.css" />
     <link rel="stylesheet" href="../css/grouplist.css" />
+    <link rel="stylesheet" href="../css/time.css" />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
