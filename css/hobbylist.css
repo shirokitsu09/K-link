@@ -301,8 +301,8 @@
     top: -35.6px;
 }
 
-.tutoringjoin {
-    display: block;
+.joinbar {
+    display: none;
     position: relative;
     background-color: var(--color-gray);
     width: 360px;

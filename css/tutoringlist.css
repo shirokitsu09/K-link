@@ -1,8 +1,6 @@
 .list-frame {
     position: relative;
-    /* background-color: var(--basecolor-white); */
-    background-color: transparent; /*<-------new*/
-    top: 38%; /*<-----new*/
+    background-color: var(--basecolor-white);
     width: 360px;
     height: 800px;
     overflow: scroll;
@@ -174,13 +172,12 @@
     font-size: var(--subtitle-1-size);
 }
 
-.tdot-button{
+.tdot-button {
     position: absolute;
-    width: 32px;
-    height: 16px;
-    object-fit: cover;
-    right: 10px;
     top: 10px;
+    right: 10px;
+    width: fit-content;
+    height: fit-content;
     cursor: pointer;
 }
 
@@ -266,8 +263,8 @@
     top: -42px;
 }
 
-.tutoringjoin {
-    display: block;
+.joinbar {
+    display: none;
     position: relative;
     background-color: var(--color-gray);
     width: 360px;
@@ -387,12 +384,4 @@
 {
     margin-bottom: 50px;
 }
-
-/*================NEW==============*/
-.list-111 {
-    width: 300px;
-    height: 400px;
-    background-color:transparent;
-}
-/*=================================*/
 

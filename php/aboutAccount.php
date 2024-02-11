@@ -31,6 +31,7 @@ $aboutme = $row['aboutme'];
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     />
 </head>
+
 <body>      
   <div class="hobby">
     <?php include '../php/header.php'?>
@@ -63,18 +64,18 @@ $aboutme = $row['aboutme'];
         </div>
 <script>
 
-      function tpopup_open(e){
-        tpopup.classList.add("on");
-      }
-
-      function tpopup_close(e){
-        tpopup.classList.remove("on");
-      }
-
-  tdot = document.getElementById("tdot")
+  var tdot = document.getElementById("tdot")
       tdot.addEventListener("click",function (e) {
       tpopup_open();
       });
+  
+  document.addEventListener('click', e => {
+    if(!tpopup.contains(e.target) && !tpopupReport.contains(e.target) && !reportpopup.contains(e.target) && e.target !== tdot){
+        tpopup_close();
+        tpopupReport_close();
+        reportpopup_close();
+      }
+    });
 
       function changeText() {
         let text = document.querySelector('.name-header');
@@ -104,6 +105,7 @@ $aboutme = $row['aboutme'];
         line.style.top = '38px';
     }
     changeText();
+
 </script>
 </body>
 </html>
