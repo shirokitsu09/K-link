@@ -153,6 +153,10 @@ ellipse-parent.frame-child {
   height: 38px;
 }
 
+.group-inner.active {
+  background-color: var(--accent);
+}
+
 .frame-div {
   position: absolute;
   display: flex;
@@ -377,8 +381,10 @@ ellipse-parent.frame-child {
 }
 .vector-icon {
   position: absolute;
-  height: 40px;
-  width: 40px;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
 }
 .div12 {
   position: absolute;

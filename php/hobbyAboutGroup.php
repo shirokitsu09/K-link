@@ -1,3 +1,32 @@
+<?php
+session_start();
+include("../config/con_db.php");
+
+if(isset($_GET['hID'])){
+$hID = $_GET['hID'];
+
+$sql_hobby_db = "SELECT * FROM hobby_db WHERE hID = '$hID'";
+$result_hobby_db = $con->query($sql_hobby_db);
+$row = $result_hobby_db->fetch_assoc();
+
+$activityName = $row['activityName'];
+$location = $row['location'];
+$time = $row['time'];
+$memberCount = $row['memberCount'];
+$memberMax = $row['memberMax'];
+$detail = $row['detail'];
+$image = $row['image'];
+$day = $row['date[]'];
+
+$dayArray = explode(",", $day);
+
+$formattedTime = date("H:i", strtotime($time));
+  if($image === NULL) {
+    $image = 'emptyPicture.svg';
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,8 +53,10 @@
       <div class="about-group-body">
         <div class="body-background">
         <img class="tdot-button" alt="" src="../images/ThreeDots.svg" />
-          <b class="group-name">ชื่อกลุ่ม</b>
-            <img class="group-picture" alt="" src="../images/" />
+        <div class="groupNameFrame">
+          <b class="group-name"><?php echo $activityName ?></b>
+        </div>  
+            <img class="group-picture" alt="" src="./uploadedImg/<?php echo $image?>" />
 
           <div class="group-date">
             <div class="group-date-title">วันทำกิจกกรม</div>
@@ -55,26 +86,26 @@
           </div>
           
           <div class="group-location">
-          <div class="group-location-title">สถานที่</div>
+          <div class="group-location-title">สถานที่ :</div>
             <div class="group-location-container">
-              <div class="group-location-text">โดมเห็ดรูม A (ข้างโรงเอ วิศวะ)</div>
+              <div class="group-location-text"><?php echo $location; ?></div>
             </div>
           </div>
 
           <div class="group-time-container">
             <div class="group-time-title">เวลา :</div>
-            <div class="group-time-time">20:00</div>
+            <div class="group-time-time"><?php echo $formattedTime; ?></div>
             </div>
 
           <div class="group-member-container">
               <div class="group-member-text">สมาชิก :</div>
-              <div class="group-member-amount availible">25</div><div class="group-member-max availible">/ไม่จำกัด</div>
+              <div class="group-member-amount availible"><?php echo $memberCount; ?>/<?php echo $memberMax; ?></div>
               <img class="vector-icon1" alt="" src="../images/aboutgroup/magnifyglass.svg" />
             </div>
 
           <div class="group-parent1">
             <div class="rectangle-parent4">
-              <div class="group-description-container">วิ่งเก็บเห็ด</div>
+              <div class="group-description-container"><?php echo $detail; ?></div>
       
             </div>
             <div class="div14">รายละเอียด</div>
@@ -99,7 +130,7 @@
     </div>
 
         <div class="footerIndividual">
-            <a href="hobbyEditAboutGroup.php" class="createGroupButton">
+            <a href="hobbyEditAboutGroup.php?hID=<?php echo $row['hID'];?>" class="createGroupButton">
                 <img src="../images/wrench.svg">
             </a>
         </div>
@@ -152,8 +183,26 @@
         line.style.left = '80px';
         line.style.top = '38px';
     }
+  // checkDate
+    document.addEventListener("DOMContentLoaded", function() {
+    var ellipseDates = document.querySelectorAll(".ellipse-date");
 
+        ellipseDates.forEach(function(ellipseDate) {
+          var date = ellipseDate.querySelector(".date").textContent.trim();
 
+        <?php
+           if(isset($dayArray)) {
+                echo "var dayArray = " . json_encode($dayArray) . ";";
+
+                echo "if (dayArray.includes(date)) {";
+                echo "ellipseDate.classList.add('active');";
+                echo "}";
+            }
+        ?>
+
+      });
+    });
+  // 
     changeText();
 
       </script>

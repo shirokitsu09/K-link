@@ -1,3 +1,33 @@
+<?php
+  session_start();
+  include("../config/con_db.php");
+
+  if(isset($_GET['hID'])){
+    $hID = $_GET['hID'];
+    $sql_hobby_db = "SELECT * FROM hobby_db WHERE hID = '$hID'";
+    $result_hobby_db = $con->query($sql_hobby_db);
+    $row = $result_hobby_db->fetch_assoc();
+    
+    $activityName = $row['activityName'];
+    $location = $row['location'];
+    $time = $row['time'];
+    $memberCount = $row['memberCount'];
+    $memberMax = $row['memberMax'];
+    $detail = $row['detail'];
+    $image = $row['image'];
+    $day = $row['date[]'];
+    
+    $dayArray = explode(",", $day);
+    
+    $formattedTime = date("H:i", strtotime($time));
+    list($hour, $minute) = explode(':', $formattedTime);
+
+      if($image === NULL) {
+        $image = 'emptyPicture.svg';
+      }
+    }
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,121 +35,236 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" href="../css/globalTEST.css" />
-    <link rel="stylesheet" href="../css/hobbyaboutgroup.css" />
+    <link rel="stylesheet" href="../css/hobbyEdit.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
     />
+
+    <title>Edit-Hobby's Post</title>
+
   </head>
   <body>
-    <div class="hobby">
-      <div class="about-group-header">
-      <div class="group-child"></div>
-        <b class="header-text">ABOUT GROUP</b>
-        <img class="back-button" alt="" src="../images/backbutton.svg" />
+    
+    <div class="background">
 
-        <img class="noti-button-icon" alt="" src="../images/noti.svg" />
-      </div>
-      
+    <link rel="stylesheet" href="../css/HEADER.css" />
+      <?php
+        include '../php/header.php';
+      ?>
 
-      <div class="about-group-body">
-        <div class="body-background">
-        <img class="tdot-button" alt="" src="../images/threedot.svg" />
-          <b class="group-name">ชื่อกลุ่ม</b>
-            <img class="group-picture" alt="" src="../images/" />
+<form action="hobbyEditPost_db.php" method="post" enctype="multipart/form-data">
 
-          <div class="group-date">
-            <div class="group-date-title">วันทำกิจกกรม</div>
-            <div class="group-date-container">
-              <div class="ellipse-date">
-                <div class="date">จ</div>
-              </div>
-              <div class="ellipse-date">
-                <div class="date">อ</div>
-              </div>
-              <div class="ellipse-date">
-                <div class="date">พ</div>
-              </div>
-              <div class="ellipse-date">
-                <div class="date">พฤ</div>
-              </div>
-              <div class="ellipse-date">
-                <div class="date">ศ</div>
-              </div>
-              <div class="ellipse-date">
-                <div class="date">ส</div>
-              </div>
-              <div class="ellipse-date">
-                <div class="date">อา</div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="group-location">
-          <div class="group-location-title">สถานที่</div>
-            <div class="group-location-container">
-              <div class="group-location-text">โดมเห็ดรูม A (ข้างโรงเอ วิศวะ)</div>
-            </div>
-          </div>
+      <div class="main-frame">      
+        <div class="frame-child"></div>
 
-          <div class="group-time-container">
-            <div class="group-time-title">เวลา :</div>
-            <div class="group-time-time">20:00</div>
-            </div>
-
-          <div class="group-member-container">
-              <div class="group-member-text">สมาชิก :</div>
-              <div class="group-member-amount availible">25</div><div class="group-member-max availible">/ไม่จำกัด</div>
-              <img class="vector-icon1" alt="" src="../images/aboutgroup/magnifyglass.svg" />
-            </div>
-
-          <div class="group-parent1">
-            <div class="rectangle-parent4">
-              <div class="group-description-container">วิ่งเก็บเห็ด</div>
-      
-            </div>
-            <div class="div14">รายละเอียด</div>
-          </div>
-          <div class="rectangle-parent5">
-            <div class="tag-container">
-            <div class="div17">วิ่ง</div>
-            <div class="div17">กีฬา</div>
-            <div class="div17">ช่วงเย็น</div>
-            <div class="div17">สนามกีฬา</div>
-            <div class="div17">ออกกำลังกาย</div>
-            </div>
-            <div class="tag">Tag</div>
-          </div>
-          <div class="rectangle-parent10">
-          <div class="button-invite"></div>
-          <div class="div20">ชวนเพื่อนเข้ากลุ่ม</div>
-          <img class="vector-icon2" alt="" src="../images/aboutgroup/addfriendtogroup.svg" />
+        <div class="hobby-name">
+          <label for="ActivityName" class="name">ชื่อกิจกรรม <a class="star">*<a></label>
+          <input type="text" class="first2 textfields-child" name="activityName" placeholder="<?php echo $activityName ?>" maxlength="27"></input>
         </div>
+
+        <div class="day-select">
+            <div class="textfields">
+              <div class="div2">วันที่ <a class="star">*<a></div>
+            
+            </div>
+          <div class="frame-div">
+
+            <div class="ellipse-parent">
+              <div class="group-inner"></div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="0">จ
+                <input type="checkbox" hidden name="day[]" id="monday" value="จ">
+              </label>
+            </div>
+
+            <div class="ellipse-parent">
+              <div class="group-inner"></div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="1">อ
+                <input type="checkbox" hidden name="day[]" id="tuesday" value="อ">
+              </label>
+            </div>
+
+            <div class="ellipse-parent">
+              <div class="group-inner"></div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="2">พ
+                <input type="checkbox" hidden name="day[]" id="wednesday" value="พ">
+              </label>
+            </div>
+            <div class="ellipse-parent">
+              <div class="group-inner"></div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="3">พฤ
+                <input type="checkbox" hidden name="day[]" id="thursday" value="พฤ">
+              </label>
+            </div>
+            <div class="ellipse-parent">
+              <div class="group-inner"></div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="4">ศ
+                <input type="checkbox" hidden name="day[]" id="friday" value="ศ">
+              </label>
+            </div>
+            <div class="ellipse-parent">
+              <div class="group-inner"></div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="5">ส
+                <input type="checkbox" hidden name="day[]" id="saturday" value="ส">
+              </label>
+            </div>
+            <div class="ellipse-parent">
+              <div class="group-inner"></div>
+              <label class="div3" onclick="toggleBackground(this)" data-day="6">อา
+                <input type="checkbox" hidden name="day[]" id="sunday" value="อา">
+              </label>
+            </div>
+          </div>
         </div>
+
+        <div class="time-member">
+
+          <div class="textfields-parent">
+            <div class="textfields1">
+              <div class="name">เวลา <a class="star">*</a></div>
+              <div class="textfields-child">
+                      <!-- coding -->
+                      <link rel="stylesheet" href="../css/time.css" />
+                      <?php
+                        include '../php/assets/time.php';
+                      ?>
+                      <!-- coding -->
+              </div>
+            </div>
+          </div>
+
+            <div class="member">
+              <div class="name">สมาชิกที่รับ <a class="star">*</a></div>
+              <input type="text" class="first2 textfields-child" name="memberMax" placeholder="<?php echo $memberMax ?>" maxlength="2"></input>
+            </div>
+
+            <div class="requairment">
+              <div class="name"><a class="star">*</a> ไม่จำกัดสมาชิก<br>โปรดพิมพ์ "00"</div>
+            </div>
+        </div>
+
+        <div class="location">
+          <label for="location" class="name">สถานที่ <a class="star">*</a></label>
+          <input type="text" class="first2 textfields-child" name="location" placeholder="<?php echo $location ?>"></input>
+        </div>
+        
+        <div class="detail">
+          <label for="detail" class="name">รายละเอียด</label>
+          <textarea class="detail-text textfields-child" name="detail" placeholder="<?php echo $detail ?>"></textarea>
+        </div>
+
+        <div class="PicUpload-frame">
+
+          <label for="PicProfileGroup" class="div12">รูปโปรไฟล์กลุ่ม</label>
+          <label class="group-child8">
+            <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png, .pdf">     
+            <div class="PicUpload">    
+              <img class="vector-icon" alt="" src="./uploadedImg/<?php echo $image ?>" />
+            </div> 
+          </label>
+
+        </div>
+
+        <div class="tag">
+          <label for="detail" class="tag" name="tag">Tag</label>
+        </div>
+        <div class="add-tag-frame">
+          <div class="group-child10">
+          <div class="rectangle-parent2">
+            <div class="group-child9"></div>
+            <div class="add-tag">Add Tag</div>
+            <img class="vector-icon1" alt="" src="../images/plus.svg" />
+          </div>
+          </div>
+        </div>
+
+        <div class="create-cancle">
+          <div class="rectangle-group">
+            <button type="submit" name="Update" class="create-button">ยืนยัน</button>
+          </div>
+          <div class="rectangle-container">
+            <button type="button" name="Cancle" class="button-cancle">ยกเลิก</button>
+          </div>
+
       </div>
+
+</form>
+
     </div>
-
-    <script>
-      var groupContainer11 = document.getElementById("groupContainer11");
-      if (groupContainer11) {
-        groupContainer11.addEventListener("click", function (e) {
-          // Please sync "tutoring  group 12" to the project
-        });
-      }
-      
-      var groupContainer22 = document.getElementById("groupContainer22");
-      if (groupContainer22) {
-        groupContainer22.addEventListener("click", function (e) {
-          // Please sync "user edit" to the project
-        });
-      }
-      
-      var frameIcon = document.getElementById("frameIcon");
-      if (frameIcon) {
-        frameIcon.addEventListener("click", function (e) {
-          // Please sync "ThreeDotsOption" to the project
-        });
-      }
-      </script>
   </body>
+
+<script>
+    function toggleBackground(element) {
+      let checkbox = element.querySelector('input[type="checkbox"]');
+        if (checkbox.checked) {
+        element.classList.add('select');
+    } else {
+        element.classList.remove('select');
+    }
+  }
+
+    function changeText() {
+        let text = document.querySelector('.name-header');
+        let icon = document.querySelector('.app-icon');
+        let line = document.querySelector('.LINE');
+
+        text.textContent = 'แก้ไขกลุ่ม';
+        text.style.width = '200px';
+        text.style.left = '100px';
+        text.style.top = '30px';
+
+        icon.src = '../images/backbutton.svg';
+        icon.style.width = '30px';
+        icon.style.height = '30px';
+        icon.style.top = '37px';
+        icon.style.left = '25px';
+
+        line.style.left = '80px';
+        line.style.top = '38px';
+    }
+
+    function changeTime() {
+        let hour = document.getElementById('HourInput');
+        let minute = document.getElementById('MinuteInput');
+        let hour_show = document.getElementById('hour');
+        let minute_show = document.getElementById('minute');
+
+        hour.value = '<?php echo $hour; ?>';
+        minute.value = '<?php echo $minute; ?>';
+
+        hour_show.textContent = '<?php echo $hour; ?>';
+        minute_show.textContent = '<?php echo $minute; ?>';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    let ellipseDates = document.querySelectorAll(".div3");
+
+    ellipseDates.forEach(function(ellipseDate) {
+        let date = ellipseDate.textContent.trim();
+
+       <?php
+        if(isset($dayArray)) {
+            echo "let dayArray = " . json_encode($dayArray) . ";";
+
+            echo "dayArray.forEach(function(day) {";
+            echo "    ellipseDates.forEach(function(ellipseDate) {";
+            echo "        if (ellipseDate.textContent.trim() === day) {";
+            echo "            let checkbox_edit = ellipseDate.querySelector('input[type=\"checkbox\"]');";
+            echo "            checkbox_edit.checked = true;";
+            echo "            ellipseDate.classList.add('select');";
+            echo "        }";
+            echo "    });";
+            echo "});";
+        }
+        ?>
+
+    });
+    changeTime();
+    changeText();
+});
+
+
+
+</script>
+
 </html>

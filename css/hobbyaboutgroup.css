@@ -61,14 +61,25 @@
 }
 
 .group-name {
-    position: absolute;
-    height: 36px;
-    top: 35px;
-    font-size: 60px;
-    display: inline-block;
-    text-align: center;
-    width: 330px;
-    font-size: var(--h4-size);
+  position: relative;
+  height: 36px;
+  font-size: 60px;
+  display: inline-block;
+  text-align: center;
+  width: 280px;
+  font-size: var(--h4-size);
+  word-break: break-word;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; /* Add ellipsis for truncated text */
+}
+
+.groupNameFrame {
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .group-picture {
@@ -125,6 +136,10 @@
     background-color: var(--neutrals1);
     border: 1px solid var(--neutrals2);
     box-sizing: border-box;
+  }
+
+  .ellipse-date.active {
+    background-color: var(--accent);
   }
 
   .div4 {
@@ -276,10 +291,13 @@
 
   .group-member-amount {
     position: absolute;
-    top: 4px;
-    left: 70px;
-    width: 30px;
+    top: 3px;
+    left: 65px;
+    width: 50%;
     height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
 .group-member-amount.availible {
@@ -374,14 +392,15 @@
   .group-description-container {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 1px;
     border-radius: var(--br-8xs);
     background-color: var(--neutrals1);
     outline-style: solid;
     outline-color: var(--color-black);
     outline-width: 1.3px;
-    width: 300px;
-    height: 135px;
+    width: 280px;
+    height: 115px;
+    padding: 10px;
   }
   .div13 {
     position: absolute;

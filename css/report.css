@@ -1,9 +1,9 @@
 .list-frame {
     position: relative;
-    background-color: var(--basecolor-white);
+    /* background-color: var(--basecolor-white); */
     width: 360px;
     height: 800px;
-    overflow: scroll;
+    overflow: hidden;
     text-align: left;
     font-family: "roboto", sans-serif;
     font-size: var(--subtitle-1-size);
@@ -39,6 +39,16 @@
     left: 130px;
     margin-bottom: 40px;
     z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.outerFrame {
+    position: absolute;
+    width: 360px;
+    height: 10000px;
+    bottom: -10px;
+    background-color: rgba(0,0,0,0.2) ;
 }
 
 .tpopup-option {
