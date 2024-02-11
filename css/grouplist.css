@@ -4,8 +4,8 @@
     background-color: transparent;
     width: 360px;
     max-height: 67%;
-    /* overflow-x: hidden; */
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     text-align: left;
     font-family: var(--subtitle-1);
     font-size: var(--subtitle-1-size);
@@ -142,8 +142,8 @@
     display: inline-block;
     height: max-content;
     width: max-content;
-    /* top: 50px;
-    left: 140px; */
+    top: 50px;
+    left: 140px;
     font-size: var(--subtitle-1-size);
 }
 

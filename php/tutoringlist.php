@@ -41,7 +41,7 @@
           <b class="subject">แคลเซคจารย์สยาม</b>
           <div class="mentor">ผู้สอน : AIJHONG</div>
           <div class="group-description">รายละเอียด : polar coordinates</div>
-          <div class="group-date">เวลา : 15 มิ.ย. 2567 17.00 - 19.00</div>
+          <div class="group-date-tutoring">เวลา : 15 มิ.ย. 2567 17.00 - 19.00</div>
           <div class="group-location">สถานที่ : โต๊ะรูม A (โดมเห็ดข้างโรง A)</div>
           <b class="faculty">วิศวกรรมศาสตร์</b>
         </div>
@@ -89,7 +89,7 @@
           <b class="subject">ชีวะชีใจ</b>
           <div class="mentor">ผู้สอน : เจ้าชายไอโบ</div>
           <div class="group-description">รายละเอียด : สอบปลายภาค</div>
-          <div class="group-date">เวลา : 1 ม.ค. 2555 13.30 - 16.30</div>
+          <div class="group-date-tutoring">เวลา : 1 ม.ค. 2555 13.30 - 16.30</div>
           <div class="group-location">สถานที่ : พระจอมเกล้า 908</div>
           <b class="faculty">วิทยาศาสตร์</b>
         </div>
@@ -137,7 +137,7 @@
           <b class="subject">แคล 2</b>
           <div class="mentor">ผู้สอน : เหน่ง iot</div>
           <div class="group-description">รายละเอียด : polar coordinates</div>
-          <div class="group-date">เวลา : 15 มิ.ย. 2567 17.00 - 19.00</div>
+          <div class="group-date-tutoring">เวลา : 15 มิ.ย. 2567 17.00 - 19.00</div>
           <div class="group-location">สถานที่ : Google meet</div>
           <b class="faculty">วิศวกรรมศาสตร์</b>
         </div>
@@ -186,7 +186,7 @@
           <b class="subject">เซอกิตจารย์ตู๋</b>
           <div class="mentor">ผู้สอน : โอมZA2595</div>
           <div class="group-description">รายละเอียด : สอบปลายภาค</div>
-          <div class="group-date">เวลา : 5 ก.พ. 2558 12.30 - 00.00</div>
+          <div class="group-date-tutoring">เวลา : 5 ก.พ. 2558 12.30 - 00.00</div>
           <div class="group-location">สถานที่ : E-12 1007</div>
           <b class="faculty">วิศวกรรมศาสตร์</b>
         </div>
@@ -234,7 +234,7 @@
           <b class="subject">อิเล็กจารย์ส...</b>
           <div class="mentor">ผู้สอน : ตัวตึงภาคฟิ</div>
           <div class="group-description">รายละเอียด : Test 2 - 3</div>
-          <div class="group-date">เวลา : 18 ก.ย. 2568 00.30 - 05.30</div>
+          <div class="group-date-tutoring">เวลา : 18 ก.ย. 2568 00.30 - 05.30</div>
           <div class="group-location">สถานที่ : โรงครุ</div>
           <b class="faculty">วิทยาศาสตร์</b>
         </div>
