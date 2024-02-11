@@ -3,11 +3,12 @@
     background: linear-gradient(180deg, #f89603, #f86a03 56.25%, #f85b03);
     width: 360px;
     height: 800px;
-    overflow: scroll;
+    overflow: hidden;
     text-align: center;
     color: var(--neutrals1);
     font-size: var(--subtitle-1-size);
     font-family: "roboto", sans-serif;
+    z-index: 0;
   }
 
 .part-header {
@@ -206,17 +207,23 @@
 .box-aboutme {
     position: absolute;
     top: 439px;
-    left: 30px;
+    left: 29px;
     border-radius: 20px;
     background-color: var(--neutrals1);
-    width: 260px;
+    width: 220px;
     height: 140px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-aboutme {
+    word-wrap: break-word;
+    overflow: hidden;
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 260px;
-    height: fit-content;
+    display: inline-block;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    font-size: var(--subtitle-1-size);
 }

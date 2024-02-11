@@ -13,7 +13,7 @@
 <body>
 <div class="list-frame">
 <div class="tpopup" id="tpopup">
-        <div class="tpopup-drag" id="tpopupdrag"></div>
+        <div class="tpopup-drag" id="tpopupdrag"><div class="outerFrame"></div></div>
         <div class="tpopup-option" id="tpopup-option-1">
           <img class="tpopup-option-icon" src="">
           <div class="tpopup-option-text">สวมรอยเป็นบุคคลอื่น</div>
