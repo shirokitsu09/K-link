@@ -15,8 +15,7 @@
   </head>
   <body>
     <div class="background">
-      <?php include 'settingButton.php' ?>
-      <?php include 'header.php' ?>
+      <?php include 'setting-button.php'?>
       <div class="inner">
 
           <div class="inner-background"></div>

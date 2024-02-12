@@ -1,8 +1,9 @@
  <div class="time-pickable">
-    <div class="hour hidden" id="hour">--</div>
+    <div class="hour hidden" id="hour" onclick="OpenHour()">--</div>
     <div class="colon">:</div>
-    <div class="minute hidden" id="minute">--</div>
+    <div class="minute hidden" id="minute" onclick="OpenMinute()">--</div>
 </div>
+    <script>updateInputValue();</script>
     <div id="dropdown-hour" class="dropdown-hour hidden">
         <select id="HourDropdown" size="5" onchange="updateInputValue()">
             <option value="00">00</option>
@@ -50,7 +51,7 @@
         </select>
         <input type="text" id="MinuteInput" name="Minute" style="display: none;" value="">
     </div>
-        <input type="time" id="CombinedTimeInput" name="time" hidden>
+        <input type="time" id="CombinedTimeInput" name="CombinedTime" hidden>
 <!-- -------------------------------------------------------------- -->
 
 <script>

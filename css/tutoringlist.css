@@ -1,6 +1,8 @@
-.list-frame {
+.list-frame-tutoring {
     position: relative;
-    background-color: var(--basecolor-white);
+    /* background-color: var(--basecolor-white); */
+    background-color: transparent; /*<-------new*/
+    top: 2%; /*<-----new*/
     width: 360px;
     height: 800px;
     overflow: scroll;
@@ -15,7 +17,7 @@
     width: 360px;
     height: 24px;
 }
-.list-inner {
+.list-inner-tutoring {
     position: relative;
     border-radius: 20px;
     background-color: var(--basecolor-white);
@@ -142,7 +144,7 @@
     left: 25px;
 }
 
-.group-date {
+.group-date-tutoring {
     position: absolute;
     display: inline-block;
     height: max-content;
@@ -172,12 +174,13 @@
     font-size: var(--subtitle-1-size);
 }
 
-.tdot-button {
+.tdot-button{
     position: absolute;
-    top: 10px;
+    width: 32px;
+    height: 16px;
+    object-fit: cover;
     right: 10px;
-    width: fit-content;
-    height: fit-content;
+    top: 10px;
     cursor: pointer;
 }
 
@@ -263,8 +266,8 @@
     top: -42px;
 }
 
-.joinbar {
-    display: none;
+.tutoringjoin {
+    display: block;
     position: relative;
     background-color: var(--color-gray);
     width: 360px;
@@ -374,7 +377,7 @@
     
 .list {
     position: relative;
-    top: 10px;
+    top: 0px; /*10px*/
     left: 0px;
     width: 360px;
     height: 300px;
@@ -384,4 +387,12 @@
 {
     margin-bottom: 50px;
 }
+
+/*================NEW==============*/
+.list-111 {
+    width: 360px;
+    height: 350px;
+    background-color:transparent;
+}
+/*=================================*/
 

@@ -23,65 +23,59 @@
         include '../php/header.php';
       ?>
 
-<form action="hobbyCreatePost_db.php" method="post" enctype="multipart/form-data">
+<form action="hobbyCreatePost_db2.php" method="post" enctype="multipart/form-data">
 
       <div class="main-frame">      
         <div class="frame-child"></div>
 
-        <div class="hobby-name">
-          <label for="ActivityName" class="name">ชื่อกิจกรรม <a class="star">*<a></label>
-          <input type="text" class="first2 textfields-child" name="activityName" placeholder="ชื่อกลุ่มหรือกิจกรรม..." maxlength="27"></input>
-        </div>
-
-        <div class="day-select">
+        <div class="date-select">
             <div class="textfields">
-              <div class="div2">วันที่ <a class="star">*<a></div>
-            
+              <div class="div2">วันที่</div>
             </div>
           <div class="frame-div">
 
             <div class="ellipse-parent">
               <div class="group-inner"></div>
               <label class="div3" onclick="toggleBackground(this)" data-day="0">จ
-                <input type="checkbox" hidden name="day[]" id="monday" value="จ">
+                <input type="checkbox" hidden name="date[]" id="monday" value="monday">
               </label>
             </div>
 
             <div class="ellipse-parent">
               <div class="group-inner"></div>
               <label class="div3" onclick="toggleBackground(this)" data-day="1">อ
-                <input type="checkbox" hidden name="day[]" id="tuesday" value="อ">
+                <input type="checkbox" hidden name="date[]" id="tuesday" value="tuesday">
               </label>
             </div>
 
             <div class="ellipse-parent">
               <div class="group-inner"></div>
               <label class="div3" onclick="toggleBackground(this)" data-day="2">พ
-                <input type="checkbox" hidden name="day[]" id="wednesday" value="พ">
+                <input type="checkbox" hidden name="date[]" id="wednesday" value="wednesday">
               </label>
             </div>
             <div class="ellipse-parent">
               <div class="group-inner"></div>
               <label class="div3" onclick="toggleBackground(this)" data-day="3">พฤ
-                <input type="checkbox" hidden name="day[]" id="thursday" value="พฤ">
+                <input type="checkbox" hidden name="date[]" id="thursday" value="thursday">
               </label>
             </div>
             <div class="ellipse-parent">
               <div class="group-inner"></div>
               <label class="div3" onclick="toggleBackground(this)" data-day="4">ศ
-                <input type="checkbox" hidden name="day[]" id="friday" value="ศ">
+                <input type="checkbox" hidden name="date[]" id="friday" value="friday">
               </label>
             </div>
             <div class="ellipse-parent">
               <div class="group-inner"></div>
               <label class="div3" onclick="toggleBackground(this)" data-day="5">ส
-                <input type="checkbox" hidden name="day[]" id="saturday" value="ส">
+                <input type="checkbox" hidden name="date[]" id="saturday" value="saturday">
               </label>
             </div>
             <div class="ellipse-parent">
               <div class="group-inner"></div>
               <label class="div3" onclick="toggleBackground(this)" data-day="6">อา
-                <input type="checkbox" hidden name="day[]" id="sunday" value="อา">
+                <input type="checkbox" hidden name="date[]" id="sunday" value="sunday">
               </label>
             </div>
           </div>
@@ -91,7 +85,7 @@
 
           <div class="textfields-parent">
             <div class="textfields1">
-              <div class="name">เวลา <a class="star">*</a></div>
+              <div class="name">เวลา</div>
               <div class="textfields-child">
                       <!-- coding -->
                       <link rel="stylesheet" href="../css/time.css" />
@@ -104,17 +98,19 @@
           </div>
 
             <div class="member">
-              <div class="name">สมาชิก <a class="star">*</a></div>
+              <div class="name">สมาชิก</div>
               <input type="text" class="first2 textfields-child" name="memberMax" placeholder="จำนวนที่รับได้" maxlength="2"></input>
-            </div>
+          </div>
 
-            <div class="requairment">
-              <div class="name"><a class="star">*</a> ไม่จำกัดสมาชิก<br>โปรดพิมพ์ "00"</div>
-            </div>
+        </div>
+
+        <div class="hobby-name">
+          <label for="ActivityName" class="name">ชื่อกิจกรรม</label>
+          <input type="text" class="first2 textfields-child" name="activityName" placeholder="ชื่อกลุ่มหรือกิจกรรม..." maxlength="27"></input>
         </div>
 
         <div class="location">
-          <label for="location" class="name">สถานที่ <a class="star">*</a></label>
+          <label for="location" class="name">สถานที่</label>
           <input type="text" class="first2 textfields-child" name="location" placeholder="สถานที่ทำกิจกรรม"></input>
         </div>
         
@@ -135,17 +131,13 @@
 
         </div>
 
-        <div class="tag">
-          <label for="detail" class="tag" name="tag">Tag</label>
-        </div>
         <div class="add-tag-frame">
-          <div class="group-child10">
           <div class="rectangle-parent2">
             <div class="group-child9"></div>
             <div class="add-tag">Add Tag</div>
             <img class="vector-icon1" alt="" src="../images/plus.svg" />
           </div>
-          </div>
+          <div class="group-child10"></div>
         </div>
 
         <div class="create-cancle">

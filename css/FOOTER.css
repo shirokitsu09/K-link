@@ -14,13 +14,13 @@
     background: #06021b;
  } */
  .navigation {
-    position: fixed;
-    /* margin-top: 30px; */
-    left: 0;
-    top: 720px;
+    position: relative;
+    margin-top: 300px;
+    right: 0;
+    bottom: -420px;
     width: 360px;
     /* height: 70px; */
-    min-height: 80px;
+    height: 80px;
     background: var(--primary);
     display: flex;
     justify-content: center;
@@ -115,9 +115,6 @@
    justify-content: center;
    align-items: center;
    transition: .5s;
- }
- .indicator.hidden {
-   display: none;
  }
  .indicator::before {
    content: '';
