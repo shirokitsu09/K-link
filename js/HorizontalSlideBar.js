@@ -7,14 +7,8 @@ const IconVisibility = () => {
 
     let scrollableWidth = tabMenu.scrollWidth - tabMenu.clientWidth;
 
-    //OLD VERSION
-    // btnLeft.style.display = scrollLeftValue > 0 ? "block" : "none";
-    // btnRight.style.display = scrollableWidth > scrollLeftValue ? "block" : "none";
-
-    //NEW VERSION
-    btnLeft.style.display = scrollLeftValue > 0 ? "none" : "none";
-    btnRight.style.display = scrollableWidth > scrollLeftValue ? "none" : "none";
-
+    btnLeft.style.display = scrollLeftValue > 0 ? "block" : "none";
+    btnRight.style.display = scrollableWidth > scrollLeftValue ? "block" : "none";
     console.log(scrollableWidth ,scrollLeftValue);
 }
 
@@ -31,14 +25,12 @@ btnLeft.addEventListener("click", () => {
 });
 
 window.onload = function(){
-    // btnRight.style.display = tabMenu.scrollWidth > tabMenu.clientWidth || tabMenu.scrollWidth >= window.innerWidth ? "block" : "none";
-    btnRight.style.display = tabMenu.scrollWidth > tabMenu.clientWidth || tabMenu.scrollWidth >= window.innerWidth ? "none" : "none";
+    btnRight.style.display = tabMenu.scrollWidth > tabMenu.clientWidth || tabMenu.scrollWidth >= window.innerWidth ? "block" : "none";
     btnLeft.style.display = tabMenu.scrollWidth >= window.innerWidth ? "" : "none";
 }
 
 window.onresize = function(){
-    // btnRight.style.display = tabMenu.scrollWidth > tabMenu.clientWidth || tabMenu.scrollWidth >= window.innerWidth ? "block" : "none";
-    btnRight.style.display = tabMenu.scrollWidth > tabMenu.clientWidth || tabMenu.scrollWidth >= window.innerWidth ? "none" : "none";
+    btnRight.style.display = tabMenu.scrollWidth > tabMenu.clientWidth || tabMenu.scrollWidth >= window.innerWidth ? "block" : "none";
     btnLeft.style.display = tabMenu.scrollWidth >= window.innerWidth ? "" : "none";
 
     let scrollLeftValue = Math.round(tabMenu.scrollLeft);
