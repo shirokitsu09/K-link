@@ -5,8 +5,8 @@
 
   $sql_hobby_db = "SELECT * FROM hobby_db";
   $sql_hobby_dbCount = "SELECT COUNT(*) as count FROM hobby_db";
-  $result_hobby_db = $con->query($sql_hobby_db);
-  $result_hobby_dbCount = $con->query($sql_hobby_dbCount);
+  $result_hobby_db = $conn->query($sql_hobby_db);
+  $result_hobby_dbCount = $conn->query($sql_hobby_dbCount);
 
   if ($result_hobby_db !== false && $result_hobby_dbCount->num_rows > 0) {
     // Fetch the result
@@ -130,7 +130,7 @@
   }
   
   // Close the database connection
-  $con->close();
+  $conn->close();
 ?>  
 </div>
 <!DOCTYPE html>
