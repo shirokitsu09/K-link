@@ -1,3 +1,33 @@
+<?php
+  session_start();
+  include("../config/con_db.php");
+
+  if(isset($_GET['hID'])){
+    $hID = $_GET['hID'];
+    $sql_hobby_db = "SELECT * FROM hobby_db WHERE hID = '$hID'";
+    $result_hobby_db = $con->query($sql_hobby_db);
+    $row = $result_hobby_db->fetch_assoc();
+    
+    $activityName = $row['activityName'];
+    $location = $row['location'];
+    $time = $row['time'];
+    $memberCount = $row['memberCount'];
+    $memberMax = $row['memberMax'];
+    $detail = $row['detail'];
+    $image = $row['image'];
+    $day = $row['date[]'];
+    
+    $dayArray = explode(",", $day);
+    
+    $formattedTime = date("H:i", strtotime($time));
+    list($hour, $minute) = explode(':', $formattedTime);
+
+      if($image === NULL) {
+        $image = 'emptyPicture.svg';
+      }
+    }
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,13 +35,13 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" href="../css/globalTEST.css" />
-    <link rel="stylesheet" href="../css/hobby.css" />
+    <link rel="stylesheet" href="../css/hobbyEdit.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
     />
 
-    <title>Create Hobby</title>
+    <title>Edit-Hobby's Post</title>
 
   </head>
   <body>
@@ -23,14 +53,14 @@
         include '../php/header.php';
       ?>
 
-<form action="hobbyCreatePost_db.php" method="post" enctype="multipart/form-data">
+<form action="hobbyEditPost_db.php" method="post" enctype="multipart/form-data">
 
       <div class="main-frame">      
         <div class="frame-child"></div>
 
         <div class="hobby-name">
           <label for="ActivityName" class="name">ชื่อกิจกรรม <a class="star">*<a></label>
-          <input type="text" class="first2 textfields-child" name="activityName" placeholder="ชื่อกลุ่มหรือกิจกรรม..." maxlength="27"></input>
+          <input type="text" class="first2 textfields-child" name="activityName" placeholder="<?php echo $activityName ?>" maxlength="27"></input>
         </div>
 
         <div class="day-select">
@@ -104,8 +134,8 @@
           </div>
 
             <div class="member">
-              <div class="name">สมาชิก <a class="star">*</a></div>
-              <input type="text" class="first2 textfields-child" name="memberMax" placeholder="จำนวนที่รับได้" maxlength="2"></input>
+              <div class="name">สมาชิกที่รับ <a class="star">*</a></div>
+              <input type="text" class="first2 textfields-child" name="memberMax" placeholder="<?php echo $memberMax ?>" maxlength="2"></input>
             </div>
 
             <div class="requairment">
@@ -115,12 +145,12 @@
 
         <div class="location">
           <label for="location" class="name">สถานที่ <a class="star">*</a></label>
-          <input type="text" class="first2 textfields-child" name="location" placeholder="สถานที่ทำกิจกรรม"></input>
+          <input type="text" class="first2 textfields-child" name="location" placeholder="<?php echo $location ?>"></input>
         </div>
         
         <div class="detail">
           <label for="detail" class="name">รายละเอียด</label>
-          <textarea class="detail-text textfields-child" name="detail" placeholder="รายละเอียดเพิ่มเติมของกิจกรรม"></textarea>
+          <textarea class="detail-text textfields-child" name="detail" placeholder="<?php echo $detail ?>"></textarea>
         </div>
 
         <div class="PicUpload-frame">
@@ -129,7 +159,7 @@
           <label class="group-child8">
             <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png, .pdf">     
             <div class="PicUpload">    
-              <img class="vector-icon" alt="" src="../images/plus.svg" />
+              <img class="vector-icon" alt="" src="./uploadedImg/<?php echo $image ?>" />
             </div> 
           </label>
 
@@ -150,7 +180,7 @@
 
         <div class="create-cancle">
           <div class="rectangle-group">
-            <button type="submit" name="Create" class="create-button">สร้าง</button>
+            <button type="submit" name="Update" class="create-button">ยืนยัน</button>
           </div>
           <div class="rectangle-container">
             <button type="button" name="Cancle" class="button-cancle">ยกเลิก</button>
@@ -178,7 +208,7 @@
         let icon = document.querySelector('.app-icon');
         let line = document.querySelector('.LINE');
 
-        text.textContent = 'งานอดิเรก';
+        text.textContent = 'แก้ไขกลุ่ม';
         text.style.width = '200px';
         text.style.left = '100px';
         text.style.top = '30px';
@@ -193,7 +223,47 @@
         line.style.top = '38px';
     }
 
+    function changeTime() {
+        let hour = document.getElementById('HourInput');
+        let minute = document.getElementById('MinuteInput');
+        let hour_show = document.getElementById('hour');
+        let minute_show = document.getElementById('minute');
+
+        hour.value = '<?php echo $hour; ?>';
+        minute.value = '<?php echo $minute; ?>';
+
+        hour_show.textContent = '<?php echo $hour; ?>';
+        minute_show.textContent = '<?php echo $minute; ?>';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    let ellipseDates = document.querySelectorAll(".div3");
+
+    ellipseDates.forEach(function(ellipseDate) {
+        let date = ellipseDate.textContent.trim();
+
+       <?php
+        if(isset($dayArray)) {
+            echo "let dayArray = " . json_encode($dayArray) . ";";
+
+            echo "dayArray.forEach(function(day) {";
+            echo "    ellipseDates.forEach(function(ellipseDate) {";
+            echo "        if (ellipseDate.textContent.trim() === day) {";
+            echo "            let checkbox_edit = ellipseDate.querySelector('input[type=\"checkbox\"]');";
+            echo "            checkbox_edit.checked = true;";
+            echo "            ellipseDate.classList.add('select');";
+            echo "        }";
+            echo "    });";
+            echo "});";
+        }
+        ?>
+
+    });
+    changeTime();
     changeText();
+});
+
+
 
 </script>
 

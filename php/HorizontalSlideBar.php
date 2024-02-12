@@ -10,19 +10,25 @@
     <title>HORI</title>
 </head>
 <body>
-    <section class="main-container-scrollBar">
+    <section class="main-container">
         <div class="tab-nav-bar">
             <div class="tab-navigation">
                 <ion-icon class="left" name="chevron-back-outline"></ion-icon>
                 <ion-icon class="right" name="chevron-forward-outline"></ion-icon>
                 <ul class="tab-menu">
-                    <li class="tab-btn"><div class="tab-btn-circle"></div>กลุ่มที่สร้าง</li>
-                    <li class="tab-btn"><div class="tab-btn-circle"></div>กลุ่มที่เข้าร่วมแล้ว</li>
-                    <li class="tab-btn"><div class="tab-btn-circle"></div>กลุ่มที่รอการตอบรับ</li>
-                    <li class="tab-btn"><div class="tab-btn-circle"></div>Hobby</li>
-                    <li class="tab-btn"><div class="tab-btn-circle"></div>Library</li>
-                    <li class="tab-btn"><div class="tab-btn-circle"></div>Tutoring</li>
-                    <li class="tab-btn"><div class="tab-btn-circle"></div>โพสต์ของฉัน</li>
+                    <li class="tab-btn">Tokyo</li>
+                    <li class="tab-btn">Tokyo</li>
+                    <li class="tab-btn">Tokyo</li>
+                    <li class="tab-btn">Tokyo</li>
+                    <li class="tab-btn">Tokyo</li>
+                    <li class="tab-btn">Tokyo</li>
+                    <li class="tab-btn">Tokyo</li>
+                    <li class="tab-btn">Tokyo</li>
+                    <li class="tab-btn">Tokyo</li>
+                    <li class="tab-btn">Tokyo</li>
+                    <li class="tab-btn">Tokyo</li>
+                    <li class="tab-btn">Tokyo</li>
+                    <li class="tab-btn">Tokyo</li>
                 </ul>
             </div>
         </div>
