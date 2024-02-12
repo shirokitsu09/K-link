@@ -30,40 +30,74 @@
                 <span class="circle"></span>
             </a>
         </li>
-        <div class="indicator"></div>
+        <div class="indicator" id="indicator"></div>
     </ul>
 </div>
+
 <script>
-    const list = document.querySelectorAll('.list-footer');
+
+    const listF = document.querySelectorAll('.list-footer');
 
 
     function activeLink() {
-        list.forEach((item) =>
+        listF.forEach((item) =>
             item.classList.remove('active'));
         this.classList.add('active');
     }
+    // ---------------------
+    // const Indi = document.querySelectorAll(".list-footer");
+    // function hiddenIndicator() {
+    //     Indi.forEach(at => {
+    //         Indi.addEventListener("click", () => {
+    //             const isActive = at.classList.contains("active");
+
+    //             if (!isActive) {
+    //                 at.classList.add("active");
+    //             }
+    //         });
+    //     });
+    // }
+    function removeActiveFromClass() {
+        listF.forEach((item) => {
+            item.classList.remove('active');
+        });
+    }
+
+    // --------------------------
+    listF.forEach((item) => {
+        item.addEventListener('click', activeLink);
+    });
 
 
-    list.forEach((item) =>
-        item.addEventListener('click', activeLink));
+
+    function changeText(text) {
+        const textContainer = document.getElementById('name-header');
+
+        const headerElement = document.querySelector('.HEADER');
+
+        textContainer.innerText = text;
+
+        if (text === 'SETTING') {
+            headerElement.style.display = 'none';
+        } else {
+            headerElement.style.display = '';
+        }
+
+
+        if (text === 'MYPOST' || text === 'SETTING') {
+            textContainer.style.left = '130px';
+        }
+        // else if (text === 'SETTING') {
+        //     textContainer.style.left = '130px';
+        // }
+        else {
+            textContainer.style.left = '135px';
+        }
+    }
+
+
 </script>
 
-<script>
-  function changeText(text) {
-    const textContainer = document.getElementById('name-header');
-    textContainer.innerText = text;
-
-    if (text === 'MYPOST') {
-        textContainer.style.left = '130px';
-    }
-    else if (text === 'SETTING') {
-        textContainer.style.left = '130px';
-    }   
-    else{
-        textContainer.style.left = '135px';
-    }
-  }
-</script>
 
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
