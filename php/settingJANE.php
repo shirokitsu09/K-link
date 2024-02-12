@@ -1,15 +1,15 @@
-<link rel="stylesheet" href="../CSS/setting.css" />
+<link rel="stylesheet" href="../css/setting.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
 <div class="background">
 
   <div class="setting-head">
-    <img class="setting-item" alt="" src="../images/backbutton.svg" id="backbutton" />
+    <img class="setting-item" alt="" src="../images/backbutton.svg" id="backbutton"/>
     <div class="header-text">SETTING</div>
     <div class="noti-button-icon">
-        <a href="#noti">
-            <ion-icon name="notifications"></ion-icon>
-        </a>
+      <a href="#noti">
+        <ion-icon name="notifications"></ion-icon>
+      </a>
     </div>
   </div>
 
@@ -47,10 +47,11 @@
 
 
 <script>
+
   var backButton = document.getElementById("backbutton");
   if (backButton) {
     backButton.addEventListener("click", function (e) {
-      window.location.href = "";
+      window.history.back();
     });
   }
 
