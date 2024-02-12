@@ -63,14 +63,14 @@
 .dropdown-hour {
     position: absolute;
     top: 55px;
-    left: 22px; 
+    left: 10px; 
     z-index: 1;
 }
 
 .dropdown-minute {
     position: absolute;
     top: 55px;
-    left: 88px; 
+    left: 74px; 
     z-index: 1;
 }
 

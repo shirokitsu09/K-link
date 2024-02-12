@@ -12,13 +12,12 @@
   </head>
   <body>
     <div class="list-frame">
-    <?php include_once'../php/reportList.php'
-    ?>
+      <div class="status-bar"></div>
       <div class="list" id="list-1">
         <div class="list-inner">
         <div class="list-inner-head">
         <img class="library-flag-banner" alt="" src="../images/grouplist/" />
-        <img class="tdot-button" alt="" src="../images/threedot.svg" id="tdot-1"/>
+        <img class="Tdot-button" alt="" src="../images/threedot.svg" />
             <div class="tag-group">
             <div class="tag">วิศวกรรมศาสตร์</div>
             <div class="tag">AIJHONG</div>
@@ -50,7 +49,7 @@
         
         </div>
         
-        <div class="joinbar" id="joinbar-1" style="display: none;">
+        <div class="tutoringjoin" id="tutoringjoin-1" style="display: none;">
         <div class="join-button" id="join-1" value="join-1">
             <div class="group">
               <div class="button-text">เข้าร่วมกลุ่ม</div>
@@ -78,7 +77,7 @@
         <div class="list-inner">
         <div class="list-inner-head">
         <img class="library-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
-        <img class="tdot-button" alt="" src="../images/threedot.svg" id="tdot-2"/>
+        <img class="Tdot-button" alt="" src="../images/threedot.svg" />
                 <div class="tag-group">
                 <div class="tag">วิศวกรรมศาสตร์</div>
                 <div class="tag">AIJHONG</div>
@@ -109,7 +108,7 @@
             </div>
         </div>
         
-        <div class="joinbar" id="joinbar-2" style="display: none;">
+        <div class="tutoringjoin" id="tutoringjoin-2" style="display: none;">
           <div class="join-button" id="join-2">
             <div class="group">
               <div class="button-text">เข้าร่วมกลุ่ม</div>
@@ -137,7 +136,7 @@
         <div class="list-inner">
         <div class="list-inner-head">
         <img class="library-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
-        <img class="tdot-button" alt="" src="../images/threedot.svg" id="tdot-3"/>
+        <img class="Tdot-button" alt="" src="../images/threedot.svg" />
             <div class="tag-group">
             <div class="tag">วิศวกรรมศาสตร์</div>
             <div class="tag">พี่บ็อบ</div>
@@ -168,7 +167,7 @@
             </div>
         </div>
         
-        <div class="joinbar" id="joinbar-3" style="display: none;">
+        <div class="tutoringjoin" id="tutoringjoin-3" style="display: none;">
         <div class="join-button" id="join-3">
           <div class="group">
             <div class="button-text">เข้าร่วมกลุ่ม</div>
@@ -194,73 +193,74 @@
       </div>
 
     <script>
+      var display = 0;
       var list1 = document.getElementById("list-1");
-      var joinbar1 =document.getElementById("joinbar-1");
+      var tutoringjoin1 =document.getElementById("tutoringjoin-1");
       var innerlist1 = document.getElementById("innerlist-1");
 
       var list2 = document.getElementById("list-2");
-      var joinbar2 =document.getElementById("joinbar-2");
+      var tutoringjoin2 =document.getElementById("tutoringjoin-2");
       var innerlist2 = document.getElementById("innerlist-2");
 
       var list3 = document.getElementById("list-3");
-      var joinbar3 =document.getElementById("joinbar-3");
+      var tutoringjoin3 =document.getElementById("tutoringjoin-3");
       var innerlist3 = document.getElementById("innerlist-3");
       
-      function close_joinbar(e){
-        joinbar1.style.display = 'none';
-        joinbar2.style.display = 'none';
-        joinbar3.style.display = 'none';
+      function close_tutoringjoin(e){
+        tutoringjoin1.style.display = 'none';
+        tutoringjoin2.style.display = 'none';
+        tutoringjoin3.style.display = 'none';
         document.querySelector('.padding')?.classList.remove('padding')
       }
 
       var close1 = document.getElementById("close-1");
-      close1.addEventListener("click", close_joinbar);
+      close1.addEventListener("click", close_tutoringjoin);
       var close2 = document.getElementById("close-2");
-      close2.addEventListener("click", close_joinbar);
+      close2.addEventListener("click", close_tutoringjoin);
       var close3 = document.getElementById("close-3");
-      close3.addEventListener("click", close_joinbar);
+      close3.addEventListener("click", close_tutoringjoin);
 
       var join1 = document.getElementById("join-1");
       join1.addEventListener("click", function(e){
         console.log("join group1 requested");
-        close_joinbar();
+        close_tutoringjoin();
       });
 
       var join2 = document.getElementById("join-2");
       join2.addEventListener("click", function(e){
         console.log("join group2 requested");
-        close_joinbar();
+        close_tutoringjoin();
       });
 
       var join3 = document.getElementById("join-3");
       join3.addEventListener("click", function(e){
         console.log("join group3 requested");
-        close_joinbar();
+        close_tutoringjoin();
       });
       
       var member1 = document.getElementById("member-1")
       member1.addEventListener("click", function (e) {
         console.log("member group1 view requested")
-        close_joinbar();
+        close_tutoringjoin();
       });
 
       var member2 = document.getElementById("member-2")
       member2.addEventListener("click", function (e) {
         console.log("member group2 view requested")
-        close_joinbar();
+        close_tutoringjoin();
       });
 
       var member3 = document.getElementById("member-3")
       member3.addEventListener("click", function (e) {
         console.log("member group3 view requested")
-        close_joinbar();
+        close_tutoringjoin();
       });
 
       if (innerlist1) {
-      innerlist1.addEventListener("click", function (e) {
+        innerlist1.addEventListener("click", function (e) {
           if (list1 != 'list-1.padding'){
-            close_joinbar();
-            joinbar1.style.display = 'block';
+            close_tutoringjoin();
+            tutoringjoin1.style.display = 'block';
             list1.classList.add('padding');
           }
         });
@@ -269,8 +269,8 @@
       if (innerlist2) {
         innerlist2.addEventListener("click", function (e) {
           if (list2 != 'list-2.padding'){
-            close_joinbar();
-            joinbar2.style.display = 'block';
+            close_tutoringjoin();
+            tutoringjoin2.style.display = 'block';
             document.querySelector('.padding')?.classList.remove('padding')
             list2.classList.add('padding');
           }
@@ -280,41 +280,14 @@
       if (innerlist3) {
         innerlist3.addEventListener("click", function (e) {
           if (list3 != 'list-3.padding'){
-            close_joinbar();
-            joinbar3.style.display = 'block';
+            close_tutoringjoin();
+            tutoringjoin3.style.display = 'block';
             document.querySelector('.padding')?.classList.remove('padding')
             list3.classList.add('padding');
           }
         });
       }
 
-// tpopup
-tdot1 = document.getElementById("tdot-1");
-      tdot1.addEventListener("click",function (e) {
-        close_joinbar();
-        tpopup_open();
-      });
-
-      tdot2 = document.getElementById("tdot-2");
-      tdot2.addEventListener("click",function (e) {
-        close_joinbar();
-        tpopup_open();
-      });
-
-      tdot3 = document.getElementById("tdot-3");
-      tdot3.addEventListener("click",function (e) {
-        close_joinbar();
-        tpopup_open();
-      });
-
-    document.addEventListener('click', e => {
-    if(!tpopup.contains(e.target) && !tpopupReport.contains(e.target) && !reportpopup.contains(e.target) && e.target !== tdot1 && e.target !== tdot2 && e.target !== tdot3){
-        tpopup_close();
-        tpopupReport_close();
-        reportpopup_close();
-      }
-    });
-// 
     </script>
 
   </body>

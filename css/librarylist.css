@@ -177,10 +177,10 @@
     color: var(--primary);
 }
 
-.tdot-button{
+.Tdot-button{
     position: absolute;
-    width: fit-content;
-    height: fit-content;
+    width: 32px;
+    height: 16px;
     object-fit: cover;
     right: 10px;
     top: 10px;
@@ -201,7 +201,7 @@
     height: 25px;
     left : 38px;
     top: 7px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .like-amount:hover{
@@ -214,7 +214,7 @@
     height: 40px;
     left: 220px;
     top: 15px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .download-button:hover {
@@ -227,7 +227,7 @@
     height: 40px;
     left: 265px;
     top: 15px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .share-button:hover {
@@ -244,8 +244,8 @@
     top: -35.65px;
 }
 
-.joinbar {
-    display: none;
+.tutoringjoin {
+    display: block;
     position: relative;
     background-color: var(--color-gray);
     width: 360px;
