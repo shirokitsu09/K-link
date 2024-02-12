@@ -1,8 +1,9 @@
+/*------global-----------
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  margin: 0;
+  line-height: normal;
 } 
+--------global---------*/
 
 .creategroup-button {
   width: 100%;
@@ -187,34 +188,4 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-
-.Lock {
-  bottom: 0%;
-  position: absolute;
-  width: fit-content;
-  height: fit-content;
-  flex: 0 0 auto;
-  
-}
-
-.background {
-  display:flex;
-  flex-direction: column;
-  &::-webkit-scrollbar {
-    width: 0;
-}
-}
-
-.footerIndividual {
-  width: fit-content;
-  height: fit-content;
-  position: fixed;
-  top: 720px;
-}
-
-.navigation {
-  position: absolute !important;
-  top: 0 !important;
-  z-index: 10000 !important;
 }
