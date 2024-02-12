@@ -47,28 +47,29 @@
   height: 584px;
 }
 
-.option1-parent {
-  position: absolute;
+.option-parent {
+  position: relative;
   top: 34px;
   left: 10px;
   width: 300px;
   height: 40px;
   cursor: pointer;
+  margin-bottom: 20px ;
 }
 
-.option1-text {
+.option-text {
   position: relative;
-  top: -5px;
-  left: 75px;
+  top: -4px;
+  left: 50px;
   height: 30px;
-  width: 150px;
+  width: fit-content;
   display: inline-block;
-  font-size: var(--h6-size);
+  font-size: var(--h5-size);
   color: var(--color-black);
 }
 
-.option1-icon {
-  position: absolute;
+.option-icon {
+  position: relative;
   height: 30px;
   width: 30px;
   top: 7px;
@@ -78,7 +79,7 @@
   max-height: 100%;
 }
 
-.option2-parent {
+/* .option2-parent {
   position: absolute;
   height: 40px;
   width: 300px;
@@ -104,9 +105,9 @@
   height: 30px;
   font-size: var(--h6-size);
   color: var(--color-black);
-}
+} */
 
-.option3-parent {
+/* .option3-parent {
   position: absolute;
   top: 144px;
   left: 10px;
@@ -135,9 +136,9 @@
   max-width: max-content;
   overflow: hidden;
   max-height: max-content;
-}
+} */
 
-.option4-parent {
+/* .option4-parent {
   position: relative;
   height: 40px;
   width: 300px;
@@ -178,9 +179,9 @@
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
-}
+} */
 
-.option5-parent {
+/* .option5-parent {
   position: absolute;
   top: 254px;
   left: 10px;
@@ -209,228 +210,7 @@
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
-}
-
-.noti-button-icon {
-  position: absolute;
-  top: 37px;
-  left: 292px;
-  width: 38px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.container-icon {
-  height: 100%;
-  top: 0;
-}
-
-.div {
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: inline-block;
-}
-
-.setting-head {
-  position: absolute;
-  background-color: var(--primary);
-  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.25);
-  width: 360px;
-  height: 141px;
-}
-
-.header-text {
-  position: absolute;
-  top: 30px;
-  left: 70px;
-  font-size: var(--h4-size);
-  color: var(--color-gainsboro);
-  text-align: center;
-  text-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
-  -webkit-text-stroke: 1px #d9d9d9;
-}
-.setting-inner,
-.setting-item {
-  position: absolute;
-  top: 39px;
-  left: 16px;
-  width: 40px;
-  height: 34px;
-}
-.setting-inner {
-  top: 108px;
-  left: 22px;
-  border-radius: 50px;
-  background-color: var(--neutrals1);
-  box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
-  width: 316px;
-  height: 584px;
-}
-
-.option1-parent {
-  position: absolute;
-  top: 34px;
-  left: 10px;
-  width: 300px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.option1-text {
-  position: relative;
-  top: -5px;
-  left: 75px;
-  height: 30px;
-  width: 150px;
-  display: inline-block;
-  font-size: var(--h6-size);
-  color: var(--color-black);
-}
-
-.option1-icon {
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  top: 7px;
-  left: 26px;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-
-.option2-parent {
-  position: absolute;
-  height: 40px;
-  width: 300px;
-  top: 89px;
-  left: 10px;
-  cursor: pointer;
-}
-
-.option2-icon {
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  top: 2px;
-  left: 27px;
-}
-
-.option2-text {
-  top: 4px;
-  position: absolute;
-  left: 75px;
-  display: inline-block;
-  width: 150px;
-  height: 30px;
-  font-size: var(--h6-size);
-  color: var(--color-black);
-}
-
-.option3-parent {
-  position: absolute;
-  top: 144px;
-  left: 10px;
-  width: 316px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.option3-text {
-  position: absolute;
-  top: 5px;
-  left: 75px;
-  display: inline-block;
-  width: 150px;
-  height: 30px;
-  font-size: var(--h6-size);
-  color: var(--color-black);
-}
-
-.option3-icon {
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  top: 0px;
-  left: 30px;
-  max-width: max-content;
-  overflow: hidden;
-  max-height: max-content;
-}
-
-.option4-parent {
-  position: relative;
-  height: 40px;
-  width: 300px;
-  top: 199px;
-  left: 10px;
-  font-family: var(--font-inter);
-  cursor: pointer;
-}
-
-.option4-text {
-  position: absolute;
-  height: 30px;
-  width: 150px;
-  top: 5px;
-  left: 75px;
-  display: inline-block;
-  font-size: var(--h6-size);
-  color: var(--color-black);
-}
-
-.option4-mode {
-  position: absolute;
-  height: 30px;
-  width: 150px;
-  top: 5px;
-  left: 190px;
-  display: inline-block;
-  font-size: var(--h6-size);
-  color: var(--color-black);
-}
-
-.option4-icon {
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  top: 3px;
-  left: 27px;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-
-.option5-parent {
-  position: absolute;
-  top: 254px;
-  left: 10px;
-  width: 300px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.option5-text {
-  position: relative;
-  top: -5px;
-  left: 75px;
-  display: inline-block;
-  width: 150px;
-  height: 30px;
-  font-size: var(--h6-size);
-  color: var(--color-black);
-}
-
-.option5-icon {
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  top: 6px;
-  left: 28px;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
+} */
 
 .noti-button-icon {
   position: absolute;

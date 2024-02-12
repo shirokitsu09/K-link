@@ -46,7 +46,7 @@
   var backButton = document.getElementById("backbutton");
   if (backButton) {
     backButton.addEventListener("click", function (e) {
-      window.location.href = "";
+      window.location.href = "../php/index.php#home";
     });
   }
 
