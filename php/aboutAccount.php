@@ -1,19 +1,30 @@
 <?php
-session_start();
-include("../config/con_db.php");
 
-$uID = '65010001';
+  session_start();
+  include("../config/con_db.php");
 
-$sql_users = "SELECT * FROM users WHERE uID = '$uID'";
-$result_users = $con->query($sql_users);
-$row = $result_users->fetch_assoc();
+  $uID = $_SESSION["uID"];
 
-$username = $row['username'];
-$fullname = $row['fullname'];
-$email = $row['email'];
-$phoneNumber = $row['phoneNumber'];
-$faculty = 'Computer Engineering';
-$aboutme = $row['aboutme'];
+  // $sql_users = "SELECT * FROM users WHERE uID = '$uID'";
+
+  $sql_users = "SELECT 
+                    a.*,
+                    b.fName
+                    FROM users AS a
+                    LEFT JOIN faculty AS b
+                    ON a.fID = b.fID
+                    WHERE a.uId = '$uID'
+            ";
+
+  $result_users = $conn->query($sql_users);
+  $row = $result_users->fetch_assoc();
+
+  $username = $row['username'];
+  $fullname = $row['fullname'];
+  $email = $row['email'];
+  $phoneNumber = $row['phoneNumber'];
+  $faculty = 'Computer Engineering';
+  $aboutme = $row['aboutme'];
 
 ?>
 <!DOCTYPE html>
@@ -48,7 +59,7 @@ $aboutme = $row['aboutme'];
         <div class="profile-tel">เบอร์โทร : </div>
         <div class="profile-telephone"><?php echo $phoneNumber ?></div>
         <div class="profile-fac">Faculty : </div>
-        <div class="profile-faculty"><?php echo $faculty ?></div>
+        <div class="profile-faculty"><?php echo $row['fName']; ?></div>
         <div class="label-aboutme">About me</div>
         <div class="box-aboutme">
         <div class="profile-aboutme"><?php echo $aboutme ?></div>

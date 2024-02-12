@@ -1,3 +1,10 @@
+<?php
+
+  session_start();
+  $uID = $_SESSION['uID'];
+  
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,6 +37,7 @@
 
         <div class="hobby-name">
           <label for="ActivityName" class="name">ชื่อกิจกรรม <a class="star">*<a></label>
+          <input type="text" name="uID" value="<?php echo $uID?>" hidden>
           <input type="text" class="first2 textfields-child" name="activityName" placeholder="ชื่อกลุ่มหรือกิจกรรม..." maxlength="27"></input>
         </div>
 
