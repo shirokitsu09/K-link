@@ -1,14 +1,13 @@
 .list-frame {
     position: relative;
-    background-color: transparent;
-    width: fit-content;
-    height: fit-content;
+    background-color: var(--basecolor-white);
+    width: 360px;
+    height: 800px;
+    overflow: scroll;
     text-align: left;
     font-family: var(--subtitle-1);
     font-size: var(--subtitle-1-size);
     color: var(--color-black);
-    top:15px;
-    margin-bottom: 170px;
 }
 
 .status-bar {
@@ -26,7 +25,7 @@
     outline-color: var(--color-black);
     outline-width: 2px;
     width: 300px;
-    height: 280px;
+    height: 315px;
     top: 10px;
     left: 25px;
     cursor: default;
@@ -89,12 +88,12 @@
 .tag:empty {
     display: none;
 }
-/*  */
+
 .group-amount {
     position: absolute;
     display: inline-block;
     top: 25px;
-    right: 14px;
+    right: 10px;
     color: var(--accent);
     font-size: var(--h6-size);
     width: max-content;
@@ -114,7 +113,7 @@
     display: inline-block;
     height: max-content;
     width: max-content;
-    top: 0px;
+    top: 5px;
     left: 25px;
     color: var(--color-black);
     font-family: 'Roboto', sans-serif;
@@ -128,49 +127,55 @@
     height: max-content;
     width: max-content;
     font-size: var(--subtitle-1-size);
-    top: 25px;
+    top: 30px;
     left: 25px;
-}
-/* ----------- */
-.group-profile-picture {
-    position: relative;
-    height: auto;
-    max-width: 100%;
-    width: auto;
-    max-height: 100%;
 }
 
-.imgFrame {
+.group-profile-picture {
+    position: absolute;
     width: 100px;
     height: 100px;
-    position: absolute;
-    background-color: var(--neutrals1);
-    top: 50px;
-    left: 25px;
-    display: flex;
-    align-items: center;
-    border-radius: var(--br-5xs);
-    overflow: hidden;
-    justify-content: center;
+    top: 70px;
+    left: 25px
 }
 
 .group-date {
     position: absolute;
     display: inline-block;
     height: max-content;
-    width: max-content;
-    top: 50px;
+    width: 160px;
+    top: 70px;
     left: 140px;
+    font-size: var(--subtitle-1-size);
+}
+
+.group-tim {
+    position: absolute;
+    height: max-content;
+    width: max-content;
+    top: 115px;
+    left: 140px;
+    display: inline-block;
     font-size: var(--subtitle-1-size);
 }
 
 .group-time {
     position: absolute;
     height: max-content;
-    width: max-content;
-    top: 80px;
-    left: 140px;
+    width: 140px;
+    top: 115px;
+    left: 185px;
     display: inline-block;
+    font-size: var(--subtitle-1-size);
+}
+
+.group-loc {
+    position: absolute;
+    display: inline-block;
+    height: max-content;
+    width: 150px;
+    top: 140px;
+    left: 140px;
     font-size: var(--subtitle-1-size);
 }
 
@@ -178,32 +183,40 @@
     position: absolute;
     display: inline-block;
     height: max-content;
+    text-indent: 60px;
     width: 150px;
-    top: 110px;
+    top: 140px;
     left: 140px;
     font-size: var(--subtitle-1-size);
 }
 
-.group-description {
-    word-wrap: break-word;
-    overflow: hidden;
+.group-desc {
     position: absolute;
     display: inline-block;
-    padding: 10px;
-    height: 70px;
+    height: max-content;
     width: 260px;
-    top: 150px;
+    top: 190px;
     left: 25px;
     font-size: var(--subtitle-1-size);
 }
 
-.tdot-button{
+.group-description {
     position: absolute;
-    width: 32px;
-    height: 16px;
-    object-fit: cover;
-    right: 10px;
+    display: inline;
+    height: max-content;
+    text-indent: 90px;
+    width: 260px;
+    top: 190px;
+    left: 25px;
+    font-size: var(--subtitle-1-size);
+}
+
+.tdot-button {
+    position: absolute;
     top: 10px;
+    right: 10px;
+    width: fit-content;
+    height: fit-content;
     cursor: pointer;
 }
 
@@ -236,8 +249,6 @@
     left: 125px;
     margin-bottom: 40px;
     z-index: 2;
-    display: flex;
-    justify-content: center;
 }
 
 .tpopup-option {
@@ -290,14 +301,14 @@
     top: -35.6px;
 }
 
-.tutoringjoin {
-    display: block;
+.joinbar {
+    display: none;
     position: relative;
     background-color: var(--color-gray);
     width: 360px;
     height: 100px;
     top: -20px;
-    z-index: 0;
+    z-index: 1;
     animation-name: slidein;
     animation-duration: 500ms;
   }
@@ -385,7 +396,6 @@
   top: 10px;
   left: 45px;
   display: inline-block;
-  color: black;
 }
     
 .group {
@@ -403,18 +413,10 @@
     top: 10px;
     left: 0px;
     width: 360px;
-    height: 300px;
+    height: 330px;
 }
 
 .list.padding
 {
-    margin-bottom: 55px;
-}
-
-.OutFrame {
-    height: 10000px;
-    width: 360px;
-    bottom: -10px;
-    position: absolute;
-    background-color: rgba(0,0,0,0.2);
+    margin-bottom: 50px;
 }
