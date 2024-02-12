@@ -4,7 +4,7 @@
 <div class="background">
 
   <div class="setting-head">
-    <img class="setting-item" alt="" src="../images/backbutton.svg" id="backbutton"/>
+    <img class="setting-item" alt="" src="../images/backbutton.svg" id="backbuttonSetting" />
     <div class="header-text">SETTING</div>
     <div class="noti-button-icon">
       <a href="#noti">
@@ -14,14 +14,14 @@
   </div>
 
   <div class="setting-inner">
-    <div class="option1-parent" id="aboutAccountParent">
-      <div class="option1-text">เกี่ยวกับบัญชี</div>
-      <img class="option1-icon" alt="" src="../images/profile-icon.svg" />
+    <div class="option-parent" id="aboutAccountParent">
+      <img class="option-icon" alt="" src="../images/profile-icon.svg" />
+      <div class="option-text">เกี่ยวกับบัญชี</div>
     </div>
 
-    <div class="option2-parent" id="option2">
-      <img class="option2-icon" alt="" src="../images/setting/bookmark.svg" />
-      <div class="option2-text">ที่บันทึกไว้</div>
+    <div class="option-parent" id="option2">
+      <img class="option-icon" alt="" src="../images/setting/bookmark.svg" />
+      <div class="option-text">ที่บันทึกไว้</div>
     </div>
 
     <!-- <div class="option3-parent" id="languageParent">
@@ -29,15 +29,15 @@
       <img class="option3-icon" alt="" src="../images/global-icon.svg" />
     </div> -->
 
-    <div class="option3-parent" id="notificationParent">
-      <img class="option4-icon" alt="" src="../images/notification-icon.svg" />
-      <div class="option4-text">ปิดการแจ้งเตือน</div>
-      <div1 class="option4-mode" id="notificationMode"></div1>
+    <div class="option-parent" id="notificationParent">
+      <img class="option-icon" alt="" src="../images/notification-icon.svg" />
+      <div class="option-text">ปิดการแจ้งเตือน</div>
+      <div1 class="option-mode" id="notificationMode"></div1>
     </div>
 
-    <div class="option4-parent" id="aboutAppParent">
-      <img class="option5-icon" alt="" src="../images/about-app-icon.svg" />
-      <div class="option5-text">เกี่ยวกับแอพ</div>
+    <div class="option-parent" id="aboutAppParent">
+      <img class="option-icon" alt="" src="../images/about-app-icon.svg" />
+      <div class="option-text">เกี่ยวกับแอพ</div>
     </div>
   </div>
 
@@ -48,10 +48,11 @@
 
 <script>
 
-  var backButton = document.getElementById("backbutton");
+  var backButton = document.getElementById("backbuttonSetting");
   if (backButton) {
     backButton.addEventListener("click", function (e) {
-      window.history.back();
+      console.log("Back button clicked");
+      // window.location.href = "../php/index.php#home";
     });
   }
 
