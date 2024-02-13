@@ -48,13 +48,12 @@
 
 <script>
 
-  var backButton = document.getElementById("backbuttonSetting");
-  if (backButton) {
-    backButton.addEventListener("click", function (e) {
-      console.log("Back button clicked");
-      // window.location.href = "../php/index.php#home";
-    });
-  }
+  // var backButton = document.getElementById("backbuttonSetting");
+  // if (backButton) {
+  //   backButton.addEventListener("click", function (e) {
+  //     window.history.back();
+  //   });
+  // }
 
   var notiButtonIcon = document.getElementById("notiButtonIcon");
   if (notiButtonIcon) {
@@ -104,4 +103,31 @@
       });
     }
   }
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const backButton = document.getElementById('backbuttonSetting');
+    if (backButton) {
+        backButton.addEventListener('click', function(event) {
+            event.preventDefault(); // ป้องกันการโหลดหน้าเว็บใหม่
+            
+            // ตรวจสอบ URL ปัจจุบันของเว็บไซต์
+            const currentURL = window.location.href;
+            const previousURL = document.referrer; // URL ก่อนหน้าที่เรามาจาก
+
+            if (previousURL) {
+                window.location.href = previousURL; // ไปยัง URL ก่อนหน้า
+            } else {
+                // ถ้าไม่มี URL ก่อนหน้า ให้กลับไปที่ # ของ section ก่อนหน้า
+                const currentHashIndex = currentURL.lastIndexOf('#');
+                if (currentHashIndex !== -1) {
+                    const previousHash = currentURL.substring(0, currentHashIndex);
+                    window.location.href = previousHash;
+                }
+            }
+        });
+    }
+});
+
 </script>
