@@ -24,7 +24,7 @@
         </div>
 
 
-        <?php include 'hobbyList.php'; ?>
+        <?php include 'hobbyList_No-db.php'; ?>
     </div>
 </body>
 <!------------------------------ script ------------------------------>

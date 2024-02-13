@@ -27,7 +27,7 @@
       <div class="list-inner-tutoring">
         <div class="list-inner-head">
           <img class="tutoring-flag-banner" alt="" src="../images/tutoringlist/tutoringbanner.svg" />
-          <img class="tdot-button" id="tdot-1" alt="" src="../images/threedot.svg" />
+          <img class="tdot-button" id="tdot-1" alt="" src="../images/tutoringlist/threedot.svg" />
           <div class="tag-group">
             <div class="tag" id="tag-faculty-1">วิศวกรรมศาสตร์</div>
             <div class="tag" id="tag-subject-1">Calculus</div>
