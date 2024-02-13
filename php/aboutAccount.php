@@ -3,17 +3,14 @@
   session_start();
   include("../config/con_db.php");
 
-  $uID = $_SESSION["uID"];
+  $uID = $_GET["uID"];
 
   // $sql_users = "SELECT * FROM users WHERE uID = '$uID'";
 
   $sql_users = "SELECT 
-                    a.*,
-                    b.fName
+                    a.*
                     FROM users AS a
-                    LEFT JOIN faculty AS b
-                    ON a.fID = b.fID
-                    WHERE a.uId = '$uID'
+                    WHERE a.uID = '$uID'
             ";
 
   $result_users = $conn->query($sql_users);
@@ -23,6 +20,7 @@
   $fullname = $row['fullname'];
   $email = $row['email'];
   $phoneNumber = $row['phoneNumber'];
+  // $fName = $row['fName'];
   $faculty = 'Computer Engineering';
   $aboutme = $row['aboutme'];
 
@@ -59,7 +57,7 @@
         <div class="profile-tel">เบอร์โทร : </div>
         <div class="profile-telephone"><?php echo $phoneNumber ?></div>
         <div class="profile-fac">Faculty : </div>
-        <div class="profile-faculty"><?php echo $row['fName']; ?></div>
+        <div class="profile-faculty"><?php echo $faculty ?></div>
         <div class="label-aboutme">About me</div>
         <div class="box-aboutme">
         <div class="profile-aboutme"><?php echo $aboutme ?></div>

@@ -8,6 +8,7 @@
     font-family: var(--subtitle-1);
     font-size: var(--subtitle-1-size);
     color: var(--color-black);
+    overflow-x: hidden;
 }
 
 .status-bar {
@@ -59,34 +60,42 @@
     outline-color: var(--color-black);
     outline-width: 1.3px;
     width: 300px;
-    height: 480px;
+    height: auto;
+    min-height: 600px;
     top: 50px;
     left: 25px;
     cursor: default;
+    margin-bottom: 100px;
 }
 
 .list-inner-head {
-    position: absolute;
+    position: relative;
     border-radius: 20px;
     padding-inline: 5px;
-    width: 300px;
+    width: calc(100% - 10px);
     height: 70px;
     top: 0px;
     left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
 }
 
 .list-inner-body {
-    position: absolute;
+    position: relative;
     border-radius: 20px;
     padding-inline: 5px;
-    width: 300px;
-    height: 200px;
-    top: 70px;
+    width: calc(100% - 10px);
+    height: fit-content;
+    top: 0px;
     left: 0px;
+    padding-bottom: 30px;
+    padding-top: 10px;
 }
 
 .title-group {
-    position: absolute;
+    position: relative;
     display: inline;
     width: 300px;
     height: 70px;
@@ -139,45 +148,55 @@
 
 .leader {
     position: relative;
-    display: inline-block;
-    width: 160px;
-    height: 30px;
+    display: flex;
+    width: 140px;
+    height: 100%;
+    justify-content: left;
+    align-items: center;
+    left: 0;
 }
 
 .member {
     position: relative;
-    color: var(--color-black);
-    display: inline-block;
-    height: 30px;
-    width: 60px;
-    font-size: var(--subtitle-1-size);
+    display: flex;
+    width: 140px;
+    height: 100%;
+    justify-content: left;
+    align-items: center;
+    left: 0;
 }
 
 .leader-icon {
-    position: absolute;
+    position: relative;
     display: inline-block;
-    height: 24px;
-    width: 24px;
-    top: -3px;
-    left: -60px;
+    height: 100%;
+    width: 70px;
+    top: 0px;
+    left: 0px;
+    text-align: center;
 }
 
+
 .info-icon {
-    position: absolute;
-    display: inline-block;
-    height: 24px;
-    width: 24px;
-    top: -2px;
-    left: 150px;
+    position: relative;
+    display: grid;
+    height: 100%;
+    width: 80px;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+    justify-items: center;
 }
 
 .me-icon {
-    position: absolute;
-    display: inline-block;
-    height: 28px;
-    width: 28px;
-    top: -4px;
-    left: 150px;
+    position: relative;
+    display: grid;
+    height: 100%;
+    width: 80px;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+    justify-items: center;
 }
 
 .group {
@@ -190,12 +209,23 @@
   left: 3.28%;
 }
 
-.list {
-    position: relative;
-    top: 0px;
-    left: 90px;
-    width: 200px;
-    height: 30px;
+.list-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 30px; 
+    margin-bottom: 5px;
+}
+
+.list-member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 30px; 
     margin-bottom: 5px;
 }
 
