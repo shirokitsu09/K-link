@@ -32,7 +32,7 @@ CREATE TABLE `agriculturaltechnology` (
   `mID` varchar(255) NOT NULL,
   `mName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table agricultural technology major';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Table agricultural technology major';
 
 --
 -- Dumping data for table `agriculturaltechnology`
@@ -57,7 +57,7 @@ CREATE TABLE `architecture` (
   `mID` varchar(255) NOT NULL,
   `mName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table architecture major';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Table architecture major';
 
 --
 -- Dumping data for table `architecture`
@@ -86,7 +86,7 @@ CREATE TABLE `businessadmin` (
   `mID` varchar(255) NOT NULL,
   `mName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table business administration major';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Table business administration major';
 
 --
 -- Dumping data for table `businessadmin`
@@ -107,7 +107,7 @@ CREATE TABLE `dentistry` (
   `mID` varchar(255) NOT NULL,
   `mName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table dentistry major';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Table dentistry major';
 
 --
 -- Dumping data for table `dentistry`
@@ -127,7 +127,7 @@ CREATE TABLE `educationindustialtech` (
   `mID` varchar(255) NOT NULL,
   `mName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table education Industial & Technology major';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Table education Industial & Technology major';
 
 --
 -- Dumping data for table `educationindustialtech`
@@ -150,7 +150,7 @@ CREATE TABLE `engineer` (
   `mID` varchar(255) NOT NULL,
   `mName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table engineer major';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Table engineer major';
 
 --
 -- Dumping data for table `engineer`
@@ -191,7 +191,7 @@ CREATE TABLE `faculty` (
   `fID` varchar(255) NOT NULL,
   `fName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Tableคณะ';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Tableคณะ';
 
 --
 -- Dumping data for table `faculty`
@@ -224,7 +224,7 @@ CREATE TABLE `foodindustial` (
   `mID` varchar(255) NOT NULL,
   `mName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table Food Industial major';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Table Food Industial major';
 
 --
 -- Dumping data for table `foodindustial`
@@ -245,7 +245,7 @@ CREATE TABLE `informationtechnology` (
   `mID` varchar(255) NOT NULL,
   `mName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table IT major';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Table IT major';
 
 --
 -- Dumping data for table `informationtechnology`
@@ -265,7 +265,7 @@ CREATE TABLE `internationalcollege` (
   `mID` varchar(255) NOT NULL,
   `mName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table international college major';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Table international college major';
 
 --
 -- Dumping data for table `internationalcollege`
@@ -286,7 +286,7 @@ CREATE TABLE `liberalart` (
   `mID` varchar(255) NOT NULL,
   `mName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table liberal arts major';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Table liberal arts major';
 
 --
 -- Dumping data for table `liberalart`
@@ -308,7 +308,7 @@ CREATE TABLE `medicine` (
   `mID` varchar(255) NOT NULL,
   `mName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table medicine major';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Table medicine major';
 
 --
 -- Dumping data for table `medicine`
@@ -328,7 +328,7 @@ CREATE TABLE `musicengineering` (
   `mID` varchar(255) NOT NULL,
   `mName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `musicengineering`
@@ -348,7 +348,7 @@ CREATE TABLE `science` (
   `mID` varchar(255) NOT NULL,
   `mName` varchar(255) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table science major';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Table science major';
 
 --
 -- Dumping data for table `science`

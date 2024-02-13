@@ -5,7 +5,7 @@
   if(isset($_GET['hID'])){
     $hID = $_GET['hID'];
     $sql_hobby_db = "SELECT * FROM hobby_db WHERE hID = '$hID'";
-    $result_hobby_db = $con->query($sql_hobby_db);
+    $result_hobby_db = $conn->query($sql_hobby_db);
     $row = $result_hobby_db->fetch_assoc();
     
     $activityName = $row['activityName'];
@@ -60,7 +60,7 @@
 
         <div class="hobby-name">
           <label for="ActivityName" class="name">ชื่อกิจกรรม <a class="star">*<a></label>
-          <input type="text" class="first2 textfields-child" name="activityName" placeholder="<?php echo $activityName ?>" maxlength="27"></input>
+          <input type="text" class="first2 textfields-child" name="activityName" value ="<?php echo $activityName ?>" maxlength="27"></input>
         </div>
 
         <div class="day-select">
@@ -135,7 +135,7 @@
 
             <div class="member">
               <div class="name">สมาชิกที่รับ <a class="star">*</a></div>
-              <input type="text" class="first2 textfields-child" name="memberMax" placeholder="<?php echo $memberMax ?>" maxlength="2"></input>
+              <input type="text" class="first2 textfields-child" name="memberMax" value ="<?php echo $memberMax ?>" maxlength="2"></input>
             </div>
 
             <div class="requairment">
@@ -145,12 +145,12 @@
 
         <div class="location">
           <label for="location" class="name">สถานที่ <a class="star">*</a></label>
-          <input type="text" class="first2 textfields-child" name="location" placeholder="<?php echo $location ?>"></input>
+          <input type="text" class="first2 textfields-child" name="location" value ="<?php echo $location ?>"></input>
         </div>
         
         <div class="detail">
           <label for="detail" class="name">รายละเอียด</label>
-          <textarea class="detail-text textfields-child" name="detail" placeholder="<?php echo $detail ?>"></textarea>
+          <textarea class="detail-text textfields-child" name="detail" placeholder ="<?php echo $detail ?>"></textarea>
         </div>
 
         <div class="PicUpload-frame">
