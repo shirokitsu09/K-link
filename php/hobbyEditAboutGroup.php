@@ -5,7 +5,7 @@
   if(isset($_GET['hID'])){
     $hID = $_GET['hID'];
     $sql_hobby_db = "SELECT * FROM hobby_db WHERE hID = '$hID'";
-    $result_hobby_db = $con->query($sql_hobby_db);
+    $result_hobby_db = $conn->query($sql_hobby_db);
     $row = $result_hobby_db->fetch_assoc();
     
     $activityName = $row['activityName'];
