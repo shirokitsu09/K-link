@@ -1,4 +1,4 @@
-.list-frame {
+.list-frame-hobby {
     position: relative;
     top: 23%;
     background-color: transparent;
@@ -13,7 +13,7 @@
     scroll-behavior: smooth;
 }
 
-.list-inner {
+.list-inner-hobby {
     position: relative;
     border-radius: 20px;
     background-color: var(--basecolor-white);
@@ -29,7 +29,7 @@
     cursor: default;
 }
 
-.list-inner-head {
+.list-inner-head-hobby {
     position: absolute;
     border-radius: 20px;
     padding-inline: 5px;
@@ -39,7 +39,7 @@
     left: 0px;
 }
 
-.list-inner-body {
+.list-inner-body-hobby {
     position: absolute;
     border-radius: 20px;
     padding-inline: 5px;
@@ -177,7 +177,7 @@
     font-size: var(--subtitle-1-size);
 }
 
-.tdot-button{
+.tdot-button-hobby {
     position: absolute;
     width: 32px;
     height: 16px;
@@ -187,7 +187,7 @@
     cursor: pointer;
 }
 
-.tpopup {
+.tpopup-hobby {
     position: fixed;
     display: none;
     margin-left: auto;
@@ -206,7 +206,7 @@
     top: 460px;
 }
 
-.tpopup-drag {
+.tpopup-drag-hobby {
     position: relative;
     background-color: var(--accent);
     border-radius: 5px;
@@ -218,19 +218,19 @@
     z-index: 2;
 }
 
-.tpopup-option {
+.tpopup-option-hobby {
     position: relative;
     width: 360px;
     height: 30px;
     margin-bottom: 20px;
 }
 
-.tpopup-option:hover {
+.tpopup-option-hobby:hover {
     color: var(--accent);
     cursor: pointer;
 }
 
-.tpopup-option-icon {
+.tpopup-option-icon-hobby {
     position: relative;
     width: 34px;
     height: 30px;
@@ -238,7 +238,7 @@
     left: 40px;
 }
 
-.tpopup-option-text {
+.tpopup-option-text-hobby {
     position: relative;
     display: inline-block;
     width: 120px;
@@ -248,7 +248,7 @@
     font-size: var(--subtitle-1);
 }
 
-.tpopup.on {
+.tpopup-hobby.on {
     display: block;
 }
 
@@ -259,7 +259,7 @@
 @keyframes slidedown {
     from{transform: translateY(-300%);}
 }
-.group-flag-banner {
+.group-flag-banner-hobby {
     position: absolute;
     width: 109px;
     height: 91px;
@@ -268,7 +268,7 @@
     top: -35.6px;
 }
 
-.tutoringjoin {
+.hobbyjoin {
     display: block;
     position: relative;
     background-color: var(--color-gray);
@@ -283,7 +283,7 @@
     from{transform: translateX(300%);}
 }
 
-.join-button {
+.join-button-hobby {
     position: absolute;
     border-radius: 10px;
     background-color: var(--basecolor-white);
@@ -298,11 +298,11 @@
     outline-width: 1.3px;
 }
 
-.join-button:hover {
+.join-button-hobby:hover {
     color: var(--accent);
 }
 
-.member-button {
+.member-button-hobby {
     position: absolute;
     top: 35px;
     left: 140px;
@@ -317,11 +317,11 @@
     outline-width: 1.3px;
 }
 
-.member-button:hover {
+.member-button-hobby:hover {
     color: var(--accent);
 }
 
-.close-button {
+.close-button-hobby {
     position: absolute;
     border-radius: 10px;
     background-color: var(--basecolor-white);
@@ -336,7 +336,7 @@
     outline-width: 1.3px;
 }
 
-.close-button:hover {
+.close-button-hobby:hover {
     color: var(--accent);
 }
   
@@ -374,7 +374,7 @@
   left: 3.28%;
 }
     
-.list {
+.list-hobby {
     position: relative;
     top: 10px;
     left: 0px;
@@ -382,7 +382,7 @@
     height: 300px;
 }
 
-.list.padding
+.list-hobby.padding
 {
     margin-bottom: 50px;
 }
