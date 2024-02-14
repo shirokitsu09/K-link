@@ -1,6 +1,5 @@
 <?php
   session_start();
-
   include("../config/con_db.php");
 
   $sql_hobby_db = "SELECT * FROM hobby_db";
@@ -36,7 +35,7 @@
       </div> -->
 <?php
   if ($result_hobby_db->num_rows > 0) {
-
+    
     $id = 1;
     while ($id <= $rowCount && ($row = $result_hobby_db->fetch_assoc())) {
       
@@ -47,6 +46,8 @@
     $_SESSION['memberCount'] = $row['memberCount'];
     $_SESSION['memberMax'] = $row['memberMax'];
     $_SESSION['detail'] = $row['detail'];
+    $_SESSION['uID'] = '65010001';
+
     // 
 
       $pic = $row['image'];

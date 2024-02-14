@@ -4,6 +4,9 @@
 
   if(isset($_GET['hID'])){
     $hID = $_GET['hID'];
+
+    $_SESSION['hID'] = $hID;
+
     $sql_hobby_db = "SELECT * FROM hobby_db WHERE hID = '$hID'";
     $result_hobby_db = $conn->query($sql_hobby_db);
     $row = $result_hobby_db->fetch_assoc();
@@ -59,7 +62,7 @@
         <div class="frame-child"></div>
 
         <div class="hobby-name">
-          <label for="ActivityName" class="name">ชื่อกิจกรรม <a class="star">*<a></label>
+          <label for="ActivityName" class="name">ชื่อกิจกรรม<a class="star">*<a></label>
           <input type="text" class="first2 textfields-child" name="activityName" value ="<?php echo $activityName ?>" maxlength="27"></input>
         </div>
 
@@ -150,7 +153,7 @@
         
         <div class="detail">
           <label for="detail" class="name">รายละเอียด</label>
-          <textarea class="detail-text textfields-child" name="detail" placeholder ="<?php echo $detail ?>"></textarea>
+          <textarea class="detail-text textfields-child" name="detail" placeholder ="<?php echo $detail ?> " value ="<?php echo $detail ?> "></textarea>
         </div>
 
         <div class="PicUpload-frame">
@@ -159,7 +162,7 @@
           <label class="group-child8">
             <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png, .pdf">     
             <div class="PicUpload">    
-              <img class="vector-icon" alt="" src="./uploadedImg/<?php echo $image ?>" />
+              <img class="vector-icon" alt="" src="./uploadedImg/<?php echo $image ?> " value ="<?php echo $image ?> "/>
             </div> 
           </label>
 
@@ -223,14 +226,18 @@
         line.style.top = '38px';
     }
 
-    function changeTime() {
+    function changeTime_starter() {
         let hour = document.getElementById('HourInput');
         let minute = document.getElementById('MinuteInput');
         let hour_show = document.getElementById('hour');
         let minute_show = document.getElementById('minute');
 
-        hour.value = '<?php echo $hour; ?>';
-        minute.value = '<?php echo $minute; ?>';
+          hour.value = '<?php echo $hour; ?>';
+          minute.value = '<?php echo $minute; ?>';
+
+        let combinedTime = hour.value + ":" + minute.value;
+
+        document.getElementById("CombinedTimeInput").value = combinedTime;
 
         hour_show.textContent = '<?php echo $hour; ?>';
         minute_show.textContent = '<?php echo $minute; ?>';
@@ -259,8 +266,8 @@
         ?>
 
     });
-    changeTime();
     changeText();
+    changeTime_starter();
 });
 
 

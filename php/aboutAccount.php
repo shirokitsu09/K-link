@@ -3,7 +3,8 @@
   session_start();
   include("../config/con_db.php");
 
-  $uID = $_SESSION["uID"];
+  $target_uID = $_GET["uID"];
+  $uID = $_SESSION['uID'];
 
   // $sql_users = "SELECT * FROM users WHERE uID = '$uID'";
 
@@ -13,7 +14,7 @@
                     FROM users AS a
                     LEFT JOIN faculty AS b
                     ON a.fID = b.fID
-                    WHERE a.uId = '$uID'
+                    WHERE a.uId = '$target_uID'
             ";
 
   $result_users = $conn->query($sql_users);
@@ -23,7 +24,7 @@
   $fullname = $row['fullname'];
   $email = $row['email'];
   $phoneNumber = $row['phoneNumber'];
-  $faculty = 'Computer Engineering';
+  $faculty = $row['fName'];
   $aboutme = $row['aboutme'];
 
 ?>
@@ -59,7 +60,7 @@
         <div class="profile-tel">เบอร์โทร : </div>
         <div class="profile-telephone"><?php echo $phoneNumber ?></div>
         <div class="profile-fac">Faculty : </div>
-        <div class="profile-faculty"><?php echo $row['fName']; ?></div>
+        <div class="profile-faculty"><?php echo $faculty ?></div>
         <div class="label-aboutme">About me</div>
         <div class="box-aboutme">
         <div class="profile-aboutme"><?php echo $aboutme ?></div>
@@ -67,12 +68,14 @@
         </div>
       </div>
   </div>
-
+<?php if($uID == $target_uID) { ?>
         <div class="footerIndividual">
         <a href="aboutEditAccount.php?uID=<?php echo $row['uID'];?>" class="createGroupButton">
           <img src="../images/wrench.svg">
         </a>
         </div>
+<?php } ?>
+
 <script>
 
   var tdot = document.getElementById("tdot")

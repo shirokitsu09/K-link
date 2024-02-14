@@ -55,7 +55,30 @@ if (isset($_POST['Create'])) {
 
                 move_uploaded_file($imageTmpName, $imageDestination);
 
-                $sql = "INSERT INTO hobby_db
+                $sql_img = "INSERT INTO hobby_db
+                            (image
+                            ) VALUES ('$imageNewName'
+                                     )";
+
+                $result_img = mysqli_query($conn, $sql_img);
+
+                if($result_img) {
+                    echo "บันทึกรูปสำเร็จ <br>";
+                } else {
+                    echo "ผิดพลาด, ไม่สามารถบันทึกรูปได้... <br>";
+                }
+            } else {
+                echo "ไฟล์รูปใหญ่เกินไป";
+            }
+
+        } else {
+            echo "เกิดข้อผิดพลาดบางอย่างเกี่ยวกับการอัพโหลดรูป หรือรูปไม่มีการเปลี่ยนแปลง<br>";
+        }
+    } else {
+        echo "ไม่มีการอัพโหลดรูปใหม่ <br>";
+    }
+    
+    $sql = "INSERT INTO hobby_db
                             (hID,
                             type,
                             activityname, 
@@ -64,7 +87,6 @@ if (isset($_POST['Create'])) {
                             memberMax, 
                             location, 
                             detail,
-                            image,
                             dateCreate,
                             timeCreate,
                             createBy,
@@ -79,7 +101,6 @@ if (isset($_POST['Create'])) {
                                     '$memberMax',
                                     '$location',
                                     '$detail',
-                                    '$imageNewName',
                                     NOW(),
                                     NOW(),
                                     '$uID',
@@ -88,22 +109,12 @@ if (isset($_POST['Create'])) {
                                     '$uID'
                                     )";
 
-                $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $sql);
 
-                if($result) {
-                    echo "บันทึกข้อมูลสำเร็จ";
-                } else {
-                    echo "ผิดพลาด, ไม่สามารถบันทึกข้อมูลได้...";
-                }
-            } else {
-                echo "Your file is too large!";
-            }
-
+        if($result) {
+            echo "บันทึกข้อมูลสำเร็จ";
         } else {
-            echo "There was an error uploading your file...";
+            echo "ผิดพลาด, ไม่สามารถบันทึกข้อมูลได้...";
         }
-    } else {
-        echo "You can't upload files of this type!";
-    }
 }
 ?>
