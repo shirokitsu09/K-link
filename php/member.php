@@ -3,9 +3,9 @@
 
   session_start();
   include '../config/con_db.php';
-  // $user_uID = $_SESSION['uID'];
-      $user_uID = '65010005';
-      $_SESSION["uID"] = $user_uID;
+      $user_uID = $_SESSION['uID'];
+  // $user_uID = '65010003';
+  // $_SESSION["uID"] = $user_uID;
   // if(isset($_GET['hID'])) {
       $mID = 'h022410-002';
       $feature = 'hobby_db';
@@ -17,7 +17,8 @@
                       a.member,
                       a.activityName,
                       b.username,
-                      b.uID
+                      b.uID,
+                      b.fID
                       FROM $feature AS a
                       LEFT JOIN users AS b
                       ON FIND_IN_SET(b.uID, a.member)
@@ -118,7 +119,7 @@
                 <div class="member"><?php echo $row_username['username']; ?></div>
 
                 <?php if($image == "me.svg") { ?>
-                  <div class="me-icon"><img alt="" src="../images/member/<?php echo $image; ?>" /></div>
+                    <div class="me-icon"><img alt="" src="../images/member/<?php echo $image; ?>" /></div>
                 <?php } else { ?>
                   <a href = "aboutAccount.php?uID=<?php echo $members[$j];?>">
                     <div class="info-icon"><img alt="" src="../images/member/<?php echo $image; ?>" /></div>

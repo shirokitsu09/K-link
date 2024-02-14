@@ -2,6 +2,8 @@
 session_start();
 include("../config/con_db.php");
 
+$uID = $_SESSION['uID'];
+
 if(isset($_GET['hID'])){
 $hID = $_GET['hID'];
 
@@ -17,6 +19,7 @@ $memberMax = $row['memberMax'];
 $detail = $row['detail'];
 $image = $row['image'];
 $day = $row['date[]'];
+$header = $row['header'];
 
 $dayArray = explode(",", $day);
 
@@ -100,7 +103,9 @@ $formattedTime = date("H:i", strtotime($time));
           <div class="group-member-container">
               <div class="group-member-text">สมาชิก :</div>
               <div class="group-member-amount availible"><?php echo $memberCount; ?>/<?php echo $memberMax; ?></div>
-              <img class="vector-icon1" alt="" src="../images/aboutgroup/magnifyglass.svg" />
+              <a href = 'member.php?hID=<?php echo $hID?>'>
+                <img class="vector-icon1" alt="" src="../images/aboutgroup/magnifyglass.svg" />
+              </a>
             </div>
 
           <div class="group-parent1">
@@ -128,12 +133,15 @@ $formattedTime = date("H:i", strtotime($time));
         </div>
       </div>
     </div>
-
+    <?php if($uID == $header) { ?>
         <div class="footerIndividual">
             <a href="hobbyEditAboutGroup.php?hID=<?php echo $row['hID'];?>" class="createGroupButton">
                 <img src="../images/wrench.svg">
             </a>
         </div>
+    <?php
+      }
+    ?>    
     <script>
       var groupContainer11 = document.getElementById("groupContainer11");
       if (groupContainer11) {
