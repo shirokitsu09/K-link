@@ -340,7 +340,7 @@
   var innerlist_2 = document.getElementById("innerlist-2-hobby");
 
 
-  var list3 = document.getElementById("list-3-hobby");
+  var list_3 = document.getElementById("list-3-hobby");
   var Hobbyjoin3 = document.getElementById("hobbyjoin-3");
   var innerlist_3 = document.getElementById("innerlist-3-hobby");
 
@@ -464,7 +464,7 @@
 
   if (innerlist_1) {
     innerlist_1.addEventListener("click", function (e) {
-      if (list_1 != "list-1.padding") {
+      if (list_1 != "list-1-hobby.padding") {
         close_Hobbyjoin();
         Hobbyjoin1.style.display = 'block';
         list_1.classList.add('padding');
@@ -474,7 +474,7 @@
 
   if (innerlist_2) {
     innerlist_2.addEventListener("click", function (e) {
-      if (list_2 != 'list-2.padding') {
+      if (list_2 != 'list-2-hobby.padding') {
         close_Hobbyjoin();
         Hobbyjoin2.style.display = 'block';
         document.querySelector('.padding')?.classList.remove('padding')
@@ -485,11 +485,11 @@
 
   if (innerlist_3) {
     innerlist_3.addEventListener("click", function (e) {
-      if (list3 != 'list-3.padding') {
+      if (list_3 != 'list-3-hobby.padding') {
         close_Hobbyjoin();
         Hobbyjoin3.style.display = 'block';
         document.querySelector('.padding')?.classList.remove('padding')
-        list3.classList.add('padding');
+        list_3.classList.add('padding');
       }
     });
   }
