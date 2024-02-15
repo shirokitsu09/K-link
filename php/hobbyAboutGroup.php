@@ -27,6 +27,11 @@ $formattedTime = date("H:i", strtotime($time));
   if($image === NULL) {
     $image = 'emptyPicture.svg';
   }
+
+$tag = $row['tag'];
+$eachTag = explode("," , $tag);
+$eachTag_count = count($eachTag);
+
 }
 ?>
 
@@ -117,11 +122,11 @@ $formattedTime = date("H:i", strtotime($time));
           </div>
           <div class="rectangle-parent5">
             <div class="tag-container">
-            <div class="div17">วิ่ง</div>
-            <div class="div17">กีฬา</div>
-            <div class="div17">ช่วงเย็น</div>
-            <div class="div17">สนามกีฬา</div>
-            <div class="div17">ออกกำลังกาย</div>
+
+    <?php for ($i = 0 ; $i<$eachTag_count ; $i++) {?>
+          <div class="div17"><?php echo $eachTag[$i] ?></div>
+    <?php } ?>
+    
             </div>
             <div class="tag">Tag</div>
           </div>
