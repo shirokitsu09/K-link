@@ -11,18 +11,23 @@
 
 <body>
   <div class="list-frame-tutoring">
+
+
     <!-- <div class="status-bar"></div> -->
     <div class="tpopup" id="tpopup">
-      <div class="tpopup-drag" id="tpopupdrag"></div>
-      <div class="tpopup-option" id="tpopup-option-1">
+      <div class="tpopup-drag" id="tpopupdrag-1-t"></div>
+      <div class="tpopup-option" id="tpopup-option-1-t">
         <img class="tpopup-option-icon" src="../images/librarylist/tdotblock.svg">
         <div class="tpopup-option-text">บล็อก</div>
       </div>
-      <div class="tpopup-option" id="tpopup-option-2">
+      <div class="tpopup-option" id="tpopup-option-2-t">
         <img class="tpopup-option-icon" src="../images/librarylist/report.svg">
         <div class="tpopup-option-text">รายงาน</div>
       </div>
     </div>
+
+    <?php include '../php/TutoringReportList.php'; ?>
+
     <div class="list" id="list-1">
       <div class="list-inner-tutoring">
         <div class="list-inner-head">
@@ -434,18 +439,18 @@
     });
 
 
-    var tpopupdrag = document.getElementById("tpopupdrag");
+    var tpopupdrag = document.getElementById("tpopupdrag-1-t");
     tpopupdrag.addEventListener("click", function (e) {
       tpopup_close();
     });
 
-    var tpopupoption1 = document.getElementById("tpopup-option-1");
+    var tpopupoption1 = document.getElementById("tpopup-option-1-t");
     tpopupoption1.addEventListener("click", function (e) {
       console.log("blocked request");
       tpopup_close();
     });
 
-    var tpopupoption2 = document.getElementById("tpopup-option-2");
+    var tpopupoption2 = document.getElementById("tpopup-option-2-t");
     tpopupoption2.addEventListener("click", function (e) {
       console.log("reported request")
       tpopup_close();

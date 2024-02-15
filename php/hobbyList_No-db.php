@@ -10,6 +10,9 @@
 </head>
 
 <body>
+
+  
+
   <div class="list-frame-hobby">
     <!-- <div class="status-bar"></div> -->
     <div class="tpopup-hobby" id="tpopup-hobby">
@@ -23,6 +26,8 @@
         <div class="tpopup-option-text-hobby">รายงาน</div>
       </div>
     </div>
+
+    <!-- -->
 
 
     <div class="list-hobby" id="list-1-hobby">
@@ -179,152 +184,6 @@
   </div>
 
 </body>
-<!-- <script>
-  var display = 0;
-
-  var tpopupHobby = document.getElementById("tpopup-hobby"); // three dot pop up id
-
-  var hobby_list1 = document.getElementById("list-1-hobby");
-  var hobbyjoin1 = document.getElementById("hobbyjoin-1");
-  var innerhobby_list1 = document.getElementById("innerlist-1-hobby");
-
-  var hobby_list2 = document.getElementById("list-2-hobby");
-  var hobbyjoin2 = document.getElementById("hobbyjoin-2");
-  var innerlist2 = document.getElementById("innerlist-2-hobby");
-
-  var hobby_list3 = document.getElementById("list-3-hobby");
-  var hobbyjoin3 = document.getElementById("hobbyjoin-3");
-  var innerhobby_list3 = document.getElementById("innerlist-3-hobby");
-
-
-  function close_hobbyjoin(e) {
-    hobbyjoin1.style.display = 'none';
-    hobbyjoin2.style.display = 'none';
-    hobbyjoin3.style.display = 'none';
-    document.querySelector('.padding')?.classList.remove('padding')
-  }
-
-  var close_1 = document.getElementById("close-1-hobby");
-  close_1.addEventListener("click", close_hobbyjoin);
-  var close_2 = document.getElementById("close-2-hobby");
-  close_2.addEventListener("click", close_hobbyjoin);
-  var close_3 = document.getElementById("close-3-hobby");
-  close_3.addEventListener("click", close_hobbyjoin);
-
-  var join_1 = document.getElementById("join-1-hobby");
-  join_1.addEventListener("click", function (e) {
-    console.log("join group1 requested");
-    close_hobbyjoin();
-  });
-
-  var join_2 = document.getElementById("join-2-hobby");
-  join_2.addEventListener("click", function (e) {
-    console.log("join group2 requested");
-    close_hobbyjoin();
-  });
-
-  var join_3 = document.getElementById("join-3-hobby");
-  join_3.addEventListener("click", function (e) {
-    console.log("join group3 requested");
-    close_hobbyjoin();
-  });
-
-  var member_1 = document.getElementById("member-1-hobby")
-  member_1.addEventListener("click", function (e) {
-    console.log("member group1 view requested")
-    close_hobbyjoin();
-  });
-
-  var member_2 = document.getElementById("member-2-hobby")
-  member_2.addEventListener("click", function (e) {
-    console.log("member group2 view requested")
-    close_hobbyjoin();
-  });
-
-  var member_3 = document.getElementById("member-3-hobby")
-  member_3.addEventListener("click", function (e) {
-    console.log("member group3 view requested")
-    close_hobbyjoin();
-  });
-
-  function tpopup_hobby_open(e) {
-    tpopupHobby.classList.add("on");
-  }
-
-  function tpopup_hobby_close(e) {
-    tpopupHobby.classList.remove("on");
-  }
-
-  tdot1_hobby = document.getElementById("tdot-1-hobby")
-  tdot1_hobby.addEventListener("click", function (e) {
-    close_hobbyjoin();
-    tpopup_hobby_open();
-  });
-
-  tdot2_hobby = document.getElementById("tdot-2-hobby")
-  tdot2_hobby.addEventListener("click", function (e) {
-    close_hobbyjoin();
-    tpopup_hobby_open();
-  });
-
-  tdot3_hobby = document.getElementById("tdot-3-hobby")
-  tdot3_hobby.addEventListener("click", function (e) {
-    close_hobbyjoin();
-    tpopup_hobby_open();
-  });
-
-  var tpopupdragHobby = document.getElementById("tpopupdragHobby");
-  tpopupdragHobby.addEventListener("click", function (e) {
-    tpopup_hobby_close();
-  });
-
-  var tpopupoption_1 = document.getElementById("tpopup-option-1-h");
-  tpopupoption_1.addEventListener("click", function (e) {
-    console.log("blocked request");
-    tpopup_hobby_close();
-  });
-
-  var tpopupoption_2 = document.getElementById("tpopup-option-2-h");
-  tpopupoption_2.addEventListener("click", function (e) {
-    console.log("reported request")
-    tpopup_hobby_close();
-  });
-
-  // 
-  if (innerhobby_list1) {
-    innerhobby_list1.addEventListener("click", function (e) {
-      if (hobby_list1 != 'list-1-hobby.padding') {
-        close_hobbyjoin();
-        hobbyjoin1.style.display = 'block';
-        hobby_list1.classList.add('padding');
-      }
-    });
-  }
-
-  if (innerhobby_list2) {
-    innerhobby_list2.addEventListener("click", function (e) {
-      if (hobby_list2 != 'list-2-hobby.padding') {
-        close_hobbyjoin();
-        hobbyjoin2.style.display = 'block';
-        document.querySelector('.padding')?.classList.remove('padding')
-        hobby_list2.classList.add('padding');
-      }
-    });
-  }
-
-  if (innerhobby_list3) {
-    innerhobby_list3.addEventListener("click", function (e) {
-      if (hobby_list3 != 'list-3-hobby.padding') {
-        close_hobbyjoin();
-        hobbyjoin3.style.display = 'block';
-        document.querySelector('.padding')?.classList.remove('padding')
-        hobby_list3.classList.add('padding');
-      }
-    });
-  }
-
-</script> -->
-
 
 <script>
   var display = 0;
@@ -332,7 +191,7 @@
   var list_1 = document.getElementById("list-1-hobby"); //list id for padding
   var Hobbyjoin1 = document.getElementById("hobbyjoin-1"); //join group id slide in
   var innerlist_1 = document.getElementById("innerlist-1-hobby"); //touch id for response
-  
+
   var tpopupH = document.getElementById("tpopup-hobby"); // three dot pop up id
 
   var list_2 = document.getElementById("list-2-hobby");
