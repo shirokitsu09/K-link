@@ -11,7 +11,7 @@
 <body>
 
   <!-- <div class="tpopup" id="tpopup">
-    <div class="tpopup-drag" id="tpopupdrag-1"></div>
+    <div class="tpopup-drag" id="-h"></div>
     <div class="tpopup-option" id="tpopup-option-1">
       <img class="tpopup-option-icon" id="tpopup-image-1" src="../images/report/bookmark.svg">
       <div class="tpopup-option-text" id="tpopup-text-1">บันทึก</div>
@@ -98,7 +98,7 @@
   </div>
 
   <script>
-    var tpopup = document.getElementById("tpopup");
+    var tpopup = document.getElementById("tpopup-hobby");
     var tpopupReport = document.getElementById("tpopup-report");
     var backbutton = document.getElementById("backbutton");
     var reportpopup = document.getElementById("report-popup");
@@ -133,8 +133,8 @@
     }
 
     //close popup
-    var tpopupdrag1 = document.getElementById("tpopupdrag-1");
-    tpopupdrag1.addEventListener("click", function (e) {
+    var tpopupdrag1_h = document.getElementById("tpopupdragHobby");
+    tpopupdrag1_h.addEventListener("click", function (e) {
       tpopup_close();
     });
 
@@ -153,7 +153,7 @@
     var tpopupimage1 = document.getElementById("tpopup-image-1")
     var tpopuptext1 = document.getElementById("tpopup-text-1")
     var check = 0;
-    var tpopupoption1 = document.getElementById("tpopup-option-1")
+    var tpopupoption1 = document.getElementById("tpopup-option-1-h")
     tpopupoption1.addEventListener("click", function (e) {
       if (check == 0) {
         console.log("bookmarked");
@@ -169,7 +169,7 @@
       }
     });
 
-    var tpopupoption2 = document.getElementById("tpopup-option-2")
+    var tpopupoption2 = document.getElementById("tpopup-option-2-h")
     tpopupoption2.addEventListener("click", function (e) {
       tpopup_close();
       tpopupReport_open();

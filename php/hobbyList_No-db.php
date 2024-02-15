@@ -11,7 +11,7 @@
 
 <body>
 
-  
+
 
   <div class="list-frame-hobby">
     <!-- <div class="status-bar"></div> -->
@@ -27,6 +27,8 @@
       </div>
     </div>
 
+
+    <?php include "HobbyReportList.php"; ?>
     <!-- -->
 
 
@@ -352,6 +354,14 @@
       }
     });
   }
+  document.addEventListener('click', e => {
+    if (tpopup_close && !tpopup.contains(e.target) && !tpopupReport.contains(e.target) && !reportpopup.contains(e.target) && e.target !== tdot) {
+      tpopupReport_close();
+      reportpopup_close();
+    } else if (tpopup_open && !tpopup.contains(e.target) && !tpopupReport.contains(e.target) && !reportpopup.contains(e.target) && e.target !== tdot) {
+      tpopup_close();
+    }
+  });
 
 </script>
 
