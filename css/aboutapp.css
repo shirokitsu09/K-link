@@ -3,7 +3,7 @@
     background: linear-gradient(180deg, #f89603, #f86a03 56.25%, #f85b03);
     width: 360px;
     height: 800px;
-    overflow: scroll;
+    overflow: hidden;
     text-align: center;
     color: var(--neutrals1);
     font-size: var(--subtitle-1-size);
