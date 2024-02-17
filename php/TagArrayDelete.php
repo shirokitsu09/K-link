@@ -18,7 +18,17 @@
     $tagArray_count = count($tagArray);
 
     }
+//  if(isset($_POST['Updatetag'])){
+//   $Updatetag = json_decode($_POST['tag']);
+//   $UpdatetagArray = explode(",",$Updatetag);
+//   $UpdatetagString = implode(",",$UpdatetagArray);
 
+//   echo $Updatetag;
+//   $sql_update = "UPDATE hobby_db SET
+//                   tag = '$UpdatetagString'
+//                   WHERE hID = '$hID'";
+
+//  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,6 +36,7 @@
     <link rel="stylesheet" href="../css/hobbyEdit.css" />
   </head>
   <body>
+  <form action="TagArrayDelete_db.php" method="post">
    <?php for($i = 0 ; $i < $tagArray_count ; $i++) {?>
       <div class="div17">          
           <?php echo $tagArray[$i] .'<img class = "DeleteTagIcon" src="../images/TagDeleteIcon.svg" onclick=delTag(this)>'?>
@@ -33,25 +44,29 @@
     <?php } ?>
   <div class="addTag">
     <input type="text" id="tagInput">
-    <input type="button" value="addTag" onclick=addButton()>
+    <input type="button" value="addTag" onclick="addButton()">
+    <input type="button" value="merge" onclick="merge()">
   </div>
+  
+    <input type="submit" name="Updatetag" value="submit">
+    <input type="text" id="submitTag" name="tag" >
+    
 
-    <input type="button" value="submit" onclick=submit()>
-    <input type="text" id="submitTag" name="tag">
+   </form>
   </body>
 </html>
 
 <script>
   
-  let new_tag = []; // Declare new_tag array outside the function
+  let new_tag = [];
   let current_tag = <?php echo json_encode($tagArray); ?>;
+  let submitTag = [];
 
 function delTag(deleteButton) {
   let parentDiv = deleteButton.parentNode;
-  let tagToDelete = parentDiv.textContent.trim(); // Extract the tag text
+  let tagToDelete = parentDiv.textContent.trim(); 
   parentDiv.parentNode.removeChild(parentDiv);
 
-   // Parse the PHP array into JavaScript array
   let index = current_tag.indexOf(tagToDelete);
 
   if (index > -1) {
@@ -63,27 +78,33 @@ function delTag(deleteButton) {
 
 function addButton() {
   let newTag = document.getElementById("tagInput").value;
-  new_tag.push(newTag);
-  console.log("New Tag array:", new_tag);
 
+  if (newTag !== "" && !new_tag.includes(newTag)) {
+    new_tag.push(newTag);
+    console.log("New Tag array:", new_tag);
+  } else {
+    console.log("Tag already exists or is empty.");
+  }
 }
 
-  function submit() {
-    let submitTag = [];
-
+  function merge() {
+  let tag = document.getElementById("submitTag");
     for (let i = 0; i < new_tag.length; i++) {
-      let Combind_new_tag = new_tag[i].split(',');
+      let Combind_new_tag = new_tag[i];
       submitTag.push(Combind_new_tag);
+      console.log("Combind_new_tag:", Combind_new_tag);
     }
 
     for (let i = 0; i < current_tag.length; i++) {
-      let Combind_current_tag = current_tag[i].split(',');
+      let Combind_current_tag = current_tag[i];
       submitTag.push(Combind_current_tag);
+      console.log("Combind_current_tag:", Combind_current_tag);
     }
-    document.getElementById("submitTag").value = submitTag;
-    console.log("Submit Tags:", document.getElementById("submitTag").value);
-  }
 
+    tag.value = submitTag.join(',');
+    console.log("Combind_submit_tag:", document.getElementById("submitTag").value);
+
+}
 
 //-------------------------------------------------------------------------------
 
