@@ -130,13 +130,22 @@
 }
 
 .group-profile-picture {
+    position: relative;
+    max-width: 100px;
+    max-height: 100px;
+}
+.imgFrame{
     position: absolute;
     width: 100px;
     height: 100px;
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
     top: 50px;
-    left: 25px
+    left: 25px;
+    background-color: var(--neutrals1);
+    border-radius: var(--br-5xs);
 }
-
 .group-date {
     position: absolute;
     display: inline-block;

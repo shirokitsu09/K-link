@@ -1,7 +1,7 @@
 <?php
-session_start();
+  session_start();
+  include("../config/con_db.php");
 
-include("../config/con_db.php");
 
 $sql_hobby_db = "SELECT * FROM hobby_db";
 $sql_hobby_dbCount = "SELECT COUNT(*) as count FROM hobby_db";
@@ -36,9 +36,21 @@ if ($result_hobby_db !== false && $result_hobby_dbCount->num_rows > 0) {
       </div> -->
   <?php
   if ($result_hobby_db->num_rows > 0) {
-
+    
     $id = 1;
     while ($id <= $rowCount && ($row = $result_hobby_db->fetch_assoc())) {
+      
+    // Session
+    $_SESSION['activityName'] = $row['activityName'];
+    $_SESSION['location'] = $row['location'];
+    $_SESSION['time'] = $row['time'];
+    $_SESSION['memberCount'] = $row['memberCount'];
+    $_SESSION['memberMax'] = $row['memberMax'];
+    $_SESSION['detail'] = $row['detail'];
+    $_SESSION['uID'] = '65010001';
+
+    // 
+
 
       // Session
       $_SESSION['activityName'] = $row['activityName'];

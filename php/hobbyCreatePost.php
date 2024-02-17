@@ -1,3 +1,9 @@
+<?php
+
+  session_start();
+  $hID = $_SESSION['hID'];
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,6 +36,7 @@
 
         <div class="hobby-name">
           <label for="ActivityName" class="name">ชื่อกิจกรรม <a class="star">*<a></label>
+          <input type="text" name="uID" value="<?php echo $uID?>" hidden>
           <input type="text" class="first2 textfields-child" name="activityName" placeholder="ชื่อกลุ่มหรือกิจกรรม..." maxlength="27"></input>
         </div>
 
@@ -127,8 +134,9 @@
 
           <label for="PicProfileGroup" class="div12">รูปโปรไฟล์กลุ่ม</label>
           <label class="group-child8">
-            <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png, .pdf">     
-            <div class="PicUpload">    
+            <input type="file" name="image" accept=".jpg, .jpeg, .png, .pdf" id="fileInput" hidden>     
+            <div class="PicUpload">  
+              <img id="preview" src="" alt="">  
               <img class="vector-icon" alt="" src="../images/plus.svg" />
             </div> 
           </label>
@@ -194,7 +202,20 @@
     }
 
     changeText();
-
+// ------------------------------------------------------------------------
+document.getElementById('fileInput').addEventListener('change', function() {
+    const file = this.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        document.getElementById('preview').src = event.target.result;
+      }
+      reader.readAsDataURL(file);
+    } else {
+      // Clear the preview if no file is selected
+      document.getElementById('preview').src = "";
+    }
+  });
 </script>
 
 </html>
