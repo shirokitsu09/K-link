@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../css/hobby-home.css" />
     <link rel="stylesheet" href="../css/globalTEST.css" />
+    <link rel="stylesheet" href="../css/createGroupButton.css" />
     <!-- <link rel="stylesheet" href="../css/creategroup.css" /> -->
     
 </head>
@@ -25,6 +26,12 @@
 
 
         <?php include 'hobbyList_No-db.php'; ?>
+
+        <div class="footerIndividual">
+            <a href="hobbyCreatePost.php" class="createGroupButton">
+                <img src="../images/WhitePlus.svg">
+            </a>
+        </div>   
     </div>
 </body>
 <!------------------------------ script ------------------------------>
