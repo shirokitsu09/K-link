@@ -103,13 +103,13 @@
     var backbutton = document.getElementById("backbutton");
     var reportpopup = document.getElementById("report-popup");
 
-    function tpopup_open(e) {
-      tpopup.classList.add("on");
-    }
+    // function tpopup_open(e) {
+    //   tpopup.classList.add("on");
+    // }
 
-    function tpopup_close(e) {
-      tpopup.classList.remove("on");
-    }
+    // function tpopup_close(e) {
+    //   tpopup.classList.remove("on");
+    // }
 
     function tpopupReport_open(e) {
       tpopupReport.classList.add("on");
@@ -267,6 +267,45 @@
       tpopupReport_close();
       reportpopup_close();
     });
+
+    //=======================Overlay=====================================================
+
+    const createOverlay = () => {
+      const overlay = document.createElement('div');
+      overlay.classList.add('overlay');
+      overlay.id = 'OverlayOn';
+      document.body.appendChild(overlay);
+      console.log('Created overlay');
+
+      overlay.addEventListener('click', function () {
+        if (TpopUpReport) {
+          console.log('case1');
+          tpopup_open_H();
+          removeOverlay();
+          tpopupReport_close();
+          reportpopup_close();
+        } else if (reportPoPUP) {
+          // console.log('case2');
+          tpopupReport_open();
+          reportpopup_close();
+        } else {
+          console.log('case3');
+          removeOverlay();
+          tpopup_close_H();
+          reportpopup_close();
+          tpopupReport_close();
+        }
+      });
+
+      return overlay;
+    }
+
+    const removeOverlay = () => {
+      const overlay = document.getElementById('OverlayOn');
+      if (overlay) {
+        document.body.removeChild(overlay);
+      }
+    }
   </script>
 </body>
 

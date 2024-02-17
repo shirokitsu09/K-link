@@ -94,37 +94,44 @@
     <textarea placeholder="รายละเอียดเพิ่มเติม..." class="report-description" id="reportDescription" method=""
       action="">
       </textarea>
-    <div class="confirm-report-button" id="confirmreport">ยืนยัน</div>
+    <div class="confirm-report-button" id="confirmreport_hobby">ยืนยัน</div>
   </div>
 
   <script>
-    var tpopup = document.getElementById("tpopup-hobby");
+    // var tpopupH = document.getElementById("tpopup-hobby");
     var tpopupReport = document.getElementById("tpopup-report");
     var backbutton = document.getElementById("backbutton");
     var reportpopup = document.getElementById("report-popup");
 
-    function tpopup_open(e) {
-      tpopup.classList.add("on");
-    }
+    // function tpopup_open(e) {
+    //   tpopupH.classList.add("on");
 
-    function tpopup_close(e) {
-      tpopup.classList.remove("on");
-    }
+    // }
 
+    // function tpopup_close(e) {
+    //   tpopupH.classList.remove("on");
+
+    // }
+    let TpopUpReport = false;
     function tpopupReport_open(e) {
       tpopupReport.classList.add("on");
+      TpopUpReport = true;
     }
 
     function tpopupReport_close(e) {
       tpopupReport.classList.remove("on");
+      TpopUpReport = false;
     }
-
+    //===========================report popup================//
+    let reportPoPUP = false;
     function reportpopup_open(e) {
       reportpopup.classList.add("on");
+      reportPoPUP = true;
     }
 
     function reportpopup_close(e) {
       reportpopup.classList.remove("on");
+      reportPoPUP = false;
     }
 
     function clearReport(e) {
@@ -141,6 +148,8 @@
     var tpopupdrag2 = document.getElementById("tpopupdrag-2");
     tpopupdrag2.addEventListener("click", function (e) {
       tpopupReport_close();
+      tpopup_open_H();
+      removeOverlay();
     });
 
     var reportpopupdrag = document.getElementById("reportpopupdrag");
@@ -171,8 +180,9 @@
 
     var tpopupoption2 = document.getElementById("tpopup-option-2-h")
     tpopupoption2.addEventListener("click", function (e) {
-      tpopup_close();
+      // tpopup_close();
       tpopupReport_open();
+      createOverlay();
     });
     //
     backbutton.addEventListener("click", function (e) {
@@ -260,13 +270,120 @@
       reportTopic = "อื่นๆ";
     });
 
-    var confirmreport = document.getElementById("confirmreport");
-    confirmreport.addEventListener("click", function (e) {
+    var confirmreport_hobby = document.getElementById("confirmreport_hobby");
+    confirmreport_hobby.addEventListener("click", function (e) {
       reportDescription = document.getElementById("reportDescription").value;
       console.log("Report ", reportTopic, " : ", reportDescription);
       tpopupReport_close();
       reportpopup_close();
     });
+
+
+
+
+    /*====================Create Overlay Background=====================*/
+    // const createOverlay = () => {
+    //   const overlay = document.createElement('div');
+    //   overlay.classList.add('overlay');
+    //   overlay.id = 'OvelayOn';
+    //   document.body.appendChild(overlay);
+    //   return overlay;
+    // }
+    // const removeOverlay = () => {
+    //   const overlay = document.querySelector('.overlay');
+    //   if (overlay) {
+    //     document.body.removeChild(overlay);
+    //   }
+    // }
+    // const overlay = document.getElementById('OvelayOn');
+    // overlay.addEventListener('click', function () {
+    //   removeOverlay();
+    //   console.log('Overlay is clicked!');
+    // });
+
+    // let overlayCreated = false;
+
+    // const createOverlay = () => {
+    //   if (!overlayCreated) {
+    //     const overlay = document.createElement('div');
+    //     overlay.classList.add('overlay');
+    //     overlay.id = 'OverlayOn';
+    //     document.body.appendChild(overlay);
+    //     console.log('Created overlay');
+
+    //     overlay.addEventListener('click', function () {
+    //       if (TpopUpReport) {
+    //         console.log('case1');
+    //         tpopup_open_H();
+    //         tpopupReport_close(); //
+    //         reportpopup_close();
+    //       }
+    //       else if (reportPoPUP) {
+    //         // console.log('case2');
+    //         tpopupReport_open();
+    //         reportpopup_close();
+
+    //       } else {
+    //         console.log('case3');
+    //         removeOverlay();
+    //         tpopup_close_H();
+    //         reportpopup_close();
+    //         tpopupReport_close();
+    //       }
+    //     });
+
+    //     overlayCreated = true;
+    //     return overlay;
+    //   } else {
+    //     console.log('Overlay already created!');
+    //     return null;
+    //   }
+    // }
+
+    // const removeOverlay = () => {
+    //   const overlay = document.getElementById('OverlayOn');
+    //   if (overlay) {
+    //     document.body.removeChild(overlay);
+    //     overlayCreated = false; // reset overlayCreated flag
+    //   }
+    // }
+
+    const createOverlay = () => {
+      const overlay = document.createElement('div');
+      overlay.classList.add('overlay');
+      overlay.id = 'OverlayOn';
+      document.body.appendChild(overlay);
+      console.log('Created overlay');
+
+      overlay.addEventListener('click', function () {
+        if (TpopUpReport) {
+          console.log('case1');
+          tpopup_open_H();
+          removeOverlay();
+          tpopupReport_close();
+          reportpopup_close();
+        } else if (reportPoPUP) {
+          // console.log('case2');
+          tpopupReport_open();
+          reportpopup_close();
+        } else {
+          console.log('case3');
+          removeOverlay();
+          tpopup_close_H();
+          reportpopup_close();
+          tpopupReport_close();
+        }
+      });
+
+      return overlay;
+    }
+
+    const removeOverlay = () => {
+      const overlay = document.getElementById('OverlayOn');
+      if (overlay) {
+        document.body.removeChild(overlay);
+      }
+    }
   </script>
 </body>
 
