@@ -24,72 +24,72 @@
     </div>
   </div> -->
 
-  <div class="tpopup-report" id="tpopup-report">
-    <div class="tpopup-drag" id="tpopupdrag-2"></div>
-    <div class="tpopup-option" id="tpopup-report-option-1">
+  <div class="tpopup-report" id="tpopup-report-h">
+    <div class="tpopup-drag" id="tpopupdrag-2-h"></div>
+    <div class="tpopup-option" id="tpopup-report-option-1-h">
       <div class="tpopup-option-text">Spam</div>
       <img class="tpopup-option-next" src="../images/report/next.svg">
       <div class="tpopup-option-line"></div>
     </div>
 
-    <div class="tpopup-option" id="tpopup-report-option-2">
+    <div class="tpopup-option" id="tpopup-report-option-2-h">
       <div class="tpopup-option-text">อนาจาร</div>
       <img class="tpopup-option-next" src="../images/report/next.svg">
       <div class="tpopup-option-line"></div>
     </div>
 
-    <div class="tpopup-option" id="tpopup-report-option-3">
+    <div class="tpopup-option" id="tpopup-report-option-3-h">
       <div class="tpopup-option-text">ความรุนแรง</div>
       <img class="tpopup-option-next" src="../images/report/next.svg">
       <div class="tpopup-option-line"></div>
     </div>
 
-    <div class="tpopup-option" id="tpopup-report-option-4">
+    <div class="tpopup-option" id="tpopup-report-option-4-h">
       <div class="tpopup-option-text">การล่วงละเมิด</div>
       <img class="tpopup-option-next" src="../images/report/next.svg">
       <div class="tpopup-option-line"></div>
     </div>
 
-    <div class="tpopup-option" id="tpopup-report-option-5">
+    <div class="tpopup-option" id="tpopup-report-option-5-h">
       <div class="tpopup-option-text">การก่อการร้าย</div>
       <img class="tpopup-option-next" src="../images/report/next.svg">
       <div class="tpopup-option-line"></div>
     </div>
 
-    <div class="tpopup-option" id="tpopup-report-option-6">
+    <div class="tpopup-option" id="tpopup-report-option-6-h">
       <div class="tpopup-option-text">คำพูดแสดงความเกลียดชัง</div>
       <img class="tpopup-option-next" src="../images/report/next.svg">
       <div class="tpopup-option-line"></div>
     </div>
 
-    <div class="tpopup-option" id="tpopup-report-option-7">
+    <div class="tpopup-option" id="tpopup-report-option-7-h">
       <div class="tpopup-option-text">เกี่ยวกับเด็ก</div>
       <img class="tpopup-option-next" src="../images/report/next.svg">
       <div class="tpopup-option-line"></div>
     </div>
 
-    <div class="tpopup-option" id="tpopup-report-option-8">
+    <div class="tpopup-option" id="tpopup-report-option-8-h">
       <div class="tpopup-option-text">การฆ่าตัวตาย ทำร้ายตัวเอง</div>
       <img class="tpopup-option-next" src="../images/report/next.svg">
       <div class="tpopup-option-line"></div>
     </div>
 
-    <div class="tpopup-option" id="tpopup-report-option-9">
+    <div class="tpopup-option" id="tpopup-report-option-9-h">
       <div class="tpopup-option-text">ข้อมูลเท็จ</div>
       <img class="tpopup-option-next" src="../images/report/next.svg">
       <div class="tpopup-option-line"></div>
     </div>
 
-    <div class="tpopup-option" id="tpopup-report-option-10">
+    <div class="tpopup-option" id="tpopup-report-option-10-h">
       <div class="tpopup-option-text">อื่น ๆ</div>
       <img class="tpopup-option-next" src="../images/report/next.svg">
       <div class="tpopup-option-line"></div>
     </div>
   </div>
 
-  <div class="report-popup" id="report-popup">
-    <div class="tpopup-drag" id="reportpopupdrag"></div>
-    <img class="back-button" id="backbutton" alt="" src="../images/report/backbutton.svg" />
+  <div class="report-popup" id="report-popup-h">
+    <div class="tpopup-drag" id="reportpopupdrag-h"></div>
+    <img class="back-button" id="backbutton-h" alt="" src="../images/report/backbutton.svg" />
     <b class="report-title">ยืนยันการรายงาน</b>
     <textarea placeholder="รายละเอียดเพิ่มเติม..." class="report-description" id="reportDescription" method=""
       action="">
@@ -99,9 +99,9 @@
 
   <script>
     // var tpopupH = document.getElementById("tpopup-hobby");
-    var tpopupReport = document.getElementById("tpopup-report");
-    var backbutton = document.getElementById("backbutton");
-    var reportpopup = document.getElementById("report-popup");
+    var tpopupReport = document.getElementById("tpopup-report-h");
+    var backbutton = document.getElementById("backbutton-h");
+    var reportpopup = document.getElementById("report-popup-h");
 
     // function tpopup_open(e) {
     //   tpopupH.classList.add("on");
@@ -112,26 +112,26 @@
     //   tpopupH.classList.remove("on");
 
     // }
-    let TpopUpReport = false;
-    function tpopupReport_open(e) {
+    let TpopUpReport_Hobby = false;
+    function tpopupReport_open_hobby(e) {
       tpopupReport.classList.add("on");
-      TpopUpReport = true;
+      TpopUpReport_Hobby = true;
     }
 
-    function tpopupReport_close(e) {
+    function tpopupReport_close_hobby(e) {
       tpopupReport.classList.remove("on");
-      TpopUpReport = false;
+      TpopUpReport_Hobby = false;
     }
     //===========================report popup================//
-    let reportPoPUP = false;
-    function reportpopup_open(e) {
+    let reportPoPUP_Hobby = false;
+    function reportpopup_open_h(e) {
       reportpopup.classList.add("on");
-      reportPoPUP = true;
+      reportPoPUP_Hobby = true;
     }
 
-    function reportpopup_close(e) {
+    function reportpopup_close_h(e) {
       reportpopup.classList.remove("on");
-      reportPoPUP = false;
+      reportPoPUP_Hobby = false;
     }
 
     function clearReport(e) {
@@ -142,19 +142,20 @@
     //close popup
     var tpopupdrag1_h = document.getElementById("tpopupdragHobby");
     tpopupdrag1_h.addEventListener("click", function (e) {
-      tpopup_close();
+      tpopup_close_H();
     });
 
-    var tpopupdrag2 = document.getElementById("tpopupdrag-2");
+    var tpopupdrag2 = document.getElementById("tpopupdrag-2-h");
     tpopupdrag2.addEventListener("click", function (e) {
-      tpopupReport_close();
+      tpopupReport_close_hobby();
       tpopup_open_H();
       removeOverlay();
     });
 
-    var reportpopupdrag = document.getElementById("reportpopupdrag");
-    reportpopupdrag.addEventListener("click", function (e) {
-      reportpopup_close();
+    var reportpopupdrag_h = document.getElementById("reportpopupdrag-h");
+    reportpopupdrag_h.addEventListener("click", function (e) {
+      reportpopup_close_h();
+      tpopupReport_open_hobby();
     });
     // close
 
@@ -181,92 +182,92 @@
     var tpopupoption2 = document.getElementById("tpopup-option-2-h")
     tpopupoption2.addEventListener("click", function (e) {
       // tpopup_close();
-      tpopupReport_open();
+      tpopupReport_open_hobby();
       createOverlay();
     });
     //
     backbutton.addEventListener("click", function (e) {
-      reportpopup_close();
-      tpopupReport_open();
+      reportpopup_close_h();
+      tpopupReport_open_hobby();
     });
 
-    var tpopupoption1 = document.getElementById("tpopup-report-option-1");
+    var tpopupoption1 = document.getElementById("tpopup-report-option-1-h");
     tpopupoption1.addEventListener("click", function (e) {
       clearReport();
-      tpopupReport_close();
-      reportpopup_open();
+      tpopupReport_close_hobby();
+      reportpopup_open_h();
       reportTopic = "Spam";
     });
 
-    var tpopupoption2 = document.getElementById("tpopup-report-option-2");
+    var tpopupoption2 = document.getElementById("tpopup-report-option-2-h");
     tpopupoption2.addEventListener("click", function (e) {
       clearReport();
-      tpopupReport_close();
-      reportpopup_open();
+      tpopupReport_close_hobby();
+      reportpopup_open_h();
       reportTopic = "อนาจาร";
     });
 
-    var tpopupoption3 = document.getElementById("tpopup-report-option-3");
+    var tpopupoption3 = document.getElementById("tpopup-report-option-3-h");
     tpopupoption3.addEventListener("click", function (e) {
       clearReport();
-      tpopupReport_close();
-      reportpopup_open();
+      tpopupReport_close_hobby();
+      reportpopup_open_h();
       reportTopic = "ความรุนแรง";
     });
 
-    var tpopupoption4 = document.getElementById("tpopup-report-option-4");
+    var tpopupoption4 = document.getElementById("tpopup-report-option-4-h");
     tpopupoption4.addEventListener("click", function (e) {
       clearReport();
-      tpopupReport_close();
-      reportpopup_open();
+      tpopupReport_close_hobby();
+      reportpopup_open_h();
       reportTopic = "ล่วงละเมิด";
     });
 
-    var tpopupoption5 = document.getElementById("tpopup-report-option-5");
+    var tpopupoption5 = document.getElementById("tpopup-report-option-5-h");
     tpopupoption5.addEventListener("click", function (e) {
       clearReport();
-      tpopupReport_close();
-      reportpopup_open();
+      tpopupReport_close_hobby();
+      reportpopup_open_h();
       reportTopic = "ก่อการร้าย";
     });
 
-    var tpopupoption6 = document.getElementById("tpopup-report-option-6");
+    var tpopupoption6 = document.getElementById("tpopup-report-option-6-h");
     tpopupoption6.addEventListener("click", function (e) {
       clearReport();
-      tpopupReport_close();
-      reportpopup_open();
+      tpopupReport_close_hobby();
+      reportpopup_open_h();
       reportTopic = "ข้อความเกียจชัง";
     });
 
-    var tpopupoption7 = document.getElementById("tpopup-report-option-7");
+    var tpopupoption7 = document.getElementById("tpopup-report-option-7-h");
     tpopupoption7.addEventListener("click", function (e) {
       clearReport();
-      tpopupReport_close();
-      reportpopup_open();
+      tpopupReport_close_hobby();
+      reportpopup_open_h();
       reportTopic = "เกี่ยวกับเด็ก";
     });
 
-    var tpopupoption8 = document.getElementById("tpopup-report-option-8");
+    var tpopupoption8 = document.getElementById("tpopup-report-option-8-h");
     tpopupoption8.addEventListener("click", function (e) {
       clearReport();
-      tpopupReport_close();
-      reportpopup_open();
+      tpopupReport_close_hobby();
+      reportpopup_open_h();
       reportTopic = "ทำร้ายตัวเอง";
     });
 
-    var tpopupoption9 = document.getElementById("tpopup-report-option-9");
+    var tpopupoption9 = document.getElementById("tpopup-report-option-9-h");
     tpopupoption9.addEventListener("click", function (e) {
       clearReport();
-      tpopupReport_close();
-      reportpopup_open();
+      tpopupReport_close_hobby();
+      reportpopup_open_h();
       reportTopic = "ข้อมูลเท็จ";
     });
 
-    var tpopupoption10 = document.getElementById("tpopup-report-option-10");
+    var tpopupoption10 = document.getElementById("tpopup-report-option-10-h");
     tpopupoption10.addEventListener("click", function (e) {
       clearReport();
-      tpopupReport_close();
-      reportpopup_open();
+      tpopupReport_close_hobby();
+      reportpopup_open_h();
       reportTopic = "อื่นๆ";
     });
 
@@ -274,8 +275,8 @@
     confirmreport_hobby.addEventListener("click", function (e) {
       reportDescription = document.getElementById("reportDescription").value;
       console.log("Report ", reportTopic, " : ", reportDescription);
-      tpopupReport_close();
-      reportpopup_close();
+      tpopupReport_close_hobby();
+      reportpopup_close_h();
     });
 
 
@@ -315,20 +316,20 @@
     //       if (TpopUpReport) {
     //         console.log('case1');
     //         tpopup_open_H();
-    //         tpopupReport_close(); //
-    //         reportpopup_close();
+    //         tpopupReport_close_hobby(); //
+    //         reportpopup_close_h();
     //       }
     //       else if (reportPoPUP) {
     //         // console.log('case2');
-    //         tpopupReport_open();
-    //         reportpopup_close();
+    //         tpopupReport_open_hobby();
+    //         reportpopup_close_h();
 
     //       } else {
     //         console.log('case3');
     //         removeOverlay();
     //         tpopup_close_H();
-    //         reportpopup_close();
-    //         tpopupReport_close();
+    //         reportpopup_close_h();
+    //         tpopupReport_close_hobby();
     //       }
     //     });
 
@@ -356,22 +357,22 @@
       console.log('Created overlay');
 
       overlay.addEventListener('click', function () {
-        if (TpopUpReport) {
+        if (TpopUpReport_Hobby) {
           console.log('case1');
           tpopup_open_H();
           removeOverlay();
-          tpopupReport_close();
-          reportpopup_close();
-        } else if (reportPoPUP) {
+          tpopupReport_close_hobby();
+          reportpopup_close_h();
+        } else if (reportPoPUP_Hobby) {
           // console.log('case2');
-          tpopupReport_open();
-          reportpopup_close();
+          tpopupReport_open_hobby();
+          reportpopup_close_h();
         } else {
           console.log('case3');
           removeOverlay();
           tpopup_close_H();
-          reportpopup_close();
-          tpopupReport_close();
+          reportpopup_close_h();
+          tpopupReport_close_hobby();
         }
       });
 
