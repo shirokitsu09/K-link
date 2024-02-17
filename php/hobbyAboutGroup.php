@@ -62,10 +62,11 @@ $eachTag_count = count($eachTag);
         <div class="body-background">
         <img class="tdot-button" alt="" src="../images/ThreeDots.svg" />
         <div class="groupNameFrame">
-          <b class="group-name"><?php echo $activityName ?></b>
+          <b class="group-name"><?php echo "$activityName" ?></b>
         </div>  
+        <div class="FrameImage">
             <img class="group-picture" alt="" src="./uploadedImg/<?php echo $image?>" />
-
+        </div>
           <div class="group-date">
             <div class="group-date-title">วันทำกิจกกรม</div>
             <div class="group-date-container">

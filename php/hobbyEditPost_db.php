@@ -13,7 +13,7 @@ if(isset($_SESSION['hID'])){
     
     }
 
-if (isset($_POST['Update']) && isset($_SESSION['hID'])) {
+if (isset($_POST['Update'])) {
     $hID = $_SESSION['hID'];
     // echo $_SESSION['hID'];
 
@@ -32,6 +32,7 @@ if (isset($_POST['Update']) && isset($_SESSION['hID'])) {
     $imageSize = $_FILES['image']['size'];
     $imageError = $_FILES['image']['error'];
     $imageType = $_FILES['image']['type'];
+    $tag = $_POST["tag"];
 
     $imageExt = explode('.', $imageName);
     $imageActualExt = strtolower(end($imageExt));
@@ -49,7 +50,7 @@ if (isset($_POST['Update']) && isset($_SESSION['hID'])) {
                 move_uploaded_file($imageTmpName, $imageDestination);
 
                 $sql_img = "UPDATE hobby_db SET
-                            image = '$imageNewName',
+                            image = '$imageNewName'
                             
                         WHERE `hID` = '$hID'";
 
@@ -78,6 +79,7 @@ if (isset($_POST['Update']) && isset($_SESSION['hID'])) {
                 memberMax = '$memberMax',
                 location = '$location',
                 detail = '$detail',
+                tag = '$tag',
                 dateUpdate = NOW(),
                 timeUpdate = NOW()
                 
@@ -89,5 +91,17 @@ if (isset($_POST['Update']) && isset($_SESSION['hID'])) {
     } else {
         echo "ผิดพลาด, ไม่สามารถบันทึกข้อมูลได้...";
     }
+}
+
+if (isset($_POST['Delete'])) {
+    $hID = $_SESSION['hID'];
+    $sql_delete = "DELETE FROM hobby_db WHERE hID = '$hID'";
+    $result_delete = mysqli_query($conn, $sql_delete);
+
+        if($result_delete) {
+            echo "ลบกลุ่มสำเร็จ";
+        } else {
+            echo "ผิดพลาด, ไม่สามารถลบกลุ่มได้...";
+        }
 }
 ?>
