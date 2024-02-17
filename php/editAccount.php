@@ -16,7 +16,12 @@
       <div class="group-child"></div>
       <b class="header-text">แก้ไขบัญชี</b>
       <img class="back-button" alt="" src="../images/backbutton.svg" onclick="goBack()" />
-      <img class="noti-button-icon" alt="" src="../images/noti.svg" />
+      <!-- <img class="noti-button-icon" alt="" src="../images/noti.svg" /> -->
+      <div class="noti-button-icon">
+        <a href="#noti">
+          <ion-icon name="notifications"></ion-icon>
+        </a>
+      </div>
     </div>
 
     <div class="part-body">
@@ -60,7 +65,7 @@
   </div>
 </body>
 <script>
-  
+
   function redirectToSettingSection() {
     window.location.href = 'index.php#setting';
   }
@@ -69,5 +74,7 @@
   }
 
 </script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </html>

@@ -272,17 +272,19 @@
   var member_3 = document.getElementById("member-3-hobby")
   member_3.addEventListener("click", function (e) {
     console.log("member group3 view requested")
-    close_Hobbyjoin();
+    close_Hobbyjoin(); //////
   });
 
 
   // Three dot open
   function tpopup_open_H(e) {
     tpopupH.classList.add("on");
+    createOverlay();
   }
 
   function tpopup_close_H(e) {
     tpopupH.classList.remove("on");
+    removeOverlay();
   }
 
   tdot_1 = document.getElementById("tdot-1-hobby")
@@ -354,14 +356,6 @@
       }
     });
   }
-  document.addEventListener('click', e => {
-    if (tpopup_close && !tpopup.contains(e.target) && !tpopupReport.contains(e.target) && !reportpopup.contains(e.target) && e.target !== tdot) {
-      tpopupReport_close();
-      reportpopup_close();
-    } else if (tpopup_open && !tpopup.contains(e.target) && !tpopupReport.contains(e.target) && !reportpopup.contains(e.target) && e.target !== tdot) {
-      tpopup_close();
-    }
-  });
 
 </script>
 
