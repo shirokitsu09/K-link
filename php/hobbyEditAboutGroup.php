@@ -21,6 +21,10 @@
     $day = $row['date[]'];
     
     $dayArray = explode(",", $day);
+
+    $tag = $row['tag'];
+    $eachTag = explode("," , $tag);
+    $eachTag_count = count($eachTag);
     
     $formattedTime = date("H:i", strtotime($time));
     list($hour, $minute) = explode(':', $formattedTime);
@@ -173,6 +177,15 @@
         </div>
         <div class="add-tag-frame">
           <div class="group-child10">
+            <div class="tag-container">
+
+    <?php for ($i = 0 ; $i<$eachTag_count ; $i++) {?>
+        <div class="div17">          
+          <?php echo $eachTag[$i] .'<img class = "DeleteTagIcon" src="../images/TagDeleteIcon.svg">'?>
+        </div>
+    <?php } ?>
+    
+            </div>
           <div class="rectangle-parent2">
             <div class="group-child9"></div>
             <div class="add-tag">Add Tag</div>
@@ -187,6 +200,9 @@
           </div>
           <div class="rectangle-container">
             <button type="button" name="Cancle" class="button-cancle">ยกเลิก</button>
+          </div>
+          <div class="rectangle-delete">
+            <button type="submit" name="Delete" class="button-delete">ลบกลุ่ม</button>
           </div>
 
       </div>
@@ -268,9 +284,28 @@
     });
     changeText();
     changeTime_starter();
+    TagIconPosition();
+
 });
 
+function TagIconPosition() {
+    let leftPositions = document.querySelectorAll('.DeleteTagIcon');
+    let div17s = document.querySelectorAll('.div17');
 
+    div17s.forEach(function(div17, index) {
+        let div17Width = div17.offsetWidth;
+
+        let leftPosition = leftPositions[index];
+
+        if (div17Width > 100) {
+            leftPosition.style.left = "90%";
+        } else if(div17Width > 150) {
+            leftPosition.style.left = "95%";
+        } else {
+            leftPosition.style.left = "80%";
+        }
+    });
+}
 
 </script>
 

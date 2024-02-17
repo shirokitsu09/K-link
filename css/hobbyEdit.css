@@ -4,13 +4,52 @@ ellipse-parent.frame-child {
   left: 0;
 }
 
+.div17 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 5px;
+  left: 5px;
+  margin-right: 5px;
+  border-radius: 25px;
+  padding-inline: 15px;
+  background-color: var(--accent);
+  box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.25);
+  width: max-content;
+  height: 25px;
+  margin-bottom: 5px;
+}
+
+.tag-container {
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  outline-width: 1.3px;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  background-color: transparent;
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+.DeleteTagIcon {
+  position: absolute;
+  top: -30%;
+  z-index: 100;
+}
+
 .frame-child {
   border-radius: 10px;
   background-color: var(--basecolor-white);
   border: 3px solid var(--accent);
   box-sizing: border-box;
   width: 313px;
-  height: 1230px;
+  height: 1280px;
 }
 
 .create-button {
@@ -48,6 +87,24 @@ ellipse-parent.frame-child {
 .group-item {
   border-radius: var(--br-8xs);
   background-color: var(--neutrals1);
+}
+
+.rectangle-delete {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 60px;
+}
+.button-delete {
+  position: relative;
+  width: 136.45px;
+  height: 48px;
+  background-color: var(--error);
+  border-radius: var(--br-8xs);
+  cursor: pointer;
 }
 
 .create-cancle,
