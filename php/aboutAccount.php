@@ -1,31 +1,19 @@
 <?php
+session_start();
+include("../config/con_db.php");
 
-  session_start();
-  include("../config/con_db.php");
+$uID = '65010001';
 
-  $target_uID = $_GET["uID"];
-  $uID = $_SESSION['uID'];
+$sql_users = "SELECT * FROM users WHERE uID = '$uID'";
+$result_users = $con->query($sql_users);
+$row = $result_users->fetch_assoc();
 
-  // $sql_users = "SELECT * FROM users WHERE uID = '$uID'";
-
-  $sql_users = "SELECT 
-                    a.*,
-                    b.fName
-                    FROM users AS a
-                    LEFT JOIN faculty AS b
-                    ON a.fID = b.fID
-                    WHERE a.uId = '$target_uID'
-            ";
-
-  $result_users = $conn->query($sql_users);
-  $row = $result_users->fetch_assoc();
-
-  $username = $row['username'];
-  $fullname = $row['fullname'];
-  $email = $row['email'];
-  $phoneNumber = $row['phoneNumber'];
-  $faculty = $row['fName'];
-  $aboutme = $row['aboutme'];
+$username = $row['username'];
+$fullname = $row['fullname'];
+$email = $row['email'];
+$phoneNumber = $row['phoneNumber'];
+$faculty = 'Computer Engineering';
+$aboutme = $row['aboutme'];
 
 ?>
 <!DOCTYPE html>
@@ -68,14 +56,12 @@
         </div>
       </div>
   </div>
-<?php if($uID == $target_uID) { ?>
+
         <div class="footerIndividual">
         <a href="aboutEditAccount.php?uID=<?php echo $row['uID'];?>" class="createGroupButton">
           <img src="../images/wrench.svg">
         </a>
         </div>
-<?php } ?>
-
 <script>
 
   var tdot = document.getElementById("tdot")

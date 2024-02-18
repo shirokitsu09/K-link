@@ -4,11 +4,8 @@
 
   if(isset($_GET['hID'])){
     $hID = $_GET['hID'];
-
-    $_SESSION['hID'] = $hID;
-
     $sql_hobby_db = "SELECT * FROM hobby_db WHERE hID = '$hID'";
-    $result_hobby_db = $conn->query($sql_hobby_db);
+    $result_hobby_db = $con->query($sql_hobby_db);
     $row = $result_hobby_db->fetch_assoc();
     
     $activityName = $row['activityName'];
@@ -21,10 +18,6 @@
     $day = $row['date[]'];
     
     $dayArray = explode(",", $day);
-
-    $tag = $row['tag'];
-    $eachTag = explode("," , $tag);
-    $eachTag_count = count($eachTag);
     
     $formattedTime = date("H:i", strtotime($time));
     list($hour, $minute) = explode(':', $formattedTime);
@@ -66,8 +59,8 @@
         <div class="frame-child"></div>
 
         <div class="hobby-name">
-          <label for="ActivityName" class="name">ชื่อกิจกรรม<a class="star">*<a></label>
-          <input type="text" class="first2 textfields-child" name="activityName" value ="<?php echo $activityName ?>" maxlength="27"></input>
+          <label for="ActivityName" class="name">ชื่อกิจกรรม <a class="star">*<a></label>
+          <input type="text" class="first2 textfields-child" name="activityName" placeholder="<?php echo $activityName ?>" maxlength="27"></input>
         </div>
 
         <div class="day-select">
@@ -142,7 +135,7 @@
 
             <div class="member">
               <div class="name">สมาชิกที่รับ <a class="star">*</a></div>
-              <input type="text" class="first2 textfields-child" name="memberMax" value ="<?php echo $memberMax ?>" maxlength="2"></input>
+              <input type="text" class="first2 textfields-child" name="memberMax" placeholder="<?php echo $memberMax ?>" maxlength="2"></input>
             </div>
 
             <div class="requairment">
@@ -152,12 +145,12 @@
 
         <div class="location">
           <label for="location" class="name">สถานที่ <a class="star">*</a></label>
-          <input type="text" class="first2 textfields-child" name="location" value ="<?php echo $location ?>"></input>
+          <input type="text" class="first2 textfields-child" name="location" placeholder="<?php echo $location ?>"></input>
         </div>
         
         <div class="detail">
           <label for="detail" class="name">รายละเอียด</label>
-          <textarea class="detail-text textfields-child" name="detail" placeholder ="<?php echo $detail ?> " value ="<?php echo $detail ?> "></textarea>
+          <textarea class="detail-text textfields-child" name="detail" placeholder="<?php echo $detail ?>"></textarea>
         </div>
 
         <div class="PicUpload-frame">
@@ -166,7 +159,7 @@
           <label class="group-child8">
             <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png, .pdf">     
             <div class="PicUpload">    
-              <img class="vector-icon" alt="" src="./uploadedImg/<?php echo $image ?> " value ="<?php echo $image ?> "/>
+              <img class="vector-icon" alt="" src="./uploadedImg/<?php echo $image ?>" />
             </div> 
           </label>
 
@@ -177,15 +170,6 @@
         </div>
         <div class="add-tag-frame">
           <div class="group-child10">
-            <div class="tag-container">
-
-    <?php for ($i = 0 ; $i<$eachTag_count ; $i++) {?>
-        <div class="div17">          
-          <?php echo $eachTag[$i] .'<img class = "DeleteTagIcon" src="../images/TagDeleteIcon.svg">'?>
-        </div>
-    <?php } ?>
-    
-            </div>
           <div class="rectangle-parent2">
             <div class="group-child9"></div>
             <div class="add-tag">Add Tag</div>
@@ -200,9 +184,6 @@
           </div>
           <div class="rectangle-container">
             <button type="button" name="Cancle" class="button-cancle">ยกเลิก</button>
-          </div>
-          <div class="rectangle-delete">
-            <button type="submit" name="Delete" class="button-delete">ลบกลุ่ม</button>
           </div>
 
       </div>
@@ -242,18 +223,14 @@
         line.style.top = '38px';
     }
 
-    function changeTime_starter() {
+    function changeTime() {
         let hour = document.getElementById('HourInput');
         let minute = document.getElementById('MinuteInput');
         let hour_show = document.getElementById('hour');
         let minute_show = document.getElementById('minute');
 
-          hour.value = '<?php echo $hour; ?>';
-          minute.value = '<?php echo $minute; ?>';
-
-        let combinedTime = hour.value + ":" + minute.value;
-
-        document.getElementById("CombinedTimeInput").value = combinedTime;
+        hour.value = '<?php echo $hour; ?>';
+        minute.value = '<?php echo $minute; ?>';
 
         hour_show.textContent = '<?php echo $hour; ?>';
         minute_show.textContent = '<?php echo $minute; ?>';
@@ -282,30 +259,11 @@
         ?>
 
     });
+    changeTime();
     changeText();
-    changeTime_starter();
-    TagIconPosition();
-
 });
 
-function TagIconPosition() {
-    let leftPositions = document.querySelectorAll('.DeleteTagIcon');
-    let div17s = document.querySelectorAll('.div17');
 
-    div17s.forEach(function(div17, index) {
-        let div17Width = div17.offsetWidth;
-
-        let leftPosition = leftPositions[index];
-
-        if (div17Width > 100) {
-            leftPosition.style.left = "90%";
-        } else if(div17Width > 150) {
-            leftPosition.style.left = "95%";
-        } else {
-            leftPosition.style.left = "80%";
-        }
-    });
-}
 
 </script>
 

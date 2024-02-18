@@ -81,24 +81,18 @@
   display: flex;
   justify-content: center;
 }
-.FrameImage {
-  position: absolute;
-  top: 96px;
-  left: 64px;
-  border-radius: 10px;
-  outline-style: solid;
-  outline-color: var(--color-black);
-  outline-width: 1.5px;
-  background-color: var(--neutrals1);
-  display: flex;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-}
+
 .group-picture {
-    position: relative;
-    max-width: 200px;
-    max-height: 200px;
+    position: absolute;
+    top: 96px;
+    left: 64px;
+    border-radius: 10px;
+    outline-style: solid;
+    outline-color: var(--color-black);
+    outline-width: 1.5px;
+    background-color: var(--neutrals1);
+    width: 200px;
+    height: 200px;
 }
 
 .div {
@@ -447,7 +441,7 @@
     position: absolute;
     display: inline-flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Change to flex-start to align items to the start */
+    justify-content: left;
     outline-style: solid;
     outline-color: var(--color-black);
     outline-width: 1.3px;
@@ -458,13 +452,15 @@
     width: 300px;
     height: 120px;
   }
-  
+
   .div17 {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5px; /* Adjust margin to control spacing */
+    top: 5px;
+    left: 5px;
+    margin-right: 5px;
     border-radius: 25px;
     padding-inline: 15px;
     background-color: var(--accent);
@@ -472,7 +468,6 @@
     width: max-content;
     height: 25px;
   }
-  
 
   .frame-inner {
     top: 0;

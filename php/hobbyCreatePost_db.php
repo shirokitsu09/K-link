@@ -1,11 +1,11 @@
 <?php
 include("../config/con_db.php");
 
-function generateID($conn) {
+function generateID($con) {
     $dateComponents = date('myd');
 
     $sql_hID = "SELECT MAX(SUBSTRING_INDEX(hID, '-', -1)) AS lastNumber FROM hobby_db WHERE hID LIKE 'h$dateComponents%'";
-    $result_hID = $conn->query($sql_hID);
+    $result_hID = $con->query($sql_hID);
 
     if ($result_hID && $result_hID->num_rows > 0) {
         $row = $result_hID->fetch_assoc();
@@ -18,17 +18,16 @@ function generateID($conn) {
     return 'h' . $dateComponents . '-' . $suffix;
 }
 
-$hID = generateID($conn); 
+$hID = generateID($con); 
 echo $hID; 
 
 
 if (isset($_POST['Create'])) {
     $activityname = $_POST["activityName"];
-    $days = isset($_POST['day']) ? implode(',', array_map(function($day) use ($conn) {
-        return $conn->real_escape_string($day);
+    $days = isset($_POST['day']) ? implode(',', array_map(function($day) use ($con) {
+        return $con->real_escape_string($day);
     }, $_POST['day'])) : '';
     
-    $uID = $_POST["uID"];
     $time = $_POST["time"];
     $memberMax = $_POST["memberMax"];
     $location = $_POST["location"];
@@ -55,30 +54,7 @@ if (isset($_POST['Create'])) {
 
                 move_uploaded_file($imageTmpName, $imageDestination);
 
-                $sql_img = "INSERT INTO hobby_db
-                            (image
-                            ) VALUES ('$imageNewName'
-                                     )";
-
-                $result_img = mysqli_query($conn, $sql_img);
-
-                if($result_img) {
-                    echo "บันทึกรูปสำเร็จ <br>";
-                } else {
-                    echo "ผิดพลาด, ไม่สามารถบันทึกรูปได้... <br>";
-                }
-            } else {
-                echo "ไฟล์รูปใหญ่เกินไป";
-            }
-
-        } else {
-            echo "เกิดข้อผิดพลาดบางอย่างเกี่ยวกับการอัพโหลดรูป หรือรูปไม่มีการเปลี่ยนแปลง<br>";
-        }
-    } else {
-        echo "ไม่มีการอัพโหลดรูปใหม่ <br>";
-    }
-    
-    $sql = "INSERT INTO hobby_db
+                $sql = "INSERT INTO hobby_db
                             (hID,
                             type,
                             activityname, 
@@ -87,12 +63,10 @@ if (isset($_POST['Create'])) {
                             memberMax, 
                             location, 
                             detail,
+                            image,
                             dateCreate,
                             timeCreate,
-                            createBy,
-                            dateUpdate,
-                            timeUpdate,
-                            header
+                            createBy 
                             ) VALUES ('$hID',
                                     'hobby',
                                     '$activityname',
@@ -101,20 +75,27 @@ if (isset($_POST['Create'])) {
                                     '$memberMax',
                                     '$location',
                                     '$detail',
+                                    '$imageNewName',
                                     NOW(),
                                     NOW(),
-                                    '$uID',
-                                    NOW(),
-                                    NOW(),
-                                    '$uID'
-                                    )";
+                                    '')";
 
-    $result = mysqli_query($conn, $sql);
+                $result = mysqli_query($con, $sql);
 
-        if($result) {
-            echo "บันทึกข้อมูลสำเร็จ";
+                if($result) {
+                    echo "บันทึกข้อมูลสำเร็จ";
+                } else {
+                    echo "ผิดพลาด, ไม่สามารถบันทึกข้อมูลได้...";
+                }
+            } else {
+                echo "Your file is too large!";
+            }
+
         } else {
-            echo "ผิดพลาด, ไม่สามารถบันทึกข้อมูลได้...";
+            echo "There was an error uploading your file...";
         }
+    } else {
+        echo "You can't upload files of this type!";
+    }
 }
 ?>
