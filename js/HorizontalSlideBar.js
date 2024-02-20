@@ -103,3 +103,13 @@ tabBtns.forEach(tabBtn => {
         }
     });
 });
+
+// const tab_Nav =  function (tabBtnClick) {
+//     tabBtns[tabBtnClick].classList.add("active");
+// }
+
+// tabBtns.forEach((tabBtn, i) => {
+//     tabBtn.addEventListener("click", () => {
+
+//     });
+// });
