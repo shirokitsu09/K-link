@@ -91,7 +91,7 @@
     <div class="tpopup-drag" id="reportpopupdrag-h"></div>
     <img class="back-button" id="backbutton-h" alt="" src="../images/report/backbutton.svg" />
     <b class="report-title">ยืนยันการรายงาน</b>
-    <textarea placeholder="รายละเอียดเพิ่มเติม..." class="report-description" id="reportDescription" method=""
+    <textarea placeholder="รายละเอียดเพิ่มเติม..." class="report-description" id="reportDescriptionHobby" method=""
       action="">
       </textarea>
     <div class="confirm-report-button" id="confirmreport_hobby">ยืนยัน</div>
@@ -136,7 +136,7 @@
 
     function clearReport(e) {
       var reportTopic = "";
-      var reportDescription = document.getElementById("reportDescription").value = "";
+      var reportDescriptionHobby = document.getElementById("reportDescriptionHobby").value = "";
     }
 
     //close popup
@@ -273,8 +273,8 @@
 
     var confirmreport_hobby = document.getElementById("confirmreport_hobby");
     confirmreport_hobby.addEventListener("click", function (e) {
-      reportDescription = document.getElementById("reportDescription").value;
-      console.log("Report ", reportTopic, " : ", reportDescription);
+      reportDescriptionHobby = document.getElementById("reportDescriptionHobby").value;
+      console.log("Report ", reportTopic, " : ", reportDescriptionHobby);
       tpopupReport_close_hobby();
       reportpopup_close_h();
     });
