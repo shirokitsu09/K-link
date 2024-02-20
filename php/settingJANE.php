@@ -72,7 +72,7 @@
   var option2 = document.getElementById("option2");
   if (option2) {
     option2.addEventListener("click", function (e) {
-      window.location.href = "";
+      window.location.href = "../php/bookmark.php";
     });
   }
 
@@ -99,7 +99,7 @@
     var aboutAppParent = document.getElementById("aboutAppParent");
     if (aboutAppParent) {
       aboutAppParent.addEventListener("click", function (e) {
-        window.location.href = "";
+        window.location.href = "../php/aboutApp.php";
       });
     }
   }

@@ -11,18 +11,23 @@
 
 <body>
   <div class="list-frame-tutoring">
+
+
     <!-- <div class="status-bar"></div> -->
     <div class="tpopup" id="tpopup">
-      <div class="tpopup-drag" id="tpopupdrag"></div>
-      <div class="tpopup-option" id="tpopup-option-1">
+      <div class="tpopup-drag" id="tpopupdrag-1-t"></div>
+      <div class="tpopup-option" id="tpopup-option-1-t">
         <img class="tpopup-option-icon" src="../images/librarylist/tdotblock.svg">
         <div class="tpopup-option-text">บล็อก</div>
       </div>
-      <div class="tpopup-option" id="tpopup-option-2">
+      <div class="tpopup-option" id="tpopup-option-2-t">
         <img class="tpopup-option-icon" src="../images/librarylist/report.svg">
         <div class="tpopup-option-text">รายงาน</div>
       </div>
     </div>
+
+    <?php include '../php/TutoringReportList.php'; ?>
+
     <div class="list" id="list-1">
       <div class="list-inner-tutoring">
         <div class="list-inner-head">
@@ -395,60 +400,62 @@
     });
 
     // Three dot open
-    function tpopup_open(e) {
+    function tpopup_open_t(e) {
       tpopup.classList.add("on");
+      createOverlay_tutor();
     }
 
-    function tpopup_close(e) {
+    function tpopup_close_t(e) {
       tpopup.classList.remove("on");
+      removeOverlay_tutor();
     }
 
     tdot1 = document.getElementById("tdot-1")
     tdot1.addEventListener("click", function (e) {
       close_tutoringjoin();
-      tpopup_open();
+      tpopup_open_t();
     });
 
     tdot2 = document.getElementById("tdot-2")
     tdot2.addEventListener("click", function (e) {
       close_tutoringjoin();
-      tpopup_open();
+      tpopup_open_t();
     });
 
     tdot3 = document.getElementById("tdot-3")
     tdot3.addEventListener("click", function (e) {
       close_tutoringjoin();
-      tpopup_open();
+      tpopup_open_t();
     });
 
     tdot4 = document.getElementById("tdot-4")
     tdot4.addEventListener("click", function (e) {
       close_tutoringjoin();
-      tpopup_open();
+      tpopup_open_t();
     });
 
     tdot5 = document.getElementById("tdot-5")
     tdot5.addEventListener("click", function (e) {
       close_tutoringjoin();
-      tpopup_open();
+      tpopup_open_t();
     });
 
 
-    var tpopupdrag = document.getElementById("tpopupdrag");
+    var tpopupdrag = document.getElementById("tpopupdrag-1-t");
     tpopupdrag.addEventListener("click", function (e) {
-      tpopup_close();
+      tpopup_close_t();
     });
 
-    var tpopupoption1 = document.getElementById("tpopup-option-1");
+    var tpopupoption1 = document.getElementById("tpopup-option-1-t");
     tpopupoption1.addEventListener("click", function (e) {
       console.log("blocked request");
-      tpopup_close();
+      tpopup_close_t();
     });
 
-    var tpopupoption2 = document.getElementById("tpopup-option-2");
+    var tpopupoption2 = document.getElementById("tpopup-option-2-t");
     tpopupoption2.addEventListener("click", function (e) {
       console.log("reported request")
-      tpopup_close();
+      tpopup_close_t();
     });
 
     // Open tutoring join 

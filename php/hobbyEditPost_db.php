@@ -2,24 +2,13 @@
   SESSION_START();
 
 include("../config/con_db.php");
-if(isset($_SESSION['hID'])){
+if (isset($_POST['Update']) && isset($_SESSION['hID'])) {
     $hID = $_SESSION['hID'];
-
-    $sql_hobby_db = "SELECT time FROM hobby_db WHERE hID = '$hID'";
-    $result_hobby_db = $conn->query($sql_hobby_db);
-    $row = $result_hobby_db->fetch_assoc();
-    
-    $time = $row['time'];
-    
-    }
-
-if (isset($_POST['Update'])) {
-    $hID = $_SESSION['hID'];
-    // echo $_SESSION['hID'];
+    echo $_SESSION['hID'];
 
     $activityname = $_POST["activityName"];
-    $days = isset($_POST['day']) ? implode(',', array_map(function($day) use ($conn) {
-        return $conn->real_escape_string($day);
+    $days = isset($_POST['day']) ? implode(',', array_map(function($day) use ($con) {
+        return $con->real_escape_string($day);
     }, $_POST['day'])) : '';
     
     $time = $_POST["time"];
@@ -32,7 +21,6 @@ if (isset($_POST['Update'])) {
     $imageSize = $_FILES['image']['size'];
     $imageError = $_FILES['image']['error'];
     $imageType = $_FILES['image']['type'];
-    $tag = $_POST["tag"];
 
     $imageExt = explode('.', $imageName);
     $imageActualExt = strtolower(end($imageExt));
@@ -41,7 +29,7 @@ if (isset($_POST['Update'])) {
 
     $imageDestination = '';
 
-    if (in_array($imageActualExt, $allowed) || $image != '') {
+    if (in_array($imageActualExt, $allowed)) {
         if ($imageError === 0) {
             if ($imageSize > 1) {
                 $imageNewName = uniqid('', true).".".$imageActualExt;
@@ -49,59 +37,35 @@ if (isset($_POST['Update'])) {
 
                 move_uploaded_file($imageTmpName, $imageDestination);
 
-                $sql_img = "UPDATE hobby_db SET
-                            image = '$imageNewName'
+                $sql = "UPDATE hobby_db SET
+                            activityname = '$activityname',
+                            time = '$time',
+                            `date[]` = '$days', 
+                            memberMax = '$memberMax',
+                            location = '$location',
+                            detail = '$detail',
+                            image = '$imageNewName',
+                            dateUpdate = NOW(),
+                            timeUpdate = NOW()
                             
                         WHERE `hID` = '$hID'";
 
-                $result_img = mysqli_query($conn, $sql_img);
+                $result = mysqli_query($con, $sql);
 
-                if($result_img) {
-                    echo "บันทึกรูปสำเร็จ <br>";
+                if($result) {
+                    echo "บันทึกข้อมูลสำเร็จ";
                 } else {
-                    echo "ผิดพลาด, ไม่สามารถบันทึกรูปได้... <br>";
+                    echo "ผิดพลาด, ไม่สามารถบันทึกข้อมูลได้...";
                 }
             } else {
-                echo "ไฟล์รูปใหญ่เกินไป";
+                echo "Your file is too large!";
             }
 
         } else {
-            echo "เกิดข้อผิดพลาดบางอย่างเกี่ยวกับการอัพโหลดรูป หรือรูปไม่มีการเปลี่ยนแปลง<br>";
+            echo "There was an error uploading your file...";
         }
     } else {
-        echo "ไม่มีการอัพโหลดรูปใหม่ <br>";
+        echo "You can't upload files of this type!";
     }
-
-    $sql = "UPDATE hobby_db SET
-                activityname = '$activityname',
-                time = '$time',
-                `date[]` = '$days', 
-                memberMax = '$memberMax',
-                location = '$location',
-                detail = '$detail',
-                tag = '$tag',
-                dateUpdate = NOW(),
-                timeUpdate = NOW()
-                
-            WHERE `hID` = '$hID'";
-
-    $result = mysqli_query($conn, $sql);
-    if($result) {
-        echo "บันทึกข้อมูลสำเร็จ";
-    } else {
-        echo "ผิดพลาด, ไม่สามารถบันทึกข้อมูลได้...";
-    }
-}
-
-if (isset($_POST['Delete'])) {
-    $hID = $_SESSION['hID'];
-    $sql_delete = "DELETE FROM hobby_db WHERE hID = '$hID'";
-    $result_delete = mysqli_query($conn, $sql_delete);
-
-        if($result_delete) {
-            echo "ลบกลุ่มสำเร็จ";
-        } else {
-            echo "ผิดพลาด, ไม่สามารถลบกลุ่มได้...";
-        }
 }
 ?>

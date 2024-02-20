@@ -2,13 +2,11 @@
 session_start();
 include("../config/con_db.php");
 
-$uID = $_SESSION['uID'];
-
 if(isset($_GET['hID'])){
 $hID = $_GET['hID'];
 
 $sql_hobby_db = "SELECT * FROM hobby_db WHERE hID = '$hID'";
-$result_hobby_db = $conn->query($sql_hobby_db);
+$result_hobby_db = $con->query($sql_hobby_db);
 $row = $result_hobby_db->fetch_assoc();
 
 $activityName = $row['activityName'];
@@ -19,7 +17,6 @@ $memberMax = $row['memberMax'];
 $detail = $row['detail'];
 $image = $row['image'];
 $day = $row['date[]'];
-$header = $row['header'];
 
 $dayArray = explode(",", $day);
 
@@ -27,11 +24,6 @@ $formattedTime = date("H:i", strtotime($time));
   if($image === NULL) {
     $image = 'emptyPicture.svg';
   }
-
-$tag = $row['tag'];
-$eachTag = explode("," , $tag);
-$eachTag_count = count($eachTag);
-
 }
 ?>
 
@@ -62,11 +54,10 @@ $eachTag_count = count($eachTag);
         <div class="body-background">
         <img class="tdot-button" alt="" src="../images/ThreeDots.svg" />
         <div class="groupNameFrame">
-          <b class="group-name"><?php echo "$activityName" ?></b>
+          <b class="group-name"><?php echo $activityName ?></b>
         </div>  
-        <div class="FrameImage">
             <img class="group-picture" alt="" src="./uploadedImg/<?php echo $image?>" />
-        </div>
+
           <div class="group-date">
             <div class="group-date-title">วันทำกิจกกรม</div>
             <div class="group-date-container">
@@ -109,9 +100,7 @@ $eachTag_count = count($eachTag);
           <div class="group-member-container">
               <div class="group-member-text">สมาชิก :</div>
               <div class="group-member-amount availible"><?php echo $memberCount; ?>/<?php echo $memberMax; ?></div>
-              <a href = 'member.php?hID=<?php echo $hID?>'>
-                <img class="vector-icon1" alt="" src="../images/aboutgroup/magnifyglass.svg" />
-              </a>
+              <img class="vector-icon1" alt="" src="../images/aboutgroup/magnifyglass.svg" />
             </div>
 
           <div class="group-parent1">
@@ -123,11 +112,11 @@ $eachTag_count = count($eachTag);
           </div>
           <div class="rectangle-parent5">
             <div class="tag-container">
-
-    <?php for ($i = 0 ; $i<$eachTag_count ; $i++) {?>
-          <div class="div17"><?php echo $eachTag[$i] ?></div>
-    <?php } ?>
-    
+            <div class="div17">วิ่ง</div>
+            <div class="div17">กีฬา</div>
+            <div class="div17">ช่วงเย็น</div>
+            <div class="div17">สนามกีฬา</div>
+            <div class="div17">ออกกำลังกาย</div>
             </div>
             <div class="tag">Tag</div>
           </div>
@@ -139,15 +128,12 @@ $eachTag_count = count($eachTag);
         </div>
       </div>
     </div>
-    <?php if($uID == $header) { ?>
+
         <div class="footerIndividual">
             <a href="hobbyEditAboutGroup.php?hID=<?php echo $row['hID'];?>" class="createGroupButton">
                 <img src="../images/wrench.svg">
             </a>
         </div>
-    <?php
-      }
-    ?>    
     <script>
       var groupContainer11 = document.getElementById("groupContainer11");
       if (groupContainer11) {
