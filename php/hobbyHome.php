@@ -18,7 +18,7 @@
 
         <div class="box">
             <div class="search-box">
-                <input type="text" name="" placeholder="Search">
+                <input type="text" name="" placeholder="Search" id="search-box">
 
                 <ion-icon name="search-outline" class="search-icon"></ion-icon>
             </div>
