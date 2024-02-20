@@ -8,6 +8,7 @@
     $_SESSION['hID'] = $hID;
 
     $sql = "SELECT * FROM hobby_db WHERE hID = '$hID'";
+
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     
@@ -37,11 +38,13 @@
   </head>
   <body>
   <form action="TagArrayDelete_db.php" method="post">
-   <?php for($i = 0 ; $i < $tagArray_count ; $i++) {?>
+   <?php if($tagArray_count > 1) {
+    for($i = 0 ; $i < $tagArray_count ; $i++) {?>
       <div class="div17">          
           <?php echo $tagArray[$i] .'<img class = "DeleteTagIcon" src="../images/TagDeleteIcon.svg" onclick=delTag(this)>'?>
       </div>
-    <?php } ?>
+    <?php }
+    } ?>
   <div class="addTag">
     <input type="text" id="tagInput">
     <input type="button" value="addTag" onclick="addButton()">

@@ -4,13 +4,11 @@
   session_start();
   include '../config/con_db.php';
       $user_uID = $_SESSION['uID'];
-  // $user_uID = '65010003';
-  // $_SESSION["uID"] = $user_uID;
-  // if(isset($_GET['hID'])) {
-      $mID = 'h022410-002';
+  if(isset($_GET['hID'])) {
+      $mID = $_GET['hID'];
       $feature = 'hobby_db';
       $featureID = 'hID';
-  // }
+  }
 
   $sql_member = "SELECT 
                       a.header,
