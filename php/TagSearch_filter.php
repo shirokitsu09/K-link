@@ -4,19 +4,23 @@
 
   include("../config/con_db.php");
 // Start
-$sql_search_db = "SELECT * FROM hobby_db UNION SELECT * FROM library_db";
+$_SESSION['uID'] = '65010001';
+$uID = $_SESSION['uID'];
+
+$sql_search_db = "SELECT * FROM hobby_db ORDER BY dateCreate";
 $result_search_db = $conn->query($sql_search_db);
-$sql_search_dbCount = "SELECT COUNT(*) AS count FROM (SELECT * FROM hobby_db UNION SELECT * FROM library_db) AS combined";
+$sql_search_dbCount = "SELECT COUNT(*) AS count FROM (SELECT * FROM hobby_db) AS combined ORDER BY dateCreate";
 $result_search_dbCount = $conn->query($sql_search_dbCount);
 
 if ($result_search_db !== false && $result_search_dbCount !== false && $result_search_dbCount->num_rows > 0) {
     $row =  $result_search_dbCount->fetch_assoc();
     $rowCount = $row['count'];
+    $blank = 'ValueExist';
 } else {
     echo "No rows found";
+    $blank = 'None';
 }
 // Start
-
 
   if (!isset($_POST['filterPublish'])) {
     $_SESSION['filter'] = array();
@@ -40,72 +44,244 @@ if (!empty($_SESSION['filter'])) {
     $filter = $_SESSION['filter'];
     print_r($filter);
     // ----------------------------------------------------------------------------------------------
-        if(in_array('createBy', $_SESSION['filter'])){
-            $createByState  = 'active';
-            $createBy = $_SESSION['uID'];
-        } else {
-            $createByState  = '';
-            $createBy = '';
-        }
-    // ----------------------------------------------------------------------------------------------
-            if(in_array('member', $_SESSION['filter'])){
-                $memberState  = 'active';
-                $member = $_SESSION['uID'];
-            } else {
-                $memberState  = '';
-                $member = '';
-            }
-    // ----------------------------------------------------------------------------------------------
                 if(in_array('request', $_SESSION['filter'])){
                     $requestState  = 'active';
-                    $request = $_SESSION['uID'];
-                } else {
-                    $requestState  = '';
-                    $request = '';
+                    $requestCheck = in_array('request', $_SESSION['filter']);
+
+                    $hobbyCheck = in_array('hobby', $_SESSION['filter']);
+                    $myPostCheck = in_array('header', $_SESSION['filter']);
+
+                    $libraryCheck = in_array('library',$_SESSION['filter']);
+                    $tutoringCheck = in_array('tutoring',$_SESSION['filter']);
+
+                        if(!$hobbyCheck && !$myPostCheck){
+                            $sql_search_db = "SELECT * 
+                                              FROM hobby_db 
+                                              WHERE FIND_IN_SET($uID,request)
+                                              ORDER BY dateCreate";
+                            $result_search_db = $conn->query($sql_search_db);
+                            $sql_search_dbCount = "SELECT COUNT(*) AS count 
+                                                   FROM (SELECT * FROM hobby_db 
+                                                   WHERE FIND_IN_SET($uID,request)) AS combined
+                                                   ORDER BY dateCreate";
+                            $result_search_dbCount = $conn->query($sql_search_dbCount);
+
+                        } else if($hobbyCheck && !$myPostCheck){
+                            $sql_search_db = "SELECT * 
+                                              FROM hobby_db 
+                                              WHERE FIND_IN_SET($uID,request) 
+                                              OR FIND_IN_SET($uID,member)
+                                              ORDER BY dateCreate";
+                            $result_search_db = $conn->query($sql_search_db);
+                            $sql_search_dbCount = "SELECT COUNT(*) AS count 
+                                                   FROM (SELECT * FROM hobby_db 
+                                                   WHERE FIND_IN_SET($uID,request) 
+                                                   OR FIND_IN_SET($uID,member)) AS combined
+                                                   ORDER BY dateCreate";
+                            $result_search_dbCount = $conn->query($sql_search_dbCount);
+
+                        } else if(!$hobbyCheck && $myPostCheck){
+                            $sql_search_db = "SELECT * 
+                                              FROM hobby_db 
+                                              WHERE FIND_IN_SET($uID,request) 
+                                              OR $uID = header
+                                              ORDER BY dateCreate";
+                            $result_search_db = $conn->query($sql_search_db);
+                            $sql_search_dbCount = "SELECT COUNT(*) AS count 
+                                                   FROM (SELECT * FROM hobby_db 
+                                                   WHERE FIND_IN_SET($uID,request) 
+                                                   OR $uID = header) AS combined
+                                                   ORDER BY dateCreate";
+                            $result_search_dbCount = $conn->query($sql_search_dbCount);
+
+                        } else if($hobbyCheck && $myPostCheck){
+                            $sql_search_db = "SELECT * 
+                                              FROM hobby_db 
+                                              WHERE FIND_IN_SET($uID,request) 
+                                              OR $uID = header 
+                                              OR FIND_IN_SET($uID,member)
+                                              ORDER BY dateCreate";
+                            $result_search_db = $conn->query($sql_search_db);
+                            $sql_search_dbCount = "SELECT COUNT(*) AS count 
+                                                   FROM (SELECT * FROM hobby_db 
+                                                   WHERE FIND_IN_SET($uID,request) 
+                                                   OR $uID = header OR FIND_IN_SET($uID,member)) AS combined
+                                                   ORDER BY dateCreate";
+                            $result_search_dbCount = $conn->query($sql_search_dbCount);
+                        }
                 }
     // ----------------------------------------------------------------------------------------------
-                    if(in_array('hobby', $_SESSION['filter'])){
-                        
-                    } else {
-                        $hobbyState  = '';
-                        $hobby = '';
-                    }
+        if(in_array('hobby', $_SESSION['filter'])){
+            $hobbyState  = 'active';
+            $hobbyCheck = in_array('hobby', $_SESSION['filter']);
+
+            $requestCheck = in_array('request', $_SESSION['filter']);
+            $myPostCheck = in_array('header', $_SESSION['filter']);
+
+            $libraryCheck = in_array('library',$_SESSION['filter']);
+            $tutoringCheck = in_array('tutoring',$_SESSION['filter']);
+
+            if(!$requestCheck && !$myPostCheck){
+                $sql_search_db = "SELECT * 
+                                  FROM hobby_db 
+                                  WHERE FIND_IN_SET($uID,member)
+                                  ORDER BY dateCreate";
+                $result_search_db = $conn->query($sql_search_db);
+                $sql_search_dbCount = "SELECT COUNT(*) AS count 
+                                       FROM (SELECT * FROM hobby_db 
+                                       WHERE FIND_IN_SET($uID,member)) AS combined
+                                       ORDER BY dateCreate";
+                $result_search_dbCount = $conn->query($sql_search_dbCount);
+
+            } else if($requestCheck && !$myPostCheck){
+                $sql_search_db = "SELECT * 
+                                  FROM hobby_db 
+                                  WHERE FIND_IN_SET($uID,member) 
+                                  OR FIND_IN_SET($uID,request)
+                                  ORDER BY dateCreate";
+                $result_search_db = $conn->query($sql_search_db);
+                $sql_search_dbCount = "SELECT COUNT(*) AS count 
+                                       FROM (SELECT * FROM hobby_db 
+                                       WHERE FIND_IN_SET($uID,member) 
+                                       OR FIND_IN_SET($uID,request)) AS combined
+                                       ORDER BY dateCreate";
+                $result_search_dbCount = $conn->query($sql_search_dbCount);
+
+            } else if(!$requestCheck && $myPostCheck){
+                $sql_search_db = "SELECT * 
+                                  FROM hobby_db 
+                                  WHERE FIND_IN_SET($uID,member) 
+                                  OR $uID = header
+                                  ORDER BY dateCreate";
+                $result_search_db = $conn->query($sql_search_db);
+                $sql_search_dbCount = "SELECT COUNT(*) AS count 
+                                       FROM (SELECT * FROM hobby_db 
+                                       WHERE FIND_IN_SET($uID,member) 
+                                       OR $uID = header) AS combined
+                                       ORDER BY dateCreate";
+                $result_search_dbCount = $conn->query($sql_search_dbCount);
+
+            } else if($requestCheck && $myPostCheck){
+                $sql_search_db = "SELECT * 
+                                  FROM hobby_db 
+                                  WHERE FIND_IN_SET($uID,member) 
+                                  OR $uID = header OR FIND_IN_SET($uID,request)
+                                  ORDER BY dateCreate";
+                $result_search_db = $conn->query($sql_search_db);
+                $sql_search_dbCount = "SELECT COUNT(*) AS count 
+                                       FROM (SELECT * 
+                                       FROM hobby_db 
+                                       WHERE FIND_IN_SET($uID,member) 
+                                       OR $uID = header 
+                                       OR FIND_IN_SET($uID,request)) AS combined
+                                       ORDER BY dateCreate";
+                $result_search_dbCount = $conn->query($sql_search_dbCount);
+            }
+        }    
     // ----------------------------------------------------------------------------------------------
-                        if(in_array('library', $_SESSION['filter'])){
-                            $libraryState  = 'active';
-                            $myPostLibrary = $_SESSION['uID'];
-                            $hobbyCheck = in_array('hobby', $_SESSION['filter']);
+            if(in_array('library', $_SESSION['filter'])){
+                $libraryState  = 'active';
+                $myPostCheck = in_array('header', $_SESSION['filter']);
+                $hobbyCheck = in_array('hobby', $_SESSION['filter']);
+                $requestCheck = in_array('request', $_SESSION['filter']);
 
-                            if ($hobbyCheck) {
-                                $first = 'SELECT * FROM hobby_db';
-                                $second = 'UNION SELECT * FROM library_db';  
-                            }
+                $libraryCheck = in_array('library',$_SESSION['filter']);
+                $tutoringCheck = in_array('tutoring',$_SESSION['filter']);
+            }
+    // ----------------------------------------------------------------------------------------------
+                    if(in_array('tutoring', $_SESSION['filter'])){
+                        $tutoringState  = 'active';
+                        $myPostCheck = in_array('header', $_SESSION['filter']);
+                        $hobbyCheck = in_array('hobby', $_SESSION['filter']);
+                        $requestCheck = in_array('request', $_SESSION['filter']);
 
-                        } else {
-                            $libraryState  = '';
-                            $library = '';
-                        }
+                        $libraryCheck = in_array('library',$_SESSION['filter']);
+                        $tutoringCheck = in_array('tutoring',$_SESSION['filter']);
+                    }
     // ----------------------------------------------------------------------------------------------
                                 if(in_array('header', $_SESSION['filter'])){
                                     $headerState  = 'active';
-                                    $myPostHeader = $_SESSION['uID'];
-                                } else {
-                                    $headerState  = '';
-                                    $header = '';
-                                }
+                                    $myPostCheck = in_array('header', $_SESSION['filter']);
 
-    $sql_search_db = "$first $second";
-    
-    $result_search_db = $conn->query($sql_search_db);
-    $sql_search_dbCount = "SELECT COUNT(*) AS count FROM ($first $second $last) AS combined";
-    $result_search_dbCount = $conn->query($sql_search_dbCount);
-                                                                   
-if ($result_search_db !== false && $result_search_dbCount !== false && $result_search_dbCount->num_rows > 0) {
+                                    $hobbyCheck = in_array('hobby', $_SESSION['filter']);
+                                    $requestCheck = in_array('request', $_SESSION['filter']);
+
+                                    $libraryCheck = in_array('library',$_SESSION['filter']);
+                                    $tutoringCheck = in_array('tutoring',$_SESSION['filter']);      
+
+                                    if(!$requestCheck && !$hobbyCheck){
+                                        $sql_search_db = "SELECT * 
+                                                          FROM hobby_db 
+                                                          WHERE $uID = header
+                                                          ORDER BY dateCreate";
+                                        $result_search_db = $conn->query($sql_search_db);
+                                        $sql_search_dbCount = "SELECT COUNT(*) AS count 
+                                                               FROM (SELECT * 
+                                                               FROM hobby_db 
+                                                               WHERE $uID = header) AS combined
+                                                               ORDER BY dateCreate";
+                                        $result_search_dbCount = $conn->query($sql_search_dbCount);
+
+                                    } else if($requestCheck && !$hobbyCheck){
+                                        $sql_search_db = "SELECT * 
+                                                          FROM hobby_db 
+                                                          WHERE $uID = header 
+                                                          OR FIND_IN_SET($uID,request)
+                                                          ORDER BY dateCreate";
+                                        $result_search_db = $conn->query($sql_search_db);
+                                        $sql_search_dbCount = "SELECT COUNT(*) AS count 
+                                                               FROM (SELECT * 
+                                                               FROM hobby_db 
+                                                               WHERE $uID = header 
+                                                               OR FIND_IN_SET($uID,request)) AS combined
+                                                               ORDER BY dateCreate";
+                                        $result_search_dbCount = $conn->query($sql_search_dbCount);
+
+                                    } else if(!$requestCheck && $hobbyCheck){
+                                        $sql_search_db = "SELECT * 
+                                                          FROM hobby_db 
+                                                          WHERE $uID = header 
+                                                          OR FIND_IN_SET($uID,member)
+                                                          ORDER BY dateCreate";
+                                        $result_search_db = $conn->query($sql_search_db);
+                                        $sql_search_dbCount = "SELECT COUNT(*) AS count 
+                                                               FROM (SELECT * 
+                                                               FROM hobby_db 
+                                                               WHERE $uID = header 
+                                                               OR FIND_IN_SET($uID,member)) AS combined
+                                                               ORDER BY dateCreate";
+                                        $result_search_dbCount = $conn->query($sql_search_dbCount);
+
+                                    } else if($requestCheck && $hobbyCheck){
+                                        $sql_search_db = "SELECT * 
+                                                          FROM hobby_db 
+                                                          WHERE $uID = header 
+                                                          OR FIND_IN_SET($uID,request) 
+                                                          OR FIND_IN_SET($uID,member)
+                                                          ORDER BY dateCreate";
+                                        $result_search_db = $conn->query($sql_search_db);
+                                        $sql_search_dbCount = "SELECT COUNT(*) AS count 
+                                                               FROM (SELECT * 
+                                                               FROM hobby_db 
+                                                               WHERE $uID = header 
+                                                               OR FIND_IN_SET($uID,request) 
+                                                               OR FIND_IN_SET($uID,member)) AS combined
+                                                               ORDER BY dateCreate";
+                                        $result_search_dbCount = $conn->query($sql_search_dbCount);
+                                    }
+                                }
+    // ----------------------------------------------------------------------------------------------
+
+    if ($result_search_db !== false && $result_search_dbCount !== false && $result_search_dbCount->num_rows > 0 
+        && ($hobbyCheck || $requestCheck || $myPostCheck) && (!$libraryCheck && !$tutoringCheck)) {
         $row =  $result_search_dbCount->fetch_assoc();
         $rowCount = $row['count'];
+        $blank = 'ValueExist';
     } else {
         echo "No rows found";
+        $blank = 'None';
     }
+
 
 } else {
     echo "No options selected yet.";
@@ -117,7 +293,7 @@ if ($result_search_db !== false && $result_search_dbCount !== false && $result_s
 ?>
 <div class="background">
 
-<?php include 'TagSearch-list.php';?>
+<?php include 'TagSearch-listFilter.php';?>
 
 </div>
 <head>
@@ -139,10 +315,8 @@ if ($result_search_db !== false && $result_search_dbCount !== false && $result_s
             <div class="tab-navigation">
                 <ion-icon class="left" name="chevron-back-outline"></ion-icon>
                 <ion-icon class="right" name="chevron-forward-outline"></ion-icon>
-            <form action="TagSearch_db.php" method="post" id="filterForm">
+            <form action="" method="post" id="filterForm">
             <ul class="tab-menu">
-                <li class="tab-btn <?php echo $createByState; ?>" onclick="filter('createBy')" id="createBy"><div class="tab-btn-circle"></div>กลุ่มที่สร้าง</li>
-                <li class="tab-btn <?php echo $memberState; ?>" onclick="filter('member')" id="member"><div class="tab-btn-circle"></div>กลุ่มที่เข้าร่วมแล้ว</li>
                 <li class="tab-btn <?php echo $requestState; ?>" onclick="filter('request')" id="request"><div class="tab-btn-circle"></div>กลุ่มที่รอการตอบรับ</li>
                 <li class="tab-btn <?php echo $hobbyState; ?>" onclick="filter('hobby')" id="hobby"><div class="tab-btn-circle"></div>Hobby</li>
                 <li class="tab-btn <?php echo $libraryState; ?>" onclick="filter('library')" id="library"><div class="tab-btn-circle"></div>Library</li>
@@ -163,104 +337,31 @@ if ($result_search_db !== false && $result_search_dbCount !== false && $result_s
     function filter(filter) {
         let tabBtn = document.getElementById(filter);
         let active = tabBtn.classList.contains("active");
-        if (filter === 'createBy') {
-            // if(!active){
-                // tabBtn.classList.add("active");
-                filterPublish.push('createBy');
-                console.log(filterPublish);
-            // }else {
-            //     tabBtn.classList.remove("active");
-            // }
-        }
-
-        if (filter === 'member') {
-            // if(!active) {
-                // tabBtn.classList.add("active");
-                filterPublish.push('member');
-                console.log(filterPublish);
-            // }else {
-                // let index = filterPublish.indexOf('member')
-                // tabBtn.classList.remove("active");
-                // if (index > -1) {
-                //     filterPublish.splice(index, 1);
-                //     console.log(filterPublish);
-                // }
-            // }
-        }
-
+        
         if (filter === 'request') {
-            // if(!active){
-            //     tabBtn.classList.add("active");
                 filterPublish.push('request');
                 console.log(filterPublish);
-            // }else {
-            //     let index = filterPublish.indexOf('request')
-            //     tabBtn.classList.remove("active");
-            //     if (index > -1) {
-            //         filterPublish.splice(index, 1);
-            //         console.log(filterPublish);
-            //     }
-            // }
         }
 
         if (filter === 'hobby') {
-            // if(!active){
-            //     tabBtn.classList.add("active");
                 filterPublish.push('hobby');
                 console.log(filterPublish);
-            // }else {
-            //     let index = filterPublish.indexOf('hobby')
-            //     tabBtn.classList.remove("active");
-            //     if (index > -1) {
-            //         filterPublish.splice(index, 1);
-            //         console.log(filterPublish);
-            //     }
-            // }
         }
 
         if (filter === 'library') {
-            // if(!active){
-            //     tabBtn.classList.add("active");
                 filterPublish.push('library');
                 console.log(filterPublish);
-            // }else {
-            //     let index = filterPublish.indexOf('library')
-            //     tabBtn.classList.remove("active");
-            //     if (index > -1) {
-            //         filterPublish.splice(index, 1);
-            //         console.log(filterPublish);
-            //     }
-            // }
         }
 
+        
         if (filter === 'tutoring') {
-            // if(!active){
-            //     tabBtn.classList.add("active");
                 filterPublish.push('tutoring');
                 console.log(filterPublish);
-            // }else {
-            //     let index = filterPublish.indexOf('tutoring')
-            //     tabBtn.classList.remove("active");
-            //     if (index > -1) {
-            //         filterPublish.splice(index, 1);
-            //         console.log(filterPublish);
-            //     }
-            // }
         }
 
         if (filter === 'header') {
-            // if(!active){
-            //     tabBtn.classList.add("active");
                 filterPublish.push('header');
                 console.log(filterPublish);
-            // }else {
-            //     let index = filterPublish.indexOf('header')
-            //     tabBtn.classList.remove("active");
-            //     if (index > -1) {
-            //         filterPublish.splice(index, 1);
-            //         console.log(filterPublish);
-            //     }
-            // }
         }
         document.getElementById("filterPublishInput").value = filterPublish.join(',');
         document.getElementById("filterForm").submit();

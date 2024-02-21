@@ -3,44 +3,19 @@
     background-color: var(--basecolor-white);
     width: 360px;
     height: 800px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: scroll;
     text-align: center;
     color: var(--neutrals1);
     font-size: var(--subtitle-1-size);
     font-family: "roboto", sans-serif;
-}
-
-.noti-button-icon {
-    position: absolute;
-    top: 25px;
-    left: 292px;
-    z-index: 1;
-}
-
-.noti-button-icon a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--neutrals1);
-    background: var(--accent);
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: none;
-    box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
-    text-decoration: none;
-    font-size: 1.7em;
-    cursor: pointer;
-}
-
+  }
 
 .part-header {
     position: absolute;
     top: 0;
     left: 0;
     width: 360px;
-    height: 100px;
+    height: 140px;
 }
 
 .header-text {
@@ -53,7 +28,7 @@
     color: var(--neutrals1);
     text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
     font-size: var(--h4-size);
-    font-family: "roboto", sans-serif;
+    font-family: "roboto",sans-serif;
 }
 
 .group-child {
@@ -77,13 +52,13 @@
     max-height: 100%;
 }
 
-/* .noti-button-icon {
+.noti-button-icon {
     position: absolute;
     top: 30px;
     right: 25px;
     width: 45px;
     height: 45px;
-} */
+}
 
 .body-background {
     position: absolute;

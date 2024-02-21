@@ -1,4 +1,4 @@
-.list-frame-hobby {
+.list-frame {
     position: relative;
     top: 23%;
     background-color: transparent;
@@ -13,7 +13,7 @@
     scroll-behavior: smooth;
 }
 
-.list-inner-hobby {
+.list-inner {
     position: relative;
     border-radius: 20px;
     background-color: var(--basecolor-white);
@@ -29,7 +29,7 @@
     cursor: default;
 }
 
-.list-inner-head-hobby {
+.list-inner-head {
     position: absolute;
     border-radius: 20px;
     padding-inline: 5px;
@@ -39,7 +39,7 @@
     left: 0px;
 }
 
-.list-inner-body-hobby {
+.list-inner-body {
     position: absolute;
     border-radius: 20px;
     padding-inline: 5px;
@@ -130,13 +130,22 @@
 }
 
 .group-profile-picture {
+    position: relative;
+    max-width: 100px;
+    max-height: 100px;
+}
+.imgFrame{
     position: absolute;
     width: 100px;
     height: 100px;
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
     top: 50px;
-    left: 25px
+    left: 25px;
+    background-color: var(--neutrals1);
+    border-radius: var(--br-5xs);
 }
-
 .group-date {
     position: absolute;
     display: inline-block;
@@ -177,7 +186,7 @@
     font-size: var(--subtitle-1-size);
 }
 
-.tdot-button-hobby {
+.tdot-button{
     position: absolute;
     width: 32px;
     height: 16px;
@@ -187,7 +196,7 @@
     cursor: pointer;
 }
 
-.tpopup-hobby {
+.tpopup {
     position: fixed;
     display: none;
     margin-left: auto;
@@ -206,7 +215,7 @@
     top: 460px;
 }
 
-.tpopup-drag-hobby {
+.tpopup-drag {
     position: relative;
     background-color: var(--accent);
     border-radius: 5px;
@@ -218,19 +227,19 @@
     z-index: 2;
 }
 
-.tpopup-option-hobby {
+.tpopup-option {
     position: relative;
     width: 360px;
     height: 30px;
     margin-bottom: 20px;
 }
 
-.tpopup-option-hobby:hover {
+.tpopup-option:hover {
     color: var(--accent);
     cursor: pointer;
 }
 
-.tpopup-option-icon-hobby {
+.tpopup-option-icon {
     position: relative;
     width: 34px;
     height: 30px;
@@ -238,7 +247,7 @@
     left: 40px;
 }
 
-.tpopup-option-text-hobby {
+.tpopup-option-text {
     position: relative;
     display: inline-block;
     width: 120px;
@@ -248,7 +257,7 @@
     font-size: var(--subtitle-1);
 }
 
-.tpopup-hobby.on {
+.tpopup.on {
     display: block;
 }
 
@@ -259,7 +268,7 @@
 @keyframes slidedown {
     from{transform: translateY(-300%);}
 }
-.group-flag-banner-hobby {
+.group-flag-banner {
     position: absolute;
     width: 109px;
     height: 91px;
@@ -268,7 +277,7 @@
     top: -35.6px;
 }
 
-.hobbyjoin {
+.tutoringjoin {
     display: block;
     position: relative;
     background-color: var(--color-gray);
@@ -283,7 +292,7 @@
     from{transform: translateX(300%);}
 }
 
-.join-button-hobby {
+.join-button {
     position: absolute;
     border-radius: 10px;
     background-color: var(--basecolor-white);
@@ -298,11 +307,11 @@
     outline-width: 1.3px;
 }
 
-.join-button-hobby:hover {
+.join-button:hover {
     color: var(--accent);
 }
 
-.member-button-hobby {
+.member-button {
     position: absolute;
     top: 35px;
     left: 140px;
@@ -317,11 +326,11 @@
     outline-width: 1.3px;
 }
 
-.member-button-hobby:hover {
+.member-button:hover {
     color: var(--accent);
 }
 
-.close-button-hobby {
+.close-button {
     position: absolute;
     border-radius: 10px;
     background-color: var(--basecolor-white);
@@ -336,7 +345,7 @@
     outline-width: 1.3px;
 }
 
-.close-button-hobby:hover {
+.close-button:hover {
     color: var(--accent);
 }
   
@@ -374,7 +383,7 @@
   left: 3.28%;
 }
     
-.list-hobby {
+.list {
     position: relative;
     top: 10px;
     left: 0px;
@@ -382,24 +391,7 @@
     height: 300px;
 }
 
-.list-hobby.padding
+.list.padding
 {
     margin-bottom: 50px;
-}
-
-/*=========================OVERLAY=========================================*/
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 360px;
-    height: 800px;
-    background-color: rgba(255, 255, 255, 0.7);
-    z-index: 1;
-    display: block;
-}
-
-.overlay.active {
-    display: block;
 }

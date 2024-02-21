@@ -24,7 +24,7 @@
         </div>
     </div>
 </div>
-<!-- Tutoring-LOGO.svg -->
+
 <script>
     function changeImg() {
         let mainIcon = document.querySelector('.MainIcon');
@@ -36,11 +36,6 @@
             content.className = 'Librarycontent';
             link.href = '../php/library-home.php';
         } else if (mainIcon.src.match('../images/Library-LOGO.svg')) {
-            mainIcon.src = '../images/Tutoring-LOGO.svg';
-            content.textContent = 'Tutoring';
-            content.className = 'Tutoringcontent';
-            link.href = '';
-        } else if(mainIcon.src.match('../images/Tutoring-LOGO.svg')) {
             mainIcon.src = '../images/Hobby-LOGO.svg';
             content.textContent = 'Hobby';
             content.className = 'Hobbycontent';

@@ -9,7 +9,14 @@
     $search = str_replace(' ', '', $_POST['search']);
     $search = mysqli_real_escape_string($conn,$search);
 
-    $sql_search_db = "SELECT * FROM hobby_db WHERE activityName LIKE '%$search%' OR location LIKE '%$search%' OR FIND_IN_SET('$search',tag) ORDER BY activityName";
+    $sql_search_db = "SELECT * FROM hobby_db 
+                      WHERE activityName LIKE '%$search%' 
+                      OR location LIKE '%$search%' 
+                      OR FIND_IN_SET('$search', tag) 
+                      ORDER BY CASE 
+                      WHEN activityName LIKE '%$search%' THEN 0 
+                      ELSE 1 
+                      END, activityName";
     $result_search_db = $conn->query($sql_search_db);
 
     $sql_search_dbCount = "SELECT COUNT(*) as count FROM hobby_db WHERE activityName LIKE '%$search%' OR location LIKE '%$search%' OR FIND_IN_SET('$search',tag) ORDER BY activityName";

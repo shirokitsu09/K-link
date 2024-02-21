@@ -1,21 +1,4 @@
-<?php
-  session_start();
-  include("../config/con_db.php");
 
-  $sql_hobby_db = "SELECT * FROM hobby_db ORDER BY dateCreate";
-  $sql_hobby_dbCount = "SELECT COUNT(*) as count FROM hobby_db";
-  $result_hobby_db = $conn->query($sql_hobby_db);
-  $result_hobby_dbCount = $conn->query($sql_hobby_dbCount);
-
-  if ($result_hobby_db !== false && $result_hobby_dbCount->num_rows > 0) {
-    // Fetch the result
-    $row = $result_hobby_dbCount->fetch_assoc();
-    $rowCount = $row['count'];
-
-} else {
-    echo "No rows found";
-}
-  ?>
   
   <div class="list-frame">
   
@@ -33,10 +16,10 @@
         </div>
       </div> -->
 <?php
-  if ($result_hobby_db->num_rows > 0) {
-    
+  if ($result_search_db->num_rows > 0 && $blank === 'ValueExist') {
+    echo $blank;
     $id = 1;
-    while ($id <= $rowCount && ($row = $result_hobby_db->fetch_assoc())) {
+    while ($id <= $rowCount && ($row = $result_search_db->fetch_assoc())) {
       
     // Session
     $_SESSION['activityName'] = $row['activityName'];

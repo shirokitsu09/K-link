@@ -5,7 +5,7 @@ include("../config/con_db.php");
 if(isset($_GET['uID']) && !empty($_GET['uID'])) {
   $uID = $_GET['uID'];
   $sql_users = "SELECT * FROM users WHERE uID = '$uID'";
-  $result_users = $con->query($sql_users);
+  $result_users = $conn->query($sql_users);
   $row = $result_users->fetch_assoc();
 
   $username = $row['username'];
@@ -24,7 +24,7 @@ if(isset($_GET['uID']) && !empty($_GET['uID'])) {
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />   
 
     <link rel="stylesheet" href="../css/globalTEST.css" />
     <link rel="stylesheet" href="../css/abouteditaccount.css" />

@@ -28,7 +28,7 @@
    border-top-left-radius: 10px;
    border-top-right-radius: 10px;
    /* box-shadow: 3px -5px 0 rgba(0, 0, 0, 0.25);  */
-   z-index: 0;
+   z-index: 5;
 }
 .navigation ul {
    display: flex;
