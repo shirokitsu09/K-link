@@ -3,7 +3,7 @@
     background: linear-gradient(180deg, #f89603, #f86a03 56.25%, #f85b03);
     width: 360px;
     height: 800px;
-    overflow: scroll;
+    overflow: hidden;
     text-align: center;
     color: var(--neutrals1);
     font-size: var(--subtitle-1-size);
@@ -50,12 +50,35 @@
     max-height: 100%;
 }
 
-.noti-button-icon {
+/* .noti-button-icon {
     position: absolute;
     top: 30px;
     right: 25px;
     width: 45px;
     height: 45px;
+} */
+
+.noti-button-icon {
+    position: absolute;
+    top: 25px;
+    left: 292px;
+    z-index: 1;
+}
+
+.noti-button-icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutrals1);
+    background: var(--accent);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    font-size: 1.7em;
+    cursor: pointer;
 }
 
 .body-background {

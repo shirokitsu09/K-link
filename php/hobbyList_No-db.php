@@ -10,24 +10,31 @@
 </head>
 
 <body>
-  <div class="list-frame">
+
+  <div class="list-frame-hobby">
     <!-- <div class="status-bar"></div> -->
-    <div class="tpopup" id="tpopup">
-      <div class="tpopup-drag" id="tpopupdrag"></div>
-      <div class="tpopup-option" id="tpopup-option-1">
-        <img class="tpopup-option-icon" src="../images/librarylist/tdotblock.svg">
-        <div class="tpopup-option-text">บล็อก</div>
+    <div class="tpopup-hobby" id="tpopup-hobby">
+      <div class="tpopup-drag-hobby" id="tpopupdragHobby"></div>
+      <div class="tpopup-option-hobby" id="tpopup-option-1-h">
+        <img class="tpopup-option-icon-hobby" src="../images/librarylist/tdotblock.svg">
+        <div class="tpopup-option-text-hobby">บล็อก</div>
       </div>
-      <div class="tpopup-option" id="tpopup-option-2">
-        <img class="tpopup-option-icon" src="../images/librarylist/report.svg">
-        <div class="tpopup-option-text">รายงาน</div>
+      <div class="tpopup-option-hobby" id="tpopup-option-2-h">
+        <img class="tpopup-option-icon-hobby" src="../images/librarylist/report.svg">
+        <div class="tpopup-option-text-hobby">รายงาน</div>
       </div>
     </div>
-    <div class="list" id="list-1">
-      <div class="list-inner">
-        <div class="list-inner-head">
-          <img class="group-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
-          <img class="tdot-button" id="tdot-1" alt="" src="../images/tutoringlist/threedot.svg" />
+
+
+    <?php include "HobbyReportList.php"; ?>
+    <!-- -->
+
+
+    <div class="list-hobby" id="list-1-hobby">
+      <div class="list-inner-hobby">
+        <div class="list-inner-head-hobby">
+          <img class="group-flag-banner-hobby" alt="" src="../images/grouplist/groupbanner.svg" />
+          <img class="tdot-button-hobby" id="tdot-1-hobby" alt="" src="../images/tutoringlist/threedot.svg" />
           <div class="tag-group">
             <div class="tag" id="tag1-1">กีฬาและการออกกำลังกาย</div>
             <div class="tag" id="tag1-2">ชิลๆ</div>
@@ -38,7 +45,7 @@
           </div>
           <b class="group-amount available">1/10</b>
         </div>
-        <div class="list-inner-body" id="innerlist-1">
+        <div class="list-inner-body-hobby" id="innerlist-1-hobby">
           <b class="group-name">หาเพื่อนไปวิ่งกันเถอะ232...</b>
           <div class="leader">AIJHONG</div>
           <img class="group-profile-picture" alt="" src="../images/grouplist/group-profilepic1.svg" />
@@ -50,22 +57,22 @@
         </div>
       </div>
 
-      <div class="tutoringjoin" id="tutoringjoin-1" style="display: none;">
-        <div class="join-button" id="join-1" value="join-1">
+      <div class="hobbyjoin" id="hobbyjoin-1" style="display: none;">
+        <div class="join-button-hobby" id="join-1-hobby" value="join-1">
           <div class="group">
             <div class="button-text">เข้าร่วมกลุ่ม</div>
             <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-join.svg" />
           </div>
         </div>
 
-        <div class="member-button" id="member-1">
+        <div class="member-button-hobby" id="member-1-hobby">
           <div class="group">
             <div class="button-text">สมาชิกกลุ่ม</div>
             <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-member.svg" />
           </div>
         </div>
 
-        <div class="close-button" id="close-1">
+        <div class="close-button-hobby" id="close-1-hobby">
           <div class="group">
             <div class="button-text">ปิด</div>
             <img class="button-icon1" alt="" src="../images/tutoringlist/tutoring-close.svg" />
@@ -74,11 +81,11 @@
       </div>
     </div>
 
-    <div class="list" id="list-2">
-      <div class="list-inner">
-        <div class="list-inner-head">
-          <img class="group-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
-          <img class="tdot-button" id="tdot-2" alt="" src="../images/tutoringlist/threedot.svg" />
+    <div class="list-hobby" id="list-2-hobby">
+      <div class="list-inner-hobby">
+        <div class="list-inner-head-hobby">
+          <img class="group-flag-banner-hobby" alt="" src="../images/grouplist/groupbanner.svg" />
+          <img class="tdot-button" id="tdot-2-hobby" alt="" src="../images/tutoringlist/threedot.svg" />
           <div class="tag-group">
             <div class="tag" id="tag2-1">อาหารการกิน</div>
             <div class="tag" id="tag2-2">ชาบูปิ้งย่าง</div>
@@ -89,7 +96,7 @@
           </div>
           <b class="group-amount full">4/4</b>
         </div>
-        <div class="list-inner-body" id="innerlist-2">
+        <div class="list-inner-body-hobby" id="innerlist-2-hobby">
           <b class="group-name">หมูกะทะหารสี่</b>
           <div class="leader">ราชาหมูกะทะผู้ยิ่งใหญ่</div>
           <img class="group-profile-picture" alt="" src="../images/grouplist/group-profilepic2.svg" />
@@ -100,22 +107,22 @@
         </div>
       </div>
 
-      <div class="tutoringjoin" id="tutoringjoin-2" style="display: none;">
-        <div class="join-button" id="join-2">
+      <div class="hobbyjoin" id="hobbyjoin-2" style="display: none;">
+        <div class="join-button-hobby" id="join-2-hobby">
           <div class="group">
             <div class="button-text">เข้าร่วมกลุ่ม</div>
             <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-join.svg" />
           </div>
         </div>
 
-        <div class="member-button" id="member-2">
+        <div class="member-button-hobby" id="member-2-hobby">
           <div class="group">
             <div class="button-text">สมาชิกกลุ่ม</div>
             <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-member.svg" />
           </div>
         </div>
 
-        <div class="close-button" id="close-2">
+        <div class="close-button-hobby" id="close-2-hobby">
           <div class="group">
             <div class="button-text">ปิด</div>
             <img class="button-icon1" alt="" src="../images/tutoringlist/tutoring-close.svg" />
@@ -124,11 +131,11 @@
       </div>
     </div>
 
-    <div class="list" id="list-3">
-      <div class="list-inner">
-        <div class="list-inner-head">
-          <img class="group-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
-          <img class="tdot-button" id="tdot-3" alt="" src="../images/tutoringlist/threedot.svg" />
+    <div class="list-hobby" id="list-3-hobby">
+      <div class="list-inner-hobby">
+        <div class="list-inner-head-hobby">
+          <img class="group-flag-banner-hobby" alt="" src="../images/grouplist/groupbanner.svg" />
+          <img class="tdot-button-hobby" id="tdot-3-hobby" alt="" src="../images/tutoringlist/threedot.svg" />
           <div class="tag-group">
             <div class="tag">วิศวกรรมศาสตร์</div>
             <div class="tag">Calculus</div>
@@ -136,7 +143,7 @@
           </div>
           <b class="group-amount available">10/ไม่จำกัด</b>
         </div>
-        <div class="list-inner-body" id="innerlist-3">
+        <div class="list-inner-body-hobby" id="innerlist-3-hobby">
           <b class="group-name">เชียร์บาสภาคคอมรวมตัว</b>
           <div class="leader">เหน่ง iot</div>
           <img class="group-profile-picture" alt="" src="../images/grouplist/group-profilepic3.svg" />
@@ -148,22 +155,22 @@
         </div>
       </div>
 
-      <div class="tutoringjoin" id="tutoringjoin-3" style="display: none;">
-        <div class="join-button" id="join-3">
+      <div class="hobbyjoin" id="hobbyjoin-3" style="display: none;">
+        <div class="join-button-hobby" id="join-3-hobby">
           <div class="group">
             <div class="button-text">เข้าร่วมกลุ่ม</div>
             <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-join.svg" />
           </div>
         </div>
 
-        <div class="member-button" id="member-3">
+        <div class="member-button-hobby" id="member-3-hobby">
           <div class="group">
             <div class="button-text">สมาชิกกลุ่ม</div>
             <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-member.svg" />
           </div>
         </div>
 
-        <div class="close-button" id="close-3">
+        <div class="close-button-hobby" id="close-3-hobby">
           <div class="group">
             <div class="button-text">ปิด</div>
             <img class="button-icon1" alt="" src="../images/tutoringlist/tutoring-close.svg" />
@@ -173,207 +180,181 @@
 
     </div>
 
-    <div class="list" id="list-4">
-      <div class="list-inner">
-        <div class="list-inner-head">
-          <img class="group-flag-banner" alt="" src="../images/grouplist/groupbanner.svg" />
-          <img class="tdot-button" id="tdot-3" alt="" src="../images/tutoringlist/threedot.svg" />
-          <div class="tag-group">
-            <div class="tag">วิศวกรรมศาสตร์</div>
-            <div class="tag">Calculus</div>
-            <div class="tag"></div>
-          </div>
-          <b class="group-amount available">10/ไม่จำกัด</b>
-        </div>
-        <div class="list-inner-body" id="innerlist-3">
-          <b class="group-name">เชียร์บาสภาคคอมรวมตัว</b>
-          <div class="leader">เหน่ง iot</div>
-          <img class="group-profile-picture" alt="" src="../images/grouplist/group-profilepic3.svg" />
-          <div class="group-description">รายละเอียด : เพื่อช่วยเหล่าผู้เล่นให้ได้มากที่สุด ขณะเดียวกันผู้เล่นคนอื่น ๆ
-          </div>
-          <div class="group-date">วัน : 9 ธ.ค. 2565</div>
-          <div class="group-time">เวลา : 17:00 - 21:00 น.</div>
-          <div class="group-location">สถานที่ : สนามบาสข้างโรงเอ</div>
-        </div>
-      </div>
 
-      <div class="tutoringjoin" id="tutoringjoin-3" style="display: none;">
-        <div class="join-button" id="join-3">
-          <div class="group">
-            <div class="button-text">เข้าร่วมกลุ่ม</div>
-            <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-join.svg" />
-          </div>
-        </div>
-
-        <div class="member-button" id="member-3">
-          <div class="group">
-            <div class="button-text">สมาชิกกลุ่ม</div>
-            <img class="button-icon" alt="" src="../images/tutoringlist/tutoring-member.svg" />
-          </div>
-        </div>
-
-        <div class="close-button" id="close-3">
-          <div class="group">
-            <div class="button-text">ปิด</div>
-            <img class="button-icon1" alt="" src="../images/tutoringlist/tutoring-close.svg" />
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
-  <script>
-    var display = 0;
-    var list1 = document.getElementById("list-1");
-    var tutoringjoin1 = document.getElementById("tutoringjoin-1");
-    var innerlist1 = document.getElementById("innerlist-1");
-    var tpopup = document.getElementById("tpopup"); // three dot pop up id
-
-    var list2 = document.getElementById("list-2");
-    var tutoringjoin2 = document.getElementById("tutoringjoin-2");
-    var innerlist2 = document.getElementById("innerlist-2");
-
-    var list3 = document.getElementById("list-3");
-    var tutoringjoin3 = document.getElementById("tutoringjoin-3");
-    var innerlist3 = document.getElementById("innerlist-3");
-
-    function close_tutoringjoin(e) {
-      tutoringjoin1.style.display = 'none';
-      tutoringjoin2.style.display = 'none';
-      tutoringjoin3.style.display = 'none';
-      document.querySelector('.padding')?.classList.remove('padding')
-    }
-    var tag_1 = document.getElementById("tag1-1");
-    tag_1.addEventListener("click", function () {
-      location.href = "";
-    });
-
-    var tag_2 = document.getElementById("tag1-2");
-    tag_2.addEventListener("click", function () {
-      location.href = "";
-    });
-
-    var close1 = document.getElementById("close-1");
-    close1.addEventListener("click", close_tutoringjoin);
-    var close2 = document.getElementById("close-2");
-    close2.addEventListener("click", close_tutoringjoin);
-    var close3 = document.getElementById("close-3");
-    close3.addEventListener("click", close_tutoringjoin);
-
-    var join1 = document.getElementById("join-1");
-    join1.addEventListener("click", function (e) {
-      console.log("join group1 requested");
-      close_tutoringjoin();
-    });
-
-    var join2 = document.getElementById("join-2");
-    join2.addEventListener("click", function (e) {
-      console.log("join group2 requested");
-      close_tutoringjoin();
-    });
-
-    var join3 = document.getElementById("join-3");
-    join3.addEventListener("click", function (e) {
-      console.log("join group3 requested");
-      close_tutoringjoin();
-    });
-
-    var member1 = document.getElementById("member-1")
-    member1.addEventListener("click", function (e) {
-      console.log("member group1 view requested")
-      close_tutoringjoin();
-    });
-
-    var member2 = document.getElementById("member-2")
-    member2.addEventListener("click", function (e) {
-      console.log("member group2 view requested")
-      close_tutoringjoin();
-    });
-
-    var member3 = document.getElementById("member-3")
-    member3.addEventListener("click", function (e) {
-      console.log("member group3 view requested")
-      close_tutoringjoin();
-    });
-
-    function tpopup_open(e) {
-      tpopup.classList.add("on");
-    }
-
-    function tpopup_close(e) {
-      tpopup.classList.remove("on");
-    }
-
-    tdot1 = document.getElementById("tdot-1")
-    tdot1.addEventListener("click", function (e) {
-      close_tutoringjoin();
-      tpopup_open();
-    });
-
-    tdot2 = document.getElementById("tdot-2")
-    tdot2.addEventListener("click", function (e) {
-      close_tutoringjoin();
-      tpopup_open();
-    });
-
-    tdot3 = document.getElementById("tdot-3")
-    tdot3.addEventListener("click", function (e) {
-      close_tutoringjoin();
-      tpopup_open();
-    });
-
-    var tpopupdrag = document.getElementById("tpopupdrag");
-    tpopupdrag.addEventListener("click", function (e) {
-      tpopup_close();
-    });
-
-    var tpopupoption1 = document.getElementById("tpopup-option-1");
-    tpopupoption1.addEventListener("click", function (e) {
-      console.log("blocked request");
-      tpopup_close();
-    });
-
-    var tpopupoption2 = document.getElementById("tpopup-option-2");
-    tpopupoption2.addEventListener("click", function (e) {
-      console.log("reported request")
-      tpopup_close();
-    });
-
-    // 
-    if (innerlist1) {
-      innerlist1.addEventListener("click", function (e) {
-        if (list1 != 'list-1.padding') {
-          close_tutoringjoin();
-          tutoringjoin1.style.display = 'block';
-          list1.classList.add('padding');
-        }
-      });
-    }
-
-    if (innerlist2) {
-      innerlist2.addEventListener("click", function (e) {
-        if (list2 != 'list-2.padding') {
-          close_tutoringjoin();
-          tutoringjoin2.style.display = 'block';
-          document.querySelector('.padding')?.classList.remove('padding')
-          list2.classList.add('padding');
-        }
-      });
-    }
-
-    if (innerlist3) {
-      innerlist3.addEventListener("click", function (e) {
-        if (list3 != 'list-3.padding') {
-          close_tutoringjoin();
-          tutoringjoin3.style.display = 'block';
-          document.querySelector('.padding')?.classList.remove('padding')
-          list3.classList.add('padding');
-        }
-      });
-    }
-
-  </script>
-
 </body>
+
+<script>
+  var display = 0;
+
+  var list_1 = document.getElementById("list-1-hobby"); //list id for padding
+  var Hobbyjoin1 = document.getElementById("hobbyjoin-1"); //join group id slide in
+  var innerlist_1 = document.getElementById("innerlist-1-hobby"); //touch id for response
+
+  var tpopupH = document.getElementById("tpopup-hobby"); // three dot pop up id
+
+  var list_2 = document.getElementById("list-2-hobby");
+  var Hobbyjoin2 = document.getElementById("hobbyjoin-2");
+  var innerlist_2 = document.getElementById("innerlist-2-hobby");
+
+
+  var list_3 = document.getElementById("list-3-hobby");
+  var Hobbyjoin3 = document.getElementById("hobbyjoin-3");
+  var innerlist_3 = document.getElementById("innerlist-3-hobby");
+
+  // tag reponse go to tag link
+
+  // var tagfaculty = document.getElementById("tag-faculty-1");
+  // tagfaculty.addEventListener("click", function () {
+  //   location.href = "";
+  // });
+
+  // var tagsubject = document.getElementById("tag-subject-1");
+  // tagsubject.addEventListener("click", function () {
+  //   location.href = "";
+  // });
+
+  // var tagmajor = document.getElementById("tag-major-1");
+  // tagmajor.addEventListener("click", function () {
+  //   location.href = "";
+  // });
+
+
+  // tutoring response button      
+  function close_Hobbyjoin(e) {
+    Hobbyjoin1.style.display = 'none';
+    Hobbyjoin2.style.display = 'none';
+    Hobbyjoin3.style.display = 'none';
+    document.querySelector('.padding')?.classList.remove('padding')
+  }
+
+  var close_1 = document.getElementById("close-1-hobby");
+  close_1.addEventListener("click", close_Hobbyjoin);
+  var close_2 = document.getElementById("close-2-hobby");
+  close_2.addEventListener("click", close_Hobbyjoin);
+  var close_3 = document.getElementById("close-3-hobby");
+  close_3.addEventListener("click", close_Hobbyjoin);
+
+  var join_1 = document.getElementById("join-1-hobby");
+  join_1.addEventListener("click", function (e) {
+    console.log("join group1 requested");
+    close_Hobbyjoin();
+  });
+
+  var join_2 = document.getElementById("join-2-hobby");
+  join_2.addEventListener("click", function (e) {
+    console.log("join group2 requested");
+    close_Hobbyjoin();
+  });
+
+  var join_3 = document.getElementById("join-3-hobby");
+  join_3.addEventListener("click", function (e) {
+    console.log("join group3 requested");
+    close_Hobbyjoin();
+  });
+
+
+  var member_1 = document.getElementById("member-1-hobby")
+  member_1.addEventListener("click", function (e) {
+    console.log("member group1 view requested")
+    close_Hobbyjoin();
+  });
+
+  var member_2 = document.getElementById("member-2-hobby")
+  member_2.addEventListener("click", function (e) {
+    console.log("member group2 view requested")
+    close_Hobbyjoin();
+  });
+
+  var member_3 = document.getElementById("member-3-hobby")
+  member_3.addEventListener("click", function (e) {
+    console.log("member group3 view requested")
+    close_Hobbyjoin(); //////
+  });
+
+
+  // Three dot open
+  function tpopup_open_H(e) {
+    tpopupH.classList.add("on");
+    createOverlay();
+  }
+
+  function tpopup_close_H(e) {
+    tpopupH.classList.remove("on");
+    removeOverlay();
+  }
+
+  tdot_1 = document.getElementById("tdot-1-hobby")
+  tdot_1.addEventListener("click", function (e) {
+    close_Hobbyjoin();
+    tpopup_open_H();
+  });
+
+  tdot_2 = document.getElementById("tdot-2-hobby")
+  tdot_2.addEventListener("click", function (e) {
+    close_Hobbyjoin();
+    tpopup_open_H();
+  });
+
+  tdot_3 = document.getElementById("tdot-3-hobby")
+  tdot_3.addEventListener("click", function (e) {
+    close_Hobbyjoin();
+    tpopup_open_H();
+  });
+
+
+  var tpopupdragH = document.getElementById("tpopupdragHobby");
+  tpopupdragH.addEventListener("click", function (e) {
+    tpopup_close_H();
+  });
+
+  var tpopupoptionH1 = document.getElementById("tpopup-option-1-h");
+  tpopupoptionH1.addEventListener("click", function (e) {
+    console.log("blocked request");
+    tpopup_close_H();
+  });
+
+  var tpopupoptionH2 = document.getElementById("tpopup-option-2-h");
+  tpopupoptionH2.addEventListener("click", function (e) {
+    console.log("reported request")
+    tpopup_close_H();
+  });
+
+  // Open tutoring join 
+
+  if (innerlist_1) {
+    innerlist_1.addEventListener("click", function (e) {
+      if (list_1 != "list-1-hobby.padding") {
+        close_Hobbyjoin();
+        Hobbyjoin1.style.display = 'block';
+        list_1.classList.add('padding');
+      }
+    });
+  }
+
+  if (innerlist_2) {
+    innerlist_2.addEventListener("click", function (e) {
+      if (list_2 != 'list-2-hobby.padding') {
+        close_Hobbyjoin();
+        Hobbyjoin2.style.display = 'block';
+        document.querySelector('.padding')?.classList.remove('padding')
+        list_2.classList.add('padding');
+      }
+    });
+  }
+
+  if (innerlist_3) {
+    innerlist_3.addEventListener("click", function (e) {
+      if (list_3 != 'list-3-hobby.padding') {
+        close_Hobbyjoin();
+        Hobbyjoin3.style.display = 'block';
+        document.querySelector('.padding')?.classList.remove('padding')
+        list_3.classList.add('padding');
+      }
+    });
+  }
+
+</script>
 
 </html>

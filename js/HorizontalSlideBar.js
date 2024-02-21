@@ -90,18 +90,26 @@ tabMenu.addEventListener("touchstart", (event) => {
 });
 // ==================================================================
 
+const tabBtns = document.querySelectorAll(".tab-btn");
 
-// const tabBtns = document.querySelectorAll(".tab-btn");
+tabBtns.forEach(tabBtn => {
+    tabBtn.addEventListener("click", () => {
+        const isActive = tabBtn.classList.contains("active");
 
-// tabBtns.forEach(tabBtn => {
+        if (!isActive) {
+            tabBtn.classList.add("active");
+        } else {
+            tabBtn.classList.remove("active");
+        }
+    });
+});
+
+// const tab_Nav =  function (tabBtnClick) {
+//     tabBtns[tabBtnClick].classList.add("active");
+// }
+
+// tabBtns.forEach((tabBtn, i) => {
 //     tabBtn.addEventListener("click", () => {
-//         const isActive = tabBtn.classList.contains("active");
-
-//         if (!isActive) {
-//             tabBtn.classList.add("active");
-//         } else {
-//             tabBtn.classList.remove("active");
-//         }
 
 //     });
 // });
