@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0 auto;
+    line-height: normal;
+    background: #000000;
+}
+
+:root {
+    /* fonts */
+    --h4: Roboto;
+    --subtitle-1: Roboto;
+    --subtitle-2: Roboto;
+
+    /* font sizes */
+    --font-size-smi: 13px;
+    --body-2-size: 16px;
+    --caption-size: 14px;
+    --overline-size: 10px;
+    --h6-size: 20px;
+    --h5-size: 24px;
+    --h4-size: 34px;
+    --h3-size: 48px;
+    --h2-size: 60px;
+    --h1-size: 96px;
+    --font-size-xs: 12px;
+    --subtitle-1-size: 16px;
+    --subtitle-2-size: 14px;
+
+    /* Colors */
+    --basecolor-white: #fff;
+    --color-gray-100: rgba(255, 255, 255, 0);
+    --color-gray-200: rgba(0, 0, 0, 0);
+    --neutrals1: #d9d9d9;
+    --neutrals2: #000;
+    --accent: #ffb600;
+    --color-orange-100: rgba(255, 182, 0, 0);
+    --primary: #ff4800;
+    --color-black: #000;
+    --color-gainsboro: #d9d9d9;
+
+    --error: #ff0101;
+    --color-orange: #ffb600;
+    --secordary: #ff8500;
+    --success: #7cb518;
+
+    /* Border radiuses */
+    --br-xl: 20px;
+    --br-mini: 15px;
+    --br-8xs: 5px;
+    --br-5xs: 8px;
+    --br-11xl: 30px;
+    --br-6xl: 25px;
+
+    --padding-2xs: 11px;
+    --padding-lg: 18px;
+}
+
+
+.header-invitefriends {
+    top: 0;
+    left: 0;
+    width: 360px;
+
+}
+
+.header-invitefriends {
+    border-radius: 0 0 var(--br-mini) var(--br-mini);
+    background-color: var(--primary);
+    box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+    height: 92px;
+    text-align: left;
+    font-family: var(--h4);
+    font-size: var(--h4-size);
+}
+
+.header-invitefriends,
+.name-header-invitefriends,
+.app-icon {
+    position: absolute;
+}
+
+.name-header-invitefriends {
+    top: 27px;
+    left: 72px;
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    text-shadow: 2.5px 5px 0 rgba(0, 0, 0, 0.25);
+    color: var(--neutrals1);
+    -webkit-text-stroke: 1px var(--neutrals1);
+}
+
+.noti-button-icon {
+    position: absolute;
+    top: 25px;
+    left: 292px;
+}
+
+.noti-button-icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutrals1);
+    background: var(--accent);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    font-size: .8em;
+    cursor: pointer;
+}
+
+.InviteFriend-Frame {
+    background: var(--Backguard-1, linear-gradient(180deg, #F89603 0%, #F86A03 56.25%, #F85B03 100%));
+    width: 360px;
+    height: 800px;
+}
+
+.backBtnInviteF {
+    position: absolute;
+    top: 36px;
+    left: 16px;
+    width: 35px;
+    height: 35px;
+}
