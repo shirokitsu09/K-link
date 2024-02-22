@@ -1,0 +1,365 @@
+.list-frame {
+    position: relative;
+    background-color: var(--basecolor-white);
+    width: 360px;
+    height: 800px;
+    overflow: scroll;
+    text-align: left;
+    font-family: "roboto", sans-serif;
+    font-size: var(--subtitle-1-size);
+    color: var(--color-black);
+}
+
+.status-bar {
+    position: relative;
+    width: 360px;
+    height: 24px;
+}
+
+.list-inner {
+    position: relative;
+    border-radius: 20px;
+    background-color: var(--basecolor-white);
+    padding-inline: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    outline-style: solid;
+    outline-color: var(--color-black);
+    outline-width: 2px;
+    width: 300px;
+    height: 350px;
+    top: 10px;
+    left: 25px;
+    cursor: default;
+}
+
+.list-inner-head {
+    position: absolute;
+    border-radius: 20px;
+    padding-inline: 5px;
+    width: 300px;
+    height: 50px;
+    top: 0px;
+    left: 0px;
+}
+
+.list-inner-body {
+    position: absolute;
+    padding-inline: 5px;
+    width: 300px;
+    height: 240px;
+    top: 50px;
+    left: 0px;
+    cursor: default;
+}
+
+.list-inner-bottom {
+    position: absolute;
+    padding-inline: 5px;
+    width: 300px;
+    height: 60px;
+    top: 290px;
+    left: 0px;
+
+}
+.tag {
+    position: relative;
+    display: inline;
+    text-align: center;
+    border-radius: 40px;
+    grid-column-end: 3;
+    background-color: var(--neutrals1);
+    width: max-content;
+    height: 15px;
+    top: 1px;
+    padding-inline: 5px;
+    font-size: var(--overline-size);
+    cursor: pointer;
+}
+
+.tag:hover {
+    color: var(--color-lightcyan);
+}
+
+.tag-group {
+    position: relative;
+    width: 200px;
+    height: 16px;
+    left: 70px;
+}
+
+.tag-group1 {
+    position: relative;
+    width: 200px;
+    top: 1px;
+    height: 16px;
+    left: 40px;
+}
+
+.tag:empty {
+    display: none;
+}
+
+.subject-name {
+    position: absolute;
+    display: inline-block;
+    height: max-content;
+    width: max-content;
+    top: 0px;
+    left: 25px;
+    color: var(--color-black);
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--h6-size);
+}
+
+.subject-id {
+    position: absolute;
+    display: inline-block;
+    height: max-content;
+    width: max-content;
+    top: 25px;
+    left: 25px;
+    color: var(--color-black);
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--h6-size);
+}
+
+.subject-uploader {
+    position: absolute;
+    color: var(--neutrals1);
+    display: inline-block;
+    height: max-content;
+    width: max-content;
+    font-size: var(--subtitle-1-size);
+    top: 60px;
+    left: 140px;
+}
+
+
+.subject-file-picture {
+    position: absolute;
+    outline-style: solid;
+    outline-color: var(--color-black);
+    outline-width: 0.8px;
+    width: 100px;
+    height: 141.4px;
+    top: 60px;
+    left: 25px
+}
+
+.subject-faculty {
+    position: absolute;
+    height: max-content;
+    width: max-content;
+    top: 95px;
+    left: 140px;
+    display: inline-block;
+    font-size: var(--subtitle-1-size);
+    color: var(--primary);
+}
+
+.subject-description {
+    position: absolute;
+    display: inline-block;
+    height: 100px;
+    width: 160px;
+    top: 130px;
+    left: 140px;
+    font-size: var(--subtitle-1-size);
+}
+
+.faculty {
+    position: absolute;
+    height: max-content;
+    width: max-content;
+    bottom: 20px;
+    right: 15px;
+    display: inline-block;
+    color: var(--primary);
+}
+
+.tdot-button{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    object-fit: cover;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.like-button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 25px;
+    top: 15px;
+}
+
+.like-amount {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left : 38px;
+    top: 7px;
+    z-index: 1;
+}
+
+.like-amount:hover{
+    cursor: pointer;
+}
+
+.download-button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 220px;
+    top: 15px;
+    z-index: 1;
+}
+
+.download-button:hover {
+    cursor: pointer;
+}
+
+.share-button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 265px;
+    top: 15px;
+    z-index: 1;
+}
+
+.share-button:hover {
+    cursor: pointer;
+}
+
+.library-flag-banner {
+    display: none;
+    position: absolute;
+    width: 109px;
+    height: 91px;
+    object-fit: cover;
+    left: -23.65px;
+    top: -35.65px;
+}
+
+.joinbar {
+    display: none;
+    position: relative;
+    background-color: var(--color-gray);
+    width: 360px;
+    height: 100px;
+    top: -20px;
+    z-index: 1;
+    animation-name: slidein;
+    animation-duration: 500ms;
+}
+
+  @keyframes slidein {
+    from{transform: translateX(300%);}
+}
+
+.join-button {
+    position: absolute;
+    border-radius: 10px;
+    background-color: var(--basecolor-white);
+    padding-inline: 1px;
+    top: 35px;
+    left: 10px;
+    width: 125px;
+    height: 50px;
+    cursor: pointer;
+    outline-style: solid;
+    outline-color: var(--color-black);
+    outline-width: 1.3px;
+}
+
+.join-button:hover {
+    color: var(--accent);
+}
+
+.member-button {
+    position: absolute;
+    top: 35px;
+    left: 140px;
+    border-radius: 10px;
+    background-color: var(--basecolor-white);
+    padding-inline: 1px;
+    width: 125px;
+    height: 50px;
+    cursor: pointer;
+    outline-style: solid;
+    outline-color: var(--color-black);
+    outline-width: 1.3px;
+}
+
+.member-button:hover {
+    color: var(--accent);
+}
+
+.close-button {
+    position: absolute;
+    border-radius: 10px;
+    background-color: var(--basecolor-white);
+    padding-inline: 1px;
+    top: 35px;
+    left: 270px;
+    width: 75px;
+    height: 50px;
+    cursor: pointer;
+    outline-style: solid;
+    outline-color: var(--color-black);
+    outline-width: 1.3px;
+}
+
+.close-button:hover {
+    color: var(--accent);
+}
+  
+.button-icon1,
+.button-icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.button-icon1{
+  width: 43px;
+  height: 46px;
+}
+  
+.button-text {
+  position: absolute;
+  height: max-content;
+  width: max-content;
+  top: 10px;
+  left: 45px;
+  display: inline-block;
+}
+    
+.group {
+  position: absolute;
+  height: 81.63%;
+  width: 96.72%;
+  top: 8.16%;
+  right: 0;
+  bottom: 10.2%;
+  left: 3.28%;
+}
+    
+.list {
+    position: relative;
+    top: 10px;
+    left: 0px;
+    width: 360px;
+    height: 370px;
+}
+
+.list.padding
+{
+    margin-bottom: 50px;
+}
