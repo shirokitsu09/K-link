@@ -1,0 +1,27 @@
+.edit-button-frame {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+
+.edit-button {
+    top: 590px;
+    left: 290px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--accent);
+    box-shadow: 2px 3px 0px 0px rgb(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-setting {
+    width: 38px;
+    height: 38px;
+}
+
+    

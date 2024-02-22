@@ -1,0 +1,102 @@
+.notiline {
+    position: absolute;
+    top: 173px;
+    left: calc(50% - 115px);
+    background-color: #f96e20;
+    width: 230px;
+    height: 2px;
+  }
+  .day-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--br-8xs);
+    background-color: var(--neutrals1);
+    width: 71px;
+    height: 35px;
+  }
+  .day-dropicon {
+    position: absolute;
+    top: 16px;
+    left: 50px;
+    width: 11.67px;
+    height: 6.67px;
+    object-fit: cover;
+  }
+  .textday {
+    position: absolute;
+    top: calc(50% - 11.5px);
+    left: calc(50% - 24.5px);
+    display: inline-block;
+    width: 34px;
+    height: 21px;
+  }
+  .day-frame {
+    position: absolute;
+    top: 122px;
+    left: 152px;
+    width: 71px;
+    height: 35px;
+  }
+  .status-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--br-8xs);
+    background-color: var(--neutrals1);
+    width: 103.75px;
+    height: 35px;
+  }
+  .textstatus {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    display: inline-block;
+    width: 84px;
+    height: 20px;
+  }
+  .status-frame {
+    position: absolute;
+    top: 122px;
+    left: 235px;
+    width: 103.75px;
+    height: 35px;
+    text-align: center;
+  }
+  .feature-dropicon {
+    position: absolute;
+    top: 14px;
+    left: 94px;
+    width: 11.67px;
+    height: 6.67px;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .textfeature {
+    position: absolute;
+    top: 6px;
+    left: 13px;
+    display: inline-block;
+    width: 68px;
+    height: 23px;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .feature-frame {
+    position: absolute;
+    top: 122px;
+    left: 21px;
+    text-align: center;
+  }
+  .feature-background {
+    border-radius: var(--br-8xs);
+    background-color: var(--neutrals1);
+    width: 119px;
+    height: 35px;
+  }
+
+  .notification {
+    font-size: var(--h6-size);
+    color: var(--neutrals2);
+    font-family: var(--h6);
+  }
