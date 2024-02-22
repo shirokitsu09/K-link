@@ -24,7 +24,6 @@
                 ";
 
   $result_member = $conn->query($sql_member);
-  $row = $result_member->fetch_assoc();
   $activityName = $row['activityName'];
 ?>
 

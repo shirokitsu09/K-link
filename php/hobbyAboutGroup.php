@@ -123,11 +123,13 @@ $eachTag_count = count($eachTag);
           </div>
           <div class="rectangle-parent5">
             <div class="tag-container">
+              <div class="tag-flex">
 
     <?php for ($i = 0 ; $i<$eachTag_count ; $i++) {?>
           <div class="div17"><?php echo $eachTag[$i] ?></div>
     <?php } ?>
     
+              </div>
             </div>
             <div class="tag">Tag</div>
           </div>

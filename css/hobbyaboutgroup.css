@@ -437,7 +437,7 @@
 
   .group-parent1 {
     position: absolute;
-    top: 580px;
+    top: 555px;
     left: 8px;
     width: 304px;
     height: 167px;
@@ -457,6 +457,22 @@
     background-color: var(--neutrals1);
     width: 300px;
     height: 120px;
+  }
+
+  .tag-flex {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    outline-width: 1.3px;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background-color: transparent;
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
   }
   
   .div17 {
