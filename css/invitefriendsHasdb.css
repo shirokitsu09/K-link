@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0 auto;
+    line-height: normal;
+    background: #000000;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    /* fonts */
+    --h4: Roboto;
+    --subtitle-1: Roboto;
+    --subtitle-2: Roboto;
+
+    /* font sizes */
+    --font-size-smi: 13px;
+    --body-2-size: 16px;
+    --caption-size: 14px;
+    --overline-size: 10px;
+    --h6-size: 20px;
+    --h5-size: 24px;
+    --h4-size: 34px;
+    --h3-size: 48px;
+    --h2-size: 60px;
+    --h1-size: 96px;
+    --font-size-xs: 12px;
+    --subtitle-1-size: 16px;
+    --subtitle-2-size: 14px;
+
+    /* Colors */
+    --basecolor-white: #fff;
+    --color-gray-100: rgba(255, 255, 255, 0);
+    --color-gray-200: rgba(0, 0, 0, 0);
+    --neutrals1: #d9d9d9;
+    --neutrals2: #000;
+    --accent: #ffb600;
+    --color-orange-100: rgba(255, 182, 0, 0);
+    --primary: #ff4800;
+    --color-black: #000;
+    --color-gainsboro: #d9d9d9;
+
+    --error: #ff0101;
+    --color-orange: #ffb600;
+    --secordary: #ff8500;
+    --success: #7cb518;
+
+    /* Border radiuses */
+    --br-xl: 20px;
+    --br-mini: 15px;
+    --br-8xs: 5px;
+    --br-5xs: 8px;
+    --br-11xl: 30px;
+    --br-6xl: 25px;
+
+    --padding-2xs: 11px;
+    --padding-lg: 18px;
+}
+
+
+.header-invitefriends {
+    top: 0;
+    left: 0;
+    width: 360px;
+
+}
+
+.header-invitefriends {
+    border-radius: 0 0 var(--br-mini) var(--br-mini);
+    background-color: var(--primary);
+    box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+    height: 92px;
+    text-align: left;
+    font-family: var(--h4);
+    font-size: var(--h4-size);
+}
+
+.header-invitefriends,
+.name-header-invitefriends,
+.app-icon {
+    position: absolute;
+}
+
+.name-header-invitefriends {
+    top: 27px;
+    left: 72px;
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    text-shadow: 2.5px 5px 0 rgba(0, 0, 0, 0.25);
+    color: var(--neutrals1);
+    -webkit-text-stroke: 1px var(--neutrals1);
+}
+
+.noti-button-icon {
+    position: absolute;
+    top: 25px;
+    left: 292px;
+}
+
+.noti-button-icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutrals1);
+    background: var(--accent);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    font-size: .8em;
+    cursor: pointer;
+}
+
+.InviteFriend-Frame {
+    background: var(--Backguard-1, linear-gradient(180deg, #F89603 0%, #F86A03 56.25%, #F85B03 100%));
+    width: 360px;
+    height: 800px;
+}
+
+.backBtnInviteF {
+    position: absolute;
+    top: 36px;
+    left: 16px;
+    width: 35px;
+    height: 35px;
+}
+
+
+/* ============================================={ MIXED }================================================== */
+
+
+.select-menu-facultys {
+    position: absolute;
+    top: 119px;
+    left: 49px;
+    width: 260px;
+    z-index: 4;
+} 
+
+/* .select-menu-departments {
+    position: absolute;
+    top: 185px;
+    left: 49px;
+    width: 260px;
+    z-index: 3;
+} */
+
+.select-menu-majors {
+    position: absolute;
+    /* top: 251px;  */
+    top: 185px;
+    left: 49px;
+    width: 260px;
+    z-index: 2;
+}
+
+
+.select-menu-facultys .select-btn-faculty, 
+/* .select-menu-departments .select-btn-department, */
+.select-menu-majors .select-btn-major {
+    display: flex;
+    height: 46px;
+    background: white;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    border: 2px solid black;
+    
+}
+
+.sBtn-text-facultys, .sBtn-text-majors {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.select-btn-faculty i, 
+/* .select-btn-department i, */
+.select-btn-major i {
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.select-menu-facultys.active .select-btn-faculty i, 
+/* .select-menu-departments.active .select-btn-department i, */
+.select-menu-majors.active .select-btn-major i {
+    transform: rotate(-180deg);
+}
+
+.select-menu-facultys .options-facultys, 
+/* .select-menu-departments .options-departments, */
+.select-menu-majors .options-majors {
+    position: relative;
+    padding: 5px;
+    margin-top: 5px;
+    max-height: 275px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    background: white;
+    border-radius: 8px;
+    display: none;
+}
+
+.select-menu-facultys.active .options-facultys, 
+/* .select-menu-departments.active .options-departments, */
+.select-menu-majors.active .options-majors {
+    display: block;
+}
+
+.options-facultys .options-faculty,
+/* .options-departments .options-department, */
+.options-majors .options-major {
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 8px;
+    align-items: center;
+    background: white;
+}
+
+.options-faculty-text, .options-major-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.options-facultys .options-faculty:hover, 
+/* .options-departments .options-department:hover, */
+.options-majors .options-major:hover {
+    background: #989898;
+}
+
+/* ============================================={ faculty }================================================== */
+
+/* .select-menu-facultys {
+    position: absolute;
+    top: 119px;
+    left: 49px;
+    width: 260px;
+    z-index: 4;
+} 
+
+.select-menu-facultys .select-btn-faculty {
+    display: flex;
+    height: 46px;
+    background: white;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+
+.select-btn-faculty i {
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.select-menu-facultys.active .select-btn-faculty i {
+    transform: rotate(-180deg);
+}
+
+.select-menu-facultys .options-facultys {
+    position: relative;
+    padding: 5px;
+    margin-top: 5px;
+    max-height: 275px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    background: white;
+    border-radius: 8px;
+    display: none;
+}
+
+.select-menu-facultys.active .options-facultys {
+    display: block;
+}
+
+.options-facultys .options-faculty {
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 8px;
+    align-items: center;
+    background: white;
+}
+
+.options-facultys .options-faculty:hover {
+    background: #989898;
+} */
+
+/* ============================================={ department }================================================== */
+
+/* .select-menu-departments {
+    position: absolute;
+    top: 185px;
+    left: 49px;
+    width: 260px;
+    z-index: 3;
+}
+
+.select-menu-departments .select-btn-department {
+    display: flex;
+    height: 46px;
+    background: white;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+
+.select-btn-department i {
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.select-menu-departments.active .select-btn-department i {
+    transform: rotate(-180deg);
+}
+
+.select-menu-departments .options-departments {
+    position: relative;
+    padding: 5px;
+    margin-top: 5px;
+    max-height: 275px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    background: white;
+    border-radius: 8px;
+    display: none;
+}
+
+.select-menu-departments.active .options-departments {
+    display: block;
+}
+
+.options-departments .options-department {
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 8px;
+    align-items: center;
+    background: white;
+}
+
+.options-departments .options-department:hover {
+    background: #989898;
+} */
+
+
+/* ============================================={ major }================================================== */
+
+/* .select-menu-majors {
+    position: absolute;
+    top: 251px;
+    left: 49px;
+    width: 260px;
+    z-index: 2;
+}
+
+.select-menu-majors .select-btn-major {
+    display: flex;
+    height: 46px;
+    background: white;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+
+.select-btn-major i {
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.select-menu-majors.active .select-btn-major i {
+    transform: rotate(-180deg);
+}
+
+.select-menu-majors .options-majors {
+    position: relative;
+    padding: 5px;
+    margin-top: 5px;
+    max-height: 275px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    background: white;
+    border-radius: 8px;
+    display: none;
+}
+
+.select-menu-majors.active .options-majors {
+    display: block;
+}
+
+.options-majors .options-major {
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 8px;
+    align-items: center;
+    background: white;
+}
+
+.options-majors .options-major:hover {
+    background: #989898;
+} */
+
+
+/* ============================================={ search-box }================================================== */
+
+
+.SearchInviteFriend {
+    position: absolute;
+    /* top: 317px; */
+    top: 251px;
+    left: 49px;
+    max-width: 360px;
+    width: 260px;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+
+}
+
+.SearchInviteFriend .SearchInviteFriend-box {
+    position: relative;
+    height: 40px;
+    left: 0;
+    margin-top: 0;
+    max-width: 280px;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 20px;
+    /* background: green; */
+    /* margin: auto; */
+    /* box-shadow: 0 5px 1px rgba(0, 0, 0, 0.25); */
+}
+
+.SearchInviteFriend-box input {
+    position: relative;
+    height: auto;
+    width: 150px;
+    border-radius: 20px;
+    background: #fff;
+    outline: none;
+    border: 2px solid #000;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+}
+
+
+.SearchInviteFriend-box .SearchInviteFriend-icon-box {
+    position: relative;
+    background: var(--accent);
+    /* right: 13px;
+    top: 0px; */
+    width: 40px;
+    height: 40px;
+    color: #000;
+    /* height: 100%; */
+    text-align: center;
+    line-height: 42px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+    /* cursor: pointer; */
+    border: 2px solid #000;
+}
+/* .SearchInviteFriend-icon-box .SearchInviteFriend-icon {
+    position: absolute;
+    background: var(--accent);
+    right: 13px;
+    top: 0px;
+    width: 20px;
+    height: 40px;
+    color: #000;
+    height: 100%;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 20px;
+} */
+/* .SearchInviteFriend-box .SearchInviteFriend-icon {
+    position: absolute;
+    background: var(--accent);
+    right: 13px;
+    top: 0px;
+    width: 20px;
+    height: 40px;
+    color: #000;
+    height: 100%;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 20px;
+} */
+
+/* ============================================={ Name List }================================================== */
+
+.Name-List {
+    width: 305px;
+    max-height: 460px;
+    /* height: 100%; */
+    position: relative;
+    /* top: 380px; */
+    top: 317px;
+    left: 27px;
+    /* background: #7cb518; */
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+
+
+.Name-List-ul {
+    margin: 0px 0px 10px 0px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    /* background: #989898; */
+    gap: 10px;   
+}
+
+.Name-List-ul .Name-List-li {
+    display: flex;
+    align-items: center;
+    background: var(--basecolor-white);
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.Name-List-li .ListInfo-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 8px;
+}
+
+.ListInfo-container .st-Name {
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+.ListInfo-container .st-Id {
+    margin: 0;
+    font-size: 14px;
+    padding-left: 7px;
+}
+.Name-List-li .Invite-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 10px;
+    width: 72px;
+    height: 30px;
+    background: var(--accent);
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+.Invite-btn .invitePeople_icon {
+    width: 30px;
+    height: 15px;
+}
+.Invite-btn .InviteCheck {
+    width: 13px;
+    height: 10px;
+}

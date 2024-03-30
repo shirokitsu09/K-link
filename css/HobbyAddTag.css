@@ -1,0 +1,273 @@
+/* body {
+    background-color: antiquewhite;
+} */
+
+.FrameAddTag.hidden{
+    display: none;
+}
+
+.closeTag {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: absolute;
+    top: 11.5%;
+    right: 2%;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.thickWhite {
+    position: relative;
+    background-color: rgba(255, 255, 255, .50);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.FrameAddTag {
+    width: 360px;
+    height: 800px;
+    background-color: transparent;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0px;
+    z-index: 1;
+}
+
+.AddTagcontent {
+    width: 320px;
+    height: 662px;
+    position: absolute;
+    bottom: 0; 
+    background-color: white;
+    border-radius: 20px;
+
+}
+.AddTagcontent p1 {
+    font-size: 10px;
+    position: absolute;
+    color: red;
+    top: 18px;
+    left: 31px;
+
+}
+.AddTagcontent p2 {
+    font-size: 10px;
+    position: absolute;
+    top: 18px;
+   left: 37px;
+
+
+}
+
+.close-btn {
+    position: absolute;
+    top: 15.5%;
+    right: 4%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--accent);
+
+}
+
+.closePage {
+    position: relative;
+    color: var(--neutrals1);
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+}
+
+.cir {
+    position: relative;
+    top: 36px;
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    border-radius: 50%;
+    background: var(--accent);
+
+}
+
+p3 {
+    color: var(--neutrals1);
+    font-size: 14px;
+    position: absolute;
+    left: 80px;
+    top: 95px;
+}
+
+p4 {
+    font-size: 14px;
+    position: absolute;
+    left: 20px;
+    top: 95px;
+}
+
+p5 {
+    /* color: var(--neutrals1); */
+    font-size: 14px;
+    position: absolute;
+    left: 136px;
+    top: 95px;
+}
+
+p6 {
+    color: var(--neutrals1);
+    font-size: 14px;
+    position: absolute;
+    left: 165px;
+    top: 95px;
+}
+
+p7 {
+    font-size: 14px;
+    position: absolute;
+    top: 300px; 
+    left: 20px; 
+}
+
+.savetag {
+    position: absolute;
+  font-size: 16px;
+  width: 90px;
+  height: fit-content;
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  left: 211px;
+  top: 267px;
+  background-color: white;
+  box-shadow: 0px 2px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.savetag:active {
+    background-color: var(--accent); 
+}
+
+input {
+
+    padding-left: 20px;
+    padding-right: 115px;
+}
+
+.pin-container {
+    position: relative;
+    max-width: 150px;
+    width: 100%;
+    height: 52px;  
+    top: 32px; 
+    left: 17px; 
+
+}
+
+.pin-container .pin-input{
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+
+}
+
+.btnaddtag {
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    top: 15px; 
+    left: 185px; 
+    width: 91px;
+    height: 25px;
+    background: var(--accent);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnaddtag .plusAdd {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    font-weight: bold;
+    color: var(--basecolor-white);
+}
+
+#tagContainer{
+    position: relative;
+    width: 275px;
+    height: fit-content;
+    top: 70px;
+    left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    word-break: break-all;
+
+}
+
+.remove-tag {
+    position: relative;
+    color: var(--neutrals1);
+    background-color: var(--accent);
+    border-radius: 50%;
+    width: 26.22px;
+    height: 25px;
+    font-size: 25px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    top: -12px;
+    right: -10px;
+    
+}
+
+.tag {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin: 5px;
+    background-color: var(--accent);
+    border-radius: 25px;
+    box-shadow: 2px 2px; 
+    text-align: left;
+    display: flex ; /* เพิ่มบรรทัดนี้ */
+    align-items: center; /* เพิ่มบรรทัดนี้ */
+
+}
+
+
+.remove-tag #closeTag{
+    position: absolute;
+    top: -4.5px;
+    right: -4px;
+    color: var(--neutrals1);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.DeleteTagIcon {
+    position: absolute;
+    top: -30%;
+    z-index: 100;
+  }
+
+
+

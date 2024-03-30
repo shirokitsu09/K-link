@@ -1,0 +1,210 @@
+.hobby {
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    min-width: 360px;
+    min-height: 800px;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: var(--color-black);
+    font-size: var(--subtitle-1-size);
+    background-color: var(--basecolor-white);
+    font-family: "roboto", sans-serif;
+}
+
+.noti-button-icon {
+    position: absolute;
+    top: 25px;
+    left: 292px;
+    z-index: 1;
+}
+
+.noti-button-icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutrals1);
+    background: var(--accent);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    font-size: 1.7em;
+    cursor: pointer;
+}
+
+
+.part-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 360px;
+    height: 100px;
+}
+
+.header-text {
+    position: absolute;
+    top: 30px;
+    left: 65px;
+    display: inline-block;
+    width: fit-content;
+    height: 30px;
+    color: var(--neutrals1);
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
+    font-size: var(--h4-size);
+    font-family: "roboto", sans-serif;
+}
+
+.group-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: var(--primary);
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.25);
+    width: 360px;
+    height: 100px;
+}
+
+.back-button {
+    position: absolute;
+    height: 29px;
+    width: 30px;
+    top: 40px;
+    left: 15px;
+    max-height: 100%;
+}
+
+.HEADER-bookmark {
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 360px;
+    position: fixed;
+    z-index: 5;
+    height: 92px;
+    background-color: var(--primary);
+    border-radius: 0 0 var(--br-mini) var(--br-mini);
+    box-shadow: 4px 2px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  .app-icon-bookmark {
+  position: absolute;
+  }
+  .app-icon-bookmark {
+    top: 37px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .name-header-bookmark {
+    position: absolute;
+    top: 25px;
+    left: 95px;
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    text-shadow: 2.5px 5px 0 rgba(0, 0, 0, 0.25);
+    color: var(--neutrals1);
+    -webkit-text-stroke: 1px var(--neutrals1);
+    font-size: 34px;
+  }
+
+  .noti-button-icon-bookmark {
+    position: absolute;
+    top: 25px;
+    right: 5%;
+  }
+
+  .noti-button-icon-bookmark a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutrals1);
+    background: var(--accent);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    font-size: .8em;
+    cursor: pointer;
+  }
+
+.app-logo {
+    position: absolute;
+    top: 38px;
+    left: 101px;
+    border-radius: 100%;
+    outline-style: solid;
+    outline-color: var(--color-black);
+    outline-width: 1px;
+    background-color: var(--neutrals1);
+    width: 114px;
+    height: 114px;
+}
+
+.app-name {
+    position: absolute;
+    height: 24px;
+    top: 40px;
+    left: 30px;
+    font-size: 60px;
+    display: inline-block;
+    width: 316px;
+    font-size: var(--h4-size);
+}
+
+.version-label {
+    position: absolute;
+    top: 52px;
+    left: 130px;
+    font-size: var(--h6-size);
+    display: inline-block;
+    width: 216px;
+    height: 24px;
+}
+
+.version-description {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    font-size: var(--subtitle-1-size);
+    display: inline-block;
+    width: 216px;
+    height: 24px;
+}
+
+.list-frame-bookmark {
+    position: relative;
+    top: 110px;
+    background-color: transparent;
+    width: 360px;
+    height: 100%;
+    max-height: 67%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: left;
+    font-family: var(--subtitle-1);
+    font-size: var(--subtitle-1-size);
+    color: var(--color-black);
+    scroll-behavior: smooth;
+}
+
+.invisible{
+    position: relative;
+    top: 5px;
+    width: 360px;
+    height: 100px;
+    display: block;
+  }

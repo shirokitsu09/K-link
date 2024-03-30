@@ -1,0 +1,230 @@
+.HEADER {
+  top: 0;
+  left: 0;
+  /* width: 360px; */ /*old*/
+  width: 100%;
+} 
+.HEADER {
+  border-radius: 0 0 var(--br-mini) var(--br-mini);
+  background-color: var(--primary);
+  box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+  height: 92px;
+}
+.HEADER,
+.name-header,
+.app-icon {
+  position: absolute;
+}
+.app-icon {
+  top: 12px;
+  /* left: 30px; */
+  left: 12.5%;
+  width: 46.55px;
+  height: 65.95px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.name-header {
+  top: 25px;
+  left: 135px;
+  display: inline-block;
+  width: 117px;
+  height: 40px;
+  text-shadow: 2.5px 5px 0 rgba(0, 0, 0, 0.25);
+  color: var(--neutrals1);
+  -webkit-text-stroke: 1px var(--neutrals1);
+}
+.LINE {
+  position: absolute;
+  top: 30px;
+  left: 106px;
+  border-radius: 5px;
+  background-color: var(--neutrals1);
+  box-shadow: 1.5px 5px 0 rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--neutrals1);
+  box-sizing: border-box;
+  width: 3px;
+  height: 30px;
+}
+.noti-button-icon {
+  position: absolute;
+  top: 25px;
+  /* left: 292px;   */
+  right: 5%;
+}
+.noti-button-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutrals1);
+  background: var(--accent);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  font-size: .8em;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 360px) {
+
+}
+@media screen and (min-width: 390px) {
+  .app-icon {
+    left: 50px;
+  }
+  .name-header {
+    left: 155px;
+  }
+  .LINE {
+    left: 126px;
+  }
+  /* .noti-button-icon {
+    left: 312px;  
+  } */
+}
+@media screen and (min-width: 430px) {
+  .app-icon {
+    left: 65px;
+  }
+  .name-header {
+    left: 170px;
+  }
+  .LINE {
+    left: 141px;
+  }
+  /* .noti-button-icon {
+    left: 327px;  
+  } */
+}
+@media screen and (min-width: 480px) {
+  .app-icon {
+    left: 85px;
+  }
+  .name-header {
+    left: 190px;
+  }
+  .LINE {
+    left: 161px;
+  }
+  /* .noti-button-icon {
+    left: 347px;  
+  } */
+}
+@media screen and (min-width: 520px) {
+  .app-icon {
+    left: 115px;
+  }
+  .name-header {
+    left: 220px;
+  }
+  .LINE {
+    left: 191px;
+  }
+  /* .noti-button-icon {
+    left: 377px;  
+  } */
+}
+@media screen and (min-width: 560px) {
+  .app-icon {
+    left: 125px;
+  }
+  .name-header {
+    left: 230px;
+  }
+  .LINE {
+    left: 201px;
+  }
+  /* .noti-button-icon {
+    left: 387px;  
+  } */
+}
+@media screen and (min-width: 600px) {
+  .app-icon {
+    left: 155px;
+  }
+  .name-header {
+    left: 260px;
+  }
+  .LINE {
+    left: 231px;
+  }
+  /* .noti-button-icon {
+    left: 417px;  
+  } */
+}
+@media screen and (min-width: 641px) {
+  .app-icon {
+    left: 175px;
+  }
+  .name-header {
+    left: 280px;
+  }
+  .LINE {
+    left: 251px;
+  }
+  /* .noti-button-icon {
+    left: 437px;  
+  } */
+}
+@media screen and (min-width: 700px) {
+  .app-icon {
+    left: 205px;
+  }
+  .name-header {
+    left: 310px;
+  }
+  .LINE {
+    left: 281px;
+  }
+  /* .noti-button-icon {
+    left: 467px;  
+  } */
+}
+@media screen and (min-width: 740px) {
+  .app-icon {
+    left: 235px;
+  }
+  .name-header {
+    left: 340px;
+  }
+  .LINE {
+    left: 311px;
+  }
+  /* .noti-button-icon {
+    left: 497px;  
+  } */
+}
+@media screen and (min-width: 800px) {
+  .app-icon {
+    left: 265px;
+  }
+  .name-header {
+    left: 370px;
+  }
+  .LINE {
+    left: 341px;
+  }
+  /* .noti-button-icon {
+    left: 527px;  
+  } */
+}
+@media screen and (min-width: 850px) {
+  .app-icon {
+    left: 285px;
+  }
+  .name-header {
+    left: 390px;
+  }
+  .LINE {
+    left: 361px;
+  }
+  /* .noti-button-icon {
+    left: 547px;  
+  } */
+}
+
+
+  

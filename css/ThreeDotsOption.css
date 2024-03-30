@@ -1,0 +1,127 @@
+.threedotsoption-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-11xl) var(--br-11xl) 0 0;
+  background-color: var(--basecolor-white);
+}
+.line {
+  position: absolute;
+  top: 13px;
+  left: calc(50% - 49px);
+  border-radius: 5px;
+  background-color: var(--accent);
+  width: 99px;
+  height: 9px;
+}
+.threedotsoption-aria {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 319.49px;
+}
+.option-background {
+  left: 0;
+  background-color: var(--basecolor-white);
+  width: 360px;
+  height: 60px;
+}
+.div,
+.icon-background,
+.option-background {
+  position: absolute;
+  top: 0;
+}
+.div {
+  height: 100%;
+  width: 33.33%;
+  left: 41.11%;
+  display: flex;
+  align-items: center;
+}
+.icon-background {
+  left: 0;
+  background-color: var(--color-gray);
+  width: 60px;
+  height: 60px;
+}
+.share-icon {
+  position: absolute;
+  top: calc(50% - 17px);
+  left: calc(50% - 21px);
+  width: 41.25px;
+  height: 34.38px;
+}
+.icon {
+  position: absolute;
+  top: 0;
+  left: 36px;
+  width: 60px;
+  height: 60px;
+}
+.shareoption {
+  position: relative;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  width: 360px;
+  height: 60px;
+}
+.inner-icon {
+  position: absolute;
+  top: calc(50% - 21px);
+  left: calc(50% - 21px);
+  width: 41.25px;
+  height: 41.26px;
+}
+.anotheroption {
+  position: relative;
+  width: 360px;
+  height: 60px;
+}
+.shareoption-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1px;
+}
+.close-aria,
+.threedotsoption-inner,
+.threedotsoption1 {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 360px;
+  height: 121px;
+}
+.close-aria,
+.threedotsoption1 {
+  top: 480px;
+  height: 320px;
+}
+.close-aria {
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 515px;
+  z-index: -1;
+}
+.background {
+  position: relative;
+  background-color: var(--color-gray);
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--h6-size);
+  color: var(--color-black);
+  font-family: var(--h6);
+  left: 40%;
+  top: 50px;
+}

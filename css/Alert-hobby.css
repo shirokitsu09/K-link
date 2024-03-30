@@ -1,0 +1,228 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --dark: #34495E;
+  --light: #ffffff;
+  --success: #0ABF30;
+  --error: #E24D4C;
+  --warning: #E9BD0C;
+  --info: #3498DB;
+  --color-black: #000;
+  --primary: #ff4800;
+  --accent: #ffb600;
+  --neutrals: #d9d9d9;
+}
+
+.notifications {
+  position: fixed;
+  top: 660px;
+  left: 20px;
+  z-index: 100;
+}
+.notifications :where(.toast, .column) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.notifications .toast {
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  border-radius: 4px;
+  padding: 16px 17px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  animation: show_toast 0.3s ease forwards;
+}
+
+.alert-hobby-box{
+    position: absolute;
+    display: none;
+    width: 280px;
+    height: 102px;
+    left: 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    outline-style: ridge;
+    outline-color: var(--color-black);
+    outline-width: 1.2px;
+    background-color: var(--light);
+    top: 400px;
+    cursor: default;
+    z-index: 3;
+}
+
+.alert-hobby-box.on{
+    display: block;
+}
+
+.alert-hobby-redbar {
+    position: absolute;
+    width: 280px;
+    height: 9.4px;
+    background-color: var(--primary);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.alert-hobby-box-text{
+    position: relative;
+    width: fit-content;
+    display: inline;
+    height: 20px;
+    font-size: 20px;
+    top: 10px;
+    padding: 5px;
+    left: 5px;
+}
+
+.alert-hobby-box-text-highlight{
+    position: relative;
+    width: fit-content;
+    display: inline;
+    height: 20px;
+    font-size: 20px;
+    color: var(--success);
+    top: 10px;
+    padding: 2.5px;
+    left: 5px;
+}
+
+@keyframes show_toast {
+    0% {
+        transform: translateY(100%);
+    }
+    40% {
+        transform: translateY(-5%);
+    }
+    80% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+.notifications .toast.hide {
+    animation: hide_toast 0.3s ease forwards;
+}
+@keyframes hide_toast {
+    0% {
+        transform: translateY(-10px);
+    }
+    40% {
+        transform: translateY(0);
+    }
+    80% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(calc(100% + 20px));
+    }
+}
+.toast::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 100%; /*100%,50%*/
+    bottom: 0px;
+    left: 0px;
+    animation: progress 1s linear forwards;
+}
+@keyframes progress {
+    100% {
+        width: 0%;
+    }
+}
+.notifications .toast.success {
+    background: var(--success);
+}
+.notifications .toast.error {
+    background: var(--error);
+}
+.notifications .toast.warning {
+    background: var(--warning);
+}
+.notifications .toast.accent_join {
+    background: var(--accent);
+}
+.notifications .toast.accent_report {
+    background: var(--primary);
+}
+
+.toast.success::before, .btn#success {
+    background: var(--success);
+}
+.toast.error::before, .btn#error {
+    background: var(--error);
+}
+.toast.warning::before, .btn#warning {
+    background: var(--warning);
+}
+.toast.info::before, .btn#info {
+    background: var(--info);
+}
+.toast.toast.info::before, .btn#accent_join {
+    background: var(--accent);
+}
+.toast.toast.info::before, .btn#accent_report {
+    background: var(--accent);
+}
+.toast.toast.info::before, .btn#neutrals {
+    background: var(--neutrals);
+}
+
+.toast .column span {
+    color: #fff;
+    font-size: 20px;
+    /* margin-left: 50%; */
+}
+.toast i:last-child {
+    color: #aeb0d7;
+    cursor: pointer;
+}
+.toast i:last-child:hover {
+    color: var(--dark);
+}
+
+.buttons {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    top: 45px;
+    z-index: 1;
+}
+
+.buttons .btn {
+    border: none;
+    outline: none;
+    color: var(--color-black);
+    margin: 0 5px;
+    font-size: 16px;
+    padding: 10px 40px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.overlay-hobby {
+    position: fixed;
+    margin: 0 auto;
+    min-width: 360px;
+    min-height: 800px;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    display: block;
+}
+
+.overlay-hobby.active {
+    display: block;
+}

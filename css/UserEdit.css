@@ -1,0 +1,241 @@
+.background {
+    background-color: var(--secordary);
+}
+
+.whitebox {
+    background-color: var(--basecolor-white);
+    position: relative;
+    width: 313px;
+    height: 703px;
+    border-radius: 50px;
+    left: 6%;
+    top: 12px;
+}
+
+label {
+    position: relative;
+    font-size: 16px;
+    left: 18px;
+}
+
+input {
+    position: relative;
+    font-size: 24px;
+    left: 18px;
+    width: 280px;
+}
+
+.savetag {
+    position: absolute;
+    font-size: 16px;
+    width: 90px;
+    height: 30px;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    left: 211px;
+    top: 400px;
+    background-color: white;
+    box-shadow: 0px 2px 0 rgba(0, 0, 0, 0.25);
+
+}
+
+.savetag:active {
+    background-color: var(--accent); 
+}
+
+.nickname label,
+.username label,
+.phonenumber label,
+.aboutme label {
+
+    margin-bottom: 5px; /* ระยะห่างด้านล่างของ label */
+
+    }
+
+.nickname input,
+.username input,
+.phonenumber input,
+.aboutme input {
+
+        margin-bottom: 5px; /* ระยะห่างด้านล่างของ input */
+
+    }
+
+    .a1 {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .HEADER {
+        top: 0;
+        left: 0;
+        border-radius: 0 0 var(--br-mini) var(--br-mini);
+        background-color: var(--primary);
+        box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+        height: 92px;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+      }
+      
+      .app-icon {
+        top: 33px;
+        left: 30px;
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+        cursor: pointer;
+        position: absolute;
+      }
+      
+      .name-header {
+        font-size: 34px;
+        top: 25px;
+        left: 75px;
+        display: inline-block;
+        width: 200px;
+        height: 40px;
+        text-shadow: 2.5px 5px 0 rgba(0, 0, 0, 0.25);
+        color: var(--neutrals1);
+        -webkit-text-stroke: 1px var(--neutrals1);
+        position: absolute;
+      }
+      
+      .noti-button-icon {
+        position: absolute;
+        top: 25%;
+        left: 85%;
+      }
+      
+      /* Default styles */
+      .noti-button-icon a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--neutrals1);
+        background: var(--accent);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: none;
+        box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+        text-decoration: none;
+        font-size: 2em;
+        cursor: pointer;
+      }
+      
+      .noti-button-icon ion-icon {
+        font-size: 1em; /* Adjust the size as needed */
+      }
+      /* Media query for smaller screens */
+    
+      @media only screen and (min-width: 320px) {
+      
+      
+         .app-icon {
+            top: 30%;
+            left: 5%;
+            height: 35px;
+            width: 35px;
+        }
+      
+        .name-header {
+          top: 25%;
+          left: 20%;
+          width: auto;
+          height: auto;
+          font-size: 1em;
+        }
+    
+        .noti-button-icon {
+          top: 25%;
+          right: 13%;
+        }
+        .whitebox {
+            left: 1%;
+          }
+      }
+      @media only screen and (min-width: 360px) {
+      
+      
+        .app-icon {
+            top: 27%;
+            left: 5%;
+            height: 35px;
+            width: 35px;
+        }
+      
+        .name-header {
+          top: 27%;
+          left: 25%;
+          width: auto;
+          height: auto;
+          font-size: 1em;
+        }
+    
+        .noti-button-icon {
+          top: 25%;
+          right: 5%;
+        }
+        .whitebox {
+          left: 0;
+        }
+      }
+    
+      @media only screen and (min-width: 425px) {
+      
+      
+        .app-icon {
+            top: 27%;
+            left: 5%;
+            height: 35px;
+            width: 35px;
+        }
+      
+        .name-header {
+          top: 27%;
+          left: 27%;
+          width: auto;
+          height: auto;
+          font-size: 1em;
+        }
+    
+        .noti-button-icon {
+          top: 25%;
+          right: 5%;
+        }
+        .whitebox {
+          left: 12%;
+        }
+      }
+    
+      @media only screen and (min-width: 768px) {
+      
+      
+        .app-icon {
+            top: 27%;
+            left: 5%;
+            height: 35px;
+            width: 35px;
+        }
+      
+        .name-header {
+          top: 27%;
+          left: 37%;
+          width: auto;
+          height: auto;
+          font-size: 1em;
+        }
+    
+        .noti-button-icon {
+          top: 25%;
+          right: 5%;
+        }
+    
+        .whitebox {
+          left: 27%;
+        }
+    
+      }
+    

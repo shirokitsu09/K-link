@@ -1,0 +1,370 @@
+
+.container-icon {
+  height: 100%;
+  top: 0;
+}
+
+.div {
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+
+.setting-head {
+  position: absolute;
+  background-color: var(--primary);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.25);
+  /* width: 360px; */
+  width: 100%;
+  height: 141px;
+  min-width: 360px;
+  left: 0;
+}
+
+.header-text {
+  position: absolute;
+  top: 30px;
+  left: 80px;
+  font-size: var(--h4-size);
+  color: var(--color-gainsboro);
+  text-align: center;
+  text-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke: 1px #d9d9d9;
+}
+.setting-inner,
+.setting-item {
+  position: relative;
+  top: 39px;
+  /* left: 16px; */
+  left: 5%;
+  width: 40px;
+  height: 34px;
+  cursor: pointer;
+}
+.setting-inner {
+  top: 108px;
+  /* left: 22px; */
+  left: 0px;
+  border-radius: 50px;
+  background-color: var(--neutrals1);
+  box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+  width: 316px;
+  height: 584px;
+}
+
+.option-parent {
+  position: relative;
+  top: 34px;
+  left: 10px;
+  width: 300px;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 20px ;
+}
+
+.option-text {
+  position: relative;
+  top: -4px;
+  left: 50px;
+  height: 30px;
+  width: fit-content;
+  display: inline-block;
+  font-size: var(--h5-size);
+  color: var(--color-black);
+}
+
+.option-icon {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  top: 7px;
+  left: 26px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+/* .option2-parent {
+  position: absolute;
+  height: 40px;
+  width: 300px;
+  top: 89px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.option2-icon {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 2px;
+  left: 27px;
+}
+
+.option2-text {
+  top: 4px;
+  position: absolute;
+  left: 75px;
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  font-size: var(--h6-size);
+  color: var(--color-black);
+} */
+
+/* .option3-parent {
+  position: absolute;
+  top: 144px;
+  left: 10px;
+  width: 316px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.option3-text {
+  position: absolute;
+  top: 5px;
+  left: 75px;
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  font-size: var(--h6-size);
+  color: var(--color-black);
+}
+
+.option3-icon {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 0px;
+  left: 30px;
+  max-width: max-content;
+  overflow: hidden;
+  max-height: max-content;
+} */
+
+/* .option4-parent {
+  position: relative;
+  height: 40px;
+  width: 300px;
+  top: 199px;
+  left: 10px;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+
+.option4-text {
+  position: absolute;
+  height: 30px;
+  width: 150px;
+  top: 5px;
+  left: 75px;
+  display: inline-block;
+  font-size: var(--h6-size);
+  color: var(--color-black);
+}
+
+.option4-mode {
+  position: absolute;
+  height: 30px;
+  width: 150px;
+  top: 5px;
+  left: 190px;
+  display: inline-block;
+  font-size: var(--h6-size);
+  color: var(--color-black);
+}
+
+.option4-icon {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 3px;
+  left: 27px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+} */
+
+/* .option5-parent {
+  position: absolute;
+  top: 254px;
+  left: 10px;
+  width: 300px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.option5-text {
+  position: relative;
+  top: -5px;
+  left: 75px;
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  font-size: var(--h6-size);
+  color: var(--color-black);
+}
+
+.option5-icon {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 6px;
+  left: 28px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+} */
+
+.noti-button-icon-setting {
+  position: absolute;
+  top: 37px;
+  /* left: 292px; */
+  right: 10%;
+  width: 38px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.noti-button-icon-setting a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutrals1);
+  background: var(--accent);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  font-size: .8em;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 360px) {
+
+}
+@media screen and (min-width: 390px) {
+  /* .setting-item {
+    left: 50px;
+  } */
+  .header-text {
+    left: 115px;
+  }
+  /* .noti-button-icon-setting {
+    left: 312px;  
+  } */
+}
+@media screen and (min-width: 430px) {
+  /* .setting-item {
+    left: 65px;
+  } */
+  .header-text {
+    left: 135px;
+  }
+  /* .noti-button-icon-setting {
+    left: 327px;  
+  } */
+}
+@media screen and (min-width: 480px) {
+  /* .setting-item {
+    left: 85px;
+  } */
+  .header-text {
+    left: 155px;
+  }
+  /* .noti-button-icon-setting {
+    left: 347px;  
+  } */
+}
+@media screen and (min-width: 520px) {
+  /* .setting-item {
+    left: 115px;
+  } */
+  .header-text {
+    left: 175px;
+  }
+  /* .noti-button-icon-setting {
+    left: 377px;  
+  } */
+}
+@media screen and (min-width: 560px) {
+  /* .setting-item {
+    left: 125px;
+  } */
+  .header-text {
+    left: 195px;
+  }
+  /* .noti-button-icon-setting {
+    left: 387px;  
+  } */
+}
+@media screen and (min-width: 600px) {
+  /* .setting-item {
+    left: 155px;
+  } */
+  .header-text {
+    left: 215px;
+  }
+  /* .noti-button-icon-setting {
+    left: 417px;  
+  } */
+}
+@media screen and (min-width: 641px) {
+  /* .setting-item {
+    left: 175px;
+  } */
+  .header-text {
+    left: 235px;
+  }
+  /* .noti-button-icon-setting {
+    left: 437px;  
+  } */
+}
+@media screen and (min-width: 700px) {
+  /* .setting-item {
+    left: 205px;
+  } */
+  .header-text {
+    left: 270px;
+  }
+  /* .noti-button-icon-setting {
+    left: 467px;  
+  } */
+}
+@media screen and (min-width: 740px) {
+  /* .setting-item {
+    left: 235px;
+  } */
+  .header-text {
+    left: 295px;
+  }
+  /* .noti-button-icon-setting {
+    left: 497px;  
+  } */
+}
+@media screen and (min-width: 800px) {
+  /* .setting-item {
+    left: 265px;
+  } */
+  .header-text {
+    left: 320px;
+  }
+  /* .noti-button-icon-setting {
+    left: 527px;  
+  } */
+}
+@media screen and (min-width: 850px) {
+  /* .setting-item {
+    left: 285px;
+  } */
+  .header-text {
+    left: 340px;
+  }
+  /* .noti-button-icon-setting {
+    left: 547px;  
+  } */
+}

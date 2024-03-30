@@ -1,0 +1,230 @@
+.hobby {
+    position: relative;
+    background: linear-gradient(180deg, #f89603, #f86a03 56.25%, #f85b03);
+    width: 360px;
+    height: 800px;
+    overflow: hidden;
+    text-align: center;
+    color: var(--neutrals1);
+    font-size: var(--subtitle-1-size);
+    font-family: "roboto", sans-serif;
+    z-index: 0;
+  }
+
+.part-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 140px;
+}
+
+.header-text {
+    position: absolute;
+    top: 30px;
+    left: 65px;
+    display: inline-block;
+    width: fit-content;
+    height: 30px;
+    color: var(--neutrals1);
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
+    font-size: var(--h4-size);
+    font-family: "roboto",sans-serif;
+}
+
+.group-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--primary);
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.25);
+    width: 360px;
+    height: 140px;
+}
+
+.back-button {
+    position: absolute;
+    height: 29px;
+    width: 30px;
+    top: 40px;
+    left: 15px;
+    max-height: 100%;
+}
+
+.noti-button-icon {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+}
+
+.body-background {
+    position: absolute;
+    border-radius: 25px;
+    background-color: #fff;
+    top: 0px;
+    left: 22px;
+    width: 316px;
+    height: 650px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.part-body {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 360px;
+    height: 660px;
+    text-align: left;
+    font-size: var(--button-size);
+    color: var(--neutrals2);
+    z-index: 1;
+}
+
+.tdot-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.profile-picture {
+    position: absolute;
+    top: 38px;
+    left: 101px;
+    border-radius: 100%;
+    outline-style: solid;
+    outline-color: var(--color-black);
+    outline-width: 1px;
+    background-color: var(--neutrals1);
+    width: 114px;
+    height: 114px;
+}
+
+.profile-name {
+    position: absolute;
+    height: 24px;
+    top: 184px;
+    font-size: 60px;
+    display: inline-block;
+    text-align: center;
+    width: 316px;
+    font-size: var(--h5-size);
+}
+
+.profile-fn {
+    position: absolute;
+    top: 244px;
+    left: 20px;
+    font-size: var(--h6-size);
+    display: inline-block;
+    width: 216px;
+    height: 24px;
+}
+
+.profile-fullname {
+    position: absolute;
+    top: 244px;
+    left: 60px;
+    font-size: var(--h6-size);
+    display: inline-block;
+    width: 216px;
+    height: 24px;
+}
+
+.profile-em {
+    position: absolute;
+    top: 284px;
+    left: 20px;
+    font-size: var(--h6-size);
+    display: inline-block;
+    width: 216px;
+    height: 24px;
+}
+
+.profile-email {
+    position: absolute;
+    top: 284px;
+    left: 85px;
+    font-size: var(--h6-size);
+    display: inline-block;
+    width: 216px;
+    height: 24px;
+}
+
+.profile-tel {
+    position: absolute;
+    top: 324px;
+    left: 20px;
+    font-size: var(--h6-size);
+    display: inline-block;
+    width: 216px;
+    height: 24px;
+}
+
+.profile-telephone {
+    position: absolute;
+    top: 324px;
+    left: 107px;
+    font-size: var(--h6-size);
+    display: inline-block;
+    width: 216px;
+    height: 24px;
+}
+
+.profile-fac {
+    position: absolute;
+    top: 364px;
+    left: 20px;
+    font-size: var(--h6-size);
+    display: inline-block;
+    width: 216px;
+    height: 24px;
+}
+
+.profile-faculty {
+    position: absolute;
+    top: 364px;
+    left: 97px;
+    font-size: var(--h6-size);
+    display: inline-block;
+    width: 216px;
+    height: 24px;
+}
+
+.label-aboutme {
+    position: absolute;
+    top: 404px;
+    left: 20px;
+    font-size: var(--h6-size);
+    display: inline-block;
+    width: 216px;
+    height: 24px;
+}
+
+.box-aboutme {
+    position: absolute;
+    top: 439px;
+    left: 29px;
+    border-radius: 20px;
+    background-color: var(--neutrals1);
+    width: 220px;
+    height: 140px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-aboutme {
+    word-wrap: break-word;
+    overflow: hidden;
+    position: absolute;
+    display: inline-block;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    font-size: var(--subtitle-1-size);
+}

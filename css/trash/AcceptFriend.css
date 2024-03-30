@@ -1,0 +1,118 @@
+.background {
+    background-color: var(--secordary);
+    overflow-y: auto;
+}
+
+.groupname {
+    width: 360px;
+    height: 157px;
+    top: 50px;
+}
+
+p1 {
+    position: relative;
+    top: 100px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold; 
+}
+
+p2 {
+    position: relative;
+    top: 100px;
+    left: 10px;
+    font-size: 24px;
+    width: 100%;
+    
+}
+
+p3 {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+}
+
+.AcceptList {
+    padding: 5px;
+    width: 360px;
+    position: relative;
+}
+
+.request{
+    position: relative;
+}
+
+.AcceptList .request {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: none;
+    border-right: none;        
+    padding: 5px;
+    width: 360px;
+    height: 151px;
+}
+
+.AcceptList .request p3 {
+    position: relative;
+    font-size: 20px;
+    left: 30px;
+    width: 227px;
+    height: 39px;
+    float: left;
+
+}
+
+.AcceptList .request img {
+    position: relative;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    top: 15px;
+    left: 15px;
+    float: left;
+}
+
+.AcceptList .request .accept {
+    color: black;
+    position: absolute;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 160px;
+    height: 36px;
+    top: 55px;
+    left: 145px;
+    background-color: var(--accent);
+    border: none;
+    display: block;
+}
+
+
+.AcceptList .request .deny {
+    color: black;
+    position: absolute;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 160px;
+    height: 36px;
+    top: 100px; /* เปลี่ยนเป็น -32px */
+    left: 145px; /* เปลี่ยนเป็น 32px */
+    background-color: var(--neutrals1);
+    border: none;
+    display: block;
+}
+
+.request p {
+    position: relative;
+    margin-top: 0;
+    font-size: 20px;
+    left: 30px;
+    float: left;
+    border-radius: 5px;
+    width: 160px;
+    height: 36px;
+    background-color: var(--accent);
+    text-align: center;
+    border: none;
+}
